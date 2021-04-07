@@ -1,0 +1,14 @@
+dev.py
+.vscode/
+data/
+experiments/*/*/images
+experiments/*/*/models
+**/__pycache__/
+__pycache__/
+articles/
+.ipynb_checkpoints/
+/*.txt
+*.pth
+/*.png
+images
+models

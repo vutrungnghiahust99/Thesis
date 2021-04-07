@@ -2,6 +2,7 @@ import argparse
 import logging
 import os
 import pandas as pd
+from tqdm import tqdm
 
 import torchvision.transforms as transforms
 from torchvision import datasets
@@ -10,29 +11,31 @@ import torch
 from src.models.eriklindernoren_architecture import Generator, Discriminator
 from src.losses import LSGAN as lsgan_loss
 from src.losses import GAN1 as gan1_loss
-from src.losses import WGANGP as wgangp_loss
 from src.utils import sample_image
 from src.metrics import Metrics
 from src.augmentation import Augmentation
 from src.noise import Noise
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--exp_id', type=str, required=True)
-parser.add_argument("--base_exp_name", type=str, required=True)
-parser.add_argument("--loss_name", type=str, choices=['gan1', 'lsgan', 'wgangp'])
-parser.add_argument("--shift", type=int, default=-1)
-parser.add_argument("--std", type=float, choices=[-1, 0.001, 0.01, 0.02, 0.04, 0.1, 0.5, 2, 4])
+parser.add_argument("--exp_name", type=str, required=True)
+parser.add_argument("--loss_name", type=str, choices=['gan1', 'lsgan'])
+
+# augmentation
+parser.add_argument("--augmentation", type=int, choices=[0, 1])
+parser.add_argument("--translation_shift", type=int, choices=[2, 4, 8, -1], default=-1)
+parser.add_argument("--gaussian_noise_std", type=float, choices=[-1, 0.001, 0.01, 0.02, 0.04, 0.1, 0.5], default=-1)
+parser.add_argument("--aug_times", type=int, default=-1)
+
+# spectral normalization
 parser.add_argument("--spec_g", type=int, choices=[0, 1])
 parser.add_argument("--spec_d", type=int, choices=[0, 1])
+
+# input noise z
 parser.add_argument("--dist", type=str, choices=['gauss', 'uniform'])
-parser.add_argument("--bound", type=float, choices=[0.01, 1, 100])
-parser.add_argument("--augmentation", type=int, choices=[0, 1])
-parser.add_argument("--aug_times", type=int)
-parser.add_argument("--train_g_more", type=int, choices=[0, 1])
-parser.add_argument("--bs_g", type=int, choices=[64, 128, 256, -1])
+parser.add_argument("--bound", type=float, default=1)
+
 parser.add_argument("--n_epochs", type=int)
-parser.add_argument("--n_critic", type=int, default=5)
-parser.add_argument("--interval", type=int, choices=[1, 5, 10])
+parser.add_argument("--interval", type=int, choices=[1, 5, 10], default=1)
 parser.add_argument("--weights_g", type=str, default='')
 parser.add_argument("--weights_d", type=str, default='')
 
@@ -48,14 +51,19 @@ parser.add_argument("--img_size", type=int, default=28, help="size of each image
 parser.add_argument("--channels", type=int, default=1, help="number of image channels")
 args = parser.parse_args()
 
-s1 = f'exp_id_{args.exp_id}_base_exp_name_{args.base_exp_name}_loss_name_{args.loss_name}_shift_{args.shift}_spec_g_{args.spec_g}_spec_d_{args.spec_d}_dist_{args.dist}_std_{args.std}'
-s2 = f'bound_{args.bound}_aug_{args.augmentation}_aug_times_{args.aug_times}_train_g_more_{args.train_g_more}_bs_g_{args.bs_g}_n_epochs_{args.n_epochs}_n_critic_{args.n_critic}_interval_{args.interval}'
-args.exp_name = s1 + "_" + s2
+
+s1 = f'{args.exp_name}_loss_{args.loss_name}_spec_g_{args.spec_g}_spec_d_{args.spec_d}_dist_{args.dist}'
+if args.augmentation:
+    s1 = s1 + f'_translation_shift_{args.translation_shift}_gaussian_noise_std_{args.gaussian_noise_std}_aug_times_{args.aug_times}'
+args.exp_id = s1
 
 # make exp_folder
-exp_folder = f'experiments/{args.base_exp_name}/{args.exp_name}'
-os.makedirs(exp_folder, exist_ok=True)
-mode = 'a'
+exp_folder = f'experiments/{args.exp_id}'
+if not args.weights_g and not args.weights_d:
+    os.makedirs(exp_folder, exist_ok=False)
+    mode = 'w'
+else:
+    mode = 'a'
 
 logging.basicConfig(filename=f'{exp_folder}/{args.exp_name}.txt',
                     filemode=mode,
@@ -153,113 +161,61 @@ if args.loss_name == 'gan1':
     loss = gan1_loss
 elif args.loss_name == 'lsgan':
     loss = lsgan_loss
-elif args.loss_name == 'wgangp':
-    loss = wgangp_loss
 else:
     RuntimeError(f'{args.loss_name} is not supported!!!')
 
 # ----------
 #  Training
 # ----------
-if args.train_g_more + args.augmentation == 2:
-    RuntimeError("Can not augmentation and train g more at the same time!!!!")
 
 header = None
 results = []
-batch = 0
-for epoch in range(start_epoch, start_epoch + args.n_epochs):
+for epoch in range(start_epoch, args.n_epochs):
     logging.info(f'epoch: {epoch}')
     generator.train()
     discriminator.train()
     generator.requires_grad_(True)
     discriminator.requires_grad_(True)
 
-    for i, (imgs, _) in enumerate(dataloader):
+    for (imgs, _) in tqdm(dataloader):
         batch_size = imgs.shape[0]
         real_imgs = imgs.type(Tensor)
         if args.augmentation:
-            real_imgs = torch.cat([real_imgs] + [Augmentation.translation(real_imgs, args.shift) for _ in range(args.aug_times)])
+            real_imgs = torch.cat([real_imgs] + [Augmentation.add_guassian_noise(real_imgs, args.std) for _ in range(args.aug_times)])
  
         # -----------------
         #  Train Generator
         # -----------------
 
-        if i % args.n_critic == 0:
-            optimizer_G.zero_grad()
-            if args.train_g_more:
-                z_g = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, args.bs_g, args.z_dim)
-                gen_imgs_g = generator(z_g)
-                with torch.no_grad():
-                    z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
-                    gen_imgs = generator(z)
-                lossg = loss.compute_lossg(discriminator, gen_imgs_g)
-                lossg.backward()
-                optimizer_G.step()
+        optimizer_G.zero_grad()
+        if args.augmentation:
+            z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
+            gen_imgs = generator(z)
+            gen_imgs = torch.cat([gen_imgs] + [Augmentation.add_guassian_noise(gen_imgs, args.std) for _ in range(args.aug_times)])
+            lossg = loss.compute_lossg(discriminator, gen_imgs)
 
-            elif args.augmentation:
-                z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
-                gen_imgs = generator(z)
-                gen_imgs = torch.cat([gen_imgs] + [Augmentation.translation(gen_imgs, args.shift) for _ in range(args.aug_times)])
-                lossg = loss.compute_lossg(discriminator, gen_imgs)
-
-                lossg.backward()
-                optimizer_G.step()
-            else:
-                z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
-                gen_imgs = generator(z)
-                lossg = loss.compute_lossg(discriminator, gen_imgs)
-
-                lossg.backward()
-                optimizer_G.step()
+            lossg.backward()
+            optimizer_G.step()
         else:
             z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
             gen_imgs = generator(z)
-            if args.augmentation:
-                gen_imgs = torch.cat([gen_imgs] + [Augmentation.translation(gen_imgs, args.shift) for _ in range(args.aug_times)])
-        
-        if i % 5 != 0:
-            continue
+            lossg = loss.compute_lossg(discriminator, gen_imgs)
 
-        logging.info(f"batch: {batch}")
-        generator.eval()
-        discriminator.eval()
-        generator.requires_grad_(False)
-        discriminator.requires_grad_(False)
+            lossg.backward()
+            optimizer_G.step()
 
-        entry_0 = [batch]
-        header_0 = ['batch']
+        # ---------------------
+        #  Train Discriminator
+        # ---------------------
+        optimizer_D.zero_grad()
 
-        logging.info('g_wrt_z')
-        g_wrt_z = Metrics.compute_l2norm_derivative_g_wrt_z(generator, args.bound, args.dist)
-        entry_1 = [g_wrt_z.mean(), g_wrt_z.std(), g_wrt_z.min(), g_wrt_z.max()]
-        header_1 = ['g_wrt_z_mean', 'g_wrt_z_std', 'g_wrt_z_min', 'g_wrt_z_max']
-        logging.info(entry_1)
+        lossd = loss.compute_lossd(discriminator, gen_imgs.detach(), real_imgs)
 
-        # logging.info('lossg_wrt_theta_g')
-        # lossg_wrt_theta_g = Metrics.compute_lsnorm_derivative_lossg_wrt_theta_g(args.loss_name, generator, discriminator, args.bound, args.dist)
-        # entry_2 = [lossg_wrt_theta_g.mean(), lossg_wrt_theta_g.std(), lossg_wrt_theta_g.min(), lossg_wrt_theta_g.max()]
-        # header_2 = ['lossg_wrt_theta_g_mean', 'lossg_wrt_theta_g_std', 'lossg_wrt_theta_g_min', 'lossg_wrt_theta_g_max']
-        # logging.info(entry_2)
+        lossd.backward()
+        optimizer_D.step()
 
-        logging.info('lossg_wrt_z')
-        lossg_wrt_z = Metrics.compute_l2norm_derivative_lossg_wrt_z(args.loss_name, generator, discriminator, args.bound, args.dist)
-        entry_6 = [lossg_wrt_z.mean(), lossg_wrt_z.std(), lossg_wrt_z.min(), lossg_wrt_z.max()]
-        header_6 = ['lossg_wrt_z_mean', 'lossg_wrt_z_std', 'lossg_wrt_z_min', 'lossg_wrt_zmax']
-        logging.info(entry_6)
-
-        entry = entry_1 + entry_6
-        if header is None:
-            header = header_1 + header_6
-
-        results.append(entry)
-
-        logging.info(f'epoch: {epoch}')
-        generator.train()
-        discriminator.train()
-        generator.requires_grad_(True)
-        discriminator.requires_grad_(True)
-
-        batch += 1
+    if epoch % args.interval != 0:
+        continue
 
     generator.eval()
     discriminator.eval()
@@ -274,6 +230,31 @@ for epoch in range(start_epoch, start_epoch + args.n_epochs):
     logging.info(f'saved g at: {g_path}')
     logging.info(f'saved d at: {d_path}')
     sample_image(images_folder, args.bound, args.dist, generator, epoch)
+
+    # statistic
+
+    entry_0 = [epoch]
+    header_0 = ['epoch']
+
+    logging.info('lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std')
+    lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std = Metrics.compute_lossg_lossd_dx_dgz(args.loss_name, generator, discriminator, real_imgs_loader, args.bound, args.dist)
+    entry_7 = [lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std]
+    header_7 = ['lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std', 'dx_mean', 'dx_std', 'dgz_mean', 'dgz_std']
+    logging.info(entry_7)
+
+    logging.info('fid score')
+    fid_score = Metrics.compute_fid(generator, args.dist, args.bound)
+    entry_8 = [fid_score]
+    header_8 = ['fid_score']
+    logging.info(entry_8)
+    print(fid_score)
+
+    entry = entry_7 + entry_8
+    if header is None:
+        header = header_7 + header_8
+
+    results.append(entry)
+    logging.info('--------------------------------')
 
 csv_path = f'{exp_folder}/{args.exp_name}.csv'
 df = pd.DataFrame(results, columns=header)
