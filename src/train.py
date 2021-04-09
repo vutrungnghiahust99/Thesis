@@ -60,14 +60,8 @@ parser.add_argument("--img_size", type=int, default=28, help="size of each image
 parser.add_argument("--channels", type=int, default=1, help="number of image channels")
 args = parser.parse_args()
 
-
-s1 = f'{args.exp_name}_loss_{args.loss_name}_spec_g_{args.spec_g}_spec_d_{args.spec_d}_dist_{args.dist}'
-if args.augmentation:
-    s1 = s1 + f'_translation_shift_{args.translation_shift}_gaussian_noise_std_{args.gaussian_noise_std}_aug_times_{args.aug_times}'
-args.exp_id = s1
-
 # make exp_folder
-exp_folder = f'experiments/{args.exp_id}'
+exp_folder = f'experiments/{args.exp_name}'
 if not args.weights_g and not args.weights_d:
     os.makedirs(exp_folder, exist_ok=False)
     mode = 'w'
