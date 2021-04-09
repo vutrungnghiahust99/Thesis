@@ -14,7 +14,7 @@ from src.dataset import MNIST
 from src.losses import LSGAN as lsgan_loss
 from src.losses import GAN1 as gan1_loss
 from src.utils import sample_image
-# from src.utils import get_gen_real_imgs_with_headID
+from src.utils import get_gen_real_imgs_with_headID
 from src.metrics import Metrics
 from src.augmentation import Augmentation
 from src.noise import Noise
@@ -215,11 +215,11 @@ for epoch in range(start_epoch, args.n_epochs):
             # ---------------------
             #  Train Discriminator
             # ---------------------
-            
+
             optimizer_D.zero_grad()
-            # g, r = get_gen_real_imgs_with_headID(gen_imgs.detach(), real_imgs, heads, head_id)
-            # lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
-            lossd = loss.compute_lossd_rf(discriminator, gen_imgs.detach(), real_imgs, head_id)
+            g, r = get_gen_real_imgs_with_headID(gen_imgs.detach(), real_imgs, heads, head_id)
+            lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
+            # lossd = loss.compute_lossd_rf(discriminator, gen_imgs.detach(), real_imgs, head_id)
             lossd.backward()
             optimizer_D.step()
 
