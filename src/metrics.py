@@ -7,7 +7,6 @@ import torch
 from src.noise import Noise
 from src.losses import GAN1 as gan1_loss
 from src.losses import LSGAN as lsgan_loss
-from src.losses import WGANGP as wgangp_loss
 from src.fid_score.fid_score import compute_fid_score
 
 Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
@@ -312,8 +311,6 @@ def select_loss(loss_name):
         return lsgan_loss
     elif loss_name == 'gan1':
         return gan1_loss
-    elif loss_name == 'wgangp':
-        return wgangp_loss
     else:
         RuntimeError(f'{loss_name} is not supported!!')
 
