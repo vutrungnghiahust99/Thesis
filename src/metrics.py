@@ -258,6 +258,43 @@ class Metrics():
         return lossgs.mean(), lossgs.std(), lossds.mean(), lossds.std(), dxs.mean(), dxs.std(), dgzs.mean(), dgzs.std()
 
     @staticmethod
+    def compute_lossg_lossd_dx_dgz_rf(loss_name,
+                                      generator,
+                                      discriminator,
+                                      real_imgs_loader,
+                                      bound,
+                                      dist,
+                                      z_dim=100):
+        loss = select_loss(loss_name)
+        lossgs = []
+        lossds = []
+        dxs = []
+        dgzs = []
+        for img, _ in tqdm(real_imgs_loader):
+            real_img = img.type(Tensor)
+            z = Noise.sample_gauss_or_uniform_noise(dist, bound, 1, z_dim)
+            with torch.no_grad():
+                gen_img = generator(z)
+            lossg = loss.compute_lossg_rf_eval(discriminator, gen_img)
+            lossgs.append(lossg.item())
+
+            with torch.no_grad():
+                real_pred = discriminator(real_img, -1)
+                fake_pred = discriminator(gen_img, -1)
+            dxs.append(real_pred.item())
+            dgzs.append(fake_pred.item())
+
+            lossd = loss.compute_lossd_rf_eval(discriminator, gen_img, real_img)
+            lossds.append(lossd.item())
+
+        lossgs = np.array(lossgs)
+        lossds = np.array(lossds)
+        dxs = np.array(dxs)
+        dgzs = np.array(dgzs)
+
+        return lossgs.mean(), lossgs.std(), lossds.mean(), lossds.std(), dxs.mean(), dxs.std(), dgzs.mean(), dgzs.std()
+
+    @staticmethod
     def compute_fid(generator,
                     dist,
                     bound,

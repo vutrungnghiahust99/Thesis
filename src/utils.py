@@ -31,3 +31,23 @@ def sample_image(images_folder, bound, dist, generator, epoch, n_row=10, z_dim=1
     path = f"{images_folder}/{epoch}.png"
     save_image(gen_imgs, path, nrow=n_row, normalize=True)
     logging.info(f'saved image at: {path}')
+
+
+def get_frequent(s, a):
+    count = 0
+    for b in list(s):
+        count += (b == a)
+    return count
+
+
+def get_gen_real_imgs_with_headID(gen_imgs, real_imgs, heads, head_id):
+    gen = []
+    real = []
+    for i in range(len(heads)):
+        count = get_frequent(heads[i], str(head_id))
+        if count == 0:
+            continue
+        for _ in range(count):
+            gen.append(gen_imgs[i].unsqueeze(0))
+            real.append(real_imgs[i].unsqueeze(0))
+    return torch.cat(gen), torch.cat(real)
