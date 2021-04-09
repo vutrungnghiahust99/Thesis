@@ -15,7 +15,7 @@ from src.dataset import MNIST
 from src.losses import LSGAN as lsgan_loss
 from src.losses import GAN1 as gan1_loss
 from src.utils import sample_image
-# from src.utils import get_gen_real_imgs_with_headID
+from src.utils import get_gen_real_imgs_with_headID
 from src.metrics import Metrics
 from src.augmentation import Augmentation
 from src.noise import Noise
@@ -40,6 +40,8 @@ parser.add_argument("--bound", type=float, default=1)
 
 # No. heads in the discriminator
 parser.add_argument("--n_heads", type=int, choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], default=10)
+
+parser.add_argument("--diff_data_for_heads", type=int, choices=[0, 1], default=0)
 
 parser.add_argument("--n_epochs", type=int)
 parser.add_argument("--interval", type=int, default=1)
@@ -215,13 +217,15 @@ for epoch in range(start_epoch, args.n_epochs):
         # ---------------------
         #  Train Discriminator
         # ---------------------
-        heads = list(range(args.n_heads))
-        random.shuffle(heads)
-        for head_id in heads:
+        random_seq = list(range(args.n_heads))
+        random.shuffle(random_seq)
+        for head_id in random_seq:
             optimizer_D.zero_grad()
-            # g, r = get_gen_real_imgs_with_headID(gen_imgs.detach(), real_imgs, heads, head_id)
-            # lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
-            lossd = loss.compute_lossd_rf(discriminator, gen_imgs.detach(), real_imgs, head_id)
+            if args.diff_data_for_heads:
+                g, r = get_gen_real_imgs_with_headID(gen_imgs.detach(), real_imgs, heads, head_id)
+                lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
+            else:
+                lossd = loss.compute_lossd_rf(discriminator, gen_imgs.detach(), real_imgs, head_id)
             lossd.backward()
             optimizer_D.step()
 
