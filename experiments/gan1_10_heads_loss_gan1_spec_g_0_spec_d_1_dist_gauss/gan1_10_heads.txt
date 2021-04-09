@@ -1,0 +1,507 @@
+21-04-09 12:37:02, INFO: 
+***************** GAN1_10_HEADS **************
+21-04-09 12:37:02, INFO: aug_times: -1
+21-04-09 12:37:02, INFO: augmentation: 0
+21-04-09 12:37:02, INFO: b1: 0.5
+21-04-09 12:37:02, INFO: b2: 0.999
+21-04-09 12:37:02, INFO: batch_size: 64
+21-04-09 12:37:02, INFO: bound: 1
+21-04-09 12:37:02, INFO: channels: 1
+21-04-09 12:37:02, INFO: data_path: data/mnist
+21-04-09 12:37:02, INFO: dist: gauss
+21-04-09 12:37:02, INFO: exp_id: gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss
+21-04-09 12:37:02, INFO: exp_name: gan1_10_heads
+21-04-09 12:37:02, INFO: gaussian_noise_std: -1
+21-04-09 12:37:02, INFO: img_size: 28
+21-04-09 12:37:02, INFO: interval: 2
+21-04-09 12:37:02, INFO: loss_name: gan1
+21-04-09 12:37:02, INFO: lr: 0.0002
+21-04-09 12:37:02, INFO: n_cpu: 8
+21-04-09 12:37:02, INFO: n_epochs: 200
+21-04-09 12:37:02, INFO: n_heads: 10
+21-04-09 12:37:02, INFO: spec_d: 1
+21-04-09 12:37:02, INFO: spec_g: 0
+21-04-09 12:37:02, INFO: translation_shift: -1
+21-04-09 12:37:02, INFO: weights_d: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_58.pth
+21-04-09 12:37:02, INFO: weights_g: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_58.pth
+21-04-09 12:37:02, INFO: z_dim: 100
+21-04-09 12:37:02, INFO: --------------------------------
+21-04-09 12:37:02, INFO: exp_folder: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss
+21-04-09 12:37:02, INFO: images_folder: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images
+21-04-09 12:37:02, INFO: models_folder: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models
+21-04-09 12:37:02, INFO: Generator(
+  (model): Sequential(
+    (0): Linear(
+      (linear): Linear(in_features=100, out_features=128, bias=True)
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+    (4): Linear(
+      (linear): Linear(in_features=256, out_features=512, bias=True)
+    )
+    (5): LeakyReLU(negative_slope=0.2, inplace=True)
+    (6): Linear(
+      (linear): Linear(in_features=512, out_features=1024, bias=True)
+    )
+    (7): LeakyReLU(negative_slope=0.2, inplace=True)
+    (8): Linear(
+      (linear): Linear(in_features=1024, out_features=784, bias=True)
+    )
+    (9): Tanh()
+  )
+)
+21-04-09 12:37:02, INFO: Discriminator(
+  (share_layers): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=784, out_features=512, bias=True)
+      )
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=512, out_features=256, bias=True)
+      )
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+  )
+  (head_0): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+  (head_1): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+  (head_2): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+  (head_3): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+  (head_4): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+  (head_5): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+  (head_6): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+  (head_7): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+  (head_8): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+  (head_9): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+    (1): Sigmoid()
+  )
+)
+21-04-09 12:37:14, INFO: loaded g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_58.pth
+21-04-09 12:37:15, INFO: loaded d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_58.pth
+21-04-09 12:37:15, INFO: start at epoch: 59
+21-04-09 12:37:15, INFO: data at: data/mnist
+21-04-09 12:37:17, INFO: epoch: 59
+21-04-09 12:39:20, INFO: epoch: 60
+21-04-09 12:41:23, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_60.pth
+21-04-09 12:41:23, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_60.pth
+21-04-09 12:41:24, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/60.png
+21-04-09 12:41:24, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 12:43:00, INFO: [-0.6741790516853332, 0.0719795068446415, 0.6856637517809868, 0.0541377836460544, 0.4996229939222336, 0.040331778087629215, 0.48912062109708787, 0.036093147909525364]
+21-04-09 12:43:00, INFO: fid score
+21-04-09 12:43:50, INFO: [57.72182164338395]
+21-04-09 12:43:50, INFO: --------------------------------
+21-04-09 12:43:50, INFO: epoch: 61
+21-04-09 12:45:51, INFO: epoch: 62
+21-04-09 12:47:53, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_62.pth
+21-04-09 12:47:53, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_62.pth
+21-04-09 12:47:54, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/62.png
+21-04-09 12:47:54, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 12:49:30, INFO: [-0.6758366158485413, 0.08384973686972308, 0.7026450497984886, 0.05795946794419925, 0.4837029265284538, 0.038213888257662226, 0.4894678989470005, 0.04319115412756978]
+21-04-09 12:49:30, INFO: fid score
+21-04-09 12:50:19, INFO: [68.82479519833393]
+21-04-09 12:50:19, INFO: --------------------------------
+21-04-09 12:50:19, INFO: epoch: 63
+21-04-09 12:52:20, INFO: epoch: 64
+21-04-09 12:54:21, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_64.pth
+21-04-09 12:54:21, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_64.pth
+21-04-09 12:54:21, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/64.png
+21-04-09 12:54:21, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 12:55:58, INFO: [-0.6561277976691723, 0.07432018871236684, 0.6643778881072998, 0.05799335763800372, 0.5122952438235283, 0.043701597670591424, 0.4797151237308979, 0.03841184970374576]
+21-04-09 12:55:58, INFO: fid score
+21-04-09 12:56:47, INFO: [87.32193073243346]
+21-04-09 12:56:47, INFO: --------------------------------
+21-04-09 12:56:47, INFO: epoch: 65
+21-04-09 12:58:48, INFO: epoch: 66
+21-04-09 13:00:49, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_66.pth
+21-04-09 13:00:49, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_66.pth
+21-04-09 13:00:49, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/66.png
+21-04-09 13:00:49, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 13:02:26, INFO: [-0.6905695149540901, 0.07262928923063852, 0.6793839090228081, 0.051758160628561624, 0.5140101358413697, 0.03727718604411548, 0.49738861184120176, 0.03639597665645265]
+21-04-09 13:02:26, INFO: fid score
+21-04-09 13:03:15, INFO: [66.91233125872472]
+21-04-09 13:03:15, INFO: --------------------------------
+21-04-09 13:03:15, INFO: epoch: 67
+21-04-09 13:05:15, INFO: epoch: 68
+21-04-09 13:07:17, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_68.pth
+21-04-09 13:07:17, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_68.pth
+21-04-09 13:07:17, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/68.png
+21-04-09 13:07:17, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 13:08:54, INFO: [-0.6481763247609138, 0.07071581596412616, 0.6807209547042846, 0.054562818353631845, 0.4916750087082386, 0.03955765842398717, 0.47569462551474573, 0.03696788729087691]
+21-04-09 13:08:54, INFO: fid score
+21-04-09 13:09:42, INFO: [90.82373235252064]
+21-04-09 13:09:42, INFO: --------------------------------
+21-04-09 13:09:42, INFO: epoch: 69
+21-04-09 13:11:43, INFO: epoch: 70
+21-04-09 13:13:45, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_70.pth
+21-04-09 13:13:45, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_70.pth
+21-04-09 13:13:45, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/70.png
+21-04-09 13:13:45, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 13:15:21, INFO: [-0.6611936399579048, 0.056230207350687546, 0.681820389521122, 0.048134676737781046, 0.49684374559521677, 0.038258672237400385, 0.4829535965561867, 0.028824859299111587]
+21-04-09 13:15:21, INFO: fid score
+21-04-09 13:16:10, INFO: [94.51762407282024]
+21-04-09 13:16:10, INFO: --------------------------------
+21-04-09 13:16:10, INFO: epoch: 71
+21-04-09 13:18:10, INFO: epoch: 72
+21-04-09 13:20:11, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_72.pth
+21-04-09 13:20:11, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_72.pth
+21-04-09 13:20:11, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/72.png
+21-04-09 13:20:11, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 13:21:48, INFO: [-0.6764025469899178, 0.048944051381161376, 0.6777617865800858, 0.03974002167943054, 0.5080995022892952, 0.032663232408819916, 0.49094864383935927, 0.024868008763863882]
+21-04-09 13:21:48, INFO: fid score
+21-04-09 13:22:37, INFO: [89.34806508143706]
+21-04-09 13:22:37, INFO: --------------------------------
+21-04-09 13:22:37, INFO: epoch: 73
+21-04-09 13:24:38, INFO: epoch: 74
+21-04-09 13:26:39, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_74.pth
+21-04-09 13:26:39, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_74.pth
+21-04-09 13:26:39, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/74.png
+21-04-09 13:26:39, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 13:28:17, INFO: [-0.6478786086022854, 0.09761069562811285, 0.6540618852198123, 0.06767907799269954, 0.5189524864912033, 0.047526345786238974, 0.47436797674298287, 0.05072783233645082]
+21-04-09 13:28:17, INFO: fid score
+21-04-09 13:29:06, INFO: [108.1642119819742]
+21-04-09 13:29:06, INFO: --------------------------------
+21-04-09 13:29:06, INFO: epoch: 75
+21-04-09 13:31:07, INFO: epoch: 76
+21-04-09 13:33:09, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_76.pth
+21-04-09 13:33:09, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_76.pth
+21-04-09 13:33:09, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/76.png
+21-04-09 13:33:09, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 13:34:46, INFO: [-0.6713121875286102, 0.0988766437377848, 0.6969772612273694, 0.06785225615183779, 0.4875174928069115, 0.04582271312068413, 0.486494887471199, 0.04965368524590282]
+21-04-09 13:34:46, INFO: fid score
+21-04-09 13:35:35, INFO: [119.77425950044633]
+21-04-09 13:35:35, INFO: --------------------------------
+21-04-09 13:35:35, INFO: epoch: 77
+21-04-09 13:37:36, INFO: epoch: 78
+21-04-09 13:39:37, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_78.pth
+21-04-09 13:39:37, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_78.pth
+21-04-09 13:39:37, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/78.png
+21-04-09 13:39:37, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 13:41:15, INFO: [-0.6447012707173825, 0.1364885839900335, 0.6353077237665653, 0.08737648322088556, 0.5380211869299412, 0.05783770912644704, 0.4703232123732567, 0.07118560094080723]
+21-04-09 13:41:15, INFO: fid score
+21-04-09 13:42:04, INFO: [106.03382143768067]
+21-04-09 13:42:04, INFO: --------------------------------
+21-04-09 13:42:04, INFO: epoch: 79
+21-04-09 13:44:07, INFO: epoch: 80
+21-04-09 13:46:10, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_80.pth
+21-04-09 13:46:10, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_80.pth
+21-04-09 13:46:10, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/80.png
+21-04-09 13:46:10, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 13:47:47, INFO: [-0.6840407142579555, 0.07579430459564435, 0.6875502340197563, 0.055758560422496016, 0.5026807899057865, 0.0405753827577831, 0.493983870190382, 0.03800217793713676]
+21-04-09 13:47:47, INFO: fid score
+21-04-09 13:48:37, INFO: [95.28181046781967]
+21-04-09 13:48:37, INFO: --------------------------------
+21-04-09 13:48:37, INFO: epoch: 81
+21-04-09 13:50:40, INFO: epoch: 82
+21-04-09 13:52:43, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_82.pth
+21-04-09 13:52:43, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_82.pth
+21-04-09 13:52:43, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/82.png
+21-04-09 13:52:43, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 13:54:21, INFO: [-0.6798062291681767, 0.12880025421895538, 0.7126521871328354, 0.08292474169128129, 0.477033168143034, 0.04880309447056871, 0.48919061806201936, 0.06298717220800526]
+21-04-09 13:54:21, INFO: fid score
+21-04-09 13:55:10, INFO: [95.8137765196239]
+21-04-09 13:55:10, INFO: --------------------------------
+21-04-09 13:55:10, INFO: epoch: 83
+21-04-09 13:57:14, INFO: epoch: 84
+21-04-09 13:59:17, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_84.pth
+21-04-09 13:59:17, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_84.pth
+21-04-09 13:59:17, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/84.png
+21-04-09 13:59:17, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:00:54, INFO: [-0.6909098771035671, 0.10075908844067492, 0.6851487926900387, 0.06383803379222013, 0.5084607990205288, 0.03957275487436877, 0.49630852734446523, 0.05143607185903535]
+21-04-09 14:00:54, INFO: fid score
+21-04-09 14:01:44, INFO: [101.03170981490351]
+21-04-09 14:01:44, INFO: --------------------------------
+21-04-09 14:01:44, INFO: epoch: 85
+21-04-09 14:03:48, INFO: epoch: 86
+21-04-09 14:05:52, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_86.pth
+21-04-09 14:05:52, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_86.pth
+21-04-09 14:05:52, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/86.png
+21-04-09 14:05:52, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:07:30, INFO: [-0.6501593730330467, 0.07512265325006813, 0.6747128248095512, 0.053543418391736874, 0.4985045128285885, 0.039444314200140725, 0.4765710244596004, 0.038979772428214585]
+21-04-09 14:07:30, INFO: fid score
+21-04-09 14:08:20, INFO: [102.05391739438286]
+21-04-09 14:08:20, INFO: --------------------------------
+21-04-09 14:08:20, INFO: epoch: 87
+21-04-09 14:10:24, INFO: epoch: 88
+21-04-09 14:12:26, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_88.pth
+21-04-09 14:12:26, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_88.pth
+21-04-09 14:12:26, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/88.png
+21-04-09 14:12:26, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:14:04, INFO: [-0.6453818571925163, 0.06956630489484492, 0.6777939393162727, 0.05343912157781816, 0.49312985730171205, 0.03956859302733116, 0.4742750629425049, 0.03623352721778045]
+21-04-09 14:14:04, INFO: fid score
+21-04-09 14:14:53, INFO: [87.43643410135437]
+21-04-09 14:14:53, INFO: --------------------------------
+21-04-09 14:14:53, INFO: epoch: 89
+21-04-09 14:16:55, INFO: epoch: 90
+21-04-09 14:18:56, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_90.pth
+21-04-09 14:18:56, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_90.pth
+21-04-09 14:18:56, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/90.png
+21-04-09 14:18:56, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:20:33, INFO: [-0.6482324395060539, 0.03195977867912202, 0.6693866183042526, 0.03731572982814419, 0.502423561501503, 0.033593203174869524, 0.476762498319149, 0.01680784498635432]
+21-04-09 14:20:33, INFO: fid score
+21-04-09 14:21:22, INFO: [100.50265473741834]
+21-04-09 14:21:22, INFO: --------------------------------
+21-04-09 14:21:22, INFO: epoch: 91
+21-04-09 14:23:24, INFO: epoch: 92
+21-04-09 14:25:26, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_92.pth
+21-04-09 14:25:26, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_92.pth
+21-04-09 14:25:26, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/92.png
+21-04-09 14:25:26, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:27:03, INFO: [-0.6793879645705223, 0.06830488346561339, 0.6867013361215591, 0.05087453150760942, 0.5009361801743507, 0.03708234206576789, 0.49190767045021055, 0.03391113467695723]
+21-04-09 14:27:03, INFO: fid score
+21-04-09 14:27:53, INFO: [89.27787178127514]
+21-04-09 14:27:53, INFO: --------------------------------
+21-04-09 14:27:53, INFO: epoch: 93
+21-04-09 14:29:55, INFO: epoch: 94
+21-04-09 14:31:57, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_94.pth
+21-04-09 14:31:57, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_94.pth
+21-04-09 14:31:57, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/94.png
+21-04-09 14:31:57, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:33:35, INFO: [-0.6671521857976913, 0.06467494784381521, 0.6779804957985878, 0.048452375415234526, 0.5034775114774704, 0.03628664020379825, 0.48577097163796423, 0.03266346700919712]
+21-04-09 14:33:35, INFO: fid score
+21-04-09 14:34:24, INFO: [97.65086778395045]
+21-04-09 14:34:24, INFO: --------------------------------
+21-04-09 14:34:24, INFO: epoch: 95
+21-04-09 14:36:27, INFO: epoch: 96
+21-04-09 14:38:31, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_96.pth
+21-04-09 14:38:31, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_96.pth
+21-04-09 14:38:31, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/96.png
+21-04-09 14:38:31, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:40:09, INFO: [-0.648066349041462, 0.06579780873444184, 0.6910921950697899, 0.056765592252406016, 0.4819744069695473, 0.0449706431088112, 0.47582202115058897, 0.033950273554845006]
+21-04-09 14:40:09, INFO: fid score
+21-04-09 14:40:58, INFO: [89.97156256900365]
+21-04-09 14:40:58, INFO: --------------------------------
+21-04-09 14:40:58, INFO: epoch: 97
+21-04-09 14:43:03, INFO: epoch: 98
+21-04-09 14:45:09, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_98.pth
+21-04-09 14:45:09, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_98.pth
+21-04-09 14:45:09, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/98.png
+21-04-09 14:45:09, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:46:46, INFO: [-0.6800379721403121, 0.05998739377274247, 0.6848658380806446, 0.05212324761770948, 0.5036248493850232, 0.04474018602300225, 0.49249099761247633, 0.030399444786077683]
+21-04-09 14:46:46, INFO: fid score
+21-04-09 14:47:36, INFO: [99.06837116413823]
+21-04-09 14:47:36, INFO: --------------------------------
+21-04-09 14:47:36, INFO: epoch: 99
+21-04-09 14:49:39, INFO: epoch: 100
+21-04-09 14:51:41, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_100.pth
+21-04-09 14:51:41, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_100.pth
+21-04-09 14:51:41, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/100.png
+21-04-09 14:51:41, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:53:20, INFO: [-0.6910310213565827, 0.07585193349375254, 0.6977630271792412, 0.06000864292808741, 0.4964800906062126, 0.045742631665191935, 0.49753776199817656, 0.036572233607110705]
+21-04-09 14:53:20, INFO: fid score
+21-04-09 14:54:09, INFO: [121.83448141520154]
+21-04-09 14:54:09, INFO: --------------------------------
+21-04-09 14:54:09, INFO: epoch: 101
+21-04-09 14:56:13, INFO: epoch: 102
+21-04-09 14:58:16, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_102.pth
+21-04-09 14:58:16, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_102.pth
+21-04-09 14:58:16, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/102.png
+21-04-09 14:58:16, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 14:59:54, INFO: [-0.6578077501654624, 0.059264120342018195, 0.6802754239141942, 0.05751616310964748, 0.49765802775621415, 0.049699057872319215, 0.4811032265484333, 0.03080749638557072]
+21-04-09 14:59:54, INFO: fid score
+21-04-09 15:00:43, INFO: [114.0431998560631]
+21-04-09 15:00:43, INFO: --------------------------------
+21-04-09 15:00:43, INFO: epoch: 103
+21-04-09 15:02:47, INFO: epoch: 104
+21-04-09 15:04:50, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_104.pth
+21-04-09 15:04:50, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_104.pth
+21-04-09 15:04:50, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/104.png
+21-04-09 15:04:50, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 15:06:28, INFO: [-0.6318311550199985, 0.07299155860356948, 0.632415097361803, 0.05655508978379636, 0.5330379129588604, 0.04627325958007423, 0.4669510222375393, 0.03949501259161092]
+21-04-09 15:06:28, INFO: fid score
+21-04-09 15:07:17, INFO: [107.47971614436]
+21-04-09 15:07:17, INFO: --------------------------------
+21-04-09 15:07:17, INFO: epoch: 105
+21-04-09 15:09:20, INFO: epoch: 106
+21-04-09 15:11:24, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_106.pth
+21-04-09 15:11:24, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_106.pth
+21-04-09 15:11:24, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/106.png
+21-04-09 15:11:24, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 15:13:02, INFO: [-0.6619563519716263, 0.05802539907319731, 0.7034368439793587, 0.05135152480783298, 0.4764824656128883, 0.0411974258025696, 0.48328570209741595, 0.03019001513941874]
+21-04-09 15:13:02, INFO: fid score
+21-04-09 15:13:51, INFO: [120.44540190210122]
+21-04-09 15:13:51, INFO: --------------------------------
+21-04-09 15:13:51, INFO: epoch: 107
+21-04-09 15:15:55, INFO: epoch: 108
+21-04-09 15:17:59, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_108.pth
+21-04-09 15:17:59, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_108.pth
+21-04-09 15:17:59, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/108.png
+21-04-09 15:17:59, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 15:19:36, INFO: [-0.6262227311730385, 0.05484367087228462, 0.6786183892130851, 0.05912916723366233, 0.4841465665221214, 0.05315956861226014, 0.4645792774379253, 0.02979197865766643]
+21-04-09 15:19:36, INFO: fid score
+21-04-09 15:20:26, INFO: [126.32756657171038]
+21-04-09 15:20:26, INFO: --------------------------------
+21-04-09 15:20:26, INFO: epoch: 109
+21-04-09 15:22:29, INFO: epoch: 110
+21-04-09 15:24:33, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_110.pth
+21-04-09 15:24:33, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_110.pth
+21-04-09 15:24:33, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/110.png
+21-04-09 15:24:33, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 15:26:11, INFO: [-0.6836470331013202, 0.1979471344347475, 0.6909807203769683, 0.112978292150786, 0.5002202581763268, 0.05363881036304704, 0.485809664195776, 0.09356688017773451]
+21-04-09 15:26:11, INFO: fid score
+21-04-09 15:27:01, INFO: [116.52037817532937]
+21-04-09 15:27:01, INFO: --------------------------------
+21-04-09 15:27:01, INFO: epoch: 111
+21-04-09 15:29:04, INFO: epoch: 112
+21-04-09 15:31:08, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_112.pth
+21-04-09 15:31:08, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_112.pth
+21-04-09 15:31:08, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/112.png
+21-04-09 15:31:08, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 15:32:46, INFO: [-0.6252185608565808, 0.11167499665152814, 0.655087309974432, 0.07554843144755408, 0.5066780490040779, 0.050004594314339054, 0.4615445618569851, 0.059151924616071806]
+21-04-09 15:32:46, INFO: fid score
+21-04-09 15:33:35, INFO: [131.787915887185]
+21-04-09 15:33:35, INFO: --------------------------------
+21-04-09 15:33:35, INFO: epoch: 113
+21-04-09 15:35:38, INFO: epoch: 114
+21-04-09 15:37:41, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_114.pth
+21-04-09 15:37:41, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_114.pth
+21-04-09 15:37:41, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/114.png
+21-04-09 15:37:41, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 15:39:19, INFO: [-0.65002847853899, 0.053060383098398715, 0.6807206270813942, 0.0568704505813978, 0.4933974558711052, 0.04901746459707131, 0.47723609492182734, 0.027610915759355554]
+21-04-09 15:39:19, INFO: fid score
+21-04-09 15:40:08, INFO: [105.5460784098129]
+21-04-09 15:40:08, INFO: --------------------------------
+21-04-09 15:40:08, INFO: epoch: 115
+21-04-09 15:42:11, INFO: epoch: 116
+21-04-09 15:44:14, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_116.pth
+21-04-09 15:44:14, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_116.pth
+21-04-09 15:44:14, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/116.png
+21-04-09 15:44:14, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 15:45:52, INFO: [-0.6819413755595684, 0.0508481572455424, 0.6804998917102814, 0.05080477549721014, 0.5090657855689525, 0.0446938153552259, 0.4937123853087425, 0.025698332517151895]
+21-04-09 15:45:52, INFO: fid score
+21-04-09 15:46:41, INFO: [123.01889783675838]
+21-04-09 15:46:41, INFO: --------------------------------
+21-04-09 15:46:41, INFO: epoch: 117
+21-04-09 15:48:44, INFO: epoch: 118
+21-04-09 15:50:49, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_118.pth
+21-04-09 15:50:49, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_118.pth
+21-04-09 15:50:49, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/118.png
+21-04-09 15:50:49, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 15:52:28, INFO: [-0.6712532942533493, 0.08389724531354523, 0.6829384610652923, 0.06191366662757595, 0.5013116426348686, 0.04535620003691295, 0.4871566732108593, 0.04211211256391723]
+21-04-09 15:52:28, INFO: fid score
+21-04-09 15:53:17, INFO: [109.28693301692417]
+21-04-09 15:53:17, INFO: --------------------------------
+21-04-09 15:53:17, INFO: epoch: 119
+21-04-09 15:55:20, INFO: epoch: 120
+21-04-09 15:57:24, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_120.pth
+21-04-09 15:57:24, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_120.pth
+21-04-09 15:57:24, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/120.png
+21-04-09 15:57:24, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 15:59:01, INFO: [-0.6441232909917831, 0.04641636658394075, 0.6900768905162812, 0.06425411261872493, 0.48240004563331607, 0.05728555277263449, 0.47430734112858774, 0.024645076258934525]
+21-04-09 15:59:01, INFO: fid score
+21-04-09 15:59:50, INFO: [197.51034573334272]
+21-04-09 15:59:50, INFO: --------------------------------
+21-04-09 15:59:50, INFO: epoch: 121
+21-04-09 16:01:54, INFO: epoch: 122
+21-04-09 16:03:57, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_122.pth
+21-04-09 16:03:57, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_122.pth
+21-04-09 16:03:57, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/122.png
+21-04-09 16:03:57, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 16:05:35, INFO: [-0.647355647534132, 0.11946593124173208, 0.6443498250663281, 0.08054768501104421, 0.5297053599059581, 0.056021874031759955, 0.4727044023871422, 0.06600012341931043]
+21-04-09 16:05:35, INFO: fid score
+21-04-09 16:06:24, INFO: [152.4211899387902]
+21-04-09 16:06:24, INFO: --------------------------------
+21-04-09 16:06:24, INFO: epoch: 123
+21-04-09 16:08:29, INFO: epoch: 124
+21-04-09 16:10:34, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_124.pth
+21-04-09 16:10:34, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_124.pth
+21-04-09 16:10:34, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/124.png
+21-04-09 16:10:34, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 16:12:13, INFO: [-0.6259698377370835, 0.06529976302774573, 0.6735280151128769, 0.05889355956235793, 0.4885306726872921, 0.047794611717705326, 0.4641152030646801, 0.03501385696533155]
+21-04-09 16:12:13, INFO: fid score
+21-04-09 16:13:03, INFO: [123.03525906367247]
+21-04-09 16:13:03, INFO: --------------------------------
+21-04-09 16:13:03, INFO: epoch: 125
+21-04-09 16:15:08, INFO: epoch: 126
+21-04-09 16:17:14, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_126.pth
+21-04-09 16:17:14, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_126.pth
+21-04-09 16:17:14, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/126.png
+21-04-09 16:17:14, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 16:18:53, INFO: [-0.6026763446629048, 0.06833317555659182, 0.6436590080559254, 0.05560178777031806, 0.5061880647063255, 0.0440271472175699, 0.4513446138560772, 0.03887075314909868]
+21-04-09 16:18:53, INFO: fid score
+21-04-09 16:19:43, INFO: [126.04318092551301]
+21-04-09 16:19:43, INFO: --------------------------------
+21-04-09 16:19:43, INFO: epoch: 127
+21-04-09 16:21:48, INFO: epoch: 128
+21-04-09 16:23:55, INFO: saved g at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/generator_128.pth
+21-04-09 16:23:55, INFO: saved d at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/models/discriminator_128.pth
+21-04-09 16:23:55, INFO: saved image at: experiments/gan1_10_heads_loss_gan1_spec_g_0_spec_d_1_dist_gauss/images/128.png
+21-04-09 16:23:55, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-09 16:25:35, INFO: [-0.6568301356136799, 0.08402172695494728, 0.6594779567837715, 0.06015215034881994, 0.5176378670454025, 0.043923762130569484, 0.47966837626695635, 0.04391569962012533]
+21-04-09 16:25:35, INFO: fid score
+21-04-09 16:26:24, INFO: [123.59223527229798]
+21-04-09 16:26:24, INFO: --------------------------------
+21-04-09 16:26:24, INFO: epoch: 129
+21-04-09 16:28:30, INFO: epoch: 130
