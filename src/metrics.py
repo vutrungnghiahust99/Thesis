@@ -264,7 +264,8 @@ class Metrics():
                                       real_imgs_loader,
                                       bound,
                                       dist,
-                                      z_dim=100):
+                                      z_dim=100,
+                                      head_id=-1):
         loss = select_loss(loss_name)
         lossgs = []
         lossds = []
@@ -275,16 +276,16 @@ class Metrics():
             z = Noise.sample_gauss_or_uniform_noise(dist, bound, 1, z_dim)
             with torch.no_grad():
                 gen_img = generator(z)
-            lossg = loss.compute_lossg_rf_eval(discriminator, gen_img)
+            lossg = loss.compute_lossg_rf(discriminator, gen_img, head_id)
             lossgs.append(lossg.item())
 
             with torch.no_grad():
-                real_pred = discriminator(real_img, -1)
-                fake_pred = discriminator(gen_img, -1)
+                real_pred = discriminator(real_img, head_id)
+                fake_pred = discriminator(gen_img, head_id)
             dxs.append(real_pred.item())
             dgzs.append(fake_pred.item())
 
-            lossd = loss.compute_lossd_rf_eval(discriminator, gen_img, real_img)
+            lossd = loss.compute_lossd_rf(discriminator, gen_img, real_img, head_id)
             lossds.append(lossd.item())
 
         lossgs = np.array(lossgs)
