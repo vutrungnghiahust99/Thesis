@@ -13,7 +13,8 @@ from src.models.random_forest_d_architecture import Discriminator
 from src.dataset import MNIST
 from src.losses import LSGAN as lsgan_loss
 from src.losses import GAN1 as gan1_loss
-from src.utils import sample_image, get_gen_real_imgs_with_headID
+from src.utils import sample_image
+# from src.utils import get_gen_real_imgs_with_headID
 from src.metrics import Metrics
 from src.augmentation import Augmentation
 from src.noise import Noise
@@ -35,6 +36,9 @@ parser.add_argument("--spec_d", type=int, choices=[0, 1], default=0)
 # input noise z
 parser.add_argument("--dist", type=str, choices=['gauss', 'uniform'], default='gauss')
 parser.add_argument("--bound", type=float, default=1)
+
+# No. heads in the discriminator
+parser.add_argument("--n_heads", type=int, choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], default=10)
 
 parser.add_argument("--n_epochs", type=int)
 parser.add_argument("--interval", type=int, choices=[1, 5, 10], default=1)
@@ -94,9 +98,9 @@ logging.info(f'models_folder: {models_folder}')
 # Initialize generator and discriminator
 generator = Generator(use_spectral_norm=args.spec_g)
 if args.loss_name == 'gan1':
-    discriminator = Discriminator(use_sigmoid=True, use_spec_norm=args.spec_d)
+    discriminator = Discriminator(use_sigmoid=True, use_spec_norm=args.spec_d, n_heads=args.n_heads)
 else:
-    discriminator = Discriminator(use_sigmoid=False, use_spec_norm=args.spec_d)
+    discriminator = Discriminator(use_sigmoid=False, use_spec_norm=args.spec_d, n_heads=args.n_heads)
 
 logging.info(generator)
 logging.info(discriminator)
@@ -186,7 +190,7 @@ for epoch in range(start_epoch, args.n_epochs):
             real_imgs = torch.cat([real_imgs] + [Augmentation.add_guassian_noise(real_imgs, args.std) for _ in range(args.aug_times)])
             heads = heads * (1 + args.aug_times)
 
-        for head_id in range(1):
+        for head_id in range(args.n_heads):
             # -----------------
             #  Train Generator
             # -----------------
@@ -196,7 +200,7 @@ for epoch in range(start_epoch, args.n_epochs):
                 z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
                 gen_imgs = generator(z)
                 gen_imgs = torch.cat([gen_imgs] + [Augmentation.add_guassian_noise(gen_imgs, args.std) for _ in range(args.aug_times)])
-                lossg = loss.compute_lossg(discriminator, gen_imgs)
+                lossg = loss.compute_lossg_rf(discriminator, gen_imgs, head_id)
 
                 lossg.backward()
                 optimizer_G.step()
@@ -213,8 +217,9 @@ for epoch in range(start_epoch, args.n_epochs):
             # ---------------------
             
             optimizer_D.zero_grad()
-            g, r = get_gen_real_imgs_with_headID(gen_imgs.detach(), real_imgs, heads, head_id)
-            lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
+            # g, r = get_gen_real_imgs_with_headID(gen_imgs.detach(), real_imgs, heads, head_id)
+            # lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
+            lossd = loss.compute_lossd_rf(discriminator, gen_imgs.detach(), real_imgs, head_id)
             lossd.backward()
             optimizer_D.step()
 
@@ -241,7 +246,15 @@ for epoch in range(start_epoch, args.n_epochs):
     header_0 = ['epoch']
 
     logging.info('lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std')
-    lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std = Metrics.compute_lossg_lossd_dx_dgz_rf(args.loss_name, generator, discriminator, real_imgs_loader, args.bound, args.dist)
+    lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std = \
+        Metrics.compute_lossg_lossd_dx_dgz_rf(
+            args.loss_name,
+            generator,
+            discriminator,
+            real_imgs_loader,
+            args.bound,
+            args.dist,
+            head_id=-1)  # compute the average of all heads
     entry_7 = [lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std]
     header_7 = ['lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std', 'dx_mean', 'dx_std', 'dgz_mean', 'dgz_std']
     logging.info(entry_7)
