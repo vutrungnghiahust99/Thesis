@@ -2,6 +2,7 @@ import argparse
 import logging
 import os
 import pandas as pd
+import random
 from tqdm import tqdm
 
 import torchvision.transforms as transforms
@@ -14,7 +15,7 @@ from src.dataset import MNIST
 from src.losses import LSGAN as lsgan_loss
 from src.losses import GAN1 as gan1_loss
 from src.utils import sample_image
-from src.utils import get_gen_real_imgs_with_headID
+# from src.utils import get_gen_real_imgs_with_headID
 from src.metrics import Metrics
 from src.augmentation import Augmentation
 from src.noise import Noise
@@ -190,36 +191,37 @@ for epoch in range(start_epoch, args.n_epochs):
             real_imgs = torch.cat([real_imgs] + [Augmentation.add_guassian_noise(real_imgs, args.std) for _ in range(args.aug_times)])
             heads = heads * (1 + args.aug_times)
 
-        for head_id in range(args.n_heads):
-            # -----------------
-            #  Train Generator
-            # -----------------
+        # -----------------
+        #  Train Generator
+        # -----------------
 
-            optimizer_G.zero_grad()
-            if args.augmentation:
-                z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
-                gen_imgs = generator(z)
-                gen_imgs = torch.cat([gen_imgs] + [Augmentation.add_guassian_noise(gen_imgs, args.std) for _ in range(args.aug_times)])
-                lossg = loss.compute_lossg_rf(discriminator, gen_imgs, head_id)
+        optimizer_G.zero_grad()
+        if args.augmentation:
+            z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
+            gen_imgs = generator(z)
+            gen_imgs = torch.cat([gen_imgs] + [Augmentation.add_guassian_noise(gen_imgs, args.std) for _ in range(args.aug_times)])
+            lossg = loss.compute_lossg_rf(discriminator, gen_imgs, -1)
 
-                lossg.backward()
-                optimizer_G.step()
-            else:
-                z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
-                gen_imgs = generator(z)
-                lossg = loss.compute_lossg_rf(discriminator, gen_imgs, head_id)
+            lossg.backward()
+            optimizer_G.step()
+        else:
+            z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
+            gen_imgs = generator(z)
+            lossg = loss.compute_lossg_rf(discriminator, gen_imgs, -1)
 
-                lossg.backward()
-                optimizer_G.step()
+            lossg.backward()
+            optimizer_G.step()
 
-            # ---------------------
-            #  Train Discriminator
-            # ---------------------
-
+        # ---------------------
+        #  Train Discriminator
+        # ---------------------
+        heads = list(range(args.n_heads))
+        random.shuffle(heads)
+        for head_id in heads:
             optimizer_D.zero_grad()
-            g, r = get_gen_real_imgs_with_headID(gen_imgs.detach(), real_imgs, heads, head_id)
-            lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
-            # lossd = loss.compute_lossd_rf(discriminator, gen_imgs.detach(), real_imgs, head_id)
+            # g, r = get_gen_real_imgs_with_headID(gen_imgs.detach(), real_imgs, heads, head_id)
+            # lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
+            lossd = loss.compute_lossd_rf(discriminator, gen_imgs.detach(), real_imgs, head_id)
             lossd.backward()
             optimizer_D.step()
 
