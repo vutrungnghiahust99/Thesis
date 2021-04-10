@@ -10,11 +10,11 @@ header = [
 
 INPUT = [
     # 'gan1_10_heads',
-    # 'gan1_10_heads_1G_10heads',
+    'gan1_10_heads_1G_10heads',
     # 'gan1_10_heads_1G_10heads_diff_data_for_heads',
     # 'gan1_10_heads_diff_data_for_heads',
-    'lsgan_10_heads_1G_10heads',
-    'lsgan_10_heads_1G_10heads_diff_data_for_heads'
+    # 'lsgan_10_heads_1G_10heads',
+    # 'lsgan_10_heads_1G_10heads_diff_data_for_heads'
 ]
 
 
