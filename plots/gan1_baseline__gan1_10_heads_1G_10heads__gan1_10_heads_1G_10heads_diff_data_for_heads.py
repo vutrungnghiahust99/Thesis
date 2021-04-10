@@ -16,7 +16,7 @@ epochs = [x * 2 for x in range(n)]
 
 fig, axs = plt.subplots(2, 3, sharex=False, sharey=False, figsize=(12, 8))
 
-n = 40
+n = 50
 df1_ = df1.iloc[n:, :]
 df2_ = df2.iloc[n:, :]
 df3_ = df3.iloc[n:, :]
