@@ -25,8 +25,23 @@ def create_d_head(use_sigmoid: bool, use_spec_norm: bool):
         return nn.Sequential(Linear(use_spec_norm, 256, 1))
 
 
+def create_d_big_head(use_sigmoid: bool, use_spec_norm: bool):
+    """
+    Create a big head which has the capacity as 10 small heads
+    """
+    if use_sigmoid:
+        return nn.Sequential(
+            Linear(use_spec_norm, 256, 10),
+            Linear(use_spec_norm, 10, 1),
+            nn.Sigmoid())
+    else:
+        return nn.Sequential(
+            Linear(use_spec_norm, 256, 10),
+            Linear(use_spec_norm, 10, 1))
+
+
 class Discriminator(nn.Module):
-    def __init__(self, use_sigmoid, use_spec_norm, img_shape=(1, 28, 28), n_heads=10):
+    def __init__(self, use_sigmoid, use_spec_norm, img_shape=(1, 28, 28), n_heads=10, use_big_head_d=False):
         super(Discriminator, self).__init__()
 
         self.share_layers = nn.Sequential(
@@ -36,8 +51,12 @@ class Discriminator(nn.Module):
             nn.LeakyReLU(0.2, inplace=True)
         )
         self.n = n_heads
-        for head in range(self.n):
-            setattr(self, "head_%i" % head, create_d_head(use_sigmoid, use_spec_norm))
+        if not use_big_head_d:
+            for head in range(self.n):
+                setattr(self, "head_%i" % head, create_d_head(use_sigmoid, use_spec_norm))
+        else:
+            assert n_heads == 1
+            setattr(self, "head_%i" % 0, create_d_big_head(use_sigmoid, use_spec_norm))
 
     def forward(self, img, head_id):
         img_flat = img.view(img.size(0), -1)

@@ -47,6 +47,7 @@ parser.add_argument("--n_epochs", type=int)
 parser.add_argument("--interval", type=int, default=1)
 parser.add_argument("--weights_g", type=str, default='')
 parser.add_argument("--weights_d", type=str, default='')
+parser.add_argument("--use_big_head_d", type=int, choices=[0, 1], default=0)
 
 # unchanged configs
 parser.add_argument('--data_path', type=str, default='data/mnist')
@@ -95,9 +96,9 @@ logging.info(f'models_folder: {models_folder}')
 # Initialize generator and discriminator
 generator = Generator(use_spectral_norm=args.spec_g)
 if args.loss_name == 'gan1':
-    discriminator = Discriminator(use_sigmoid=True, use_spec_norm=args.spec_d, n_heads=args.n_heads)
+    discriminator = Discriminator(use_sigmoid=True, use_spec_norm=args.spec_d, n_heads=args.n_heads, use_big_head_d=args.use_big_head_d)
 else:
-    discriminator = Discriminator(use_sigmoid=False, use_spec_norm=args.spec_d, n_heads=args.n_heads)
+    discriminator = Discriminator(use_sigmoid=False, use_spec_norm=args.spec_d, n_heads=args.n_heads, use_big_head_d=args.use_big_head_d)
 
 logging.info(generator)
 logging.info(discriminator)
