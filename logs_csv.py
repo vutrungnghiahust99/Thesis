@@ -42,6 +42,7 @@ for inp in INPUT:
     df = pd.DataFrame(results, columns=header)
     # if os.path.isfile(OUTPUT):
     #     raise RuntimeError(f'{OUTPUT} exists')
+    print(df.shape)
     df.to_csv(OUTPUT, index=None)
     print(OUTPUT)
     print('Completed')
