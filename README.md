@@ -1,27 +1,9 @@
-Experiments using eriklindernoren architecture
----
-commit: "to HDD"
+Data
+===
+Download data at: https://husteduvn-my.sharepoint.com/:f:/g/personal/nghia_vt173284_sis_hust_edu_vn/EnLISFks36FDpy9g5PThWAQBDnbvnFydOP95FeQj8E_O9w?e=6jdZxb
 
-plot
-```bash
-./plots/eriklindernoren_architecture/plot.sh
-```
----
-Experiment using SAGAN architecture with conv_dim=64
----
-```bash
-./runs/sagan_architecture/run_spectral_norm_lsgan.sh
-./runs/sagan_architecture/run_spectral_norm_gan1.sh
-```
-Experiment using SAGAN architecture with conv_dim=16
----
-```bash
-./runs/sagan_architecture/run_spectral_norm_lsgan_d_conv_dim=16.sh
-./runs/sagan_architecture/run_spectral_norm_gan1_d_conv_dim=16.sh
-```
-Experiment using SAGAN architecture with conv_dim=16 and using attention
----
-```bash
-./runs/sagan_architecture/run_spectral_norm_lsgan_d_conv_dim=16_attention.sh
-./runs/sagan_architecture/run_spectral_norm_gan1_d_conv_dim=16_attention.sh
-```
+- Save data at: ./data/mnist/...
+
+Enviroments
+===
+- Pytorch
