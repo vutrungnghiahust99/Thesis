@@ -1,0 +1,828 @@
+***************** LSGAN_10_HEADS_1G_10HEADS_DIFF_DATA_FOR_HEADS **************
+aug_times: -1
+augmentation: 0
+b1: 0.5
+b2: 0.999
+batch_size: 64
+bound: 1
+channels: 1
+data_path: data/mnist
+diff_data_for_heads: 1
+dist: gauss
+exp_name: lsgan_10_heads_1G_10heads_diff_data_for_heads
+gaussian_noise_std: -1
+img_size: 28
+interval: 2
+loss_name: lsgan
+lr: 0.0002
+n_cpu: 8
+n_epochs: 200
+n_heads: 10
+spec_d: 1
+spec_g: 0
+translation_shift: -1
+weights_d: 
+weights_g: 
+z_dim: 100
+--------------------------------
+exp_folder: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads
+images_folder: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images
+models_folder: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models
+Generator(
+  (model): Sequential(
+    (0): Linear(
+      (linear): Linear(in_features=100, out_features=128, bias=True)
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+    (4): Linear(
+      (linear): Linear(in_features=256, out_features=512, bias=True)
+    )
+    (5): LeakyReLU(negative_slope=0.2, inplace=True)
+    (6): Linear(
+      (linear): Linear(in_features=512, out_features=1024, bias=True)
+    )
+    (7): LeakyReLU(negative_slope=0.2, inplace=True)
+    (8): Linear(
+      (linear): Linear(in_features=1024, out_features=784, bias=True)
+    )
+    (9): Tanh()
+  )
+)
+Discriminator(
+  (share_layers): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=784, out_features=512, bias=True)
+      )
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=512, out_features=256, bias=True)
+      )
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+  )
+  (head_0): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+  (head_1): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+  (head_2): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+  (head_3): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+  (head_4): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+  (head_5): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+  (head_6): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+  (head_7): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+  (head_8): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+  (head_9): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=256, out_features=1, bias=True)
+      )
+    )
+  )
+)
+start at epoch: 0
+data at: data/mnist
+epoch: 0
+100% 938/938 [01:26<00:00, 10.82it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_0.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_0.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/0.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 56.86it/s]
+[0.884784149646759, 0.09503557206308683, 0.009054155876228504, 0.0162695997327114, 0.9523272975742817, 0.0971352366755815, 0.06080810681219273, 0.051987929591795864]
+fid score
+Downloading: "https://github.com/mseitzer/pytorch-fid/releases/download/fid_weights/pt_inception-2015-12-05-6726825d.pth" to /root/.cache/torch/hub/checkpoints/pt_inception-2015-12-05-6726825d.pth
+100% 91.2M/91.2M [00:10<00:00, 8.92MB/s]
+100% 313/313 [00:12<00:00, 24.11it/s]
+100% 313/313 [00:12<00:00, 24.17it/s]
+[296.9214524316644]
+296.9214524316644
+--------------------------------
+epoch: 1
+100% 938/938 [01:26<00:00, 10.79it/s]
+epoch: 2
+100% 938/938 [01:26<00:00, 10.80it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_2.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_2.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/2.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 56.86it/s]
+[0.8383923713207245, 0.08253239120313369, 0.0070497233622040766, 0.0063019162629668925, 0.9957990756392479, 0.06880044013004594, 0.085477961472069, 0.04518647553004808]
+fid score
+100% 313/313 [00:12<00:00, 24.15it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[293.264224146186]
+293.264224146186
+--------------------------------
+epoch: 3
+100% 938/938 [01:27<00:00, 10.76it/s]
+epoch: 4
+100% 938/938 [01:27<00:00, 10.75it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_4.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_4.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/4.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.64it/s]
+[0.7794698981404304, 0.1922832282145761, 0.03392866679994186, 0.05073855234621066, 0.9362099287390709, 0.18671853577299324, 0.12472715020943483, 0.11561936562201838]
+fid score
+100% 313/313 [00:12<00:00, 24.15it/s]
+100% 313/313 [00:12<00:00, 24.19it/s]
+[157.01629994625304]
+157.01629994625304
+--------------------------------
+epoch: 5
+100% 938/938 [01:26<00:00, 10.79it/s]
+epoch: 6
+100% 938/938 [01:26<00:00, 10.80it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_6.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_6.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/6.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.73it/s]
+[0.6007336311414838, 0.2092248915295887, 0.06222417647189704, 0.057049489612756375, 0.8788140466481448, 0.185718702382891, 0.23726774738862877, 0.13774974244344787]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.19it/s]
+[121.51378903052802]
+121.51378903052802
+--------------------------------
+epoch: 7
+100% 938/938 [01:26<00:00, 10.79it/s]
+epoch: 8
+100% 938/938 [01:26<00:00, 10.81it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_8.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_8.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/8.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 56.91it/s]
+[0.5715633231409593, 0.20546398757068604, 0.10311599910290897, 0.09769849113567619, 0.7729337123112753, 0.25871106215716255, 0.25808851538296695, 0.14536887778027288]
+fid score
+100% 313/313 [00:12<00:00, 24.16it/s]
+100% 313/313 [00:12<00:00, 24.19it/s]
+[120.17684452136317]
+120.17684452136317
+--------------------------------
+epoch: 9
+100% 938/938 [01:26<00:00, 10.79it/s]
+epoch: 10
+100% 938/938 [01:26<00:00, 10.82it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_10.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_10.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/10.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 56.95it/s]
+[0.5758439052738249, 0.24266707349606811, 0.129296073618218, 0.11650246802178911, 0.6982682020600769, 0.2694154298675737, 0.2595594171479868, 0.16611433949567253]
+fid score
+100% 313/313 [00:12<00:00, 24.13it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[112.36476187251293]
+112.36476187251293
+--------------------------------
+epoch: 11
+100% 938/938 [01:26<00:00, 10.80it/s]
+epoch: 12
+100% 938/938 [01:26<00:00, 10.81it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_12.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_12.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/12.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 56.97it/s]
+[0.4964603532919893, 0.2354513160992503, 0.14538828372738136, 0.1193811915187964, 0.6911543698345588, 0.2570235056246477, 0.3164339093146438, 0.17087866425981296]
+fid score
+100% 313/313 [00:12<00:00, 24.13it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[96.95258612884163]
+96.95258612884163
+--------------------------------
+epoch: 13
+100% 938/938 [01:26<00:00, 10.81it/s]
+epoch: 14
+100% 938/938 [01:26<00:00, 10.82it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_14.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_14.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/14.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 56.94it/s]
+[0.4060936137986486, 0.24875126472615056, 0.17711389973062905, 0.11381296402936436, 0.6628132662374526, 0.21406090456635646, 0.39430724821839397, 0.19807340274340432]
+fid score
+100% 313/313 [00:12<00:00, 24.15it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[82.82323246988136]
+82.82323246988136
+--------------------------------
+epoch: 15
+100% 938/938 [01:26<00:00, 10.80it/s]
+epoch: 16
+100% 938/938 [01:26<00:00, 10.85it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_16.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_16.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/16.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 56.92it/s]
+[0.4062200247587636, 0.23655322391831315, 0.17517287816833121, 0.10514125558356076, 0.6480282344129867, 0.2077808687424355, 0.38853235029913485, 0.17980877039153997]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[83.47428350242313]
+83.47428350242313
+--------------------------------
+epoch: 17
+100% 938/938 [01:26<00:00, 10.81it/s]
+epoch: 18
+100% 938/938 [01:26<00:00, 10.78it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_18.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_18.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/18.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 57.25it/s]
+[0.5428047535143793, 0.23752259163290526, 0.17000145279904827, 0.0993907984565199, 0.5534691960538505, 0.18659008598605703, 0.2814939880857368, 0.16296607480680764]
+fid score
+100% 313/313 [00:12<00:00, 24.16it/s]
+100% 313/313 [00:12<00:00, 24.19it/s]
+[68.65730716535248]
+68.65730716535248
+--------------------------------
+epoch: 19
+100% 938/938 [01:26<00:00, 10.78it/s]
+epoch: 20
+100% 938/938 [01:26<00:00, 10.83it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_20.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_20.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/20.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 56.85it/s]
+[0.3570033430524869, 0.1978826735318411, 0.18387736743992428, 0.10177413997093869, 0.6541996079370379, 0.1957553176758882, 0.42642531409303774, 0.1673873810907373]
+fid score
+100% 313/313 [00:12<00:00, 24.16it/s]
+100% 313/313 [00:12<00:00, 24.19it/s]
+[60.50544883050492]
+60.50544883050492
+--------------------------------
+epoch: 21
+100% 938/938 [01:26<00:00, 10.80it/s]
+epoch: 22
+100% 938/938 [01:26<00:00, 10.83it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_22.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_22.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/22.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 57.32it/s]
+[0.39823632914267654, 0.23738091251269625, 0.20136318291627686, 0.1251863539560902, 0.6021200206453446, 0.21698055193868968, 0.39954976742468573, 0.194160507495064]
+fid score
+100% 313/313 [00:12<00:00, 24.13it/s]
+100% 313/313 [00:12<00:00, 24.19it/s]
+[55.125288969597904]
+55.125288969597904
+--------------------------------
+epoch: 23
+100% 938/938 [01:27<00:00, 10.74it/s]
+epoch: 24
+100% 938/938 [01:26<00:00, 10.79it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_24.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_24.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/24.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 57.11it/s]
+[0.38721284091637936, 0.18941078537111553, 0.18066186999864875, 0.09854875076949564, 0.6216362866090611, 0.1914063482748119, 0.397155780820176, 0.15425766307085706]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[53.92358353044341]
+53.92358353044341
+--------------------------------
+epoch: 25
+100% 938/938 [01:27<00:00, 10.77it/s]
+epoch: 26
+100% 938/938 [01:26<00:00, 10.78it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_26.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_26.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/26.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.49it/s]
+[0.45544558451874184, 0.23296812699533875, 0.19259232632067289, 0.109346383308579, 0.5589162693457678, 0.19704515588687402, 0.348176050305838, 0.1748585872759366]
+fid score
+100% 313/313 [00:12<00:00, 24.10it/s]
+100% 313/313 [00:12<00:00, 24.15it/s]
+[48.27238029159534]
+48.27238029159534
+--------------------------------
+epoch: 27
+100% 938/938 [01:27<00:00, 10.68it/s]
+epoch: 28
+100% 938/938 [01:27<00:00, 10.68it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_28.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_28.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/28.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.43it/s]
+[0.4311403784295544, 0.20691675597655512, 0.1945598390704952, 0.10013257340459841, 0.5534291328085587, 0.17892313670148613, 0.36326865734165475, 0.16036291765161373]
+fid score
+100% 313/313 [00:12<00:00, 24.12it/s]
+100% 313/313 [00:12<00:00, 24.14it/s]
+[50.66923440835299]
+50.66923440835299
+--------------------------------
+epoch: 29
+100% 938/938 [01:27<00:00, 10.74it/s]
+epoch: 30
+100% 938/938 [01:27<00:00, 10.75it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_30.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_30.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/30.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 57.04it/s]
+[0.4301509098284734, 0.23118209326804684, 0.2148801406764891, 0.13169912810777332, 0.5535366243337841, 0.23609143446979694, 0.37226858652445954, 0.190018400862]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[43.89747661981875]
+43.89747661981875
+--------------------------------
+epoch: 31
+100% 938/938 [01:26<00:00, 10.79it/s]
+epoch: 32
+100% 938/938 [01:27<00:00, 10.75it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_32.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_32.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/32.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.82it/s]
+[0.4026761741342023, 0.2030475606936928, 0.20037354520652442, 0.10127351043346525, 0.5583582957725972, 0.17255199760275566, 0.3866230880184274, 0.16262949584279496]
+fid score
+100% 313/313 [00:12<00:00, 24.12it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[44.23893792531558]
+44.23893792531558
+--------------------------------
+epoch: 33
+100% 938/938 [01:27<00:00, 10.67it/s]
+epoch: 34
+100% 938/938 [01:28<00:00, 10.64it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_34.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_34.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/34.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.66it/s]
+[0.40850688214737746, 0.18970398546293774, 0.20397662726335986, 0.10740724937687934, 0.552341534466669, 0.195102312210623, 0.38048995893855025, 0.15721939885319677]
+fid score
+100% 313/313 [00:12<00:00, 24.12it/s]
+100% 313/313 [00:12<00:00, 24.16it/s]
+[38.410037219740104]
+38.410037219740104
+--------------------------------
+epoch: 35
+100% 938/938 [01:28<00:00, 10.65it/s]
+epoch: 36
+100% 938/938 [01:28<00:00, 10.65it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_36.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_36.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/36.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.52it/s]
+[0.4681755671238061, 0.25724604939804185, 0.20148633586904033, 0.12448822596745668, 0.5549085367430933, 0.21886130994523623, 0.3443930869089556, 0.19585450659227027]
+fid score
+100% 313/313 [00:12<00:00, 24.12it/s]
+100% 313/313 [00:12<00:00, 24.16it/s]
+[38.260237306874046]
+38.260237306874046
+--------------------------------
+epoch: 37
+100% 938/938 [01:28<00:00, 10.65it/s]
+epoch: 38
+100% 938/938 [01:27<00:00, 10.67it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_38.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_38.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/38.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.71it/s]
+[0.447011666636169, 0.19617725070676556, 0.18366810520119034, 0.09587479807688072, 0.5618533103547175, 0.17936715783042823, 0.34808716913856913, 0.1484105904658389]
+fid score
+100% 313/313 [00:12<00:00, 24.13it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[39.68314167725495]
+39.68314167725495
+--------------------------------
+epoch: 39
+100% 938/938 [01:27<00:00, 10.73it/s]
+epoch: 40
+100% 938/938 [01:27<00:00, 10.67it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_40.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_40.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/40.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.80it/s]
+[0.47304017760809514, 0.23685408774572508, 0.20584242260190658, 0.10972469026635906, 0.5130347051265417, 0.1862657569713688, 0.33340537677611576, 0.1693946510266543]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.19it/s]
+[35.96463197680177]
+35.96463197680177
+--------------------------------
+epoch: 41
+100% 938/938 [01:27<00:00, 10.68it/s]
+epoch: 42
+100% 938/938 [01:27<00:00, 10.67it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_42.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_42.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/42.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.55it/s]
+[0.39886761230884765, 0.20539917661956097, 0.2157301339664962, 0.11594760612416895, 0.540393521878263, 0.19434011549973634, 0.3917917138879944, 0.17015681586360928]
+fid score
+100% 313/313 [00:12<00:00, 24.15it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[36.30015790870149]
+36.30015790870149
+--------------------------------
+epoch: 43
+100% 938/938 [01:27<00:00, 10.68it/s]
+epoch: 44
+100% 938/938 [01:27<00:00, 10.66it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_44.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_44.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/44.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.38it/s]
+[0.4889555093664909, 0.2143550001356857, 0.2375315558401868, 0.11016752500901274, 0.43440520059461707, 0.16813224536814445, 0.31896824024550585, 0.15860346994724228]
+fid score
+100% 313/313 [00:12<00:00, 24.15it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[36.09211222110841]
+36.09211222110841
+--------------------------------
+epoch: 45
+100% 938/938 [01:27<00:00, 10.72it/s]
+epoch: 46
+100% 938/938 [01:27<00:00, 10.72it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_46.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_46.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/46.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:27<00:00, 56.82it/s]
+[0.3331270743327324, 0.21199118890043994, 0.22137853667419405, 0.1283034955765971, 0.6069866524979938, 0.2132986128424469, 0.4548362267232209, 0.18954005008237476]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.17it/s]
+[35.171014638210465]
+35.171014638210465
+--------------------------------
+epoch: 47
+100% 938/938 [01:27<00:00, 10.72it/s]
+epoch: 48
+100% 938/938 [01:27<00:00, 10.72it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_48.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_48.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/48.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.62it/s]
+[0.4325809711796872, 0.2149171314652735, 0.2193857690269826, 0.11015544971745443, 0.5040743498614058, 0.18045188742660054, 0.3638401219289284, 0.16699111965075386]
+fid score
+100% 313/313 [00:12<00:00, 24.13it/s]
+100% 313/313 [00:12<00:00, 24.19it/s]
+[31.00076218287964]
+31.00076218287964
+--------------------------------
+epoch: 49
+100% 938/938 [01:27<00:00, 10.75it/s]
+epoch: 50
+100% 938/938 [01:27<00:00, 10.72it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_50.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_50.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/50.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:29<00:00, 55.74it/s]
+[0.3668124772198114, 0.24415967661549853, 0.24435237940762308, 0.14891604187723873, 0.554167009095056, 0.23504141804209772, 0.4339387194833835, 0.21538451889793808]
+fid score
+100% 313/313 [00:12<00:00, 24.13it/s]
+100% 313/313 [00:12<00:00, 24.17it/s]
+[30.314657052718076]
+30.314657052718076
+--------------------------------
+epoch: 51
+100% 938/938 [01:28<00:00, 10.65it/s]
+epoch: 52
+100% 938/938 [01:28<00:00, 10.65it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_52.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_52.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/52.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.29it/s]
+[0.44228252951991165, 0.22186532574519222, 0.22728434703627134, 0.11497046466287286, 0.4841360006119474, 0.17675488550431787, 0.3574611212029762, 0.17155456224807292]
+fid score
+100% 313/313 [00:12<00:00, 24.13it/s]
+100% 313/313 [00:12<00:00, 24.17it/s]
+[32.18352742786186]
+32.18352742786186
+--------------------------------
+epoch: 53
+100% 938/938 [01:28<00:00, 10.65it/s]
+epoch: 54
+100% 938/938 [01:28<00:00, 10.66it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_54.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_54.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/54.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.25it/s]
+[0.346303910044636, 0.18546386046992103, 0.21987137409867719, 0.10694910711858352, 0.5574233217356727, 0.17382509549747863, 0.4336742867897439, 0.15993781636577775]
+fid score
+100% 313/313 [00:12<00:00, 24.13it/s]
+100% 313/313 [00:12<00:00, 24.17it/s]
+[31.43426926258232]
+31.43426926258232
+--------------------------------
+epoch: 55
+100% 938/938 [01:27<00:00, 10.72it/s]
+epoch: 56
+100% 938/938 [01:27<00:00, 10.72it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_56.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_56.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/56.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:29<00:00, 56.09it/s]
+[0.385504513731171, 0.22977854055991404, 0.22661937535429388, 0.12573348496366765, 0.5421418021471472, 0.20641613678032697, 0.40774472367192505, 0.18638956673200663]
+fid score
+100% 313/313 [00:12<00:00, 24.09it/s]
+100% 313/313 [00:12<00:00, 24.16it/s]
+[29.227041423096892]
+29.227041423096892
+--------------------------------
+epoch: 57
+100% 938/938 [01:27<00:00, 10.68it/s]
+epoch: 58
+100% 938/938 [01:27<00:00, 10.68it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_58.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_58.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/58.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.64it/s]
+[0.44099869763921595, 0.2229046186570144, 0.21233011801773682, 0.1165065401350113, 0.521623871227121, 0.1883980964372368, 0.35966081617397033, 0.17597311081889086]
+fid score
+100% 313/313 [00:12<00:00, 24.11it/s]
+100% 313/313 [00:12<00:00, 24.15it/s]
+[30.903139437520394]
+30.903139437520394
+--------------------------------
+epoch: 59
+100% 938/938 [01:27<00:00, 10.68it/s]
+epoch: 60
+100% 938/938 [01:27<00:00, 10.73it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_60.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_60.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/60.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.71it/s]
+[0.3898947842655638, 0.21912881644662074, 0.2291644100037636, 0.12682189938295868, 0.5280995761831291, 0.20249661409381012, 0.40236708553330974, 0.18092682945912517]
+fid score
+100% 313/313 [00:12<00:00, 24.15it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[27.29023726097722]
+27.29023726097722
+--------------------------------
+epoch: 61
+100% 938/938 [01:27<00:00, 10.69it/s]
+epoch: 62
+100% 938/938 [01:27<00:00, 10.73it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_62.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_62.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/62.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.60it/s]
+[0.40402483338485473, 0.23421104944221696, 0.2376608772000298, 0.12508103549970245, 0.5054878821786493, 0.19488273993308425, 0.39438585728998293, 0.19302901394094205]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.17it/s]
+[27.92531291966469]
+27.92531291966469
+--------------------------------
+epoch: 63
+100% 938/938 [01:27<00:00, 10.73it/s]
+epoch: 64
+100% 938/938 [01:27<00:00, 10.75it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_64.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_64.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/64.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.47it/s]
+[0.423778102694219, 0.21714646664223114, 0.2278484175772872, 0.11912673015118384, 0.49941707036457955, 0.19051633515750202, 0.3725167961991392, 0.17334297539649773]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[27.067981094505086]
+27.067981094505086
+--------------------------------
+epoch: 65
+100% 938/938 [01:27<00:00, 10.69it/s]
+epoch: 66
+100% 938/938 [01:27<00:00, 10.71it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_66.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_66.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/66.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.65it/s]
+[0.3587980800061996, 0.19609770583284347, 0.21872924491567536, 0.10693184754226383, 0.5505149722318164, 0.171515771024605, 0.42360202380791306, 0.16298894911771702]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[26.279655691661873]
+26.279655691661873
+--------------------------------
+epoch: 67
+100% 938/938 [01:27<00:00, 10.69it/s]
+epoch: 68
+100% 938/938 [01:27<00:00, 10.73it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_68.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_68.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/68.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.54it/s]
+[0.31565183355146725, 0.17981865844981876, 0.24460240725756158, 0.11261936150730495, 0.5309776213985052, 0.1766158988503564, 0.46118714853958226, 0.15917285862160813]
+fid score
+100% 313/313 [00:12<00:00, 24.16it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[26.770169716014323]
+26.770169716014323
+--------------------------------
+epoch: 69
+100% 938/938 [01:27<00:00, 10.70it/s]
+epoch: 70
+100% 938/938 [01:27<00:00, 10.74it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_70.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_70.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/70.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.61it/s]
+[0.4046746573600085, 0.23804398996642578, 0.23472788230599545, 0.13409806257155005, 0.5152080280173162, 0.2123317494341885, 0.39233462400431746, 0.18820425438374122]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[26.736067859660693]
+26.736067859660693
+--------------------------------
+epoch: 71
+100% 938/938 [01:27<00:00, 10.70it/s]
+epoch: 72
+100% 938/938 [01:27<00:00, 10.74it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_72.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_72.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/72.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.59it/s]
+[0.3613793804995756, 0.22266082480497676, 0.24951277972885874, 0.13779345322068343, 0.5189039571570873, 0.20561458667188032, 0.43195685145485174, 0.19674549429642493]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[26.262183256641435]
+26.262183256641435
+--------------------------------
+epoch: 73
+100% 938/938 [01:27<00:00, 10.71it/s]
+epoch: 74
+100% 938/938 [01:27<00:00, 10.73it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_74.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_74.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/74.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.54it/s]
+[0.3338179671704769, 0.19680894641030366, 0.23272890146635472, 0.11128146630751397, 0.5459291704657954, 0.17225601083331105, 0.4478932396621909, 0.17028585924084214]
+fid score
+100% 313/313 [00:12<00:00, 24.15it/s]
+100% 313/313 [00:12<00:00, 24.19it/s]
+[27.015088302492217]
+27.015088302492217
+--------------------------------
+epoch: 75
+100% 938/938 [01:27<00:00, 10.72it/s]
+epoch: 76
+100% 938/938 [01:27<00:00, 10.73it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_76.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_76.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/76.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.49it/s]
+[0.359594591215341, 0.20138675828265887, 0.24511873679254204, 0.11730415176938751, 0.5028075653001666, 0.17362087880637989, 0.42664802305016203, 0.1756824925039923]
+fid score
+100% 313/313 [00:12<00:00, 24.13it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[23.844980362212482]
+23.844980362212482
+--------------------------------
+epoch: 77
+100% 938/938 [01:27<00:00, 10.73it/s]
+epoch: 78
+100% 938/938 [01:27<00:00, 10.70it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_78.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_78.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/78.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:29<00:00, 56.17it/s]
+[0.37915182442730294, 0.19839299678230857, 0.23588805051879025, 0.12453705538722261, 0.513728035847377, 0.2048305230898226, 0.4071032742999436, 0.1662143171687312]
+fid score
+100% 313/313 [00:12<00:00, 24.15it/s]
+100% 313/313 [00:12<00:00, 24.17it/s]
+[24.128172505173666]
+24.128172505173666
+--------------------------------
+epoch: 79
+100% 938/938 [01:27<00:00, 10.73it/s]
+epoch: 80
+100% 938/938 [01:27<00:00, 10.73it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_80.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_80.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/80.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.66it/s]
+[0.3861703823909893, 0.20489498264704586, 0.23670427972171457, 0.1165966218261527, 0.49923328896695746, 0.17941521268255295, 0.40213974646700223, 0.16951549909574878]
+fid score
+100% 313/313 [00:12<00:00, 24.12it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[25.487075744366848]
+25.487075744366848
+--------------------------------
+epoch: 81
+100% 938/938 [01:27<00:00, 10.74it/s]
+epoch: 82
+100% 938/938 [01:27<00:00, 10.70it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_82.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_82.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/82.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.59it/s]
+[0.36007196470403613, 0.18349256225909885, 0.2246497747015208, 0.10703305672774802, 0.5315324705027044, 0.16848012069319063, 0.4206883615083992, 0.1564406655205259]
+fid score
+100% 313/313 [00:12<00:00, 24.14it/s]
+100% 313/313 [00:12<00:00, 24.18it/s]
+[24.3781932704606]
+24.3781932704606
+--------------------------------
+epoch: 83
+100% 938/938 [01:27<00:00, 10.73it/s]
+epoch: 84
+100% 938/938 [01:27<00:00, 10.70it/s]
+saved g at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/generator_84.pth
+saved d at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/models/discriminator_84.pth
+saved image at: experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/images/84.png
+lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+100% 5000/5000 [01:28<00:00, 56.72it/s]
+[0.4417028876092343, 0.20385240112359385, 0.2399540392541312, 0.11219549421104315, 0.4527374817626318, 0.17201371673812255, 0.3545581540042302, 0.15846388083894564]
+fid score
+100% 313/313 [00:12<00:00, 24.15it/s]
+ 77% 240/313 [00:09<00:03, 24.14it/s]
+
