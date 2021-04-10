@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-exp1 = 'experiments/baseline/gan1_base/gan1_base.csv'
-exp2 = 'experiments/gan1_10_heads_1G_10heads/gan1_10_heads_1G_10heads.csv'
-exp3 = 'experiments/gan1_10_heads_1G_10heads_diff_data_for_heads/gan1_10_heads_1G_10heads_diff_data_for_heads.csv'
+exp1 = 'experiments/baseline/lsgan_base/lsgan_base.csv'
+exp2 = 'experiments/lsgan_10_heads_1G_10heads/lsgan_10_heads_1G_10heads.csv'
+exp3 = 'experiments/lsgan_10_heads_1G_10heads_diff_data_for_heads/lsgan_10_heads_1G_10heads_diff_data_for_heads.csv'
 
 df1 = pd.read_csv(exp1)
 df2 = pd.read_csv(exp2)
@@ -16,7 +16,7 @@ epochs = [x * 2 for x in range(n)]
 
 fig, axs = plt.subplots(2, 3, sharex=False, sharey=False, figsize=(12, 8))
 
-n = 40
+n = 20
 df1_ = df1.iloc[n:, :]
 df2_ = df2.iloc[n:, :]
 df3_ = df3.iloc[n:, :]
@@ -57,17 +57,9 @@ axs[1, 2].plot(epochs, df3['lossg_mean'], color='black')
 axs[1, 2].set_xlabel('epoch', fontsize='x-large')
 axs[1, 2].set_ylabel(r'$V(G)$', fontsize='large')
 
-# handles, labels = axs[0, 0].get_legend_handles_labels()
-# fig.legend(handles, labels, loc='lower right', fontsize='large')
-# plt.tight_layout()
-
 handles, labels = axs[0, 0].get_legend_handles_labels()
 axs[1, 1].legend(handles=handles, labels=labels, loc='lower center',
                  bbox_to_anchor=(0.5, -0.5), fancybox=False, shadow=False,
                  ncol=4, fontsize='xx-large')
 plt.subplots_adjust(bottom=0.2, wspace=0.32, top=0.95, left=0.07, right=0.98, hspace=0.25)
-
-
-# plt.subplots_adjust(top=.9, bottom=0.3, right=0.99, left=0.05,
-#                     hspace=0, wspace=0.32)
-plt.savefig('reports/gan1_baseline__gan1_10_heads_1G_10heads__gan1_10_heads_1G_10heads_diff_data_for_heads.pdf')
+plt.savefig('reports/lsgan_baseline__lsgan_10_heads_1G_10heads__lsgan_10_heads_1G_10heads_diff_data_for_heads.pdf')
