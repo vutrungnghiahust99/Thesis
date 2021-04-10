@@ -4,7 +4,7 @@ python -m src.train --exp_name 'gan1_base' \
                     --spec_g '0' \
                     --spec_d '1' \
                     --dist 'gauss' \
-                    --n_epochs '200' \
+                    --n_epochs '300' \
                     --n_heads '1' \
                     --interval '2'
 
@@ -14,6 +14,6 @@ python -m src.train --exp_name 'lsgan_base' \
                     --spec_g '0' \
                     --spec_d '1' \
                     --dist 'gauss' \
-                    --n_epochs '200' \
+                    --n_epochs '300' \
                     --n_heads '1' \
                     --interval '2'
