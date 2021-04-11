@@ -43,6 +43,8 @@ parser.add_argument("--n_heads", type=int, choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 1
 
 parser.add_argument("--diff_data_for_heads", type=int, choices=[0, 1], default=0)
 
+parser.add_argument("--use_dropout", type=int, choices=[0, 1], default=0)
+
 parser.add_argument("--n_epochs", type=int)
 parser.add_argument("--interval", type=int, default=1)
 parser.add_argument("--weights_g", type=str, default='')
@@ -96,9 +98,19 @@ logging.info(f'models_folder: {models_folder}')
 # Initialize generator and discriminator
 generator = Generator(use_spectral_norm=args.spec_g)
 if args.loss_name == 'gan1':
-    discriminator = Discriminator(use_sigmoid=True, use_spec_norm=args.spec_d, n_heads=args.n_heads, use_big_head_d=args.use_big_head_d)
+    discriminator = Discriminator(
+        use_sigmoid=True,
+        use_spec_norm=args.spec_d,
+        n_heads=args.n_heads,
+        use_big_head_d=args.use_big_head_d,
+        use_dropout=args.use_dropout)
 else:
-    discriminator = Discriminator(use_sigmoid=False, use_spec_norm=args.spec_d, n_heads=args.n_heads, use_big_head_d=args.use_big_head_d)
+    discriminator = Discriminator(
+        use_sigmoid=False,
+        use_spec_norm=args.spec_d,
+        n_heads=args.n_heads,
+        use_big_head_d=args.use_big_head_d,
+        use_dropout=args.use_dropout)
 
 logging.info(generator)
 logging.info(discriminator)
