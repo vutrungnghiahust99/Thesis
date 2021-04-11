@@ -25,6 +25,18 @@ def create_d_head(use_sigmoid: bool, use_spec_norm: bool):
         return nn.Sequential(Linear(use_spec_norm, 256, 1))
 
 
+def create_d_head_with_dropout(use_sigmoid: bool, use_spec_norm: bool):
+    if use_sigmoid:
+        return nn.Sequential(
+            Linear(use_spec_norm, 256, 1),
+            nn.Dropout(),
+            nn.Sigmoid())
+    else:
+        return nn.Sequential(
+            Linear(use_spec_norm, 256, 1),
+            nn.Dropout())
+
+
 def create_d_big_head(use_sigmoid: bool, use_spec_norm: bool):
     """
     Create a big head which has the capacity as 10 small heads
@@ -41,7 +53,7 @@ def create_d_big_head(use_sigmoid: bool, use_spec_norm: bool):
 
 
 class Discriminator(nn.Module):
-    def __init__(self, use_sigmoid, use_spec_norm, img_shape=(1, 28, 28), n_heads=10, use_big_head_d=False):
+    def __init__(self, use_sigmoid, use_spec_norm, img_shape=(1, 28, 28), n_heads=10, use_big_head_d=False, use_dropout=False):
         super(Discriminator, self).__init__()
 
         self.share_layers = nn.Sequential(
@@ -53,7 +65,10 @@ class Discriminator(nn.Module):
         self.n = n_heads
         if not use_big_head_d:
             for head in range(self.n):
-                setattr(self, "head_%i" % head, create_d_head(use_sigmoid, use_spec_norm))
+                if not use_dropout:
+                    setattr(self, "head_%i" % head, create_d_head(use_sigmoid, use_spec_norm))
+                else:
+                    setattr(self, "head_%i" % head, create_d_head_with_dropout(use_sigmoid, use_spec_norm))
         else:
             assert n_heads == 1
             setattr(self, "head_%i" % 0, create_d_big_head(use_sigmoid, use_spec_norm))
