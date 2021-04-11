@@ -156,7 +156,11 @@ real_imgs_loader = torch.utils.data.DataLoader(
 
 # Optimizers
 optimizer_G = torch.optim.Adam(generator.parameters(), lr=args.lr, betas=(args.b1, args.b2))
-optimizer_D = torch.optim.Adam(discriminator.parameters(), lr=args.lr, betas=(args.b1, args.b2))
+# optimizer_D = torch.optim.Adam(discriminator.parameters(), lr=args.lr, betas=(args.b1, args.b2))
+optimizer_D_shared_layer = torch.optim.Adam(discriminator.share_layers.parameters(), lr=args.lr, betas=(args.b1, args.b2))
+optimizer_D_heads = []
+for i in range(args.n_heads):
+    optimizer_D_heads.append(torch.optim.Adam(getattr(discriminator, f'head_{i}').parameters(), lr=args.lr, betas=(args.b1, args.b2)))
 
 Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
@@ -214,15 +218,17 @@ for epoch in range(start_epoch, args.n_epochs):
         # ---------------------
         random_seq = list(range(args.n_heads))
         random.shuffle(random_seq)
+        optimizer_D_shared_layer.zero_grad()
         for head_id in random_seq:
-            optimizer_D.zero_grad()
+            optimizer_D_heads[head_id].zero_grad()
             if args.diff_data_for_heads:
                 g, r = get_gen_real_imgs_with_headID(gen_imgs.detach(), real_imgs, heads, head_id)
                 lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
             else:
                 lossd = loss.compute_lossd_rf(discriminator, gen_imgs.detach(), real_imgs, head_id)
             lossd.backward()
-            optimizer_D.step()
+            optimizer_D_heads[head_id].step()
+        optimizer_D_shared_layer.step()
 
     if epoch % args.interval != 0:
         continue
