@@ -11,3 +11,4 @@ articles/
 *.pth
 /*.png
 images
+log_csv.py
