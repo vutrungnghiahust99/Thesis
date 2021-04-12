@@ -281,29 +281,29 @@ for epoch in range(start_epoch, args.n_epochs):
     logging.info(entry_8)
     print(fid_score)
 
-    lossg_mean__lossg_std__lossd_mean__lossd_std__dx_mean__dx_std__dgz_mean__dgz_std_all = \
-        Metrics.compute_lossg_lossd_dx_dgz_rf_sep_heads(
-            args.loss_name,
-            generator,
-            discriminator,
-            real_imgs_loader,
-            args.bound,
-            args.dist,
-            n_heads=args.n_heads)  # compute metrics for each head in D
-    entry_9 = []
-    header_9 = []
-    for head_id in range(args.n_heads):
-        h = [f'lossg_mean_{head_id}', f'lossg_std_{head_id}', f'lossd_mean_{head_id}', f'lossd_std_{head_id}',
-             f'dx_mean_{head_id}', f'dx_std_{head_id}', f'dgz_mean_{head_id}', f'dgz_std_{head_id}']
-        e = lossg_mean__lossg_std__lossd_mean__lossd_std__dx_mean__dx_std__dgz_mean__dgz_std_all[head_id]
-        logging.info(h)
-        logging.info(e)
-        header_9 = header_9 + h
-        entry_9 = entry_9 + e
+    # lossg_mean__lossg_std__lossd_mean__lossd_std__dx_mean__dx_std__dgz_mean__dgz_std_all = \
+    #     Metrics.compute_lossg_lossd_dx_dgz_rf_sep_heads(
+    #         args.loss_name,
+    #         generator,
+    #         discriminator,
+    #         real_imgs_loader,
+    #         args.bound,
+    #         args.dist,
+    #         n_heads=args.n_heads)  # compute metrics for each head in D
+    # entry_9 = []
+    # header_9 = []
+    # for head_id in range(args.n_heads):
+    #     h = [f'lossg_mean_{head_id}', f'lossg_std_{head_id}', f'lossd_mean_{head_id}', f'lossd_std_{head_id}',
+    #          f'dx_mean_{head_id}', f'dx_std_{head_id}', f'dgz_mean_{head_id}', f'dgz_std_{head_id}']
+    #     e = lossg_mean__lossg_std__lossd_mean__lossd_std__dx_mean__dx_std__dgz_mean__dgz_std_all[head_id]
+    #     logging.info(h)
+    #     logging.info(e)
+    #     header_9 = header_9 + h
+    #     entry_9 = entry_9 + e
 
-    entry = entry_7 + entry_8 + entry_9
+    entry = entry_7 + entry_8
     if header is None:
-        header = header_7 + header_8 + header_9
+        header = header_7 + header_8
 
     results.append(entry)
     logging.info('--------------------------------')
