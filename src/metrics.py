@@ -295,6 +295,48 @@ class Metrics():
         return lossgs.mean(), lossgs.std(), lossds.mean(), lossds.std(), dxs.mean(), dxs.std(), dgzs.mean(), dgzs.std()
 
     @staticmethod
+    def compute_lossg_lossd_dx_dgz_rf_sep_heads(loss_name,
+                                                generator,
+                                                discriminator,
+                                                real_imgs_loader,
+                                                bound,
+                                                dist,
+                                                z_dim=100,
+                                                n_heads=10):
+        loss = select_loss(loss_name)
+        out = []
+        for head_id in tqdm(range(n_heads)):
+            lossgs = []
+            lossds = []
+            dxs = []
+            dgzs = []
+            for img, _ in tqdm(real_imgs_loader):
+                real_img = img.type(Tensor)
+                z = Noise.sample_gauss_or_uniform_noise(dist, bound, 1, z_dim)
+                with torch.no_grad():
+                    gen_img = generator(z)
+                lossg = loss.compute_lossg_rf(discriminator, gen_img, head_id)
+                lossgs.append(lossg.item())
+
+                with torch.no_grad():
+                    real_pred = discriminator(real_img, head_id)
+                    fake_pred = discriminator(gen_img, head_id)
+                dxs.append(real_pred.item())
+                dgzs.append(fake_pred.item())
+
+                lossd = loss.compute_lossd_rf(discriminator, gen_img, real_img, head_id)
+                lossds.append(lossd.item())
+
+            lossgs = np.array(lossgs)
+            lossds = np.array(lossds)
+            dxs = np.array(dxs)
+            dgzs = np.array(dgzs)
+            out.append(
+                [lossgs.mean(), lossgs.std(), lossds.mean(), lossds.std(), dxs.mean(), dxs.std(), dgzs.mean(), dgzs.std()]
+            )
+        return out
+
+    @staticmethod
     def compute_fid(generator,
                     dist,
                     bound,
