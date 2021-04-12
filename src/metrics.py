@@ -305,7 +305,7 @@ class Metrics():
                                                 n_heads=10):
         loss = select_loss(loss_name)
         out = []
-        for head_id in tqdm(range(n_heads)):
+        for head_id in range(n_heads):
             lossgs = []
             lossds = []
             dxs = []
