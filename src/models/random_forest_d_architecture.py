@@ -105,3 +105,15 @@ class Discriminator(nn.Module):
             return getattr(self, "head_%i" % head_id)(s1).squeeze()
         else:
             RuntimeError(f"Invalid head id: {head_id}")
+
+    def forward_eval(self, img):
+        """
+        Return [D1(S(img)), D2(S(img)), ... Dn(S(img))]
+        """
+        img_flat = img.view(img.size(0), -1)
+        s1 = self.share_layers(img_flat)
+        out = []
+        for head_id in range(self.n_heads):
+            a = getattr(self, "head_%i" % head_id)(s1).squeeze()
+            out.append(a)
+        return out
