@@ -1,4 +1,4 @@
-python -m src.train --exp_name 'run_gan1_10_heads_1G_10heads_dropout_for_d' \
+python -m src.train --exp_name 'gan1_10_heads_1G_10heads_dropout_for_d' \
                     --loss_name 'gan1' \
                     --augmentation '0' \
                     --spec_g '0' \
