@@ -247,6 +247,8 @@ for epoch in range(start_epoch, args.n_epochs):
     # save checkpoint
     g_path = os.path.join(models_folder, f'generator_{epoch}.pth')
     d_path = os.path.join(models_folder, f'discriminator_{epoch}.pth')
+    assert os.path.isfile(g_path) is False, f"Can not overwrite G at: {g_path}"
+    assert os.path.isfile(d_path) is False, f"Can not overwrite D at: {d_path}"
     torch.save(generator.state_dict(), g_path)
     torch.save(discriminator.state_dict(), d_path)
     logging.info(f'saved g at: {g_path}')
