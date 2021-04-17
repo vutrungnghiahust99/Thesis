@@ -1,4 +1,4 @@
-dev.py
+
 .vscode/
 data/
 experiments/*/*/images
@@ -11,4 +11,3 @@ articles/
 *.pth
 /*.png
 images
-log_csv.py
