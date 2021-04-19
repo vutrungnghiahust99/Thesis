@@ -197,7 +197,7 @@ for epoch in range(start_epoch, args.n_epochs):
         batch_size = imgs.shape[0]
         real_imgs = imgs.type(Tensor)
         if args.augmentation:
-            real_imgs = torch.cat([real_imgs] + [Augmentation.translation(real_imgs, args.shift) for _ in range(args.aug_times)])
+            real_imgs = torch.cat([real_imgs] + [Augmentation.translation(real_imgs, args.translation_shift) for _ in range(args.aug_times)])
             heads = heads * (1 + args.aug_times)
 
         # -----------------
@@ -208,7 +208,7 @@ for epoch in range(start_epoch, args.n_epochs):
         if args.augmentation:
             z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
             gen_imgs_ = generator(z)
-            gen_imgs = torch.cat([gen_imgs_] + [Augmentation.translation(gen_imgs_, args.shift) for _ in range(args.aug_times)])
+            gen_imgs = torch.cat([gen_imgs_] + [Augmentation.translation(gen_imgs_, args.translation_shift) for _ in range(args.aug_times)])
             lossg = loss.compute_lossg_rf(discriminator, gen_imgs, -1)
 
             lossg.backward()
