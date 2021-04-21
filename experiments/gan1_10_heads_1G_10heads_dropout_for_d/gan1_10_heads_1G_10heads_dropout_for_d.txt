@@ -1662,5 +1662,987 @@
 21-04-12 18:29:29, INFO: fid score
 21-04-12 18:30:19, INFO: [15.661966728314212]
 21-04-12 18:30:19, INFO: --------------------------------
-21-04-12 18:30:19, INFO: epoch: 299
-21-04-12 18:31:51, INFO: Completed
+21-04-20 08:00:02, INFO: start at epoch: 299
+21-04-20 08:00:02, INFO: data at: data/mnist
+21-04-20 08:00:05, INFO: epoch: 299
+21-04-20 08:01:32, INFO: epoch: 300
+21-04-20 08:02:59, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_300.pth
+21-04-20 08:02:59, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_300.pth
+21-04-20 08:02:59, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/300.png
+21-04-20 08:02:59, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:04:36, INFO: [-0.716915137398243, 0.10358030424237176, 0.6942912704706192, 0.0756187550692785, 0.5138433576345444, 0.05558775801264502, 0.5091720086991787, 0.049403798158214704]
+21-04-20 08:04:36, INFO: fid score
+21-04-20 08:05:14, INFO: [15.043803252785949]
+21-04-20 08:05:14, INFO: --------------------------------
+21-04-20 08:05:14, INFO: epoch: 301
+21-04-20 08:06:40, INFO: epoch: 302
+21-04-20 08:08:05, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_302.pth
+21-04-20 08:08:05, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_302.pth
+21-04-20 08:08:05, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/302.png
+21-04-20 08:08:05, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:09:43, INFO: [-0.7050780149877072, 0.08493493200298642, 0.6879111171126365, 0.06068390225321302, 0.5132048647165298, 0.04370336776719383, 0.5041572968900204, 0.041713016207828475]
+21-04-20 08:09:43, INFO: fid score
+21-04-20 08:10:19, INFO: [15.964146806115593]
+21-04-20 08:10:19, INFO: --------------------------------
+21-04-20 08:10:19, INFO: epoch: 303
+21-04-20 08:11:46, INFO: epoch: 304
+21-04-20 08:13:12, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_304.pth
+21-04-20 08:13:12, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_304.pth
+21-04-20 08:13:12, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/304.png
+21-04-20 08:13:12, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:14:49, INFO: [-0.6481998596549035, 0.0905471216812324, 0.6774849113345146, 0.06804972600304324, 0.49576747108697894, 0.0500123404385242, 0.474890505194664, 0.04679074238211317]
+21-04-20 08:14:49, INFO: fid score
+21-04-20 08:15:25, INFO: [15.69015869969948]
+21-04-20 08:15:25, INFO: --------------------------------
+21-04-20 08:15:25, INFO: epoch: 305
+21-04-20 08:16:51, INFO: epoch: 306
+21-04-20 08:18:18, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_306.pth
+21-04-20 08:18:18, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_306.pth
+21-04-20 08:18:18, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/306.png
+21-04-20 08:18:18, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:19:54, INFO: [-0.7161825513958932, 0.07347172881928811, 0.6902809841156006, 0.05152732831002649, 0.5159011319577694, 0.03659228637798848, 0.5100691409289837, 0.035878751131509797]
+21-04-20 08:19:54, INFO: fid score
+21-04-20 08:20:31, INFO: [16.312611051261968]
+21-04-20 08:20:31, INFO: --------------------------------
+21-04-20 08:20:31, INFO: epoch: 307
+21-04-20 08:21:56, INFO: epoch: 308
+21-04-20 08:23:23, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_308.pth
+21-04-20 08:23:23, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_308.pth
+21-04-20 08:23:23, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/308.png
+21-04-20 08:23:23, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:25:00, INFO: [-0.6808322591900825, 0.0751330428167638, 0.6813782181739807, 0.05375893589402576, 0.5071507541000843, 0.03914590577540011, 0.4923867256700993, 0.03766244506238709]
+21-04-20 08:25:00, INFO: fid score
+21-04-20 08:25:36, INFO: [17.861623186368718]
+21-04-20 08:25:36, INFO: --------------------------------
+21-04-20 08:25:36, INFO: epoch: 309
+21-04-20 08:27:02, INFO: epoch: 310
+21-04-20 08:28:28, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_310.pth
+21-04-20 08:28:28, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_310.pth
+21-04-20 08:28:28, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/310.png
+21-04-20 08:28:28, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:30:04, INFO: [-0.6710334785401821, 0.0748222548987716, 0.6961850559711457, 0.05513135377878237, 0.4876782999932766, 0.03906729404970508, 0.48739147579073905, 0.03821034316994319]
+21-04-20 08:30:04, INFO: fid score
+21-04-20 08:30:41, INFO: [15.379611955012024]
+21-04-20 08:30:41, INFO: --------------------------------
+21-04-20 08:30:41, INFO: epoch: 311
+21-04-20 08:32:06, INFO: epoch: 312
+21-04-20 08:33:33, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_312.pth
+21-04-20 08:33:33, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_312.pth
+21-04-20 08:33:33, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/312.png
+21-04-20 08:33:33, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:35:10, INFO: [-0.6859290216207504, 0.06592427814686375, 0.6866543993353844, 0.046376458279568114, 0.5039374291419982, 0.03236267484545872, 0.4952833746612072, 0.033253897629488056]
+21-04-20 08:35:10, INFO: fid score
+21-04-20 08:35:46, INFO: [17.60007025802622]
+21-04-20 08:35:46, INFO: --------------------------------
+21-04-20 08:35:46, INFO: epoch: 313
+21-04-20 08:37:12, INFO: epoch: 314
+21-04-20 08:38:40, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_314.pth
+21-04-20 08:38:40, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_314.pth
+21-04-20 08:38:40, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/314.png
+21-04-20 08:38:40, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:40:17, INFO: [-0.6619754701554775, 0.0629202864940491, 0.690320397746563, 0.04837397566285232, 0.4886742033302784, 0.03479033105215321, 0.48314542242884634, 0.032597564390992935]
+21-04-20 08:40:17, INFO: fid score
+21-04-20 08:40:54, INFO: [14.93578109995542]
+21-04-20 08:40:54, INFO: --------------------------------
+21-04-20 08:40:54, INFO: epoch: 315
+21-04-20 08:42:19, INFO: epoch: 316
+21-04-20 08:43:46, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_316.pth
+21-04-20 08:43:46, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_316.pth
+21-04-20 08:43:46, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/316.png
+21-04-20 08:43:46, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:45:22, INFO: [-0.6663989995956421, 0.07008946803708521, 0.6846274423480034, 0.0515596053428602, 0.4964971892952919, 0.03618586508341907, 0.4851911773562431, 0.035730846614512854]
+21-04-20 08:45:22, INFO: fid score
+21-04-20 08:45:59, INFO: [15.114117430637492]
+21-04-20 08:45:59, INFO: --------------------------------
+21-04-20 08:45:59, INFO: epoch: 317
+21-04-20 08:47:25, INFO: epoch: 318
+21-04-20 08:48:50, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_318.pth
+21-04-20 08:48:50, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_318.pth
+21-04-20 08:48:50, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/318.png
+21-04-20 08:48:50, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:50:27, INFO: [-0.6678154936552048, 0.07962085959866036, 0.6879836934268475, 0.057004985816826385, 0.4942567920267582, 0.04068217119965008, 0.4855431391358376, 0.04104897671179055]
+21-04-20 08:50:27, INFO: fid score
+21-04-20 08:51:03, INFO: [15.308246708100484]
+21-04-20 08:51:03, INFO: --------------------------------
+21-04-20 08:51:03, INFO: epoch: 319
+21-04-20 08:52:29, INFO: epoch: 320
+21-04-20 08:53:55, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_320.pth
+21-04-20 08:53:55, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_320.pth
+21-04-20 08:53:55, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/320.png
+21-04-20 08:53:55, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 08:55:32, INFO: [-0.6690694549798966, 0.07676648093695398, 0.689643466246128, 0.056172211826992016, 0.49315990901589396, 0.04010064129357849, 0.48631711990237236, 0.038933365378419106]
+21-04-20 08:55:32, INFO: fid score
+21-04-20 08:56:08, INFO: [14.624278437932531]
+21-04-20 08:56:08, INFO: --------------------------------
+21-04-20 08:56:08, INFO: epoch: 321
+21-04-20 08:57:34, INFO: epoch: 322
+21-04-20 08:58:59, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_322.pth
+21-04-20 08:58:59, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_322.pth
+21-04-20 08:58:59, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/322.png
+21-04-20 08:58:59, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:00:37, INFO: [-0.6532510771632195, 0.05621413667203902, 0.6904477699041367, 0.04246977761234727, 0.4840079217970371, 0.030467159995896633, 0.47882727937102315, 0.02922457408687205]
+21-04-20 09:00:37, INFO: fid score
+21-04-20 09:01:13, INFO: [14.548684277999854]
+21-04-20 09:01:13, INFO: --------------------------------
+21-04-20 09:01:13, INFO: epoch: 323
+21-04-20 09:02:39, INFO: epoch: 324
+21-04-20 09:04:04, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_324.pth
+21-04-20 09:04:04, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_324.pth
+21-04-20 09:04:04, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/324.png
+21-04-20 09:04:04, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:05:41, INFO: [-0.6518006965756417, 0.06924979863070968, 0.6845301280260087, 0.05086432552516258, 0.4893902593672276, 0.03536133526351029, 0.4776412605285644, 0.03625195313100575]
+21-04-20 09:05:41, INFO: fid score
+21-04-20 09:06:17, INFO: [17.536817468693613]
+21-04-20 09:06:17, INFO: --------------------------------
+21-04-20 09:06:17, INFO: epoch: 325
+21-04-20 09:07:43, INFO: epoch: 326
+21-04-20 09:09:08, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_326.pth
+21-04-20 09:09:08, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_326.pth
+21-04-20 09:09:08, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/326.png
+21-04-20 09:09:08, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:10:45, INFO: [-0.7226485116243362, 0.07751986794646865, 0.6947409369587898, 0.05403367174593914, 0.514789967596531, 0.03884848547978127, 0.5130917530715465, 0.03711669122790012]
+21-04-20 09:10:45, INFO: fid score
+21-04-20 09:11:21, INFO: [15.305391703850404]
+21-04-20 09:11:21, INFO: --------------------------------
+21-04-20 09:11:21, INFO: epoch: 327
+21-04-20 09:12:46, INFO: epoch: 328
+21-04-20 09:14:12, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_328.pth
+21-04-20 09:14:12, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_328.pth
+21-04-20 09:14:12, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/328.png
+21-04-20 09:14:12, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:15:48, INFO: [-0.676671279066801, 0.07213729124502483, 0.6842305472433567, 0.054387199176114766, 0.5023180975437165, 0.0404500343002748, 0.4903793648123741, 0.03638894331225455]
+21-04-20 09:15:48, INFO: fid score
+21-04-20 09:16:24, INFO: [16.633243826692876]
+21-04-20 09:16:24, INFO: --------------------------------
+21-04-20 09:16:24, INFO: epoch: 329
+21-04-20 09:17:50, INFO: epoch: 330
+21-04-20 09:19:15, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_330.pth
+21-04-20 09:19:15, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_330.pth
+21-04-20 09:19:15, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/330.png
+21-04-20 09:19:15, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:20:51, INFO: [-0.6695114744007588, 0.06741526985295909, 0.6876758890509606, 0.05055636141354818, 0.4950916696727276, 0.03717433190796852, 0.48688287178277967, 0.03434373043364142]
+21-04-20 09:20:51, INFO: fid score
+21-04-20 09:21:28, INFO: [16.32893082293549]
+21-04-20 09:21:28, INFO: --------------------------------
+21-04-20 09:21:28, INFO: epoch: 331
+21-04-20 09:22:55, INFO: epoch: 332
+21-04-20 09:24:21, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_332.pth
+21-04-20 09:24:21, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_332.pth
+21-04-20 09:24:21, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/332.png
+21-04-20 09:24:21, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:25:58, INFO: [-0.6813265571236611, 0.07013611314876983, 0.6939000519394874, 0.05071943904660883, 0.49471447896361354, 0.03632067442486801, 0.49281801105141637, 0.03519560678732007]
+21-04-20 09:25:58, INFO: fid score
+21-04-20 09:26:34, INFO: [15.453296649497162]
+21-04-20 09:26:34, INFO: --------------------------------
+21-04-20 09:26:34, INFO: epoch: 333
+21-04-20 09:28:00, INFO: epoch: 334
+21-04-20 09:29:25, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_334.pth
+21-04-20 09:29:25, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_334.pth
+21-04-20 09:29:25, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/334.png
+21-04-20 09:29:25, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:31:02, INFO: [-0.6239906991481781, 0.07206478323563506, 0.6987000218629837, 0.05612597264710278, 0.46313545867800715, 0.03955607217670802, 0.46281537798643113, 0.03831776403011184]
+21-04-20 09:31:02, INFO: fid score
+21-04-20 09:31:38, INFO: [15.35885471702818]
+21-04-20 09:31:38, INFO: --------------------------------
+21-04-20 09:31:38, INFO: epoch: 335
+21-04-20 09:33:05, INFO: epoch: 336
+21-04-20 09:34:31, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_336.pth
+21-04-20 09:34:31, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_336.pth
+21-04-20 09:34:31, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/336.png
+21-04-20 09:34:31, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:36:07, INFO: [-0.6411153705477715, 0.0830484641698468, 0.6904285050809383, 0.062384519043562986, 0.4792679159879684, 0.04404971921232797, 0.4714872974932194, 0.04352931973342029]
+21-04-20 09:36:07, INFO: fid score
+21-04-20 09:36:44, INFO: [15.916593230009141]
+21-04-20 09:36:44, INFO: --------------------------------
+21-04-20 09:36:44, INFO: epoch: 337
+21-04-20 09:38:10, INFO: epoch: 338
+21-04-20 09:39:35, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_338.pth
+21-04-20 09:39:35, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_338.pth
+21-04-20 09:39:35, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/338.png
+21-04-20 09:39:35, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:41:13, INFO: [-0.7127520143091679, 0.08138868124820105, 0.6911128352701664, 0.054434857697421166, 0.5134174073517322, 0.03830848372072196, 0.5080886004686356, 0.039781849547622594]
+21-04-20 09:41:13, INFO: fid score
+21-04-20 09:41:49, INFO: [14.41594905491391]
+21-04-20 09:41:49, INFO: --------------------------------
+21-04-20 09:41:49, INFO: epoch: 339
+21-04-20 09:43:18, INFO: epoch: 340
+21-04-20 09:44:45, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_340.pth
+21-04-20 09:44:45, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_340.pth
+21-04-20 09:44:45, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/340.png
+21-04-20 09:44:45, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:46:22, INFO: [-0.7037523264527321, 0.08356074181572277, 0.6848226338028908, 0.05720712411195848, 0.5154387836158275, 0.04063161546584626, 0.5035470021188259, 0.041439131209225134]
+21-04-20 09:46:22, INFO: fid score
+21-04-20 09:46:59, INFO: [15.81644896423461]
+21-04-20 09:46:59, INFO: --------------------------------
+21-04-20 09:46:59, INFO: epoch: 341
+21-04-20 09:48:25, INFO: epoch: 342
+21-04-20 09:49:51, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_342.pth
+21-04-20 09:49:51, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_342.pth
+21-04-20 09:49:51, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/342.png
+21-04-20 09:49:51, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:51:28, INFO: [-0.6809604084968567, 0.07051471461532662, 0.6960736498594284, 0.04976065492473286, 0.4922619735777378, 0.03428159453477755, 0.49261745101213456, 0.03546961606558751]
+21-04-20 09:51:28, INFO: fid score
+21-04-20 09:52:04, INFO: [15.951778599989467]
+21-04-20 09:52:04, INFO: --------------------------------
+21-04-20 09:52:04, INFO: epoch: 343
+21-04-20 09:53:31, INFO: epoch: 344
+21-04-20 09:54:58, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_344.pth
+21-04-20 09:54:58, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_344.pth
+21-04-20 09:54:58, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/344.png
+21-04-20 09:54:58, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 09:56:36, INFO: [-0.6557160819947719, 0.07480484926264083, 0.697406561267376, 0.05452270200290651, 0.4790099390149117, 0.03760953134552236, 0.47949609207510946, 0.03815043635336418]
+21-04-20 09:56:36, INFO: fid score
+21-04-20 09:57:13, INFO: [14.327643909484152]
+21-04-20 09:57:13, INFO: --------------------------------
+21-04-20 09:57:13, INFO: epoch: 345
+21-04-20 09:58:40, INFO: epoch: 346
+21-04-20 10:00:07, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_346.pth
+21-04-20 10:00:07, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_346.pth
+21-04-20 10:00:07, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/346.png
+21-04-20 10:00:07, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:01:44, INFO: [-0.6344869453966617, 0.07871356175191739, 0.6924944699406624, 0.061219542344267075, 0.4741187711954117, 0.04303370528705949, 0.4681512303709984, 0.04176399066571544]
+21-04-20 10:01:44, INFO: fid score
+21-04-20 10:02:20, INFO: [15.23952574463533]
+21-04-20 10:02:20, INFO: --------------------------------
+21-04-20 10:02:20, INFO: epoch: 347
+21-04-20 10:03:46, INFO: epoch: 348
+21-04-20 10:05:12, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_348.pth
+21-04-20 10:05:12, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_348.pth
+21-04-20 10:05:12, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/348.png
+21-04-20 10:05:12, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:06:49, INFO: [-0.6304654211699963, 0.08891325050871796, 0.7006494756102561, 0.0672116903620207, 0.464972806686163, 0.04675798408012403, 0.46557047127485274, 0.046799445669239145]
+21-04-20 10:06:49, INFO: fid score
+21-04-20 10:07:25, INFO: [14.048069947957856]
+21-04-20 10:07:25, INFO: --------------------------------
+21-04-20 10:07:25, INFO: epoch: 349
+21-04-20 10:08:51, INFO: epoch: 350
+21-04-20 10:10:17, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_350.pth
+21-04-20 10:10:17, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_350.pth
+21-04-20 10:10:17, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/350.png
+21-04-20 10:10:17, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:11:54, INFO: [-0.6527228023767472, 0.07951180254603683, 0.6939786680102348, 0.059776200487072786, 0.481264194393158, 0.042552032177040296, 0.4777488928556442, 0.040690778289055256]
+21-04-20 10:11:54, INFO: fid score
+21-04-20 10:12:30, INFO: [15.030646116270162]
+21-04-20 10:12:30, INFO: --------------------------------
+21-04-20 10:12:30, INFO: epoch: 351
+21-04-20 10:13:56, INFO: epoch: 352
+21-04-20 10:15:22, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_352.pth
+21-04-20 10:15:22, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_352.pth
+21-04-20 10:15:22, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/352.png
+21-04-20 10:15:22, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:16:59, INFO: [-0.7080297801673412, 0.10078905550322015, 0.6955935246109962, 0.06984020295261535, 0.5073435144662857, 0.0484873602142021, 0.5049172398924827, 0.0488079267871897]
+21-04-20 10:16:59, INFO: fid score
+21-04-20 10:17:35, INFO: [16.902503222226073]
+21-04-20 10:17:35, INFO: --------------------------------
+21-04-20 10:17:35, INFO: epoch: 353
+21-04-20 10:19:01, INFO: epoch: 354
+21-04-20 10:20:26, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_354.pth
+21-04-20 10:20:26, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_354.pth
+21-04-20 10:20:26, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/354.png
+21-04-20 10:20:26, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:22:03, INFO: [-0.6808616133093834, 0.08346460941963633, 0.6826505337417126, 0.057847180001130906, 0.5060856134712696, 0.041412350375229535, 0.4920564034819603, 0.04233174014485836]
+21-04-20 10:22:03, INFO: fid score
+21-04-20 10:22:39, INFO: [16.054651622837895]
+21-04-20 10:22:39, INFO: --------------------------------
+21-04-20 10:22:39, INFO: epoch: 355
+21-04-20 10:24:05, INFO: epoch: 356
+21-04-20 10:25:30, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_356.pth
+21-04-20 10:25:30, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_356.pth
+21-04-20 10:25:30, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/356.png
+21-04-20 10:25:30, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:27:07, INFO: [-0.7036787541091442, 0.0800818012571465, 0.6890475625514985, 0.05605311139947618, 0.5109248445928096, 0.03880107987603866, 0.5036600834310054, 0.039378888584334054]
+21-04-20 10:27:07, INFO: fid score
+21-04-20 10:27:43, INFO: [15.074951398872827]
+21-04-20 10:27:43, INFO: --------------------------------
+21-04-20 10:27:43, INFO: epoch: 357
+21-04-20 10:29:09, INFO: epoch: 358
+21-04-20 10:30:35, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_358.pth
+21-04-20 10:30:35, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_358.pth
+21-04-20 10:30:35, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/358.png
+21-04-20 10:30:35, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:32:11, INFO: [-0.63229240604043, 0.07308075901092814, 0.6905047925233841, 0.05552890426951595, 0.47468225434422495, 0.039975601327792085, 0.4672137878656387, 0.038690418385610756]
+21-04-20 10:32:11, INFO: fid score
+21-04-20 10:32:47, INFO: [15.311330886470842]
+21-04-20 10:32:47, INFO: --------------------------------
+21-04-20 10:32:47, INFO: epoch: 359
+21-04-20 10:34:13, INFO: epoch: 360
+21-04-20 10:35:39, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_360.pth
+21-04-20 10:35:39, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_360.pth
+21-04-20 10:35:39, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/360.png
+21-04-20 10:35:39, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:37:15, INFO: [-0.6615672751486301, 0.062175247653992, 0.694741073179245, 0.04717829949492982, 0.48412964103221895, 0.03399383950084874, 0.4829606893002987, 0.03212165275480398]
+21-04-20 10:37:15, INFO: fid score
+21-04-20 10:37:51, INFO: [14.833356786711107]
+21-04-20 10:37:51, INFO: --------------------------------
+21-04-20 10:37:51, INFO: epoch: 361
+21-04-20 10:39:17, INFO: epoch: 362
+21-04-20 10:40:43, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_362.pth
+21-04-20 10:40:43, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_362.pth
+21-04-20 10:40:43, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/362.png
+21-04-20 10:40:43, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:42:19, INFO: [-0.6733445039212703, 0.08509178401102048, 0.6861869311988353, 0.061176272438687736, 0.4989350310623646, 0.04282664120944593, 0.4881519393503666, 0.0435743080788064]
+21-04-20 10:42:19, INFO: fid score
+21-04-20 10:42:56, INFO: [16.365708310085637]
+21-04-20 10:42:56, INFO: --------------------------------
+21-04-20 10:42:56, INFO: epoch: 363
+21-04-20 10:44:22, INFO: epoch: 364
+21-04-20 10:45:47, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_364.pth
+21-04-20 10:45:47, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_364.pth
+21-04-20 10:45:47, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/364.png
+21-04-20 10:45:47, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:47:24, INFO: [-0.7039459362745285, 0.07321171632969387, 0.6919880521416664, 0.05218314098621284, 0.5080259459733963, 0.03790044420878451, 0.5040518275558948, 0.0359733030882977]
+21-04-20 10:47:24, INFO: fid score
+21-04-20 10:48:01, INFO: [14.331983646495956]
+21-04-20 10:48:01, INFO: --------------------------------
+21-04-20 10:48:01, INFO: epoch: 365
+21-04-20 10:49:27, INFO: epoch: 366
+21-04-20 10:50:53, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_366.pth
+21-04-20 10:50:53, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_366.pth
+21-04-20 10:50:53, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/366.png
+21-04-20 10:50:53, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:52:29, INFO: [-0.6982707128107548, 0.073415228846747, 0.6829573044776917, 0.05133625544882883, 0.5141989139080048, 0.036030859791754674, 0.501216389298439, 0.03649110101473007]
+21-04-20 10:52:29, INFO: fid score
+21-04-20 10:53:05, INFO: [16.010267656732026]
+21-04-20 10:53:05, INFO: --------------------------------
+21-04-20 10:53:05, INFO: epoch: 367
+21-04-20 10:54:31, INFO: epoch: 368
+21-04-20 10:55:57, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_368.pth
+21-04-20 10:55:57, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_368.pth
+21-04-20 10:55:57, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/368.png
+21-04-20 10:55:57, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 10:57:33, INFO: [-0.7037581021130085, 0.06931163728722196, 0.689862772500515, 0.049423062693402624, 0.5099334797978401, 0.03585178817036468, 0.504093514251709, 0.034117967272834886]
+21-04-20 10:57:33, INFO: fid score
+21-04-20 10:58:10, INFO: [14.439297480792334]
+21-04-20 10:58:10, INFO: --------------------------------
+21-04-20 10:58:10, INFO: epoch: 369
+21-04-20 10:59:36, INFO: epoch: 370
+21-04-20 11:01:02, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_370.pth
+21-04-20 11:01:02, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_370.pth
+21-04-20 11:01:02, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/370.png
+21-04-20 11:01:02, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:02:38, INFO: [-0.6777973458707333, 0.07317260582505332, 0.6885070002555848, 0.05250977132840479, 0.4984042509198189, 0.03758643187458231, 0.49091590787768363, 0.03682739653877078]
+21-04-20 11:02:38, INFO: fid score
+21-04-20 11:03:15, INFO: [14.147482668007939]
+21-04-20 11:03:15, INFO: --------------------------------
+21-04-20 11:03:15, INFO: epoch: 371
+21-04-20 11:04:41, INFO: epoch: 372
+21-04-20 11:06:07, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_372.pth
+21-04-20 11:06:07, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_372.pth
+21-04-20 11:06:07, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/372.png
+21-04-20 11:06:07, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:07:44, INFO: [-0.6666131246566772, 0.07408361589278047, 0.6946123614430427, 0.054653627742250334, 0.4870313944220543, 0.038519262049323426, 0.4851476718604565, 0.038029778456437506]
+21-04-20 11:07:44, INFO: fid score
+21-04-20 11:08:20, INFO: [15.214972002735863]
+21-04-20 11:08:20, INFO: --------------------------------
+21-04-20 11:08:20, INFO: epoch: 373
+21-04-20 11:09:46, INFO: epoch: 374
+21-04-20 11:11:12, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_374.pth
+21-04-20 11:11:12, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_374.pth
+21-04-20 11:11:12, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/374.png
+21-04-20 11:11:12, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:12:48, INFO: [-0.6827457124650478, 0.07932210842132337, 0.6903934041082859, 0.05856939665274501, 0.4993520407676697, 0.04223929228855079, 0.4931913677632809, 0.03983142281622664]
+21-04-20 11:12:48, INFO: fid score
+21-04-20 11:13:25, INFO: [14.744300243995411]
+21-04-20 11:13:25, INFO: --------------------------------
+21-04-20 11:13:25, INFO: epoch: 375
+21-04-20 11:14:51, INFO: epoch: 376
+21-04-20 11:16:16, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_376.pth
+21-04-20 11:16:16, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_376.pth
+21-04-20 11:16:16, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/376.png
+21-04-20 11:16:16, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:17:52, INFO: [-0.7039646104574203, 0.06874554993607032, 0.6898109251022339, 0.04754066346895467, 0.509884948682785, 0.032818831637730764, 0.5042107377648354, 0.0340412403288908]
+21-04-20 11:17:52, INFO: fid score
+21-04-20 11:18:29, INFO: [14.475961192876042]
+21-04-20 11:18:29, INFO: --------------------------------
+21-04-20 11:18:29, INFO: epoch: 377
+21-04-20 11:19:55, INFO: epoch: 378
+21-04-20 11:21:20, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_378.pth
+21-04-20 11:21:20, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_378.pth
+21-04-20 11:21:20, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/378.png
+21-04-20 11:21:20, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:22:57, INFO: [-0.6491735919952393, 0.08142665955545267, 0.6818973484158516, 0.06145130058062124, 0.49134484328627587, 0.04361277093831308, 0.4757961514532566, 0.042431668451566554]
+21-04-20 11:22:57, INFO: fid score
+21-04-20 11:23:33, INFO: [16.372218750218565]
+21-04-20 11:23:33, INFO: --------------------------------
+21-04-20 11:23:33, INFO: epoch: 379
+21-04-20 11:24:59, INFO: epoch: 380
+21-04-20 11:26:26, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_380.pth
+21-04-20 11:26:26, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_380.pth
+21-04-20 11:26:26, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/380.png
+21-04-20 11:26:26, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:28:04, INFO: [-0.6964451905012131, 0.07060908218015854, 0.6976617714643478, 0.05007241614559318, 0.49829808793663977, 0.033936478391884614, 0.5004095072209835, 0.03500477264898844]
+21-04-20 11:28:04, INFO: fid score
+21-04-20 11:28:40, INFO: [15.086669011678055]
+21-04-20 11:28:40, INFO: --------------------------------
+21-04-20 11:28:40, INFO: epoch: 381
+21-04-20 11:30:06, INFO: epoch: 382
+21-04-20 11:31:33, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_382.pth
+21-04-20 11:31:33, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_382.pth
+21-04-20 11:31:33, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/382.png
+21-04-20 11:31:33, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:33:10, INFO: [-0.6594605706453324, 0.06217945940426465, 0.699586880671978, 0.047805870660051715, 0.47850868549346925, 0.03469175748190013, 0.48187367987036706, 0.03202277617101302]
+21-04-20 11:33:10, INFO: fid score
+21-04-20 11:33:46, INFO: [15.435074167478717]
+21-04-20 11:33:46, INFO: --------------------------------
+21-04-20 11:33:46, INFO: epoch: 383
+21-04-20 11:35:12, INFO: epoch: 384
+21-04-20 11:36:38, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_384.pth
+21-04-20 11:36:38, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_384.pth
+21-04-20 11:36:38, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/384.png
+21-04-20 11:36:38, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:38:16, INFO: [-0.7016295503616333, 0.08674492068547157, 0.6952308789014816, 0.06171711427840469, 0.5040678621768951, 0.0435168803438394, 0.502362070029974, 0.042957385218407765]
+21-04-20 11:38:16, INFO: fid score
+21-04-20 11:38:52, INFO: [16.786724504115256]
+21-04-20 11:38:52, INFO: --------------------------------
+21-04-20 11:38:52, INFO: epoch: 385
+21-04-20 11:40:18, INFO: epoch: 386
+21-04-20 11:41:44, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_386.pth
+21-04-20 11:41:44, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_386.pth
+21-04-20 11:41:44, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/386.png
+21-04-20 11:41:44, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:43:21, INFO: [-0.7045669521272182, 0.08043531169255068, 0.6900921413123607, 0.05613110687599202, 0.5104203165113926, 0.03960104655212347, 0.5040689723968506, 0.04018801945406277]
+21-04-20 11:43:21, INFO: fid score
+21-04-20 11:43:58, INFO: [14.177810963473888]
+21-04-20 11:43:58, INFO: --------------------------------
+21-04-20 11:43:58, INFO: epoch: 387
+21-04-20 11:45:24, INFO: epoch: 388
+21-04-20 11:46:50, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_388.pth
+21-04-20 11:46:50, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_388.pth
+21-04-20 11:46:50, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/388.png
+21-04-20 11:46:50, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:48:27, INFO: [-0.6527266215264798, 0.0736903430950262, 0.686950465375185, 0.05244711747851657, 0.4875771062970161, 0.036675985186105514, 0.47796700622439386, 0.0382387838310419]
+21-04-20 11:48:27, INFO: fid score
+21-04-20 11:49:04, INFO: [18.1075933304933]
+21-04-20 11:49:04, INFO: --------------------------------
+21-04-20 11:49:04, INFO: epoch: 389
+21-04-20 11:50:31, INFO: epoch: 390
+21-04-20 11:51:58, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_390.pth
+21-04-20 11:51:58, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_390.pth
+21-04-20 11:51:58, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/390.png
+21-04-20 11:51:58, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:53:35, INFO: [-0.6713958213269711, 0.06537421952556167, 0.6887837065339089, 0.04705886196214171, 0.4946891620576382, 0.03370207270994094, 0.4879139274775982, 0.03340806162044067]
+21-04-20 11:53:35, INFO: fid score
+21-04-20 11:54:12, INFO: [14.462522284233103]
+21-04-20 11:54:12, INFO: --------------------------------
+21-04-20 11:54:12, INFO: epoch: 391
+21-04-20 11:55:39, INFO: epoch: 392
+21-04-20 11:57:07, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_392.pth
+21-04-20 11:57:07, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_392.pth
+21-04-20 11:57:07, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/392.png
+21-04-20 11:57:07, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 11:58:45, INFO: [-0.7118854552865028, 0.06219672918090402, 0.6846190926790238, 0.04303471267384816, 0.5191759848475456, 0.031315994353393634, 0.5083337654173374, 0.03049346546081581]
+21-04-20 11:58:45, INFO: fid score
+21-04-20 11:59:22, INFO: [14.411692206584064]
+21-04-20 11:59:22, INFO: --------------------------------
+21-04-20 11:59:22, INFO: epoch: 393
+21-04-20 12:00:50, INFO: epoch: 394
+21-04-20 12:02:17, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_394.pth
+21-04-20 12:02:17, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_394.pth
+21-04-20 12:02:17, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/394.png
+21-04-20 12:02:17, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:03:54, INFO: [-0.7428376370251178, 0.08928797277894411, 0.6863911140680313, 0.06002327159833805, 0.5343228370845318, 0.04182694865466513, 0.5223357954263688, 0.04277664593676933]
+21-04-20 12:03:54, INFO: fid score
+21-04-20 12:04:31, INFO: [16.19597167676264]
+21-04-20 12:04:31, INFO: --------------------------------
+21-04-20 12:04:31, INFO: epoch: 395
+21-04-20 12:05:57, INFO: epoch: 396
+21-04-20 12:07:24, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_396.pth
+21-04-20 12:07:24, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_396.pth
+21-04-20 12:07:24, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/396.png
+21-04-20 12:07:24, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:09:01, INFO: [-0.7023739427566529, 0.06927944619290505, 0.692366579580307, 0.04750387988140076, 0.506464204621315, 0.0323942872070878, 0.5034105453729629, 0.034062068352594975]
+21-04-20 12:09:01, INFO: fid score
+21-04-20 12:09:37, INFO: [13.919457862574546]
+21-04-20 12:09:37, INFO: --------------------------------
+21-04-20 12:09:37, INFO: epoch: 397
+21-04-20 12:11:04, INFO: epoch: 398
+21-04-20 12:12:30, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_398.pth
+21-04-20 12:12:30, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_398.pth
+21-04-20 12:12:30, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/398.png
+21-04-20 12:12:30, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:14:07, INFO: [-0.7165217887043953, 0.06785313204050587, 0.6943403153657913, 0.047115929337154, 0.5117090798795223, 0.03358149728876108, 0.5104300608932972, 0.033057880970970274]
+21-04-20 12:14:07, INFO: fid score
+21-04-20 12:14:44, INFO: [15.757654276295114]
+21-04-20 12:14:44, INFO: --------------------------------
+21-04-20 12:14:44, INFO: epoch: 399
+21-04-20 12:16:10, INFO: epoch: 400
+21-04-20 12:17:38, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_400.pth
+21-04-20 12:17:38, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_400.pth
+21-04-20 12:17:38, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/400.png
+21-04-20 12:17:38, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:19:14, INFO: [-0.6439918183863163, 0.06408318952815964, 0.6895574491858483, 0.0478000321469221, 0.4806618599653244, 0.03416964201558622, 0.47373474848866465, 0.033461328836074423]
+21-04-20 12:19:14, INFO: fid score
+21-04-20 12:19:50, INFO: [15.655226181514479]
+21-04-20 12:19:50, INFO: --------------------------------
+21-04-20 12:19:50, INFO: epoch: 401
+21-04-20 12:21:16, INFO: epoch: 402
+21-04-20 12:22:43, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_402.pth
+21-04-20 12:22:43, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_402.pth
+21-04-20 12:22:43, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/402.png
+21-04-20 12:22:43, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:24:20, INFO: [-0.7084884223282337, 0.0666902513085026, 0.6848395333766937, 0.0472764968865543, 0.5173841582477092, 0.03410872031982751, 0.5065152244091033, 0.03296136537315595]
+21-04-20 12:24:20, INFO: fid score
+21-04-20 12:24:56, INFO: [14.115958499772148]
+21-04-20 12:24:56, INFO: --------------------------------
+21-04-20 12:24:56, INFO: epoch: 403
+21-04-20 12:26:23, INFO: epoch: 404
+21-04-20 12:27:51, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_404.pth
+21-04-20 12:27:51, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_404.pth
+21-04-20 12:27:51, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/404.png
+21-04-20 12:27:51, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:29:28, INFO: [-0.7052223478794097, 0.08218885741923018, 0.6986703240394593, 0.05795684730694389, 0.5022189948141574, 0.041127456071386966, 0.5043348611652851, 0.040611194857241545]
+21-04-20 12:29:28, INFO: fid score
+21-04-20 12:30:04, INFO: [15.062180161786983]
+21-04-20 12:30:04, INFO: --------------------------------
+21-04-20 12:30:04, INFO: epoch: 405
+21-04-20 12:31:31, INFO: epoch: 406
+21-04-20 12:32:58, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_406.pth
+21-04-20 12:32:58, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_406.pth
+21-04-20 12:32:58, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/406.png
+21-04-20 12:32:58, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:34:35, INFO: [-0.6817282857775688, 0.06716847163853104, 0.6858669961810112, 0.047765647670404685, 0.5027363590538502, 0.03403570791844715, 0.4931174129605293, 0.03397218751937889]
+21-04-20 12:34:35, INFO: fid score
+21-04-20 12:35:11, INFO: [13.52633831309737]
+21-04-20 12:35:11, INFO: --------------------------------
+21-04-20 12:35:11, INFO: epoch: 407
+21-04-20 12:36:38, INFO: epoch: 408
+21-04-20 12:38:05, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_408.pth
+21-04-20 12:38:05, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_408.pth
+21-04-20 12:38:05, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/408.png
+21-04-20 12:38:05, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:39:43, INFO: [-0.701769952583313, 0.08079723471643194, 0.6914763296365738, 0.056529897740273734, 0.5074934357762336, 0.03836518399849077, 0.5026710568904876, 0.04025308506874314]
+21-04-20 12:39:43, INFO: fid score
+21-04-20 12:40:19, INFO: [13.817547184284109]
+21-04-20 12:40:19, INFO: --------------------------------
+21-04-20 12:40:19, INFO: epoch: 409
+21-04-20 12:41:47, INFO: epoch: 410
+21-04-20 12:43:16, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_410.pth
+21-04-20 12:43:16, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_410.pth
+21-04-20 12:43:16, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/410.png
+21-04-20 12:43:16, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:44:53, INFO: [-0.6784627456188201, 0.07126416459064831, 0.6847260578036308, 0.048706592963802205, 0.5021596554279327, 0.0328170313676753, 0.49132099584937095, 0.035973261082306585]
+21-04-20 12:44:53, INFO: fid score
+21-04-20 12:45:30, INFO: [14.72604542396084]
+21-04-20 12:45:30, INFO: --------------------------------
+21-04-20 12:45:30, INFO: epoch: 411
+21-04-20 12:46:58, INFO: epoch: 412
+21-04-20 12:48:28, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_412.pth
+21-04-20 12:48:28, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_412.pth
+21-04-20 12:48:28, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/412.png
+21-04-20 12:48:28, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:50:08, INFO: [-0.6923044682741165, 0.08287491242567502, 0.6873454000711441, 0.060355973859793105, 0.5072590483784676, 0.0429116692538825, 0.49786524435281754, 0.041370634529165576]
+21-04-20 12:50:08, INFO: fid score
+21-04-20 12:50:45, INFO: [13.44358388038495]
+21-04-20 12:50:45, INFO: --------------------------------
+21-04-20 12:50:45, INFO: epoch: 413
+21-04-20 12:52:13, INFO: epoch: 414
+21-04-20 12:53:41, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_414.pth
+21-04-20 12:53:41, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_414.pth
+21-04-20 12:53:41, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/414.png
+21-04-20 12:53:41, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 12:55:20, INFO: [-0.6760670775353909, 0.07142581573163131, 0.6876502458691597, 0.05122611463776389, 0.498312403523922, 0.0364582967584518, 0.4900888245999813, 0.03640338534409246]
+21-04-20 12:55:20, INFO: fid score
+21-04-20 12:55:57, INFO: [15.306440910161854]
+21-04-20 12:55:57, INFO: --------------------------------
+21-04-20 12:55:57, INFO: epoch: 415
+21-04-20 12:57:25, INFO: epoch: 416
+21-04-20 12:58:55, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_416.pth
+21-04-20 12:58:55, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_416.pth
+21-04-20 12:58:55, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/416.png
+21-04-20 12:58:55, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:00:34, INFO: [-0.6826468635320664, 0.0585693442016958, 0.694413527572155, 0.04134179374736764, 0.49435943682193756, 0.028660644363895888, 0.4938580560207367, 0.029477979901266785]
+21-04-20 13:00:34, INFO: fid score
+21-04-20 13:01:11, INFO: [15.319339331592573]
+21-04-20 13:01:11, INFO: --------------------------------
+21-04-20 13:01:11, INFO: epoch: 417
+21-04-20 13:02:40, INFO: epoch: 418
+21-04-20 13:04:08, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_418.pth
+21-04-20 13:04:08, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_418.pth
+21-04-20 13:04:08, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/418.png
+21-04-20 13:04:08, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:05:46, INFO: [-0.6674745876550674, 0.06860839801134327, 0.6917895607113839, 0.05143990107059288, 0.49006313179135325, 0.036746277309996016, 0.4857871630489826, 0.03538291511756701]
+21-04-20 13:05:46, INFO: fid score
+21-04-20 13:06:23, INFO: [14.528868184715321]
+21-04-20 13:06:23, INFO: --------------------------------
+21-04-20 13:06:23, INFO: epoch: 419
+21-04-20 13:07:51, INFO: epoch: 420
+21-04-20 13:09:19, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_420.pth
+21-04-20 13:09:19, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_420.pth
+21-04-20 13:09:19, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/420.png
+21-04-20 13:09:19, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:10:57, INFO: [-0.6406642000257969, 0.06191139467796301, 0.6913625326752663, 0.0469262635950321, 0.47727669906020165, 0.03315393924410061, 0.47205223122239115, 0.032431134334127844]
+21-04-20 13:10:57, INFO: fid score
+21-04-20 13:11:34, INFO: [13.651273643070112]
+21-04-20 13:11:34, INFO: --------------------------------
+21-04-20 13:11:34, INFO: epoch: 421
+21-04-20 13:13:02, INFO: epoch: 422
+21-04-20 13:14:31, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_422.pth
+21-04-20 13:14:31, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_422.pth
+21-04-20 13:14:31, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/422.png
+21-04-20 13:14:31, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:16:09, INFO: [-0.6663505195617676, 0.06928543286650415, 0.7001329368114472, 0.048704835597231703, 0.48116684809327126, 0.03321177882702629, 0.48519813059568406, 0.03516832473283336]
+21-04-20 13:16:09, INFO: fid score
+21-04-20 13:16:46, INFO: [14.928325162640846]
+21-04-20 13:16:46, INFO: --------------------------------
+21-04-20 13:16:46, INFO: epoch: 423
+21-04-20 13:18:14, INFO: epoch: 424
+21-04-20 13:19:42, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_424.pth
+21-04-20 13:19:42, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_424.pth
+21-04-20 13:19:42, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/424.png
+21-04-20 13:19:42, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:21:20, INFO: [-0.608953627049923, 0.07015779293602495, 0.6937835855126381, 0.05265332002690797, 0.4604703056335449, 0.03629076372632498, 0.45474927562475204, 0.03788611344236835]
+21-04-20 13:21:20, INFO: fid score
+21-04-20 13:21:57, INFO: [14.201709869701688]
+21-04-20 13:21:57, INFO: --------------------------------
+21-04-20 13:21:57, INFO: epoch: 425
+21-04-20 13:23:27, INFO: epoch: 426
+21-04-20 13:24:56, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_426.pth
+21-04-20 13:24:56, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_426.pth
+21-04-20 13:24:56, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/426.png
+21-04-20 13:24:56, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:26:34, INFO: [-0.6935716163635254, 0.07348587319874125, 0.691219695687294, 0.05112730044904766, 0.5034265088379383, 0.03614251058597666, 0.4988814720869064, 0.036009629825578544]
+21-04-20 13:26:34, INFO: fid score
+21-04-20 13:27:11, INFO: [14.180005298639713]
+21-04-20 13:27:11, INFO: --------------------------------
+21-04-20 13:27:11, INFO: epoch: 427
+21-04-20 13:28:39, INFO: epoch: 428
+21-04-20 13:30:07, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_428.pth
+21-04-20 13:30:07, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_428.pth
+21-04-20 13:30:07, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/428.png
+21-04-20 13:30:07, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:31:45, INFO: [-0.6875364379227161, 0.08242486400124528, 0.7002685472369194, 0.05750369445851058, 0.4917298081099987, 0.03924851221285114, 0.49549393438100814, 0.04098015425126612]
+21-04-20 13:31:45, INFO: fid score
+21-04-20 13:32:22, INFO: [13.390276595578769]
+21-04-20 13:32:22, INFO: --------------------------------
+21-04-20 13:32:22, INFO: epoch: 429
+21-04-20 13:33:50, INFO: epoch: 430
+21-04-20 13:35:20, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_430.pth
+21-04-20 13:35:20, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_430.pth
+21-04-20 13:35:20, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/430.png
+21-04-20 13:35:20, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:36:59, INFO: [-0.6639366256535053, 0.06232125285691866, 0.6982810216188431, 0.045580550868686426, 0.48172038460969924, 0.032112985311854234, 0.48418496183156967, 0.031860188846311505]
+21-04-20 13:36:59, INFO: fid score
+21-04-20 13:37:36, INFO: [13.754099414880358]
+21-04-20 13:37:36, INFO: --------------------------------
+21-04-20 13:37:36, INFO: epoch: 431
+21-04-20 13:39:04, INFO: epoch: 432
+21-04-20 13:40:32, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_432.pth
+21-04-20 13:40:32, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_432.pth
+21-04-20 13:40:32, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/432.png
+21-04-20 13:40:32, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:42:11, INFO: [-0.6820929788649083, 0.075937884804161, 0.687839975810051, 0.056052777791856565, 0.5014245352685451, 0.04027122299824775, 0.4929856351613998, 0.038402528149198714]
+21-04-20 13:42:11, INFO: fid score
+21-04-20 13:42:48, INFO: [13.791711664969853]
+21-04-20 13:42:48, INFO: --------------------------------
+21-04-20 13:42:48, INFO: epoch: 433
+21-04-20 13:44:17, INFO: epoch: 434
+21-04-20 13:45:44, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_434.pth
+21-04-20 13:45:44, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_434.pth
+21-04-20 13:45:44, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/434.png
+21-04-20 13:45:44, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:47:22, INFO: [-0.6960100143432617, 0.05824430904222056, 0.6889705066680908, 0.041137593751523926, 0.5064849327802659, 0.02907362731550435, 0.5005801404237747, 0.029222813242951257]
+21-04-20 13:47:22, INFO: fid score
+21-04-20 13:47:59, INFO: [14.850829042384504]
+21-04-20 13:47:59, INFO: --------------------------------
+21-04-20 13:47:59, INFO: epoch: 435
+21-04-20 13:49:27, INFO: epoch: 436
+21-04-20 13:50:55, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_436.pth
+21-04-20 13:50:55, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_436.pth
+21-04-20 13:50:55, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/436.png
+21-04-20 13:50:55, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:52:35, INFO: [-0.7368262939333916, 0.07718417915818034, 0.685917931318283, 0.05187247781526111, 0.5311633949637413, 0.03628550234633272, 0.5199630600392818, 0.036259406228870424]
+21-04-20 13:52:35, INFO: fid score
+21-04-20 13:53:11, INFO: [14.699191213299912]
+21-04-20 13:53:11, INFO: --------------------------------
+21-04-20 13:53:11, INFO: epoch: 437
+21-04-20 13:54:38, INFO: epoch: 438
+21-04-20 13:56:07, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_438.pth
+21-04-20 13:56:07, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_438.pth
+21-04-20 13:56:07, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/438.png
+21-04-20 13:56:07, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 13:57:46, INFO: [-0.6934272307097912, 0.0832519057326231, 0.6900348937630654, 0.058795151062200034, 0.504982200461626, 0.04176064388737243, 0.4984297961711884, 0.04090797175048148]
+21-04-20 13:57:46, INFO: fid score
+21-04-20 13:58:22, INFO: [13.859405402456588]
+21-04-20 13:58:22, INFO: --------------------------------
+21-04-20 13:58:22, INFO: epoch: 439
+21-04-20 13:59:51, INFO: epoch: 440
+21-04-20 14:01:18, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_440.pth
+21-04-20 14:01:18, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_440.pth
+21-04-20 14:01:18, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/440.png
+21-04-20 14:01:18, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:03:00, INFO: [-0.7180161731958389, 0.06597873745541766, 0.6909417863845825, 0.04626115040240309, 0.5159236854314804, 0.03309434040391992, 0.5112212679803372, 0.03212759316238366]
+21-04-20 14:03:00, INFO: fid score
+21-04-20 14:03:37, INFO: [14.08043974780901]
+21-04-20 14:03:37, INFO: --------------------------------
+21-04-20 14:03:37, INFO: epoch: 441
+21-04-20 14:05:06, INFO: epoch: 442
+21-04-20 14:06:33, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_442.pth
+21-04-20 14:06:33, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_442.pth
+21-04-20 14:06:33, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/442.png
+21-04-20 14:06:33, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:08:11, INFO: [-0.6990383841037751, 0.07207103113251802, 0.6811975938677788, 0.052297419056299595, 0.5165699213922024, 0.03818507961695863, 0.5016393638372422, 0.036152045699990934]
+21-04-20 14:08:11, INFO: fid score
+21-04-20 14:08:48, INFO: [15.988673853236406]
+21-04-20 14:08:48, INFO: --------------------------------
+21-04-20 14:08:48, INFO: epoch: 443
+21-04-20 14:10:16, INFO: epoch: 444
+21-04-20 14:11:43, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_444.pth
+21-04-20 14:11:43, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_444.pth
+21-04-20 14:11:43, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/444.png
+21-04-20 14:11:43, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:13:21, INFO: [-0.6276021987080574, 0.06351475804887817, 0.6970514612317086, 0.04922952526181938, 0.46599626984596254, 0.03552683086736816, 0.46506014605164525, 0.03358829475552668]
+21-04-20 14:13:21, INFO: fid score
+21-04-20 14:13:58, INFO: [14.081456501195703]
+21-04-20 14:13:58, INFO: --------------------------------
+21-04-20 14:13:58, INFO: epoch: 445
+21-04-20 14:15:25, INFO: epoch: 446
+21-04-20 14:16:52, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_446.pth
+21-04-20 14:16:52, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_446.pth
+21-04-20 14:16:52, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/446.png
+21-04-20 14:16:52, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:18:30, INFO: [-0.6237372536480427, 0.0732285139471353, 0.6840489279985428, 0.05770280030038893, 0.4769449597299099, 0.042811919166316624, 0.4626436485946178, 0.0385543844860521]
+21-04-20 14:18:30, INFO: fid score
+21-04-20 14:19:07, INFO: [13.347510214977518]
+21-04-20 14:19:07, INFO: --------------------------------
+21-04-20 14:19:07, INFO: epoch: 447
+21-04-20 14:20:34, INFO: epoch: 448
+21-04-20 14:22:01, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_448.pth
+21-04-20 14:22:01, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_448.pth
+21-04-20 14:22:01, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/448.png
+21-04-20 14:22:01, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:23:39, INFO: [-0.6602190137863159, 0.05778894502458394, 0.6923596459507942, 0.044404211340611774, 0.48562711312770845, 0.03190943049511999, 0.48239846978783607, 0.029914319533165198]
+21-04-20 14:23:39, INFO: fid score
+21-04-20 14:24:15, INFO: [15.729644616904068]
+21-04-20 14:24:15, INFO: --------------------------------
+21-04-20 14:24:15, INFO: epoch: 449
+21-04-20 14:25:43, INFO: epoch: 450
+21-04-20 14:27:10, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_450.pth
+21-04-20 14:27:10, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_450.pth
+21-04-20 14:27:10, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/450.png
+21-04-20 14:27:10, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:28:47, INFO: [-0.6728579001247883, 0.07345612027732587, 0.6965618789076805, 0.05289286278690869, 0.48801081120967865, 0.036859521189113315, 0.4883889342784882, 0.03698263961703956]
+21-04-20 14:28:47, INFO: fid score
+21-04-20 14:29:24, INFO: [14.15133870978488]
+21-04-20 14:29:24, INFO: --------------------------------
+21-04-20 14:29:24, INFO: epoch: 451
+21-04-20 14:30:51, INFO: epoch: 452
+21-04-20 14:32:18, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_452.pth
+21-04-20 14:32:18, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_452.pth
+21-04-20 14:32:18, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/452.png
+21-04-20 14:32:18, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:33:55, INFO: [-0.6320874163031578, 0.06417781180411326, 0.7011413144350052, 0.050848930393380364, 0.4643896134078503, 0.03655190630768537, 0.4674262942433357, 0.034046455547883554]
+21-04-20 14:33:55, INFO: fid score
+21-04-20 14:34:32, INFO: [13.943639512035247]
+21-04-20 14:34:32, INFO: --------------------------------
+21-04-20 14:34:32, INFO: epoch: 453
+21-04-20 14:35:59, INFO: epoch: 454
+21-04-20 14:37:27, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_454.pth
+21-04-20 14:37:27, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_454.pth
+21-04-20 14:37:27, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/454.png
+21-04-20 14:37:27, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:39:05, INFO: [-0.6715993872344493, 0.07880300966026642, 0.6988032410919667, 0.056974523702595946, 0.4855703163921833, 0.040981185609431446, 0.4875267933964729, 0.04018378603103513]
+21-04-20 14:39:05, INFO: fid score
+21-04-20 14:39:41, INFO: [14.157739908607198]
+21-04-20 14:39:41, INFO: --------------------------------
+21-04-20 14:39:41, INFO: epoch: 455
+21-04-20 14:41:07, INFO: epoch: 456
+21-04-20 14:42:34, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_456.pth
+21-04-20 14:42:34, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_456.pth
+21-04-20 14:42:34, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/456.png
+21-04-20 14:42:34, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:44:12, INFO: [-0.7033987432181835, 0.06388189384898797, 0.6922299383640289, 0.046175938709980754, 0.5072059367358684, 0.033649790343588074, 0.504092620909214, 0.031511142493312924]
+21-04-20 14:44:12, INFO: fid score
+21-04-20 14:44:49, INFO: [15.557691160708345]
+21-04-20 14:44:49, INFO: --------------------------------
+21-04-20 14:44:49, INFO: epoch: 457
+21-04-20 14:46:17, INFO: epoch: 458
+21-04-20 14:47:45, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_458.pth
+21-04-20 14:47:45, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_458.pth
+21-04-20 14:47:45, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/458.png
+21-04-20 14:47:45, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:49:22, INFO: [-0.6395190729498863, 0.06759565435654578, 0.7020874959349632, 0.052013149014637355, 0.4669484306752682, 0.036962836845306525, 0.4712561952292919, 0.03536607690530204]
+21-04-20 14:49:22, INFO: fid score
+21-04-20 14:49:59, INFO: [15.061249178949424]
+21-04-20 14:49:59, INFO: --------------------------------
+21-04-20 14:49:59, INFO: epoch: 459
+21-04-20 14:51:24, INFO: epoch: 460
+21-04-20 14:52:51, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_460.pth
+21-04-20 14:52:51, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_460.pth
+21-04-20 14:52:51, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/460.png
+21-04-20 14:52:51, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:54:29, INFO: [-0.6374631659924984, 0.06361512126400626, 0.6888038582801819, 0.046910985802244426, 0.47819521135687826, 0.03307701413898952, 0.4703045754015446, 0.03338443833073453]
+21-04-20 14:54:29, INFO: fid score
+21-04-20 14:55:06, INFO: [12.351586099397053]
+21-04-20 14:55:06, INFO: --------------------------------
+21-04-20 14:55:06, INFO: epoch: 461
+21-04-20 14:56:35, INFO: epoch: 462
+21-04-20 14:58:02, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_462.pth
+21-04-20 14:58:02, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_462.pth
+21-04-20 14:58:02, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/462.png
+21-04-20 14:58:02, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 14:59:40, INFO: [-0.6661940412461758, 0.06485122219624476, 0.6896950351953507, 0.04626203909544252, 0.4911661981463432, 0.03271134594210561, 0.4852645147681236, 0.033129276638736264]
+21-04-20 14:59:40, INFO: fid score
+21-04-20 15:00:17, INFO: [14.8600256000461]
+21-04-20 15:00:17, INFO: --------------------------------
+21-04-20 15:00:17, INFO: epoch: 463
+21-04-20 15:01:43, INFO: epoch: 464
+21-04-20 15:03:11, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_464.pth
+21-04-20 15:03:11, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_464.pth
+21-04-20 15:03:11, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/464.png
+21-04-20 15:03:11, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:04:51, INFO: [-0.6449947798132897, 0.06723526596866651, 0.6937614637374878, 0.05008683631980214, 0.47728552886843684, 0.036281704992879325, 0.4741551285803318, 0.03503330517972199]
+21-04-20 15:04:51, INFO: fid score
+21-04-20 15:05:27, INFO: [13.434535157841168]
+21-04-20 15:05:27, INFO: --------------------------------
+21-04-20 15:05:27, INFO: epoch: 465
+21-04-20 15:06:54, INFO: epoch: 466
+21-04-20 15:08:21, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_466.pth
+21-04-20 15:08:21, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_466.pth
+21-04-20 15:08:21, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/466.png
+21-04-20 15:08:21, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:09:58, INFO: [-0.7235619411587715, 0.06527374658579609, 0.6973616624832153, 0.045386330883894, 0.512185234105587, 0.03320117187670437, 0.5139518238127232, 0.03139204655326468]
+21-04-20 15:09:58, INFO: fid score
+21-04-20 15:10:35, INFO: [14.060458515282619]
+21-04-20 15:10:35, INFO: --------------------------------
+21-04-20 15:10:35, INFO: epoch: 467
+21-04-20 15:12:02, INFO: epoch: 468
+21-04-20 15:13:29, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_468.pth
+21-04-20 15:13:29, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_468.pth
+21-04-20 15:13:29, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/468.png
+21-04-20 15:13:29, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:15:06, INFO: [-0.7243565289258956, 0.07360096167764374, 0.6969069212436676, 0.05056608913783829, 0.5132039033412933, 0.03510430809031812, 0.5140501643061638, 0.03574846564090067]
+21-04-20 15:15:06, INFO: fid score
+21-04-20 15:15:42, INFO: [13.247148774386488]
+21-04-20 15:15:42, INFO: --------------------------------
+21-04-20 15:15:42, INFO: epoch: 469
+21-04-20 15:17:10, INFO: epoch: 470
+21-04-20 15:18:37, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_470.pth
+21-04-20 15:18:37, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_470.pth
+21-04-20 15:18:37, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/470.png
+21-04-20 15:18:37, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:20:15, INFO: [-0.7348573010325432, 0.054618185244742226, 0.691587713778019, 0.03760646057430442, 0.5236268624246121, 0.026955047501461275, 0.519708339869976, 0.026320683731224974]
+21-04-20 15:20:15, INFO: fid score
+21-04-20 15:20:51, INFO: [13.772842864493953]
+21-04-20 15:20:51, INFO: --------------------------------
+21-04-20 15:20:51, INFO: epoch: 471
+21-04-20 15:22:19, INFO: epoch: 472
+21-04-20 15:23:46, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_472.pth
+21-04-20 15:23:46, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_472.pth
+21-04-20 15:23:46, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/472.png
+21-04-20 15:23:46, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:25:25, INFO: [-0.6951020139217376, 0.05945157433946349, 0.6881932362318038, 0.04246678302681466, 0.5069073295593262, 0.030807184598721272, 0.5000931340634823, 0.02975756975399224]
+21-04-20 15:25:25, INFO: fid score
+21-04-20 15:26:02, INFO: [14.278691366698581]
+21-04-20 15:26:02, INFO: --------------------------------
+21-04-20 15:26:02, INFO: epoch: 473
+21-04-20 15:27:30, INFO: epoch: 474
+21-04-20 15:28:57, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_474.pth
+21-04-20 15:28:57, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_474.pth
+21-04-20 15:28:57, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/474.png
+21-04-20 15:28:57, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:30:36, INFO: [-0.7008605059146881, 0.08002189758862394, 0.6900149954795838, 0.0565066033665776, 0.5086331894218922, 0.039926961273438526, 0.5022524835824966, 0.03979071018946413]
+21-04-20 15:30:36, INFO: fid score
+21-04-20 15:31:13, INFO: [15.132185056949595]
+21-04-20 15:31:13, INFO: --------------------------------
+21-04-20 15:31:13, INFO: epoch: 475
+21-04-20 15:32:41, INFO: epoch: 476
+21-04-20 15:34:09, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_476.pth
+21-04-20 15:34:09, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_476.pth
+21-04-20 15:34:09, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/476.png
+21-04-20 15:34:09, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:35:47, INFO: [-0.6818523230314255, 0.07124352403601118, 0.6878255650162697, 0.050358177191361556, 0.5008913751304149, 0.03480131503018764, 0.4930387205123901, 0.03602144798829274]
+21-04-20 15:35:47, INFO: fid score
+21-04-20 15:36:24, INFO: [15.74693163237177]
+21-04-20 15:36:24, INFO: --------------------------------
+21-04-20 15:36:24, INFO: epoch: 477
+21-04-20 15:37:52, INFO: epoch: 478
+21-04-20 15:39:20, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_478.pth
+21-04-20 15:39:20, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_478.pth
+21-04-20 15:39:20, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/478.png
+21-04-20 15:39:20, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:40:58, INFO: [-0.655773348146677, 0.06917697173568396, 0.6915474073767662, 0.054090976324573124, 0.4847795014202595, 0.038813230782147726, 0.4797209330916405, 0.035808411425444886]
+21-04-20 15:40:58, INFO: fid score
+21-04-20 15:41:34, INFO: [14.427759084915266]
+21-04-20 15:41:34, INFO: --------------------------------
+21-04-20 15:41:34, INFO: epoch: 479
+21-04-20 15:43:02, INFO: epoch: 480
+21-04-20 15:44:30, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_480.pth
+21-04-20 15:44:30, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_480.pth
+21-04-20 15:44:30, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/480.png
+21-04-20 15:44:30, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:46:08, INFO: [-0.632523734664917, 0.06753133652242964, 0.6952967594861984, 0.049733609103655894, 0.46987965821027755, 0.035190778405228156, 0.46754962458610533, 0.035467098234297535]
+21-04-20 15:46:08, INFO: fid score
+21-04-20 15:46:44, INFO: [14.616379004369634]
+21-04-20 15:46:44, INFO: --------------------------------
+21-04-20 15:46:44, INFO: epoch: 481
+21-04-20 15:48:11, INFO: epoch: 482
+21-04-20 15:49:39, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_482.pth
+21-04-20 15:49:39, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_482.pth
+21-04-20 15:49:39, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/482.png
+21-04-20 15:49:39, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:51:17, INFO: [-0.6342483801484108, 0.06908890848429725, 0.6877171926140785, 0.052500598834105267, 0.47805248183608057, 0.037635927154330784, 0.46840468307733535, 0.03650330250291859]
+21-04-20 15:51:17, INFO: fid score
+21-04-20 15:51:53, INFO: [13.59338416159099]
+21-04-20 15:51:53, INFO: --------------------------------
+21-04-20 15:51:53, INFO: epoch: 483
+21-04-20 15:53:21, INFO: epoch: 484
+21-04-20 15:54:48, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_484.pth
+21-04-20 15:54:48, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_484.pth
+21-04-20 15:54:48, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/484.png
+21-04-20 15:54:48, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 15:56:25, INFO: [-0.638420972853899, 0.06760196075413391, 0.6989134019851685, 0.05100729731149835, 0.46928646091222764, 0.03538770837899179, 0.47067505071759225, 0.035422031740628065]
+21-04-20 15:56:25, INFO: fid score
+21-04-20 15:57:01, INFO: [14.186343964070772]
+21-04-20 15:57:01, INFO: --------------------------------
+21-04-20 15:57:01, INFO: epoch: 485
+21-04-20 15:58:28, INFO: epoch: 486
+21-04-20 15:59:56, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_486.pth
+21-04-20 15:59:56, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_486.pth
+21-04-20 15:59:56, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/486.png
+21-04-20 15:59:56, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 16:01:33, INFO: [-0.6893124438941479, 0.07526681148819882, 0.6927809569954873, 0.053181720817563116, 0.49984567456841467, 0.03725943041386297, 0.49666889373064044, 0.03735492482162501]
+21-04-20 16:01:33, INFO: fid score
+21-04-20 16:02:10, INFO: [13.42520428208016]
+21-04-20 16:02:10, INFO: --------------------------------
+21-04-20 16:02:10, INFO: epoch: 487
+21-04-20 16:03:36, INFO: epoch: 488
+21-04-20 16:05:02, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_488.pth
+21-04-20 16:05:02, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_488.pth
+21-04-20 16:05:02, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/488.png
+21-04-20 16:05:02, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 16:06:38, INFO: [-0.6768525490283966, 0.07043905805097209, 0.6917573915243149, 0.050199361545254194, 0.494524651235342, 0.03456398223292674, 0.4905181198656559, 0.03616103858613123]
+21-04-20 16:06:38, INFO: fid score
+21-04-20 16:07:15, INFO: [14.612896488756917]
+21-04-20 16:07:15, INFO: --------------------------------
+21-04-20 16:07:15, INFO: epoch: 489
+21-04-20 16:08:41, INFO: epoch: 490
+21-04-20 16:10:08, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_490.pth
+21-04-20 16:10:08, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_490.pth
+21-04-20 16:10:08, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/490.png
+21-04-20 16:10:08, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 16:11:44, INFO: [-0.6787954567790031, 0.06065600314899005, 0.6866088686704636, 0.04269107765368417, 0.5002380939722061, 0.02963187175639891, 0.4918433981597424, 0.03058468500591707]
+21-04-20 16:11:44, INFO: fid score
+21-04-20 16:12:20, INFO: [14.437247523457756]
+21-04-20 16:12:20, INFO: --------------------------------
+21-04-20 16:12:20, INFO: epoch: 491
+21-04-20 16:13:45, INFO: epoch: 492
+21-04-20 16:15:11, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_492.pth
+21-04-20 16:15:11, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_492.pth
+21-04-20 16:15:11, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/492.png
+21-04-20 16:15:11, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 16:16:47, INFO: [-0.6765511751294137, 0.05959173795932318, 0.6895651906013489, 0.04343333674545567, 0.49629403300881386, 0.031222050204949878, 0.4907328912973404, 0.030188178802894285]
+21-04-20 16:16:47, INFO: fid score
+21-04-20 16:17:23, INFO: [13.247289328319454]
+21-04-20 16:17:23, INFO: --------------------------------
+21-04-20 16:17:23, INFO: epoch: 493
+21-04-20 16:18:49, INFO: epoch: 494
+21-04-20 16:20:14, INFO: saved g at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/generator_494.pth
+21-04-20 16:20:14, INFO: saved d at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/models/discriminator_494.pth
+21-04-20 16:20:14, INFO: saved image at: experiments/gan1_10_heads_1G_10heads_dropout_for_d/images/494.png
+21-04-20 16:20:14, INFO: lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std
+21-04-20 16:21:50, INFO: [-0.6801880569159985, 0.06947152684964866, 0.69630303003788, 0.0498044628313077, 0.49169406501054763, 0.034625445796210054, 0.4922537418663502, 0.03534383824115755]
+21-04-20 16:21:50, INFO: fid score
+21-04-20 16:22:27, INFO: [14.030054973195945]
+21-04-20 16:22:27, INFO: --------------------------------
+21-04-20 16:22:27, INFO: epoch: 495
+21-04-20 16:23:52, INFO: epoch: 496
