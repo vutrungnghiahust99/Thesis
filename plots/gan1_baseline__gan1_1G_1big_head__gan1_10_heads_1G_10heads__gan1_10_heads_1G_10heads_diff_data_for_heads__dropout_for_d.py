@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-exp1 = 'experiments/baseline/gan1_base/gan1_base.csv'
-exp2 = 'experiments/gan1_10_heads_1G_10heads/gan1_10_heads_1G_10heads.csv'
-exp3 = 'experiments/gan1_10_heads_1G_10heads_diff_data_for_heads/gan1_10_heads_1G_10heads_diff_data_for_heads.csv'
-exp4 = 'experiments/gan1_1G_1big_head/gan1_1G_1big_head.csv'
+exp1 = 'experiments/gan1_base_dropout_for_d/gan1_base_dropout_for_d.csv'
+exp2 = 'experiments/gan1_10_heads_1G_10heads_dropout_for_d/gan1_10_heads_1G_10heads_dropout_for_d.csv'
+exp3 = 'experiments/gan1_10_heads_1G_10heads_diff_data_for_heads_dropout_for_d/gan1_10_heads_1G_10heads_diff_data_for_heads_dropout_for_d.csv'
+exp4 = 'experiments/gan1_1G_1big_head_dropout_for_d/gan1_1G_1big_head_dropout_for_d.csv'
 
 df1 = pd.read_csv(exp1)
 df2 = pd.read_csv(exp2)
@@ -80,4 +80,4 @@ plt.subplots_adjust(bottom=0.2, wspace=0.32, top=0.95, left=0.07, right=0.98, hs
 
 # plt.subplots_adjust(top=.9, bottom=0.3, right=0.99, left=0.05,
 #                     hspace=0, wspace=0.32)
-plt.savefig('reports/gan1_baseline__gan1_10_heads_1G_10heads__gan1_10_heads_1G_10heads_diff_data_for_heads.pdf')
+plt.savefig('reports/gan1_baseline__gan1_1G_1big_head__gan1_10_heads_1G_10heads__gan1_10_heads_1G_10heads_diff_data_for_heads_dropout_for_d.pdf')
