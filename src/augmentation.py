@@ -6,7 +6,7 @@ Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTen
 
 class Augmentation():
     @staticmethod
-    def translation(x, shift: int):
+    def translation(x, shift=2):
         """given img size H x W, this functions firstly pad zero to get image size (H+shift) x (H+shift), then crop size (HxW)
         """
         shift_x = shift
@@ -25,5 +25,39 @@ class Augmentation():
         return x
 
     @staticmethod
-    def add_guassian_noise(tensor, std, mean=0):
+    def add_guassian_noise(tensor, std=0.2, mean=0):
         return tensor + torch.randn(tensor.size()).type(Tensor) * std + mean
+
+    @staticmethod
+    def rand_cutout(x, ratio=0.5):
+        cutout_size = int(x.size(2) * ratio + 0.5), int(x.size(3) * ratio + 0.5)
+        offset_x = torch.randint(0, x.size(2) + (1 - cutout_size[0] % 2), size=[x.size(0), 1, 1], device=x.device)
+        offset_y = torch.randint(0, x.size(3) + (1 - cutout_size[1] % 2), size=[x.size(0), 1, 1], device=x.device)
+        grid_batch, grid_x, grid_y = torch.meshgrid(
+            torch.arange(x.size(0), dtype=torch.long, device=x.device),
+            torch.arange(cutout_size[0], dtype=torch.long, device=x.device),
+            torch.arange(cutout_size[1], dtype=torch.long, device=x.device),
+        )
+        grid_x = torch.clamp(grid_x + offset_x - cutout_size[0] // 2, min=0, max=x.size(2) - 1)
+        grid_y = torch.clamp(grid_y + offset_y - cutout_size[1] // 2, min=0, max=x.size(3) - 1)
+        mask = torch.ones(x.size(0), x.size(2), x.size(3), dtype=x.dtype, device=x.device)
+        mask[grid_batch, grid_x, grid_y] = 0
+        x = x * mask.unsqueeze(1)
+        return x
+
+    @staticmethod
+    def rand_brightness(x):
+        x = x + (torch.rand(x.size(0), 1, 1, 1, dtype=x.dtype, device=x.device) - 0.5)
+        return x
+
+    @staticmethod
+    def rand_saturation(x):
+        x_mean = x.mean(dim=1, keepdim=True)
+        x = (x - x_mean) * (torch.rand(x.size(0), 1, 1, 1, dtype=x.dtype, device=x.device) * 2) + x_mean
+        return x
+
+    @staticmethod
+    def rand_contrast(x):
+        x_mean = x.mean(dim=[1, 2, 3], keepdim=True)
+        x = (x - x_mean) * (torch.rand(x.size(0), 1, 1, 1, dtype=x.dtype, device=x.device) + 0.5) + x_mean
+        return x
