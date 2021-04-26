@@ -5,6 +5,8 @@ from torchvision.utils import save_image
 
 from src.noise import Noise
 
+Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+
 
 class AverageMeter(object):
     def __init__(self):
@@ -47,7 +49,14 @@ def get_gen_real_imgs_with_headID(gen_imgs, real_imgs, heads, head_id):
         count = get_frequent(heads[i], str(head_id))
         if count == 0:
             continue
-        for _ in range(count):
-            gen.append(gen_imgs[i].unsqueeze(0))
-            real.append(real_imgs[i].unsqueeze(0))
+        gen.append(gen_imgs[i].unsqueeze(0))
+        real.append(real_imgs[i].unsqueeze(0))
     return torch.cat(gen), torch.cat(real)
+
+
+def get_gen_mask_with_headID(heads, head_id):
+    mask = []
+    for i in range(len(heads)):
+        count = get_frequent(heads[i], str(head_id))
+        mask.append(count != 0)
+    return torch.tensor(mask).type(Tensor)
