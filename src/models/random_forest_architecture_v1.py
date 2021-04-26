@@ -19,13 +19,13 @@ class Linear(nn.Module):
 
 
 class Generator(nn.Module):
-    def __init__(self, use_spectral_norm, z_dim=100, img_shape=(1, 28, 28)):
+    def __init__(self, z_dim=100, img_shape=(1, 28, 28)):
         super(Generator, self).__init__()
 
         self.img_shape = img_shape
 
         def block(in_features, out_features, normalize=True):
-            layers = [Linear(use_spectral_norm, in_features, out_features)]
+            layers = [Linear(False, in_features, out_features)]
 
             if normalize:
                 layers.append(nn.BatchNorm1d(out_features, 0.8))
@@ -37,7 +37,7 @@ class Generator(nn.Module):
             *block(128, 256, normalize=False),
             *block(256, 512, normalize=False),
             *block(512, 1024, normalize=False),
-            Linear(use_spectral_norm, 1024, int(np.prod(img_shape))),
+            Linear(False, 1024, int(np.prod(img_shape))),
             nn.Tanh()
         )
 
