@@ -61,3 +61,63 @@ class Augmentation():
         x_mean = x.mean(dim=[1, 2, 3], keepdim=True)
         x = (x - x_mean) * (torch.rand(x.size(0), 1, 1, 1, dtype=x.dtype, device=x.device) + 0.5) + x_mean
         return x
+
+    @staticmethod
+    def aug0(x):
+        return Augmentation.translation(
+            Augmentation.add_guassian_noise(
+                Augmentation.rand_brightness(x)))
+
+    @staticmethod
+    def aug1(x):
+        return Augmentation.translation(
+            Augmentation.add_guassian_noise(
+                Augmentation.rand_contrast(x)))
+
+    @staticmethod
+    def aug2(x):
+        return Augmentation.translation(
+            Augmentation.add_guassian_noise(
+                Augmentation.rand_saturation(x)))
+
+    @staticmethod
+    def aug3(x):
+        return Augmentation.translation(
+            Augmentation.rand_brightness(
+                Augmentation.rand_contrast(x)))
+
+    @staticmethod
+    def aug4(x):
+        return Augmentation.translation(
+            Augmentation.rand_brightness(
+                Augmentation.rand_saturation(x)))
+
+    @staticmethod
+    def aug5(x):
+        return Augmentation.translation(
+            Augmentation.rand_contrast(
+                Augmentation.rand_saturation(x)))
+
+    @staticmethod
+    def aug6(x):
+        return Augmentation.add_guassian_noise(
+            Augmentation.rand_brightness(
+                Augmentation.rand_contrast(x)))
+
+    @staticmethod
+    def aug7(x):
+        return Augmentation.add_guassian_noise(
+            Augmentation.rand_brightness(
+                Augmentation.rand_saturation(x)))
+
+    @staticmethod
+    def aug8(x):
+        return Augmentation.add_guassian_noise(
+            Augmentation.rand_contrast(
+                Augmentation.rand_saturation(x)))
+
+    @staticmethod
+    def aug9(x):
+        return Augmentation.rand_brightness(
+            Augmentation.rand_contrast(
+                Augmentation.rand_saturation(x)))
