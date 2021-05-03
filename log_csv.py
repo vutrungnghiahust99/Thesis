@@ -2,15 +2,25 @@
 import os
 import pandas as pd
 
-root = "experiments"
+root = "experiments/augmentation"
 
 header = [
     'lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std', 'dx_mean', 'dx_std', 'dgz_mean', 'dgz_std',
-    'fid_score'
+    'fid_score',
+    'lossg_mean_0', 'lossg_std_0', 'lossd_mean_0', 'lossd_std_0', 'dx_mean_0', 'dx_std_0', 'dgz_mean_0', 'dgz_std_0',
+    'lossg_mean_1', 'lossg_std_1', 'lossd_mean_1', 'lossd_std_1', 'dx_mean_1', 'dx_std_1', 'dgz_mean_1', 'dgz_std_1',
+    'lossg_mean_2', 'lossg_std_2', 'lossd_mean_2', 'lossd_std_2', 'dx_mean_2', 'dx_std_2', 'dgz_mean_2', 'dgz_std_2',
+    'lossg_mean_3', 'lossg_std_3', 'lossd_mean_3', 'lossd_std_3', 'dx_mean_3', 'dx_std_3', 'dgz_mean_3', 'dgz_std_3',
+    'lossg_mean_4', 'lossg_std_4', 'lossd_mean_4', 'lossd_std_4', 'dx_mean_4', 'dx_std_4', 'dgz_mean_4', 'dgz_std_4',
+    'lossg_mean_5', 'lossg_std_5', 'lossd_mean_5', 'lossd_std_5', 'dx_mean_5', 'dx_std_5', 'dgz_mean_5', 'dgz_std_5',
+    'lossg_mean_6', 'lossg_std_6', 'lossd_mean_6', 'lossd_std_6', 'dx_mean_6', 'dx_std_6', 'dgz_mean_6', 'dgz_std_6',
+    'lossg_mean_7', 'lossg_std_7', 'lossd_mean_7', 'lossd_std_7', 'dx_mean_7', 'dx_std_7', 'dgz_mean_7', 'dgz_std_7',
+    'lossg_mean_8', 'lossg_std_8', 'lossd_mean_8', 'lossd_std_8', 'dx_mean_8', 'dx_std_8', 'dgz_mean_8', 'dgz_std_8',
+    'lossg_mean_9', 'lossg_std_9', 'lossd_mean_9', 'lossd_std_9', 'dx_mean_9', 'dx_std_9', 'dgz_mean_9', 'dgz_std_9'
 ]
 
 INPUT = [
-    'gan1_10_heads_1G_10heads_diff_data_for_heads_sep_d'
+    'gan1_10_heads_1G_10heads'
 ]
 
 
