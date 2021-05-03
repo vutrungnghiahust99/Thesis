@@ -6,7 +6,7 @@ Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTen
 
 class Augmentation():
     @staticmethod
-    def translation(x, shift=2):
+    def translation(x, shift=4):
         """given img size H x W, this functions firstly pad zero to get image size (H+shift) x (H+shift), then crop size (HxW)
         """
         shift_x = shift
@@ -64,60 +64,40 @@ class Augmentation():
 
     @staticmethod
     def aug0(x):
-        return Augmentation.translation(
-            Augmentation.add_guassian_noise(
-                Augmentation.rand_brightness(x)))
+        return Augmentation.translation(x)
 
     @staticmethod
     def aug1(x):
-        return Augmentation.translation(
-            Augmentation.add_guassian_noise(
-                Augmentation.rand_contrast(x)))
+        return Augmentation.translation(x)
 
     @staticmethod
     def aug2(x):
-        return Augmentation.translation(
-            Augmentation.add_guassian_noise(
-                Augmentation.rand_saturation(x)))
+        return Augmentation.translation(x)
 
     @staticmethod
     def aug3(x):
-        return Augmentation.translation(
-            Augmentation.rand_brightness(
-                Augmentation.rand_contrast(x)))
+        return Augmentation.translation(x)
 
     @staticmethod
     def aug4(x):
-        return Augmentation.translation(
-            Augmentation.rand_brightness(
-                Augmentation.rand_saturation(x)))
+        return Augmentation.translation(x)
 
     @staticmethod
     def aug5(x):
-        return Augmentation.translation(
-            Augmentation.rand_contrast(
-                Augmentation.rand_saturation(x)))
+        return Augmentation.translation(x)
 
     @staticmethod
     def aug6(x):
-        return Augmentation.add_guassian_noise(
-            Augmentation.rand_brightness(
-                Augmentation.rand_contrast(x)))
+        return Augmentation.translation(x)
 
     @staticmethod
     def aug7(x):
-        return Augmentation.add_guassian_noise(
-            Augmentation.rand_brightness(
-                Augmentation.rand_saturation(x)))
+        return Augmentation.translation(x)
 
     @staticmethod
     def aug8(x):
-        return Augmentation.add_guassian_noise(
-            Augmentation.rand_contrast(
-                Augmentation.rand_saturation(x)))
+        return Augmentation.translation(x)
 
     @staticmethod
     def aug9(x):
-        return Augmentation.rand_brightness(
-            Augmentation.rand_contrast(
-                Augmentation.rand_saturation(x)))
+        return Augmentation.translation(x)
