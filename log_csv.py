@@ -20,7 +20,8 @@ header = [
 ]
 
 INPUT = [
-    'gan1_10_heads_1G_10heads'
+    'gan1_10_heads_1G_10heads_diff_data_for_heads',
+    'gan1_10_heads_1G_10heads',
 ]
 
 
