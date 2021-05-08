@@ -9,9 +9,7 @@ import torchvision.transforms as transforms
 from torchvision import datasets
 import torch
 
-from src.models.random_forest_architecture_v1 import Generator
-from src.models.random_forest_architecture_v1 import Discriminator as Discriminator_V1
-from src.models.random_forest_architecture_v2 import Discriminator as Discriminator_V2
+from src.models.sagan_architecture import Generator, Discriminator
 from src.dataset import MNIST
 from src.losses import LSGAN as lsgan_loss
 from src.losses import GAN1 as gan1_loss
@@ -36,10 +34,7 @@ parser.add_argument("--bound", type=float, default=1)
 # No. heads in the discriminator
 parser.add_argument("--n_heads", type=int, choices=[1, 10], required=True)
 
-parser.add_argument("--use_big_head_d", type=int, choices=[0, 1], default=0)
 parser.add_argument("--diff_data_for_heads", type=int, choices=[0, 1], default=0)
-
-parser.add_argument("--use_d_v2", type=int, choices=[0, 1], default=0)
 
 parser.add_argument("--n_epochs", type=int)
 parser.add_argument("--interval", type=int, default=1)
@@ -59,7 +54,7 @@ parser.add_argument("--channels", type=int, default=1, help="number of image cha
 args = parser.parse_args()
 
 # make exp_folder
-exp_folder = f'experiments/augmentation/{args.exp_name}'
+exp_folder = f'experiments/sagan/augmentation/{args.exp_name}'
 if not args.weights_g and not args.weights_d:
     os.makedirs(exp_folder, exist_ok=False)
     mode = 'w'
@@ -92,22 +87,15 @@ logging.info(f'models_folder: {models_folder}')
 
 # Initialize generator and discriminator
 
-if not args.use_d_v2:
-    Discriminator = Discriminator_V1
-else:
-    Discriminator = Discriminator_V2
-
 generator = Generator()
 if args.loss_name == 'gan1':
     discriminator = Discriminator(
         use_sigmoid=True,
-        n_heads=args.n_heads,
-        use_big_head_d=args.use_big_head_d)
+        n_heads=args.n_heads)
 else:
     discriminator = Discriminator(
         use_sigmoid=False,
-        n_heads=args.n_heads,
-        use_big_head_d=args.use_big_head_d)
+        n_heads=args.n_heads)
 
 logging.info(generator)
 logging.info(discriminator)
