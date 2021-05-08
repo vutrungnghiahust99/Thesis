@@ -1,8 +1,11 @@
 import numpy as np
 
+import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 from src.models.spectral_normalization import SpectralNorm
+from src.models.random_forest_architecture_v2 import masks
 
 
 class ConvTranspose2d(nn.Module):
@@ -89,10 +92,38 @@ class Generator(nn.Module):
         return out
 
 
+class MaskedConv2D(nn.Conv2d):
+    def __init__(self, in_channels: int, out_channels: int, kernel_size: int, stride: int, padding: int, head_id: int):
+        super().__init__(
+            in_channels=in_channels, out_channels=out_channels, kernel_size=kernel_size, stride=stride, padding=padding)
+        self.register_buffer('mask', torch.ones(1, 128, 1, 1))
+        if head_id != -1:
+            print(head_id, masks[head_id])
+            mask = np.array(masks[head_id]).reshape(1, 128, 1, 1)
+            self.mask.data.copy_(torch.from_numpy(mask.astype(np.uint8)))
+
+    def forward(self, input):
+        return F.conv2d(input, self.mask * self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+
+
+def create_d_head(head_id: int, use_sigmoid: bool):
+    if use_sigmoid:
+        return nn.Sequential(MaskedConv2D(128, 1, 1, 1, 0, head_id), nn.Sigmoid())
+    else:
+        return nn.Sequential(MaskedConv2D(128, 1, 1, 1, 0, head_id))
+
+
+def create_d_head_without_mask(use_sigmoid: bool):
+    if use_sigmoid:
+        return nn.Sequential(nn.Conv2d(128, 1, 1, 1, 0), nn.Sigmoid())
+    else:
+        return nn.Sequential(nn.Conv2d(128, 1, 1, 1, 0))
+
+
 class Discriminator(nn.Module):
     """Discriminator, Auxiliary Classifier."""
 
-    def __init__(self, use_sigmoid: bool, image_size=28, conv_dim=16, use_spectral_norm=True):
+    def __init__(self, use_sigmoid: bool, image_size=28, conv_dim=16, use_spectral_norm=True, n_heads=10):
         super(Discriminator, self).__init__()
         assert conv_dim == 16 or conv_dim == 64
         assert image_size == 28
@@ -101,7 +132,6 @@ class Discriminator(nn.Module):
         layer2 = []
         layer3 = []
         layer4 = []
-        last = []
 
         layer1.append(Conv2d(use_spectral_norm, 1, conv_dim, 4, 2, 1))
         layer1.append(nn.LeakyReLU(0.1))
@@ -124,25 +154,38 @@ class Discriminator(nn.Module):
         self.l2 = nn.Sequential(*layer2)
         self.l3 = nn.Sequential(*layer3)
         self.l4 = nn.Sequential(*layer4)
-        last.append(nn.Conv2d(curr_dim, 1, 1, 1, 0))
-        if use_sigmoid:
-            last.append(nn.Sigmoid())
-        self.last = nn.Sequential(*last)
 
-    def forward(self, x):
+        self.n = n_heads
+        if self.n == 1:
+            setattr(self, "head_%i" % 0, create_d_head_without_mask(use_sigmoid))
+        else:
+            for head in range(self.n):
+                setattr(self, "head_%i" % head, create_d_head(head, use_sigmoid))
+
+    def forward(self, x, head_id):
         out = self.l1(x)
         out = self.l2(out)
         out = self.l3(out)
         out = self.l4(out)
-        out = self.last(out)
 
-        return out.squeeze()
+        if head_id == -1:
+            s = 0
+            for i in range(self.n):
+                s += getattr(self, "head_%i" % i)(out)
+            return (s / self.n).squeeze()
+        elif head_id >= 0 and head_id < self.n:
+            return getattr(self, "head_%i" % head_id)(out).squeeze()
+        else:
+            RuntimeError(f"Invalid head id: {head_id}")
 
-import torch
-z = torch.randn(64, 100)
-g = Generator()
-d = Discriminator(use_sigmoid=True)
-with torch.no_grad():
-    gen_imgs = g(z)
-with torch.no_grad():
-    outs = d(gen_imgs)
+
+# import torch
+# z = torch.randn(64, 100)
+# g = Generator()
+# d = Discriminator(use_sigmoid=True)
+# # d2 = Discriminator(use_sigmoid=False)
+# # d3 = Discriminator(n_heads=1, use_sigmoid=False)
+# with torch.no_grad():
+#     gen_imgs = g(z)
+# with torch.no_grad():
+#     outs = d(gen_imgs, -1)
