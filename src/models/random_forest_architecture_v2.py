@@ -1,18 +1,99 @@
 import numpy as np
 
+import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 
 from src.models.spectral_normalization import SpectralNorm
 
 
+masks = {
+    0: [0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1,
+        0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0,
+        1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1,
+        0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0,
+        0, 1, 1, 0, 0, 0, 0, 0],
+    1: [0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1,
+        0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1,
+        1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0,
+        0, 1, 0, 0, 1, 0, 0, 0],
+    2: [1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1,
+        1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0,
+        1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0,
+        1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0,
+        0, 1, 0, 0, 1, 1, 0, 0],
+    3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0,
+        0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0,
+        1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1,
+        0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 1, 1],
+    4: [1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0,
+        0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1,
+        0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1,
+        0, 0, 0, 1, 1, 0, 1, 0],
+    5: [1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0,
+        1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0,
+        0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1,
+        0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1,
+        0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0,
+        1, 0, 0, 0, 0, 1, 0, 1],
+    6: [0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0,
+        0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0,
+        0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1,
+        0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0,
+        0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1,
+        0, 1, 1, 1, 1, 1, 0, 0],
+    7: [0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0,
+        0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1,
+        0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+        1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1,
+        0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0,
+        0, 0, 0, 0, 0, 1, 0, 1],
+    8: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1,
+        0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1,
+        0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
+        0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0,
+        1, 1, 0, 0, 0, 0, 0, 1],
+    9: [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0,
+        0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1,
+        0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1,
+        0, 1, 0, 0, 0, 0, 1, 0]
+}
+
+
+class MaskedLinear(nn.Linear):
+    """ same as Linear except has a configurable mask on the weights """
+    
+    def __init__(self, in_features, out_features, head_id=-1, bias=True):
+        super().__init__(in_features, out_features, bias)
+        self.register_buffer('mask', torch.ones(out_features, in_features))
+        if head_id != -1:
+            print(head_id, masks[head_id])
+            mask = np.array(masks[head_id]).reshape(128, 1)
+            self.mask.data.copy_(torch.from_numpy(mask.astype(np.uint8).T))
+
+    def forward(self, input):
+        return F.linear(input, self.mask * self.weight, self.bias)
+
+
 class Linear(nn.Module):
-    def __init__(self, use_spectral_norm: bool, in_features: int, out_features: int):
+    def __init__(self, use_spectral_norm: bool, in_features: int, out_features: int, head_id=-1):
         super(Linear, self).__init__()
         if use_spectral_norm:
-            self.linear = SpectralNorm(nn.Linear(in_features, out_features))
+            self.linear = SpectralNorm(MaskedLinear(in_features, out_features, head_id))
         else:
-            self.linear = nn.Linear(in_features, out_features)
+            self.linear = MaskedLinear(in_features, out_features, head_id)
     
     def forward(self, x):
         return self.linear(x)
@@ -47,52 +128,32 @@ class Generator(nn.Module):
         return img
 
 
-def create_d_head(use_sigmoid: bool, use_spec_norm: bool):
+def create_d_head(use_sigmoid: bool, use_spec_norm: bool, head_id: int):
     if use_sigmoid:
         return nn.Sequential(
-            Linear(use_spec_norm, 256, 1),
+            Linear(use_spec_norm, 128, 1, head_id),
             nn.Dropout(),
             nn.Sigmoid())
     else:
         return nn.Sequential(
-            Linear(use_spec_norm, 256, 1),
+            Linear(use_spec_norm, 128, 1, head_id),
             nn.Dropout())
-
-
-def create_d_big_head(use_sigmoid: bool, use_spec_norm: bool):
-    """
-    Create a big head which has the capacity as 10 small heads
-    """
-    if use_sigmoid:
-        return nn.Sequential(
-            Linear(use_spec_norm, 256, 10),
-            nn.Dropout(),
-            Linear(use_spec_norm, 10, 1),
-            nn.Sigmoid())
-    else:
-        return nn.Sequential(
-            Linear(use_spec_norm, 256, 10),
-            nn.Dropout(),
-            Linear(use_spec_norm, 10, 1))
 
 
 class Discriminator(nn.Module):
     def __init__(self, use_sigmoid, img_shape=(1, 28, 28), n_heads=10, use_big_head_d=False):
         super(Discriminator, self).__init__()
 
+        assert use_big_head_d == 0
         self.share_layers = nn.Sequential(
-            Linear(True, int(np.prod(img_shape)), 512),
+            Linear(True, int(np.prod(img_shape)), 256),
             nn.LeakyReLU(0.2, inplace=True),
-            Linear(True, 512, 256),
+            Linear(True, 256, 128),
             nn.LeakyReLU(0.2, inplace=True)
         )
         self.n = n_heads
-        if not use_big_head_d:
-            for head in range(self.n):
-                setattr(self, "head_%i" % head, create_d_head(use_sigmoid, True))
-        else:
-            assert n_heads == 1
-            setattr(self, "head_%i" % 0, create_d_big_head(use_sigmoid, True))
+        for head in range(self.n):
+            setattr(self, "head_%i" % head, create_d_head(use_sigmoid, True, head))
 
     def forward(self, img, head_id):
         img_flat = img.view(img.size(0), -1)
