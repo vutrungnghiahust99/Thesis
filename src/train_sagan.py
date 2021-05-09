@@ -32,7 +32,7 @@ parser.add_argument("--dist", type=str, choices=['gauss', 'uniform'], required=T
 parser.add_argument("--bound", type=float, default=1)
 
 # No. heads in the discriminator
-parser.add_argument("--n_heads", type=int, choices=[1, 10], required=True)
+parser.add_argument("--n_heads", type=int, required=True)
 
 parser.add_argument("--diff_data_for_heads", type=int, choices=[0, 1], default=0)
 
