@@ -59,7 +59,10 @@ parser.add_argument("--channels", type=int, default=1, help="number of image cha
 args = parser.parse_args()
 
 # make exp_folder
-exp_folder = f'experiments/augmentation/{args.exp_name}'
+if args.augmentation:
+    exp_folder = f'experiments/augmentation/{args.exp_name}'
+else:
+    exp_folder = f'experiments/{args.exp_name}'
 if not args.weights_g and not args.weights_d:
     os.makedirs(exp_folder, exist_ok=False)
     mode = 'w'
