@@ -27,9 +27,9 @@ df3_ = df3.iloc[n1:n2, :]
 df4_ = df4.iloc[n1:n2, :]
 epochs_ = epochs[n1:n2]
 axs[0, 0].plot(epochs_, df1_['fid_score'], 'k--', color='green', label='Baseline')
-axs[0, 0].plot(epochs_, df2_['fid_score'], 'k:', color='blue', label='10 heads')
-axs[0, 0].plot(epochs_, df3_['fid_score'], label='10 heads + diff_data', color='black')
-axs[0, 0].plot(epochs_, df4_['fid_score'], label='Baseline + big head', color='orange')
+axs[0, 0].plot(epochs_, df2_['fid_score'], 'k:', color='blue', label='10heads V2')
+axs[0, 0].plot(epochs_, df3_['fid_score'], label='10heads+diff_data V2', color='black')
+axs[0, 0].plot(epochs_, df4_['fid_score'], label='Baseline+big head', color='orange')
 axs[0, 0].set_xlabel('epoch', fontsize='x-large')
 axs[0, 0].set_ylabel('FID', fontsize='large')
 
@@ -76,7 +76,7 @@ handles, labels = axs[0, 0].get_legend_handles_labels()
 axs[1, 1].legend(handles=handles, labels=labels, loc='lower center',
                  bbox_to_anchor=(0.45, -0.5), fancybox=False, shadow=False,
                  ncol=4, fontsize='xx-large')
-plt.subplots_adjust(bottom=0.2, wspace=0.32, top=0.95, left=0.07, right=0.98, hspace=0.25)
+plt.subplots_adjust(bottom=0.2, wspace=0.32, top=0.95, left=0.07, right=0.97, hspace=0.25)
 
 
 # plt.subplots_adjust(top=.9, bottom=0.3, right=0.99, left=0.05,
