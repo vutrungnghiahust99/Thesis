@@ -2,8 +2,8 @@
 import os
 import pandas as pd
 
-root = "experiments/sagan/augmentation/"
-# root = "experiments/augmentation/"
+# root = "experiments/sagan/augmentation/"
+root = "experiments/augmentation/"
 
 header = [
     'lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std', 'dx_mean', 'dx_std', 'dgz_mean', 'dgz_std',
@@ -24,11 +24,11 @@ INPUT = [
     # 'gan1_10_heads_1G_10heads_diff_data_for_heads_DV2',
     # 'gan1_10_heads_1G_10heads_DV2',
     # 'gan1_baseline',
-    # 'lsgan_10_heads_1G_10heads_diff_data_for_heads_DV2',
-    # 'lsgan_10_heads_1G_10heads_DV2',
+    'lsgan_10_heads_1G_10heads_diff_data_for_heads_DV2',
+    'lsgan_10_heads_1G_10heads_DV2',
     # 'lsgan_baseline'
-    'gan1_10_heads_1G_10heads_diff_data_for_heads',
-    'gan1_10_heads_1G_10heads',
+    # 'gan1_10_heads_1G_10heads_diff_data_for_heads',
+    # 'gan1_10_heads_1G_10heads',
 ]
 
 
