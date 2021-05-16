@@ -5,4 +5,4 @@ python -m src.train_hgan --exp_name 'gan1_1G_8heads' \
                          --dist 'gauss' \
                          --n_epochs '1000' \
                          --n_heads '8' \
-                         --interval '8'
+                         --interval '4'
