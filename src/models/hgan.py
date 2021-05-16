@@ -247,6 +247,7 @@ class Discriminator_f16(nn.Module):
 
 class Discriminator(nn.Module):
     def __init__(self, use_sigmoid: bool, n=8):
+        assert n == 8
         super(Discriminator, self).__init__()
 
         self.n = n
