@@ -114,7 +114,7 @@ class Metrics():
         while(s < z.shape[0]):
             with torch.no_grad():
                 x_gen = generator(z[s: s + batch_size])
-                b = resnet18.forward(x_gen).numpy()
+                b = resnet18.forward(x_gen).cpu().numpy()
                 logits.append(b)
             s += batch_size
         logits = np.concatenate(logits, axis=0)
