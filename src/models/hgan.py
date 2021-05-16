@@ -274,3 +274,42 @@ class Discriminator(nn.Module):
             return self.last(getattr(self, "head_%i" % head_id)(img).squeeze())
         else:
             RuntimeError(f"Invalid head id: {head_id}")
+
+
+class Discriminator_SHARED_LAYERS(nn.Module):
+    def __init__(self, use_sigmoid: bool, n=8):
+        assert n == 8
+        super(Discriminator_SHARED_LAYERS, self).__init__()
+
+        self.shared_layers = nn.Sequential(
+            nn.Conv2d(3, 6, 3, 1, 1),
+            nn.LeakyReLU(0.1),
+            nn.Conv2d(6, 12, 3, 1, 1),
+            nn.LeakyReLU(0.1)
+        )
+        N = 12
+        self.n = n
+        self.head_0 = Discriminator_vanilla(ndf=64, nc=N)
+        self.head_1 = Discriminator_f6(ndf=64, nc=N)
+        self.head_2 = Discriminator_f8(ndf=32, nc=N)
+        self.head_3 = Discriminator_f6_dense(ndf=16, nc=N)
+        self.head_4 = Discriminator_f4_dense(ndf=64, nc=N)
+        self.head_5 = Discriminator_f4s3(ndf=64, nc=N)
+        self.head_6 = Discriminator_dense(ndf=64, nc=N)
+        self.head_7 = Discriminator_f16(ndf=16, nc=N)
+        if use_sigmoid:
+            self.last = nn.Sigmoid()
+        else:
+            self.last = nn.Identity()
+    
+    def forward(self, img, head_id):
+        img = self.shared_layers(img)
+        if head_id == -1:
+            s = 0
+            for i in range(self.n):
+                s += self.last(getattr(self, "head_%i" % i)(img))
+            return (s / self.n).squeeze()
+        elif head_id >= 0 and head_id < self.n:
+            return self.last(getattr(self, "head_%i" % head_id)(img).squeeze())
+        else:
+            RuntimeError(f"Invalid head id: {head_id}")
