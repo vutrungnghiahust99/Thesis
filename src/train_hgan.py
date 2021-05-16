@@ -293,10 +293,17 @@ for epoch in range(start_epoch, args.n_epochs):
     logging.info(entry_7)
 
     logging.info('fid score')
-    fid_score = Metrics.computef_fid_resnet18(generator, resnet18, statistics, args.dist, args.bound)
+    fid_score = Metrics.compute_fid_resnet18(generator, resnet18, statistics, args.dist, args.bound)
     entry_8 = [fid_score]
     header_8 = ['fid_score']
     logging.info(entry_8)
+    print(fid_score)
+
+    logging.info('fid score [10000]')
+    fid_score = Metrics.compute_fid_resnet18(generator, resnet18, statistics, args.dist, args.bound, n=10000)
+    entry_6 = [fid_score]
+    header_6 = ['fid_score_10000']
+    logging.info(entry_6)
     print(fid_score)
 
     lossg_mean__lossg_std__lossd_mean__lossd_std__dx_mean__dx_std__dgz_mean__dgz_std_all = \
@@ -319,9 +326,9 @@ for epoch in range(start_epoch, args.n_epochs):
         header_9 = header_9 + h
         entry_9 = entry_9 + e
 
-    entry = entry_7 + entry_8 + entry_9
+    entry = entry_7 + entry_8 + entry_9 + entry_6
     if header is None:
-        header = header_7 + header_8 + entry_9
+        header = header_7 + header_8 + header_9 + header_6
 
     results.append(entry)
     logging.info('--------------------------------')
