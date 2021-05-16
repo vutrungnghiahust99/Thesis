@@ -157,8 +157,8 @@ def get_gen_pil_images(generator,
     return pil_images
 
     @staticmethod
-    def computef_fid_resnet18(generator, resnet18, statistics, n=1000, batch_size=128):
-        z = torch.randn(n, 100).view(-1, 100).type(Tensor)
+    def computef_fid_resnet18(generator, resnet18, statistics, dist, bound, n=1000, batch_size=128, z_dim=100):
+        z = Noise.sample_gauss_or_uniform_noise(dist, bound, n, z_dim)
         logits = []
         s = 0
         while(s < z.shape[0]):
