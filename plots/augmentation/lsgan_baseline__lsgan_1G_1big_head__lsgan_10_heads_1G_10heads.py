@@ -33,9 +33,9 @@ axs[0, 0].plot(epochs_, df3_['fid_score'], label='10 heads + diff_data', color='
 axs[0, 0].set_xlabel('epoch', fontsize='x-large')
 axs[0, 0].set_ylabel('FID', fontsize='large')
 
-axs[0, 1].plot(epochs, df1['fid_score'], 'k--', color='green')
-axs[0, 1].plot(epochs, df2['fid_score'], 'k:', color='blue')
-axs[0, 1].plot(epochs, df3['fid_score'], color='black')
+axs[0, 1].plot(epochs, df1['fid_score'], 'k--', color='green', label='Baseline')
+axs[0, 1].plot(epochs, df2['fid_score'], 'k:', color='blue', label='10 heads')
+axs[0, 1].plot(epochs, df3['fid_score'], color='black', label='10 heads + diff_data')
 # axs[0, 1].plot(epochs, df4['fid_score'], color='orange')
 axs[0, 1].set_xlabel('epoch', fontsize='x-large')
 axs[0, 1].set_ylabel('FID', fontsize='large')
@@ -72,7 +72,7 @@ axs[1, 2].set_ylabel(r'$V(G)$', fontsize='large')
 # fig.legend(handles, labels, loc='lower right', fontsize='large')
 # plt.tight_layout()
 
-handles, labels = axs[0, 0].get_legend_handles_labels()
+handles, labels = axs[0, 1].get_legend_handles_labels()
 axs[1, 1].legend(handles=handles, labels=labels, loc='lower center',
                  bbox_to_anchor=(0.45, -0.5), fancybox=False, shadow=False,
                  ncol=4, fontsize='xx-large')
