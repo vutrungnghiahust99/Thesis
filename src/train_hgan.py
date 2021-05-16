@@ -2,15 +2,16 @@ import argparse
 import logging
 import os
 import pandas as pd
+import pickle
 import random
 from tqdm import tqdm
 
 import torchvision.transforms as transforms
-from torchvision import datasets
 import torch
 
-from src.models.sagan_architecture import Generator, Discriminator
-from src.dataset import MNIST
+from src.models.hgan import Generator, Discriminator
+from src.fid_score.fid_model_hgan import ResNet18
+from src.dataset import CIFAR10, CIFAR10_TEST
 from src.losses import LSGAN as lsgan_loss
 from src.losses import GAN1 as gan1_loss
 from src.utils import sample_image
@@ -41,15 +42,19 @@ parser.add_argument("--interval", type=int, default=1)
 parser.add_argument("--weights_g", type=str, default='')
 parser.add_argument("--weights_d", type=str, default='')
 
+parser.add_argument('--reset18_weights', type=str, default='data/cifar10_64/cifar_resnet.pt')
+parser.add_argument('--statistics', type=str, default='data/cifar10_64/test_data_statistics.p')
+parser.add_argument('--training_path', type=str, default='data/cifar10_64/new_data/training.pt')
+parser.add_argument('--test_path', type=str, default='data/cifar10_64/new_data/test.pt')
+
 # unchanged configs
-parser.add_argument('--data_path', type=str, default='data/mnist')
 parser.add_argument("--batch_size", type=int, default=64, help="size of the batches")
 parser.add_argument("--lr", type=float, default=0.0002, help="adam: learning rate")
 parser.add_argument("--b1", type=float, default=0.5, help="adam: decay of first order momentum of gradient")
 parser.add_argument("--b2", type=float, default=0.999, help="adam: decay of first order momentum of gradient")
 parser.add_argument("--n_cpu", type=int, default=8, help="number of cpu threads to use during batch generation")
 parser.add_argument("--z_dim", type=int, default=100, help="dimensionality of the latent space")
-parser.add_argument("--img_size", type=int, default=28, help="size of each image dimension")
+parser.add_argument("--img_size", type=int, default=64, help="size of each image dimension")
 parser.add_argument("--channels", type=int, default=1, help="number of image channels")
 args = parser.parse_args()
 
@@ -125,13 +130,12 @@ os.makedirs(args.data_path, exist_ok=True)
 logging.info(f'data at: {args.data_path}')
 
 dataloader = torch.utils.data.DataLoader(
-    MNIST(
-        root='data/mnist/MNIST/processed/training_rf.pt',
+    CIFAR10(
+        root=args.training_path,
         transform=transforms.Compose([
-            transforms.Resize(args.img_size),
+            transforms.Resize((args.img_size, args.img_size), interpolation=transforms.InterpolationMode.BICUBIC),
             transforms.ToTensor(),
-            transforms.Normalize([0.5], [0.5])]
-        ),
+            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]),
     ),
     batch_size=args.batch_size,
     shuffle=True,
@@ -139,17 +143,27 @@ dataloader = torch.utils.data.DataLoader(
 
 # for evaluate
 real_imgs_loader = torch.utils.data.DataLoader(
-    datasets.MNIST(
-        args.data_path,
-        train=False,
-        download=True,
-        transform=transforms.Compose(
-            [transforms.Resize(args.img_size), transforms.ToTensor(), transforms.Normalize([0.5], [0.5])]
-        ),
+    CIFAR10_TEST(
+        root=args.test_path,
+        transform=transforms.Compose([
+            transforms.Resize((args.img_size, args.img_size), interpolation=transforms.InterpolationMode.BICUBIC),
+            transforms.ToTensor(),
+            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]),
     ),
     batch_size=1,
     shuffle=False,
 )
+
+resnet18 = ResNet18().eval()
+if torch.cuda.is_available():
+    checkpoint = torch.load(args.resnet18_weights)
+    resnet18.cuda()
+else:
+    checkpoint = torch.load(args.resnet18_weights, map_location='cpu')
+logging.info(f'Loaded resnet18 checkpoint at: {args.resnet18_weights}')
+resnet18.load_state_dict(checkpoint['model_state'])
+
+statistics = pickle.load(open(args.statistics, 'rb'))
 
 # Optimizers
 optimizer_G = torch.optim.Adam(generator.parameters(), lr=args.lr, betas=(args.b1, args.b2))
@@ -273,7 +287,7 @@ for epoch in range(start_epoch, args.n_epochs):
     logging.info(entry_7)
 
     logging.info('fid score')
-    fid_score = Metrics.compute_fid(generator, args.dist, args.bound)
+    fid_score = Metrics.computef_fid_resnet18(generator, resnet18, statistics, args.dist, args.bound)
     entry_8 = [fid_score]
     header_8 = ['fid_score']
     logging.info(entry_8)
