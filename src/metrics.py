@@ -1,6 +1,8 @@
 import numpy as np
 from PIL import Image
 from tqdm import tqdm
+import scipy.linalg as sla
+# import pickle
 
 import torch
 
@@ -153,3 +155,31 @@ def get_gen_pil_images(generator,
             pil_img = pil_img.resize((width, height))
         pil_images.append(pil_img)
     return pil_images
+
+    @staticmethod
+    def computef_fid_resnet18(generator, resnet18, statistics, n=1000, batch_size=128):
+        z = torch.randn(n, 100).view(-1, 100).type(Tensor)
+        logits = []
+        s = 0
+        while(s < z.shape[0]):
+            with torch.no_grad():
+                x_gen = generator(z[s: s + batch_size])
+                b = resnet18.forward(x_gen.cpu()).detach().numpy()
+                logits.append(b)
+            s += batch_size
+        logits = np.concatenate(logits, axis=0)
+
+        m = logits.mean(0)
+        C = np.cov(logits, rowvar=False)
+
+        fid_score = ((statistics['m'] - m) ** 2).sum() + np.matrix.trace(C + statistics['C'] - 2 * sla.sqrtm(np.matmul(C, statistics['C'])))
+        return fid_score
+
+# from src.models.hgan import Generator
+# from src.fid_score.fid_model_hgan import ResNet18
+
+# generator = Generator()
+# resnet18 = ResNet18()
+# statistics = pickle.load(open('data/cifar10_64/test_data_statistics.p', 'rb'))
+
+# fid = Metrics.computef_fid_resnet18(generator, resnet18, statistics)
