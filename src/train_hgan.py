@@ -42,7 +42,7 @@ parser.add_argument("--interval", type=int, default=1)
 parser.add_argument("--weights_g", type=str, default='')
 parser.add_argument("--weights_d", type=str, default='')
 
-parser.add_argument('--reset18_weights', type=str, default='data/cifar10_64/cifar_resnet.pt')
+parser.add_argument('--resnet18_weights', type=str, default='data/cifar10_64/cifar_resnet.pt')
 parser.add_argument('--statistics', type=str, default='data/cifar10_64/test_data_statistics.p')
 parser.add_argument('--training_path', type=str, default='data/cifar10_64/new_data/training.pt')
 parser.add_argument('--test_path', type=str, default='data/cifar10_64/new_data/test.pt')
@@ -59,7 +59,7 @@ parser.add_argument("--channels", type=int, default=1, help="number of image cha
 args = parser.parse_args()
 
 # make exp_folder
-exp_folder = f'experiments/sagan/augmentation/{args.exp_name}'
+exp_folder = f'experiments/hgan/augmentation/{args.exp_name}'
 if not args.weights_g and not args.weights_d:
     os.makedirs(exp_folder, exist_ok=False)
     mode = 'w'
@@ -96,11 +96,11 @@ generator = Generator()
 if args.loss_name == 'gan1':
     discriminator = Discriminator(
         use_sigmoid=True,
-        n_heads=args.n_heads)
+        n=args.n_heads)
 else:
     discriminator = Discriminator(
         use_sigmoid=False,
-        n_heads=args.n_heads)
+        n=args.n_heads)
 
 logging.info(generator)
 logging.info(discriminator)
@@ -126,9 +126,6 @@ if torch.cuda.is_available():
     discriminator.cuda()
 
 # Configure data loader
-os.makedirs(args.data_path, exist_ok=True)
-logging.info(f'data at: {args.data_path}')
-
 dataloader = torch.utils.data.DataLoader(
     CIFAR10(
         root=args.training_path,

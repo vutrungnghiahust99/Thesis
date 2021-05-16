@@ -57,7 +57,7 @@ class CIFAR10_TEST(Dataset):
             root: str,
             transform=None):
 
-        super(CIFAR10, self).__init__()
+        super(CIFAR10_TEST, self).__init__()
         s = torch.load(root)
         self.data, self.labels = s['data'], s['labels']
         self.transform = transform
