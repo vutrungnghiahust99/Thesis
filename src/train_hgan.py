@@ -9,7 +9,7 @@ from tqdm import tqdm
 import torchvision.transforms as transforms
 import torch
 
-from src.models.hgan import Generator, Discriminator
+from src.models.hgan import Generator, Discriminator as DV1, Discriminator_SHARED_LAYERS as DV2
 from src.fid_score.fid_model_hgan import ResNet18
 from src.dataset import CIFAR10, CIFAR10_TEST
 from src.losses import LSGAN as lsgan_loss
@@ -41,6 +41,8 @@ parser.add_argument("--n_epochs", type=int)
 parser.add_argument("--interval", type=int, default=1)
 parser.add_argument("--weights_g", type=str, default='')
 parser.add_argument("--weights_d", type=str, default='')
+
+parser.add_argument('--use_shared_layers', type=int, choices=[0, 1], default=0)
 
 parser.add_argument('--resnet18_weights', type=str, default='data/cifar10_64/cifar_resnet.pt')
 parser.add_argument('--statistics', type=str, default='data/cifar10_64/test_data_statistics.p')
@@ -91,6 +93,10 @@ logging.info(f'models_folder: {models_folder}')
 
 
 # Initialize generator and discriminator
+if not args.use_shared_layers:
+    Discriminator = DV1
+else:
+    Discriminator = DV2
 
 generator = Generator()
 if args.loss_name == 'gan1':
