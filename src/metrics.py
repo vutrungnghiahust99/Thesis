@@ -106,6 +106,25 @@ class Metrics():
         fid_score = compute_fid_score(gen_pil_imgs, real_pil_imgs)
         return fid_score
 
+    @staticmethod
+    def compute_fid_resnet18(generator, resnet18, statistics, dist, bound, n=1000, batch_size=128, z_dim=100):
+        z = Noise.sample_gauss_or_uniform_noise(dist, bound, n, z_dim)
+        logits = []
+        s = 0
+        while(s < z.shape[0]):
+            with torch.no_grad():
+                x_gen = generator(z[s: s + batch_size])
+                b = resnet18.forward(x_gen).numpy()
+                logits.append(b)
+            s += batch_size
+        logits = np.concatenate(logits, axis=0)
+
+        m = logits.mean(0)
+        C = np.cov(logits, rowvar=False)
+
+        fid_score = ((statistics['m'] - m) ** 2).sum() + np.matrix.trace(C + statistics['C'] - 2 * sla.sqrtm(np.matmul(C, statistics['C'])))
+        return fid_score
+
 
 def select_loss(loss_name):
     if loss_name == 'lsgan':
@@ -155,25 +174,6 @@ def get_gen_pil_images(generator,
             pil_img = pil_img.resize((width, height))
         pil_images.append(pil_img)
     return pil_images
-
-    @staticmethod
-    def computef_fid_resnet18(generator, resnet18, statistics, dist, bound, n=1000, batch_size=128, z_dim=100):
-        z = Noise.sample_gauss_or_uniform_noise(dist, bound, n, z_dim)
-        logits = []
-        s = 0
-        while(s < z.shape[0]):
-            with torch.no_grad():
-                x_gen = generator(z[s: s + batch_size])
-                b = resnet18.forward(x_gen.cpu()).detach().numpy()
-                logits.append(b)
-            s += batch_size
-        logits = np.concatenate(logits, axis=0)
-
-        m = logits.mean(0)
-        C = np.cov(logits, rowvar=False)
-
-        fid_score = ((statistics['m'] - m) ** 2).sum() + np.matrix.trace(C + statistics['C'] - 2 * sla.sqrtm(np.matmul(C, statistics['C'])))
-        return fid_score
 
 # from src.models.hgan import Generator
 # from src.fid_score.fid_model_hgan import ResNet18
