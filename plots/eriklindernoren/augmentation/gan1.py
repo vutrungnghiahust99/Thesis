@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 exp1 = 'experiments/augmentation/gan1_baseline/gan1_baseline.csv'
-exp2 = 'experiments/augmentation/gan1_10_heads_1G_10heads_DV2/gan1_10_heads_1G_10heads_DV2.csv'
-exp3 = 'experiments/augmentation/gan1_10_heads_1G_10heads_diff_data_for_heads_DV2/gan1_10_heads_1G_10heads_diff_data_for_heads_DV2.csv'
+exp2 = 'experiments/augmentation/gan1_10_heads_1G_10heads/gan1_10_heads_1G_10heads.csv'
+exp3 = 'experiments/augmentation/gan1_10_heads_1G_10heads_diff_data_for_heads/gan1_10_heads_1G_10heads_diff_data_for_heads.csv'
 exp4 = 'experiments/augmentation/gan1_1G_1big_head/gan1_1G_1big_head.csv'
 
 df1 = pd.read_csv(exp1)
@@ -19,7 +19,7 @@ epochs = [x * 8 for x in range(n)]
 
 fig, axs = plt.subplots(2, 3, sharex=False, sharey=False, figsize=(12, 8))
 
-n1 = 5
+n1 = 10
 n2 = n
 df1_ = df1.iloc[n1:n2, :]
 df2_ = df2.iloc[n1:n2, :]
@@ -81,4 +81,4 @@ plt.subplots_adjust(bottom=0.2, wspace=0.32, top=0.95, left=0.07, right=0.97, hs
 
 # plt.subplots_adjust(top=.9, bottom=0.3, right=0.99, left=0.05,
 #                     hspace=0, wspace=0.32)
-plt.savefig('reports/augmentation/gan1_baseline__gan1_1G_1big_head__gan1_10_heads_1G_10heads.pdf')
+plt.savefig('reports/eriklindernoren/augmentation/gan1.pdf')

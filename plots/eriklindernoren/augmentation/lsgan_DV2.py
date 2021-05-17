@@ -81,4 +81,4 @@ plt.subplots_adjust(bottom=0.2, wspace=0.32, top=0.95, left=0.07, right=0.98, hs
 
 # plt.subplots_adjust(top=.9, bottom=0.3, right=0.99, left=0.05,
 #                     hspace=0, wspace=0.32)
-plt.savefig('reports/augmentation/lsgan_baseline__lsgan_1G_1big_head__lsgan_10_heads_1G_10heads.pdf')
+plt.savefig('reports/eriklindernoren/augmentation/lsgan_DV2.pdf')
