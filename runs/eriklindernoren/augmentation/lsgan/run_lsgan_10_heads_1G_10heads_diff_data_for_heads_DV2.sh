@@ -1,4 +1,4 @@
-python -m src.train_v1 --exp_name 'lsgan_10_heads_1G_10heads_diff_data_for_heads' \
+python -m src.train_v1 --exp_name 'lsgan_10_heads_1G_10heads_diff_data_for_heads_DV2' \
                        --loss_name 'lsgan' \
                        --augmentation '1' \
                        --aug_times '5' \
@@ -6,4 +6,5 @@ python -m src.train_v1 --exp_name 'lsgan_10_heads_1G_10heads_diff_data_for_heads
                        --n_epochs '1000' \
                        --n_heads '10' \
                        --interval '8' \
-                       --diff_data_for_heads '1'
+                       --diff_data_for_heads '1' \
+                       --use_d_v2 '1'
