@@ -156,16 +156,7 @@ statistics = pickle.load(open(args.statistics, 'rb'))
 
 # Optimizers
 optimizer_G = torch.optim.Adam(generator.parameters(), lr=args.lr, betas=(args.b1, args.b2))
-optimizer_D = [
-    torch.optim.Adam(discriminator.head_0.parameters(), lr=args.lr, betas=(args.b1, args.b2)),
-    torch.optim.Adam(discriminator.head_1.parameters(), lr=args.lr, betas=(args.b1, args.b2)),
-    torch.optim.Adam(discriminator.head_2.parameters(), lr=args.lr, betas=(args.b1, args.b2)),
-    torch.optim.Adam(discriminator.head_3.parameters(), lr=args.lr, betas=(args.b1, args.b2)),
-    torch.optim.Adam(discriminator.head_4.parameters(), lr=args.lr, betas=(args.b1, args.b2)),
-    torch.optim.Adam(discriminator.head_5.parameters(), lr=args.lr, betas=(args.b1, args.b2)),
-    torch.optim.Adam(discriminator.head_6.parameters(), lr=args.lr, betas=(args.b1, args.b2)),
-    torch.optim.Adam(discriminator.head_7.parameters(), lr=args.lr, betas=(args.b1, args.b2)),
-]
+optimizer_D = torch.optim.Adam(discriminator.parameters(), lr=args.lr, betas=(args.b1, args.b2))
 
 Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
@@ -234,7 +225,7 @@ for epoch in range(start_epoch, args.n_epochs):
         #  Train Discriminator
         # ---------------------
         for head_id in random_seq:
-            optimizer_D[head_id].zero_grad()
+            optimizer_D.zero_grad()
             g = gen_imgs_.detach()
             r = real_imgs
             if args.diff_data_for_heads:
@@ -244,7 +235,7 @@ for epoch in range(start_epoch, args.n_epochs):
                 r = torch.cat([r] + [mapping[head_id](r) for _ in range(args.aug_times)])
             lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
             lossd.backward()
-            optimizer_D[head_id].step()
+            optimizer_D.step()
 
     if epoch % args.interval != 0:
         continue
