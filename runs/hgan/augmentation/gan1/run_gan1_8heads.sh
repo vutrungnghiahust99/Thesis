@@ -1,4 +1,4 @@
-python -m src.train_hgan --exp_name 'gan1_1G_8heads' \
+python -m src.train_hgan --exp_name 'gan1_8heads' \
                          --loss_name 'gan1' \
                          --augmentation '1' \
                          --aug_times '2' \
