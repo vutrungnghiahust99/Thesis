@@ -48,268 +48,71 @@ class Generator(torch.nn.Module):
         return out
 
 
-class Discriminator_vanilla(nn.Module):
-    def __init__(self, ndf, nc):
-        super(Discriminator_vanilla, self).__init__()
-        self.main = nn.Sequential(
-            # input is (nc) x 64 x 64
-            nn.Conv2d(nc, ndf, 4, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf) x 32 x 32
-            nn.Conv2d(ndf, ndf * 2, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 2),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*2) x 16 x 16
-            nn.Conv2d(ndf * 2, ndf * 4, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 4),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*4) x 8 x 8
-            nn.Conv2d(ndf * 4, ndf * 8, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 8),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*8) x 4 x 4
-            nn.Conv2d(ndf * 8, 1, 4, 1, 0, bias=False))
-
-    def forward(self, x):
-        return self.main(x).squeeze()
-
-
-class Discriminator_f6(nn.Module):
-    def __init__(self, ndf, nc):
-        super(Discriminator_f6, self).__init__()
-        self.main = nn.Sequential(
-            # input is (nc) x 64 x 64
-            nn.Conv2d(nc, ndf, 6, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf) x 31 x 31
-
-            nn.Conv2d(ndf, ndf * 2, 6, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 2),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*2) x 14 x 14
-
-            nn.Conv2d(ndf * 2, ndf * 4, 6, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 4),
-            nn.LeakyReLU(0.2, inplace=True),
-
-            # state size. (ndf*4) x 4 x 4
-            nn.Conv2d(ndf * 4, 1, 6, 2, 0, bias=False))
-
-    def forward(self, x):
-        return self.main(x).squeeze()
-
-
-class Discriminator_f8(nn.Module):
-    def __init__(self, ndf, nc):
-        super(Discriminator_f8, self).__init__()
-        self.main = nn.Sequential(
-
-            # input is (nc) x 64 x 64
-            nn.Conv2d(nc, ndf, 8, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf) x 30 x 30
-
-            nn.Conv2d(ndf, ndf * 2, 8, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 2),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*2) x 13 x 13
-
-            nn.Conv2d(ndf * 2, ndf * 4, 8, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 4),
-
-            nn.LeakyReLU(0.2, inplace=True),
-
-            # state size. (ndf*4) x 4 x 4
-
-            nn.Conv2d(ndf * 4, 1, 4, 2, 0, bias=False))
-
-    def forward(self, x):
-        return self.main(x).squeeze()
-
-
-class Discriminator_f6_dense(nn.Module):
-    def __init__(self, ndf, nc):
-        super(Discriminator_f6_dense, self).__init__()
-
-        self.main = nn.Sequential(
-            # input is (nc) x 64 x 64
-            nn.Conv2d(nc, ndf, 6, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf) x 31 x 31
-
-            nn.Conv2d(ndf, ndf * 2, 6, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 2),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*2) x 14 x 14
-
-            nn.Conv2d(ndf * 2, ndf * 4, 6, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 4),
-            nn.LeakyReLU(0.2, inplace=True))
-
-        self.linear = nn.Sequential(
-            nn.Linear(ndf * 4 * 6 * 6, 1))
-
-    def forward(self, x):
-        output = self.main(x).view(x.size(0), -1)
-        output = self.linear(output)
-
-        return output.view(-1, 1).squeeze()
-
-
-class Discriminator_f4_dense(nn.Module):
-    def __init__(self, ndf, nc):
-        super(Discriminator_f4_dense, self).__init__()
-        self.main = nn.Sequential(
-            # input is (nc) x 64 x 64
-            nn.Conv2d(nc, ndf, 4, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf) x 32 x 32
-            nn.Conv2d(ndf, ndf * 2, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 2),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*2) x 16 x 16
-            nn.Conv2d(ndf * 2, ndf * 4, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 4),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*4) x 8 x 8
-            nn.Conv2d(ndf * 4, ndf * 8, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 8),
-            nn.LeakyReLU(0.2, inplace=True))
-
-        self.linear = nn.Sequential(
-            nn.Linear(ndf * 8 * 4 * 4, 1))
-
-    def forward(self, x):
-        output = self.main(x).view(x.size(0), -1)
-        output = self.linear(output)
-
-        return output.view(-1, 1).squeeze()
-
-
-# discriminator with kernel size = 4 and stride = 3
-class Discriminator_f4s3(nn.Module):
-    def __init__(self, ndf, nc):
-        super(Discriminator_f4s3, self).__init__()
-        self.main = nn.Sequential(
-            # input is (nc) x 64 x 64
-            nn.Conv2d(nc, ndf, 4, 3, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf) x 21 x 21
-            nn.Conv2d(ndf, ndf * 2, 4, 3, 1, bias=False),
-            nn.BatchNorm2d(ndf * 2),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*2) x 7 x 7
-            nn.Conv2d(ndf * 2, ndf * 4, 4, 3, 1, bias=False),
-            nn.BatchNorm2d(ndf * 4),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*4) x 2 x 2
-            nn.Conv2d(ndf * 4, 1, 4, 3, 1, bias=False))
-
-    def forward(self, x):
-        return self.main(x).squeeze()
-
-
-class Discriminator_dense(nn.Module):
-    def __init__(self, ndf, nc):
-        super(Discriminator_dense, self).__init__()
-        self.main = nn.Sequential(
-            # input is (nc) x 64 x 64
-            nn.Conv2d(nc, ndf, 4, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True))
-        # state size. (ndf) x 32 x 32 )
-        self.linear = nn.Sequential(nn.Linear(ndf * 32 * 32, 1))
-
-    def forward(self, x):
-        x = self.main(x)
-        return self.linear(x.view(x.size(0), -1)).squeeze()
-
-
-class Discriminator_f16(nn.Module):
-    def __init__(self, ndf, nc):
-        super(Discriminator_f16, self).__init__()
-        self.main = nn.Sequential(
-
-            # input is (nc) x 64 x 64
-            nn.Conv2d(nc, ndf, 16, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf) x 26 x 26
-
-            nn.Conv2d(ndf, ndf * 2, 16, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 2),
-            nn.LeakyReLU(0.2, inplace=True),
-            # state size. (ndf*2) x 7 x 7
-
-            nn.Conv2d(ndf * 2, 1, 7, 2, 0, bias=False))
-
-    def forward(self, x):
-        return self.main(x).squeeze()
-
-
-class Discriminator(nn.Module):
-    def __init__(self, use_sigmoid: bool, n=8):
-        assert n == 8
+class Discriminator(torch.nn.Module):
+    def __init__(self, input_dim=3, num_filters=[128, 256, 512, 1024], output_dim=1, batch_norm=False):
         super(Discriminator, self).__init__()
 
+        self.projection = nn.utils.weight_norm(nn.Conv2d(input_dim, 1, kernel_size=8, stride=2, padding=3, bias=False), name="weight")
+        self.projection.weight_g.data.fill_(1)
+
+        # Hidden layers
+        self.hidden_layer = torch.nn.Sequential()
+        for i in range(len(num_filters)):
+            # Convolutional layer
+            if i == 0:
+                conv = nn.Conv2d(1, num_filters[i], kernel_size=4, stride=2, padding=1)
+            else:
+                conv = nn.Conv2d(num_filters[i - 1], num_filters[i], kernel_size=4, stride=2, padding=1)
+
+            conv_name = 'conv' + str(i + 1)
+            self.hidden_layer.add_module(conv_name, conv)
+
+            # Initializer
+            nn.init.normal_(conv.weight, mean=0.0, std=0.02)
+            nn.init.constant_(conv.bias, 0.0)
+
+            # Batch normalization
+            if i != 0 and batch_norm:
+                bn_name = 'bn' + str(i + 1)
+                self.hidden_layer.add_module(bn_name, torch.nn.BatchNorm2d(num_filters[i]))
+
+            # Activation
+            act_name = 'act' + str(i + 1)
+            self.hidden_layer.add_module(act_name, torch.nn.LeakyReLU(0.2))
+
+        # Output layer
+        self.output_layer = torch.nn.Sequential()
+        # Convolutional layer
+        out = nn.Conv2d(num_filters[i], output_dim, kernel_size=4, stride=1, padding=1)
+        self.output_layer.add_module('out', out)
+        # Initializer
+        nn.init.normal_(out.weight, mean=0.0, std=0.02)
+        nn.init.constant_(out.bias, 0.0)
+        # Activation
+        self.output_layer.add_module('act', nn.Sigmoid())
+
+    def forward(self, x):
+
+        x = self.projection(x)
+        h = self.hidden_layer(x)
+        out = self.output_layer(h)
+        return out
+
+
+class Discriminator_V1(torch.nn.Module):
+    def __init__(self, n: int):
+        super(Discriminator_V1, self).__init__()
         self.n = n
-        self.head_0 = Discriminator_vanilla(ndf=64, nc=3)
-        self.head_1 = Discriminator_f6(ndf=64, nc=3)
-        self.head_2 = Discriminator_f8(ndf=32, nc=3)
-        self.head_3 = Discriminator_f6_dense(ndf=16, nc=3)
-        self.head_4 = Discriminator_f4_dense(ndf=64, nc=3)
-        self.head_5 = Discriminator_f4s3(ndf=64, nc=3)
-        self.head_6 = Discriminator_dense(ndf=64, nc=3)
-        self.head_7 = Discriminator_f16(ndf=16, nc=3)
-        if use_sigmoid:
-            self.last = nn.Sigmoid()
-        else:
-            self.last = nn.Identity()
-    
+        for i in range(self.n):
+            setattr(self, "head_%i" % i, Discriminator())
+
     def forward(self, img, head_id):
         if head_id == -1:
             s = 0
             for i in range(self.n):
-                s += self.last(getattr(self, "head_%i" % i)(img))
+                s += getattr(self, "head_%i" % i)(img)
             return (s / self.n).squeeze()
         elif head_id >= 0 and head_id < self.n:
-            return self.last(getattr(self, "head_%i" % head_id)(img).squeeze())
-        else:
-            RuntimeError(f"Invalid head id: {head_id}")
-
-
-class Discriminator_SHARED_LAYERS(nn.Module):
-    def __init__(self, use_sigmoid: bool, n=8):
-        assert n == 8
-        super(Discriminator_SHARED_LAYERS, self).__init__()
-
-        self.shared_layers = nn.Sequential(
-            nn.Conv2d(3, 6, 3, 1, 1),
-            nn.LeakyReLU(0.1),
-            nn.Conv2d(6, 12, 3, 1, 1),
-            nn.LeakyReLU(0.1)
-        )
-        N = 12
-        self.n = n
-        self.head_0 = Discriminator_vanilla(ndf=64, nc=N)
-        self.head_1 = Discriminator_f6(ndf=64, nc=N)
-        self.head_2 = Discriminator_f8(ndf=32, nc=N)
-        self.head_3 = Discriminator_f6_dense(ndf=16, nc=N)
-        self.head_4 = Discriminator_f4_dense(ndf=64, nc=N)
-        self.head_5 = Discriminator_f4s3(ndf=64, nc=N)
-        self.head_6 = Discriminator_dense(ndf=64, nc=N)
-        self.head_7 = Discriminator_f16(ndf=16, nc=N)
-        if use_sigmoid:
-            self.last = nn.Sigmoid()
-        else:
-            self.last = nn.Identity()
-    
-    def forward(self, img, head_id):
-        img = self.shared_layers(img)
-        if head_id == -1:
-            s = 0
-            for i in range(self.n):
-                s += self.last(getattr(self, "head_%i" % i)(img))
-            return (s / self.n).squeeze()
-        elif head_id >= 0 and head_id < self.n:
-            return self.last(getattr(self, "head_%i" % head_id)(img).squeeze())
+            return getattr(self, "head_%i" % head_id)(img).squeeze()
         else:
             RuntimeError(f"Invalid head id: {head_id}")
