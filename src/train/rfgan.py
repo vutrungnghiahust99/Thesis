@@ -246,12 +246,18 @@ for epoch in range(start_epoch, args.n_epochs):
     dx, dgz = Metrics.compute_heads_statistics(generator, discriminator, real_imgs_loader, args.bound, args.dist)
     entry_2 = list(dx)
     header_2 = ['dx_mean', 'dx_std', 'dx_min', 'dx_max', 'dx_max_min']
+    logging.info(' '.join(header_2))
+    logging.info(entry_2)
     entry_3 = list(dgz)
     header_3 = ['dgz_mean', 'dgz_std', 'dgz_min', 'dgz_max', 'dgz_max_min']
+    logging.info(' '.join(header_3))
+    logging.info(entry_3)
 
     fid = Metrics.compute_fid(generator, args.dist, args.bound)
     entry_4 = [fid]
     header_4 = ['fid_score']
+    logging.info(' '.join(header_4))
+    logging.info(entry_4)
 
     logging.info('--------------------------------')
 
