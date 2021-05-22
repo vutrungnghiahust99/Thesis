@@ -1,14 +1,10 @@
 import numpy as np
 from PIL import Image
 from tqdm import tqdm
-import scipy.linalg as sla
-# import pickle
 
 import torch
 
 from src.noise import Noise
-from src.losses import GAN1 as gan1_loss
-from src.losses import LSGAN as lsgan_loss
 from src.fid_score.fid_score import compute_fid_score
 
 Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
@@ -16,84 +12,71 @@ Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTen
 
 class Metrics():
     @staticmethod
-    def compute_lossg_lossd_dx_dgz_rf(loss_name,
-                                      generator,
-                                      discriminator,
-                                      real_imgs_loader,
-                                      bound,
-                                      dist,
-                                      z_dim=100,
-                                      head_id=-1):
-        loss = select_loss(loss_name)
+    def compute_lossg_lossd_dx_dgz(loss,
+                                   generator,
+                                   discriminator,
+                                   real_imgs_loader,
+                                   bound,
+                                   dist,
+                                   z_dim=100):
         lossgs = []
         lossds = []
-        dxs = []
-        dgzs = []
         for img, _ in tqdm(real_imgs_loader):
             real_img = img.type(Tensor)
             z = Noise.sample_gauss_or_uniform_noise(dist, bound, 1, z_dim)
             with torch.no_grad():
                 gen_img = generator(z)
-            lossg = loss.compute_lossg_rf(discriminator, gen_img, head_id)
+                lossg = loss.compute_lossg(discriminator, gen_img)
             lossgs.append(lossg.item())
 
             with torch.no_grad():
-                real_pred = discriminator(real_img, head_id)
-                fake_pred = discriminator(gen_img, head_id)
-            dxs.append(real_pred.item())
-            dgzs.append(fake_pred.item())
-
-            lossd = loss.compute_lossd_rf(discriminator, gen_img, real_img, head_id)
+                lossd = loss.compute_lossd(discriminator, gen_img, real_img)
             lossds.append(lossd.item())
 
         lossgs = np.array(lossgs)
         lossds = np.array(lossds)
-        dxs = np.array(dxs)
-        dgzs = np.array(dgzs)
 
-        return lossgs.mean(), lossgs.std(), lossds.mean(), lossds.std(), dxs.mean(), dxs.std(), dgzs.mean(), dgzs.std()
+        return lossgs.mean(), lossgs.std(), lossds.mean(), lossds.std()
 
     @staticmethod
-    def compute_lossg_lossd_dx_dgz_rf_sep_heads(loss_name,
-                                                generator,
-                                                discriminator,
-                                                real_imgs_loader,
-                                                bound,
-                                                dist,
-                                                z_dim=100,
-                                                n_heads=10):
-        loss = select_loss(loss_name)
-        out = []
-        for head_id in range(n_heads):
-            lossgs = []
-            lossds = []
-            dxs = []
-            dgzs = []
-            for img, _ in tqdm(real_imgs_loader):
-                real_img = img.type(Tensor)
-                z = Noise.sample_gauss_or_uniform_noise(dist, bound, 1, z_dim)
-                with torch.no_grad():
-                    gen_img = generator(z)
-                lossg = loss.compute_lossg_rf(discriminator, gen_img, head_id)
-                lossgs.append(lossg.item())
+    def compute_heads_statistics(generator,
+                                 discriminator,
+                                 real_imgs_loader,
+                                 bound,
+                                 dist,
+                                 z_dim=100):
+        dx_mean = []
+        dx_std = []
+        dx_min = []
+        dx_max = []
+        dx_max_min = []
 
-                with torch.no_grad():
-                    real_pred = discriminator(real_img, head_id)
-                    fake_pred = discriminator(gen_img, head_id)
-                dxs.append(real_pred.item())
-                dgzs.append(fake_pred.item())
-
-                lossd = loss.compute_lossd_rf(discriminator, gen_img, real_img, head_id)
-                lossds.append(lossd.item())
-
-            lossgs = np.array(lossgs)
-            lossds = np.array(lossds)
-            dxs = np.array(dxs)
-            dgzs = np.array(dgzs)
-            out.append(
-                [lossgs.mean(), lossgs.std(), lossds.mean(), lossds.std(), dxs.mean(), dxs.std(), dgzs.mean(), dgzs.std()]
-            )
-        return out
+        dgz_mean = []
+        dgz_std = []
+        dgz_min = []
+        dgz_max = []
+        dgz_max_min = []
+        for img, _ in tqdm(real_imgs_loader):
+            real_img = img.type(Tensor)
+            z = Noise.sample_gauss_or_uniform_noise(dist, bound, 1, z_dim)
+            with torch.no_grad():
+                mean, std, min, max, max_min = discriminator.eval_heads(real_img)
+                dx_mean.append(mean)
+                dx_std.append(std)
+                dx_min.append(min)
+                dx_max.append(max)
+                dx_max_min.append(max_min)
+                
+                mean, std, min, max, max_min = discriminator.eval_heads(generator(z))
+                dgz_mean.append(mean)
+                dgz_std.append(std)
+                dgz_min.append(min)
+                dgz_max.append(max)
+                dgz_max_min.append(max_min)
+        return (
+            (np.array(dx_mean).mean(), np.array(dx_std).mean(), np.array(dx_min).mean(), np.array(dx_max).mean(), np.array(dx_max_min).mean()),
+            (np.array(dgz_mean).mean(), np.array(dgz_std).mean(), np.array(dgz_min).mean(), np.array(dgz_max).mean(), np.array(dgz_max_min).mean())
+        )
 
     @staticmethod
     def compute_fid(generator,
@@ -105,34 +88,6 @@ class Metrics():
         gen_pil_imgs = get_gen_pil_images(generator, bound, dist, len(real_pil_imgs))
         fid_score = compute_fid_score(gen_pil_imgs, real_pil_imgs)
         return fid_score
-
-    @staticmethod
-    def compute_fid_resnet18(generator, resnet18, statistics, dist, bound, n=1000, batch_size=128, z_dim=100):
-        z = Noise.sample_gauss_or_uniform_noise(dist, bound, n, z_dim)
-        logits = []
-        s = 0
-        while(s < z.shape[0]):
-            with torch.no_grad():
-                x_gen = generator(z[s: s + batch_size])
-                b = resnet18.forward(x_gen).cpu().numpy()
-                logits.append(b)
-            s += batch_size
-        logits = np.concatenate(logits, axis=0)
-
-        m = logits.mean(0)
-        C = np.cov(logits, rowvar=False)
-
-        fid_score = ((statistics['m'] - m) ** 2).sum() + np.matrix.trace(C + statistics['C'] - 2 * sla.sqrtm(np.matmul(C, statistics['C'])))
-        return fid_score
-
-
-def select_loss(loss_name):
-    if loss_name == 'lsgan':
-        return lsgan_loss
-    elif loss_name == 'gan1':
-        return gan1_loss
-    else:
-        RuntimeError(f'{loss_name} is not supported!!')
 
 
 def get_real_pil_images(path) -> [Image.Image]:
@@ -174,12 +129,3 @@ def get_gen_pil_images(generator,
             pil_img = pil_img.resize((width, height))
         pil_images.append(pil_img)
     return pil_images
-
-# from src.models.hgan import Generator
-# from src.fid_score.fid_model_hgan import ResNet18
-
-# generator = Generator()
-# resnet18 = ResNet18()
-# statistics = pickle.load(open('data/cifar10_64/test_data_statistics.p', 'rb'))
-
-# fid = Metrics.computef_fid_resnet18(generator, resnet18, statistics)

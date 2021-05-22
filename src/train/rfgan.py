@@ -1,7 +1,6 @@
 import argparse
 import logging
 import os
-import pandas as pd
 import random
 from tqdm import tqdm
 
@@ -9,14 +8,12 @@ import torchvision.transforms as transforms
 from torchvision import datasets
 import torch
 
-from src.models.random_forest_architecture_v1 import Generator
-from src.models.random_forest_architecture_v1 import Discriminator as Discriminator_V1
-from src.models.random_forest_architecture_v2 import Discriminator as Discriminator_V2
+from src.models.eriklindernoren import Generator, Discriminator
+from src.losses.gan1 import RFLoss as gan1_loss
+from src.losses.lsgan import RFLoss as lsgan_loss
 from src.dataset import MNIST
-from src.losses import LSGAN as lsgan_loss
-from src.losses import GAN1 as gan1_loss
 from src.utils import sample_image
-from src.utils import get_gen_real_imgs_with_headID, get_gen_mask_with_headID
+from src.utils import get_real_imgs_with_headID
 from src.metrics import Metrics
 from src.augmentation import Augmentation
 from src.noise import Noise
@@ -29,24 +26,20 @@ parser.add_argument("--loss_name", type=str, choices=['gan1', 'lsgan'], required
 parser.add_argument("--augmentation", type=int, choices=[0, 1], default=0)
 parser.add_argument("--aug_times", type=int, default=-1)
 
-# input noise z
-parser.add_argument("--dist", type=str, choices=['gauss', 'uniform'], required=True)
-parser.add_argument("--bound", type=float, default=1)
-
 # No. heads in the discriminator
 parser.add_argument("--n_heads", type=int, required=True)
 
-parser.add_argument("--use_big_head_d", type=int, choices=[0, 1], default=0)
-parser.add_argument("--diff_data_for_heads", type=int, choices=[0, 1], default=0)
-
-parser.add_argument("--use_d_v2", type=int, choices=[0, 1], default=0)
+parser.add_argument("--bagging", type=int, choices=[0, 1], default=0)
 
 parser.add_argument("--n_epochs", type=int)
 parser.add_argument("--interval", type=int, default=1)
+
 parser.add_argument("--weights_g", type=str, default='')
 parser.add_argument("--weights_d", type=str, default='')
 
 # unchanged configs
+parser.add_argument("--dist", type=str, choices=['gauss', 'uniform'], default='gauss')
+parser.add_argument("--bound", type=float, default=1)
 parser.add_argument('--data_path', type=str, default='data/mnist')
 parser.add_argument("--batch_size", type=int, default=64, help="size of the batches")
 parser.add_argument("--lr", type=float, default=0.0002, help="adam: learning rate")
@@ -60,9 +53,9 @@ args = parser.parse_args()
 
 # make exp_folder
 if args.augmentation:
-    exp_folder = f'experiments/augmentation/{args.exp_name}'
+    exp_folder = f'experiments/rfgan/augmentation/{args.exp_name}'
 else:
-    exp_folder = f'experiments/{args.exp_name}'
+    exp_folder = f'experiments/rfgan/{args.exp_name}'
 if not args.weights_g and not args.weights_d:
     os.makedirs(exp_folder, exist_ok=False)
     mode = 'w'
@@ -95,22 +88,19 @@ logging.info(f'models_folder: {models_folder}')
 
 # Initialize generator and discriminator
 
-if not args.use_d_v2:
-    Discriminator = Discriminator_V1
-else:
-    Discriminator = Discriminator_V2
-
 generator = Generator()
 if args.loss_name == 'gan1':
+    loss = gan1_loss
     discriminator = Discriminator(
         use_sigmoid=True,
-        n_heads=args.n_heads,
-        use_big_head_d=args.use_big_head_d)
+        m=args.n_heads,
+        use_big_head=False)
 else:
+    loss = lsgan_loss
     discriminator = Discriminator(
         use_sigmoid=False,
-        n_heads=args.n_heads,
-        use_big_head_d=args.use_big_head_d)
+        m=args.n_heads,
+        use_big_head=False)
 
 logging.info(generator)
 logging.info(discriminator)
@@ -168,37 +158,20 @@ real_imgs_loader = torch.utils.data.DataLoader(
 
 # Optimizers
 optimizer_G = torch.optim.Adam(generator.parameters(), lr=args.lr, betas=(args.b1, args.b2))
-optimizer_D = torch.optim.Adam(discriminator.parameters(), lr=args.lr, betas=(args.b1, args.b2))
+shared_layers_D_otim = torch.optim.Adam(discriminator.shared_layers.parameters(), lr=args.lr, betas=(args.b1, args.b2))
+heads_D_optim = []
+for i in range(args.n_heads):
+    optim = torch.optim.Adam(getattr(discriminator, f'head_{i}').parameters(), lr=args.lr, betas=(args.b1, args.b2))
+    heads_D_optim.append(optim)
+
 
 Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
-# loss functions
-if args.loss_name == 'gan1':
-    loss = gan1_loss
-elif args.loss_name == 'lsgan':
-    loss = lsgan_loss
-else:
-    RuntimeError(f'{args.loss_name} is not supported!!!')
 
 # ----------
 #  Training
 # ----------
 
-mapping = {
-    0: Augmentation.aug0,
-    1: Augmentation.aug1,
-    2: Augmentation.aug2,
-    3: Augmentation.aug3,
-    4: Augmentation.aug4,
-    5: Augmentation.aug5,
-    6: Augmentation.aug6,
-    7: Augmentation.aug7,
-    8: Augmentation.aug8,
-    9: Augmentation.aug9,
-}
-
-header = None
-results = []
 for epoch in range(start_epoch, args.n_epochs):
     logging.info(f'epoch: {epoch}')
     generator.train()
@@ -215,39 +188,33 @@ for epoch in range(start_epoch, args.n_epochs):
         # -----------------
         optimizer_G.zero_grad()
         z = Noise.sample_gauss_or_uniform_noise(args.dist, args.bound, batch_size, args.z_dim)
-        gen_imgs_ = generator(z)
-        gen_imgs = {}
-        lossg_total = 0
-        random_seq = list(range(args.n_heads))
-        random.shuffle(random_seq)
-        for head_id in random_seq:
-            s = gen_imgs_
-            if args.diff_data_for_heads:
-                mask = get_gen_mask_with_headID(heads, head_id)
-                mask = mask.unsqueeze(-1).unsqueeze(-1).unsqueeze(-1)
-                s = s * mask
-            if args.augmentation:
-                s = torch.cat([s] + [mapping[head_id](s) for _ in range(args.aug_times)])
-            lossg = loss.compute_lossg_rf(discriminator, s, head_id)
-            lossg_total += lossg
-        lossg_total.backward()
+        gen_imgs = generator(z)
+        s = gen_imgs
+        if args.augmentation:
+            s = torch.cat([s] + [Augmentation.translation(s) for _ in range(args.aug_times)])
+        lossg = loss.compute_lossg(discriminator, s)
+        lossg.backward()
         optimizer_G.step()
 
         # ---------------------
         #  Train Discriminator
         # ---------------------
+        random_seq = list(range(args.n_heads))
+        random.shuffle(random_seq)
         for head_id in random_seq:
-            optimizer_D.zero_grad()
-            g = gen_imgs_.detach()
+            shared_layers_D_otim.zero_grad()
+            heads_D_optim[head_id].zero_grad()
+            g = gen_imgs.detach()
             r = real_imgs
-            if args.diff_data_for_heads:
-                g, r = get_gen_real_imgs_with_headID(g, r, heads, head_id)
+            if args.bagging:
+                r = get_real_imgs_with_headID(r, heads, head_id)
             if args.augmentation:
-                g = torch.cat([g] + [mapping[head_id](g) for _ in range(args.aug_times)])
-                r = torch.cat([r] + [mapping[head_id](r) for _ in range(args.aug_times)])
-            lossd = loss.compute_lossd_rf(discriminator, g, r, head_id)
+                g = torch.cat([g] + [Augmentation.translation(g) for _ in range(args.aug_times)])
+                r = torch.cat([r] + [Augmentation.translation(r) for _ in range(args.aug_times)])
+            lossd = loss.compute_lossd(discriminator, g, r)
             lossd.backward()
-            optimizer_D.step()
+            shared_layers_D_otim.step()
+            heads_D_optim[head_id].step()
 
     if epoch % args.interval != 0:
         continue
@@ -269,59 +236,23 @@ for epoch in range(start_epoch, args.n_epochs):
     sample_image(images_folder, args.bound, args.dist, generator, epoch)
 
     # statistic
+    lossg_mean, lossg_std, lossd_mean, lossd_std = Metrics.compute_lossg_lossd_dx_dgz(
+        loss, generator, discriminator, real_imgs_loader, args.bound, args.dist)
+    entry_1 = [lossg_mean, lossg_std, lossd_mean, lossd_std]
+    header_1 = ['lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std']
+    logging.info(' '.join(header_1))
+    logging.info(entry_1)
 
-    entry_0 = [epoch]
-    header_0 = ['epoch']
+    dx, dgz = Metrics.compute_heads_statistics(generator, discriminator, real_imgs_loader, args.bound, args.dist)
+    entry_2 = list(dx)
+    header_2 = ['dx_mean', 'dx_std', 'dx_min', 'dx_max', 'dx_max_min']
+    entry_3 = list(dgz)
+    header_3 = ['dgz_mean', 'dgz_std', 'dgz_min', 'dgz_max', 'dgz_max_min']
 
-    logging.info('lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std')
-    lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std = \
-        Metrics.compute_lossg_lossd_dx_dgz_rf(
-            args.loss_name,
-            generator,
-            discriminator,
-            real_imgs_loader,
-            args.bound,
-            args.dist,
-            head_id=-1)  # compute the average of all heads
-    entry_7 = [lossg_mean, lossg_std, lossd_mean, lossd_std, dx_mean, dx_std, dgz_mean, dgz_std]
-    header_7 = ['lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std', 'dx_mean', 'dx_std', 'dgz_mean', 'dgz_std']
-    logging.info(entry_7)
+    fid = Metrics.compute_fid(generator, args.dist, args.bound)
+    entry_4 = [fid]
+    header_4 = ['fid_score']
 
-    logging.info('fid score')
-    fid_score = Metrics.compute_fid(generator, args.dist, args.bound)
-    entry_8 = [fid_score]
-    header_8 = ['fid_score']
-    logging.info(entry_8)
-    print(fid_score)
-
-    lossg_mean__lossg_std__lossd_mean__lossd_std__dx_mean__dx_std__dgz_mean__dgz_std_all = \
-        Metrics.compute_lossg_lossd_dx_dgz_rf_sep_heads(
-            args.loss_name,
-            generator,
-            discriminator,
-            real_imgs_loader,
-            args.bound,
-            args.dist,
-            n_heads=args.n_heads)  # compute metrics for each head in D
-    entry_9 = []
-    header_9 = []
-    for head_id in range(args.n_heads):
-        h = [f'lossg_mean_{head_id}', f'lossg_std_{head_id}', f'lossd_mean_{head_id}', f'lossd_std_{head_id}',
-             f'dx_mean_{head_id}', f'dx_std_{head_id}', f'dgz_mean_{head_id}', f'dgz_std_{head_id}']
-        e = lossg_mean__lossg_std__lossd_mean__lossd_std__dx_mean__dx_std__dgz_mean__dgz_std_all[head_id]
-        logging.info(h)
-        logging.info(e)
-        header_9 = header_9 + h
-        entry_9 = entry_9 + e
-
-    entry = entry_7 + entry_8 + entry_9
-    if header is None:
-        header = header_7 + header_8 + entry_9
-
-    results.append(entry)
     logging.info('--------------------------------')
 
-csv_path = f'{exp_folder}/{args.exp_name}.csv'
-df = pd.DataFrame(results, columns=header)
-df.to_csv(csv_path, index=None)
 logging.info('Completed')

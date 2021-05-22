@@ -87,16 +87,24 @@ class Discriminator(nn.Module):
             assert self.n == 1
             setattr(self, f"head_{i}", create_big_head(use_spec_norm, use_sigmoid))
 
-    def forward(self, img, head_id):
+    def forward(self, img, head_id=-1):
         img_flat = img.view(img.size(0), -1)
         img = self.shared_layers(img_flat)
-
-        if head_id == -1:
-            s = 0
-            for i in range(self.m):
-                s += getattr(self, f"head_{i}")(img)
-            return (s / self.m).view(-1)
-
-        assert head_id >= 0 and head_id < self.n
-        p = getattr(self, f"head_{head_id}")(img)
-        return p.view(-1)
+        if head_id != -1:
+            assert head_id >= 0 and head_id < self.m
+            p = getattr(self, f"head_{head_id}")(img)
+            return p.view(-1)
+        s = 0
+        for i in range(self.m):
+            s += getattr(self, f"head_{i}")(img)
+        return (s / self.m).view(-1)
+     
+    def eval_heads(self, img):
+        assert img.shape[0] == 1
+        assert self.m > 1
+        s = []
+        for i in range(self.m):
+            a = getattr(self, f"head_{i}")(img).squeeze()
+            s.append(a.item())
+        s = np.array(s)
+        return s.mean(), s.std(), s.min(), s.max(), s.max() - s.min()
