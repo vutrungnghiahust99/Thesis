@@ -102,6 +102,8 @@ class Discriminator(nn.Module):
     def eval_heads(self, img):
         assert img.shape[0] == 1
         assert self.m > 1
+        img_flat = img.view(img.size(0), -1)
+        img = self.shared_layers(img_flat)
         s = []
         for i in range(self.m):
             a = getattr(self, f"head_{i}")(img).squeeze()
