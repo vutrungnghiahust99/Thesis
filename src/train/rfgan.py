@@ -22,6 +22,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--exp_name", type=str, required=True)
 parser.add_argument("--loss_name", type=str, choices=['gan1', 'lsgan'], required=True)
 
+parser.add_argument('--use_mask_d', type=int, choices=[0, 1], default=0)
+
 # augmentation
 parser.add_argument("--augmentation", type=int, choices=[0, 1], default=0)
 parser.add_argument("--aug_times", type=int, default=-1)
@@ -94,13 +96,15 @@ if args.loss_name == 'gan1':
     discriminator = Discriminator(
         use_sigmoid=True,
         m=args.n_heads,
-        use_big_head=False)
+        use_big_head=False,
+        use_mask_d=args.use_mask_d)
 else:
     loss = lsgan_loss
     discriminator = Discriminator(
         use_sigmoid=False,
         m=args.n_heads,
-        use_big_head=False)
+        use_big_head=False,
+        use_mask_d=args.use_mask_d)
 
 logging.info(generator)
 logging.info(discriminator)
