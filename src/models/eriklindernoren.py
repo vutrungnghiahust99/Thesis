@@ -69,7 +69,7 @@ def create_big_head(use_spec_norm, use_sigmoid):
 
 
 class Discriminator(nn.Module):
-    def __init__(self, use_sigmoid, n: int, use_big_head: bool, use_spec_norm=True, img_shape=(1, 28, 28)):
+    def __init__(self, use_sigmoid, m: int, use_big_head: bool, use_spec_norm=True, img_shape=(1, 28, 28)):
         super(Discriminator, self).__init__()
 
         self.shared_layers = nn.Sequential(
@@ -79,9 +79,9 @@ class Discriminator(nn.Module):
             nn.LeakyReLU(0.2, inplace=True)
         )
 
-        self.n = n
+        self.m = m
         if not use_big_head:
-            for i in range(n):
+            for i in range(m):
                 setattr(self, f"head_{i}", create_normal_head(use_spec_norm, use_sigmoid))
         else:
             assert self.n == 1
@@ -93,10 +93,10 @@ class Discriminator(nn.Module):
 
         if head_id == -1:
             s = 0
-            for i in range(self.n):
-                s += getattr(self, "head_i" % i)(img)
-            return (s / self.n) .squeeze()
+            for i in range(self.m):
+                s += getattr(self, f"head_{i}")(img)
+            return (s / self.m).view(-1)
 
         assert head_id >= 0 and head_id < self.n
-        p = getattr(self, "head_i" % head_id)(img)
-        return p.squeeze()
+        p = getattr(self, f"head_{head_id}")(img)
+        return p.view(-1)
