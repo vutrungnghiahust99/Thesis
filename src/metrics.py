@@ -39,6 +39,41 @@ class Metrics():
         return lossgs.mean(), lossgs.std(), lossds.mean(), lossds.std()
 
     @staticmethod
+    def compute_lossg_lossd_dx_dgz(loss,
+                                   generator,
+                                   discriminator,
+                                   real_imgs_loader,
+                                   bound,
+                                   dist,
+                                   z_dim=100):
+        lossgs = []
+        lossds = []
+        dxs = []
+        dgzs = []
+        for img, _ in tqdm(real_imgs_loader):
+            real_img = img.type(Tensor)
+            z = Noise.sample_gauss_or_uniform_noise(dist, bound, 1, z_dim)
+            with torch.no_grad():
+                gen_img = generator(z)
+                lossg = loss.compute_lossg(discriminator, gen_img)
+            lossgs.append(lossg.item())
+
+            with torch.no_grad():
+                dx = discriminator(real_img).squeeze()
+                dgz = discriminator(gen_img).squeeze()
+                lossd = loss.compute_lossd(discriminator, gen_img, real_img)
+            lossds.append(lossd.item())
+            dxs.append(dx.item())
+            dgzs.append(dgz.item())
+
+        lossgs = np.array(lossgs)
+        lossds = np.array(lossds)
+        dxs = np.array(dxs)
+        dgzs = np.array(dgzs)
+
+        return lossgs.mean(), lossgs.std(), lossds.mean(), lossds.std(), dxs.mean(), dxs.std(), dgzs.mean(), dgzs.std()
+
+    @staticmethod
     def compute_heads_statistics(generator,
                                  discriminator,
                                  real_imgs_loader,
