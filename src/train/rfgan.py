@@ -240,7 +240,7 @@ for epoch in range(start_epoch, args.n_epochs):
     sample_image(images_folder, args.bound, args.dist, generator, epoch)
 
     # statistic
-    lossg_mean, lossg_std, lossd_mean, lossd_std = Metrics.compute_lossg_lossd_dx_dgz(
+    lossg_mean, lossg_std, lossd_mean, lossd_std = Metrics.compute_lossg_lossd(
         loss, generator, discriminator, real_imgs_loader, args.bound, args.dist)
     entry_1 = [lossg_mean, lossg_std, lossd_mean, lossd_std]
     header_1 = ['lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std']
