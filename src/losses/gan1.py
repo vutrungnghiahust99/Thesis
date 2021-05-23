@@ -5,6 +5,9 @@ Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTen
 BCE = torch.nn.BCELoss()
 
 
+# Random GAN
+# Baseline 1 - Small GAN with one Discriminator
+# Baseline 2 - GAN with one Discriminator and has size equal GAN with multiple heads
 class RFLoss():
     @staticmethod
     def compute_lossd(discriminator, gen_imgs, real_imgs):
