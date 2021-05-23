@@ -154,7 +154,7 @@ class Linear(nn.Module):
     
     def forward(self, x):
         return self.linear(x)
-        
+
 
 class Generator(nn.Module):
     def __init__(self, use_spectral_norm=False, z_dim=100, img_shape=(1, 28, 28)):
@@ -196,12 +196,14 @@ def create_big_head(use_spec_norm, use_sigmoid):
     if use_sigmoid:
         return nn.Sequential(
             Linear(use_spec_norm, 256, 10),
+            nn.LeakyReLU(0.2, inplace=True),
             Linear(use_spec_norm, 10, 1),
             nn.Sigmoid()
         )
     else:
         return nn.Sequential(
             Linear(use_spec_norm, 256, 10),
+            nn.LeakyReLU(0.2, inplace=True),
             Linear(use_spec_norm, 10, 1)
         )
 
@@ -225,8 +227,8 @@ class Discriminator(nn.Module):
                 else:
                     setattr(self, f"head_{i}", create_normal_head_with_mask(use_spec_norm, use_sigmoid, i))
         else:
-            assert self.n == 1
-            setattr(self, f"head_{i}", create_big_head(use_spec_norm, use_sigmoid))
+            assert self.m == 1
+            setattr(self, f"head_{0}", create_big_head(use_spec_norm, use_sigmoid))
 
     def forward(self, img, head_id=-1):
         img_flat = img.view(img.size(0), -1)
