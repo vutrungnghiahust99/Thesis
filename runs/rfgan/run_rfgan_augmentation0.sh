@@ -1,3 +1,4 @@
+# Do not use bagging
 python -m src.train.rfgan --exp_name rfgan_lossgan1_bagging0_augmentation0_10heads \
                           --loss_name 'gan1' \
                           --n_heads '10' \
@@ -11,6 +12,7 @@ python -m src.train.rfgan --exp_name rfgan_lossgan1_bagging0_augmentation0_10hea
                           --interval '4' \
                           --use_mask_d '1'
 
+# use bagging
 python -m src.train.rfgan --exp_name rfgan_lossgan1_bagging1_augmentation0_10heads \
                           --loss_name 'gan1' \
                           --n_heads '10' \
