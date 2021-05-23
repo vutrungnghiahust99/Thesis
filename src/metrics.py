@@ -12,13 +12,13 @@ Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTen
 
 class Metrics():
     @staticmethod
-    def compute_lossg_lossd_dx_dgz(loss,
-                                   generator,
-                                   discriminator,
-                                   real_imgs_loader,
-                                   bound,
-                                   dist,
-                                   z_dim=100):
+    def compute_lossg_lossd(loss,
+                            generator,
+                            discriminator,
+                            real_imgs_loader,
+                            bound,
+                            dist,
+                            z_dim=100):
         lossgs = []
         lossds = []
         for img, _ in tqdm(real_imgs_loader):
