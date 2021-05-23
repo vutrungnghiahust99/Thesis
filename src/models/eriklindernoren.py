@@ -139,9 +139,9 @@ class MaskedLinear(nn.Linear):
 
 def create_normal_head_with_mask(use_spec_norm, use_sigmoid, head_id: int):
     if use_sigmoid:
-        return nn.Sequential(SpectralNorm(MaskedLinear(256, 1, head_id)), nn.Sigmoid())
+        return nn.Sequential(SpectralNorm(MaskedLinear(256, 1, head_id)), nn.Dropout(), nn.Sigmoid())
     else:
-        return SpectralNorm(MaskedLinear(256, 1, head_id))
+        return nn.Sequential(SpectralNorm(MaskedLinear(256, 1, head_id)), nn.Dropout())
 
 
 class Linear(nn.Module):
@@ -187,9 +187,9 @@ class Generator(nn.Module):
 
 def create_normal_head(use_spec_norm, use_sigmoid):
     if use_sigmoid:
-        return nn.Sequential(Linear(use_spec_norm, 256, 1), nn.Sigmoid())
+        return nn.Sequential(Linear(use_spec_norm, 256, 1), nn.Dropout(), nn.Sigmoid())
     else:
-        return Linear(use_spec_norm, 256, 1)
+        return nn.Sequential(Linear(use_spec_norm, 256, 1), nn.Dropout())
 
 
 def create_big_head(use_spec_norm, use_sigmoid):
@@ -198,13 +198,15 @@ def create_big_head(use_spec_norm, use_sigmoid):
             Linear(use_spec_norm, 256, 10),
             nn.LeakyReLU(0.2, inplace=True),
             Linear(use_spec_norm, 10, 1),
+            nn.Dropout(),
             nn.Sigmoid()
         )
     else:
         return nn.Sequential(
             Linear(use_spec_norm, 256, 10),
             nn.LeakyReLU(0.2, inplace=True),
-            Linear(use_spec_norm, 10, 1)
+            Linear(use_spec_norm, 10, 1),
+            nn.Dropout()
         )
 
 
