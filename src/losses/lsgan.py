@@ -22,5 +22,5 @@ class RFLoss():
     @staticmethod
     def compute_lossg(discriminator, gen_imgs):
         real_labels = Tensor(gen_imgs.shape[0]).fill_(1.0)
-        lossg = MSE(gen_imgs, real_labels)
+        lossg = MSE(discriminator(gen_imgs, -1), real_labels)
         return lossg
