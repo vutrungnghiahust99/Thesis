@@ -1,0 +1,1764 @@
+21-05-23 09:00:02, INFO: 
+***************** RFGAN_LOSSGAN1_BAGGING0_AUGMENTATION1_10HEADS_USEMASKD **************
+21-05-23 09:00:02, INFO: aug_times: 2
+21-05-23 09:00:02, INFO: augmentation: 1
+21-05-23 09:00:02, INFO: b1: 0.5
+21-05-23 09:00:02, INFO: b2: 0.999
+21-05-23 09:00:02, INFO: bagging: 0
+21-05-23 09:00:02, INFO: batch_size: 64
+21-05-23 09:00:02, INFO: bound: 1
+21-05-23 09:00:02, INFO: channels: 1
+21-05-23 09:00:02, INFO: data_path: data/mnist
+21-05-23 09:00:02, INFO: dist: gauss
+21-05-23 09:00:02, INFO: exp_name: rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD
+21-05-23 09:00:02, INFO: img_size: 28
+21-05-23 09:00:02, INFO: interval: 4
+21-05-23 09:00:02, INFO: loss_name: gan1
+21-05-23 09:00:02, INFO: lr: 0.0002
+21-05-23 09:00:02, INFO: n_cpu: 8
+21-05-23 09:00:02, INFO: n_epochs: 401
+21-05-23 09:00:02, INFO: n_heads: 10
+21-05-23 09:00:02, INFO: use_mask_d: 1
+21-05-23 09:00:02, INFO: weights_d: 
+21-05-23 09:00:02, INFO: weights_g: 
+21-05-23 09:00:02, INFO: z_dim: 100
+21-05-23 09:00:02, INFO: --------------------------------
+21-05-23 09:00:02, INFO: exp_folder: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD
+21-05-23 09:00:02, INFO: images_folder: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images
+21-05-23 09:00:02, INFO: models_folder: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models
+21-05-23 09:00:02, INFO: 0: [0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0]
+21-05-23 09:00:02, INFO: 1: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0]
+21-05-23 09:00:02, INFO: 2: [0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0]
+21-05-23 09:00:02, INFO: 3: [0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1]
+21-05-23 09:00:02, INFO: 4: [0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0]
+21-05-23 09:00:02, INFO: 5: [1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1]
+21-05-23 09:00:02, INFO: 6: [1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1]
+21-05-23 09:00:02, INFO: 7: [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1]
+21-05-23 09:00:02, INFO: 8: [1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0]
+21-05-23 09:00:02, INFO: 9: [1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0]
+21-05-23 09:00:02, INFO: Generator(
+  (model): Sequential(
+    (0): Linear(
+      (linear): Linear(in_features=100, out_features=128, bias=True)
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+    (4): Linear(
+      (linear): Linear(in_features=256, out_features=512, bias=True)
+    )
+    (5): LeakyReLU(negative_slope=0.2, inplace=True)
+    (6): Linear(
+      (linear): Linear(in_features=512, out_features=1024, bias=True)
+    )
+    (7): LeakyReLU(negative_slope=0.2, inplace=True)
+    (8): Linear(
+      (linear): Linear(in_features=1024, out_features=784, bias=True)
+    )
+    (9): Tanh()
+  )
+)
+21-05-23 09:00:02, INFO: Discriminator(
+  (shared_layers): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=784, out_features=512, bias=True)
+      )
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=512, out_features=256, bias=True)
+      )
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+  )
+  (head_0): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_1): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_2): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_3): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_4): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_5): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_6): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_7): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_8): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_9): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+)
+21-05-23 09:00:02, INFO: start at epoch: 0
+21-05-23 09:00:05, INFO: data at: data/mnist
+21-05-23 09:00:06, INFO: epoch: 0
+21-05-23 09:03:14, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_0.pth
+21-05-23 09:03:14, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_0.pth
+21-05-23 09:03:14, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/0.png
+21-05-23 09:04:20, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 09:04:20, INFO: [-0.11511983256042004, 0.012662658247807698, 0.3000906398534775, 0.10165584620261486]
+21-05-23 09:05:07, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 09:05:07, INFO: [0.8352371412396431, 0.009532157824831373, 0.8187755856513977, 0.8503549401640892, 0.0315793545126915]
+21-05-23 09:05:07, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 09:05:07, INFO: [0.10906232559651137, 0.008132638599901805, 0.09516869559586048, 0.12300270459204912, 0.02783400899618864]
+21-05-23 09:06:02, INFO: fid_score
+21-05-23 09:06:02, INFO: [303.61171288633705]
+21-05-23 09:06:02, INFO: --------------------------------
+21-05-23 09:06:02, INFO: epoch: 1
+21-05-23 09:09:12, INFO: epoch: 2
+21-05-23 09:12:21, INFO: epoch: 3
+21-05-23 09:15:31, INFO: epoch: 4
+21-05-23 09:18:39, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_4.pth
+21-05-23 09:18:39, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_4.pth
+21-05-23 09:18:40, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/4.png
+21-05-23 09:19:46, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 09:19:46, INFO: [-0.08196635305732489, 0.008598790487481299, 0.2434098146289587, 0.06891154306957596]
+21-05-23 09:20:33, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 09:20:33, INFO: [0.8528139959692955, 0.01159272660451846, 0.8320972041010857, 0.8707256577730179, 0.03862845367193222]
+21-05-23 09:20:33, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 09:20:33, INFO: [0.07879746652677655, 0.007838995600981502, 0.06432558532357216, 0.09146825849711895, 0.02714267317354679]
+21-05-23 09:21:22, INFO: fid_score
+21-05-23 09:21:22, INFO: [301.0366102729976]
+21-05-23 09:21:22, INFO: --------------------------------
+21-05-23 09:21:22, INFO: epoch: 5
+21-05-23 09:24:31, INFO: epoch: 6
+21-05-23 09:27:39, INFO: epoch: 7
+21-05-23 09:30:48, INFO: epoch: 8
+21-05-23 09:33:57, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_8.pth
+21-05-23 09:33:57, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_8.pth
+21-05-23 09:33:57, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/8.png
+21-05-23 09:35:04, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 09:35:04, INFO: [-0.1463793039366603, 0.03146286006096551, 0.31415511584579947, 0.07711211462186149]
+21-05-23 09:35:51, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 09:35:51, INFO: [0.8475308612644672, 0.012420773771591594, 0.824648049724102, 0.8666016161441803, 0.041953566420078275]
+21-05-23 09:35:51, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 09:35:51, INFO: [0.13629659685522316, 0.009748836871923029, 0.11907901248037815, 0.15242447326630354, 0.03334546078592539]
+21-05-23 09:36:41, INFO: fid_score
+21-05-23 09:36:41, INFO: [207.77667383771922]
+21-05-23 09:36:41, INFO: --------------------------------
+21-05-23 09:36:41, INFO: epoch: 9
+21-05-23 09:39:50, INFO: epoch: 10
+21-05-23 09:43:00, INFO: epoch: 11
+21-05-23 09:46:10, INFO: epoch: 12
+21-05-23 09:49:19, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_12.pth
+21-05-23 09:49:19, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_12.pth
+21-05-23 09:49:19, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/12.png
+21-05-23 09:50:26, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 09:50:26, INFO: [-0.193569956022501, 0.04027024029753968, 0.3789013090997934, 0.07924974228453291]
+21-05-23 09:51:13, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 09:51:13, INFO: [0.83274274122715, 0.011741388754781448, 0.8115596368074417, 0.8509674608826637, 0.03940782407522202]
+21-05-23 09:51:13, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 09:51:13, INFO: [0.17647124720677732, 0.011027282439186673, 0.1593345854640007, 0.19522952191382648, 0.03589493644982576]
+21-05-23 09:52:01, INFO: fid_score
+21-05-23 09:52:01, INFO: [185.87335980510818]
+21-05-23 09:52:01, INFO: --------------------------------
+21-05-23 09:52:01, INFO: epoch: 13
+21-05-23 09:55:19, INFO: epoch: 14
+21-05-23 09:58:31, INFO: epoch: 15
+21-05-23 10:01:42, INFO: epoch: 16
+21-05-23 10:04:52, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_16.pth
+21-05-23 10:04:52, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_16.pth
+21-05-23 10:04:52, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/16.png
+21-05-23 10:05:59, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 10:05:59, INFO: [-0.3821339220046997, 0.11369085065911556, 0.835577561289072, 0.18828531748126054]
+21-05-23 10:06:47, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 10:06:47, INFO: [0.6422695964121818, 0.02114095991012121, 0.6051836945176124, 0.6752199488341808, 0.07003625431656837]
+21-05-23 10:06:47, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 10:06:47, INFO: [0.3152891566643119, 0.016824277270397186, 0.2875669792085886, 0.3441964583069086, 0.05662947909832001]
+21-05-23 10:07:34, INFO: fid_score
+21-05-23 10:07:34, INFO: [107.57513001682031]
+21-05-23 10:07:34, INFO: --------------------------------
+21-05-23 10:07:34, INFO: epoch: 17
+21-05-23 10:10:45, INFO: epoch: 18
+21-05-23 10:13:57, INFO: epoch: 19
+21-05-23 10:17:14, INFO: epoch: 20
+21-05-23 10:20:28, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_20.pth
+21-05-23 10:20:28, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_20.pth
+21-05-23 10:20:28, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/20.png
+21-05-23 10:21:36, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 10:21:36, INFO: [-0.47222213324308393, 0.09632580607418706, 1.1241503150820733, 0.1781699214389641]
+21-05-23 10:22:24, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 10:22:24, INFO: [0.5267768706917763, 0.022701617200765464, 0.48668750165700914, 0.562615915209055, 0.07592841355204583]
+21-05-23 10:22:24, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 10:22:24, INFO: [0.37259063220322136, 0.019390016950451942, 0.34024342147707937, 0.40475111217200754, 0.06450769069492816]
+21-05-23 10:23:14, INFO: fid_score
+21-05-23 10:23:14, INFO: [78.54755204518278]
+21-05-23 10:23:14, INFO: --------------------------------
+21-05-23 10:23:14, INFO: epoch: 21
+21-05-23 10:26:30, INFO: epoch: 22
+21-05-23 10:29:46, INFO: epoch: 23
+21-05-23 10:32:58, INFO: epoch: 24
+21-05-23 10:36:14, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_24.pth
+21-05-23 10:36:14, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_24.pth
+21-05-23 10:36:14, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/24.png
+21-05-23 10:37:21, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 10:37:21, INFO: [-0.537890832978487, 0.10040744334103405, 1.1928229887604713, 0.18574776113932437]
+21-05-23 10:38:10, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 10:38:10, INFO: [0.5255959977537393, 0.019263847558360737, 0.4921781965315342, 0.5567420416295529, 0.06456384509801864]
+21-05-23 10:38:10, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 10:38:10, INFO: [0.41129491540312774, 0.019490069204219498, 0.3780625577867031, 0.4436872975051403, 0.0656247397184372]
+21-05-23 10:39:00, INFO: fid_score
+21-05-23 10:39:00, INFO: [63.769749065587405]
+21-05-23 10:39:00, INFO: --------------------------------
+21-05-23 10:39:00, INFO: epoch: 25
+21-05-23 10:42:15, INFO: epoch: 26
+21-05-23 10:45:31, INFO: epoch: 27
+21-05-23 10:48:46, INFO: epoch: 28
+21-05-23 10:52:01, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_28.pth
+21-05-23 10:52:01, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_28.pth
+21-05-23 10:52:01, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/28.png
+21-05-23 10:53:08, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 10:53:08, INFO: [-0.5651414729595184, 0.13732355213045683, 1.2138339515328407, 0.22269834637805833]
+21-05-23 10:53:56, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 10:53:56, INFO: [0.5303862079802155, 0.021176369275115427, 0.4945228284418583, 0.5652234530389308, 0.0707006245970726]
+21-05-23 10:53:56, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 10:53:56, INFO: [0.42546417429596184, 0.020845557009228275, 0.3908725776821375, 0.4601021130472422, 0.06922953536510468]
+21-05-23 10:54:43, INFO: fid_score
+21-05-23 10:54:43, INFO: [53.357933095593154]
+21-05-23 10:54:43, INFO: --------------------------------
+21-05-23 10:54:43, INFO: epoch: 29
+21-05-23 10:57:58, INFO: epoch: 30
+21-05-23 11:01:12, INFO: epoch: 31
+21-05-23 11:04:25, INFO: epoch: 32
+21-05-23 11:07:38, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_32.pth
+21-05-23 11:07:38, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_32.pth
+21-05-23 11:07:38, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/32.png
+21-05-23 11:08:45, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 11:08:45, INFO: [-0.5506051577448845, 0.10979478145456258, 1.2803462664961816, 0.18162780817883797]
+21-05-23 11:09:33, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 11:09:33, INFO: [0.48681914656519887, 0.022080004242314537, 0.45030471501350405, 0.5237264673650265, 0.07342175235152244]
+21-05-23 11:09:33, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 11:09:33, INFO: [0.417745563427806, 0.0205290258455136, 0.38413586865067484, 0.4521812933206558, 0.06804542466998101]
+21-05-23 11:10:19, INFO: fid_score
+21-05-23 11:10:19, INFO: [43.909567135366274]
+21-05-23 11:10:19, INFO: --------------------------------
+21-05-23 11:10:19, INFO: epoch: 33
+21-05-23 11:13:29, INFO: epoch: 34
+21-05-23 11:16:44, INFO: epoch: 35
+21-05-23 11:19:56, INFO: epoch: 36
+21-05-23 11:23:09, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_36.pth
+21-05-23 11:23:09, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_36.pth
+21-05-23 11:23:09, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/36.png
+21-05-23 11:24:16, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 11:24:16, INFO: [-0.5898159148335457, 0.10735808873561464, 1.2406707193374633, 0.16518129731585882]
+21-05-23 11:25:04, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 11:25:04, INFO: [0.5255401856863499, 0.02216266869523007, 0.48749926716685293, 0.5623345776021481, 0.07483531043529511]
+21-05-23 11:25:04, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 11:25:04, INFO: [0.4433592877408862, 0.020986751115148458, 0.40799440994858743, 0.47830636306405067, 0.07031195311546326]
+21-05-23 11:25:50, INFO: fid_score
+21-05-23 11:25:50, INFO: [34.11376848492523]
+21-05-23 11:25:50, INFO: --------------------------------
+21-05-23 11:25:50, INFO: epoch: 37
+21-05-23 11:29:02, INFO: epoch: 38
+21-05-23 11:32:14, INFO: epoch: 39
+21-05-23 11:35:25, INFO: epoch: 40
+21-05-23 11:38:37, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_40.pth
+21-05-23 11:38:37, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_40.pth
+21-05-23 11:38:37, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/40.png
+21-05-23 11:39:44, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 11:39:44, INFO: [-0.5287384190142155, 0.12267797416273121, 1.2822459408402442, 0.21561361165134058]
+21-05-23 11:40:31, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 11:40:31, INFO: [0.47763419372081756, 0.02150190519324789, 0.44284769453406336, 0.5138371273517609, 0.07098943281769753]
+21-05-23 11:40:31, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 11:40:31, INFO: [0.4053261626952886, 0.021456263349831483, 0.3706599924772978, 0.4420451248794794, 0.07138513240218163]
+21-05-23 11:41:17, INFO: fid_score
+21-05-23 11:41:17, INFO: [33.774608321926195]
+21-05-23 11:41:17, INFO: --------------------------------
+21-05-23 11:41:17, INFO: epoch: 41
+21-05-23 11:44:29, INFO: epoch: 42
+21-05-23 11:47:40, INFO: epoch: 43
+21-05-23 11:50:51, INFO: epoch: 44
+21-05-23 11:54:02, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_44.pth
+21-05-23 11:54:02, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_44.pth
+21-05-23 11:54:02, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/44.png
+21-05-23 11:55:08, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 11:55:08, INFO: [-0.6313261644661426, 0.10994723033629927, 1.302817455434799, 0.17078947577619621]
+21-05-23 11:55:56, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 11:55:56, INFO: [0.5153198501908779, 0.02096350558726142, 0.48028599686026574, 0.5498265886127949, 0.06954059175252915]
+21-05-23 11:55:56, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 11:55:56, INFO: [0.4654315780043602, 0.02074754081413894, 0.43127797904014586, 0.4995020218849182, 0.06822404284477233]
+21-05-23 11:56:42, INFO: fid_score
+21-05-23 11:56:42, INFO: [31.506549709003764]
+21-05-23 11:56:42, INFO: --------------------------------
+21-05-23 11:56:42, INFO: epoch: 45
+21-05-23 11:59:53, INFO: epoch: 46
+21-05-23 12:03:04, INFO: epoch: 47
+21-05-23 12:06:14, INFO: epoch: 48
+21-05-23 12:09:25, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_48.pth
+21-05-23 12:09:25, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_48.pth
+21-05-23 12:09:25, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/48.png
+21-05-23 12:10:31, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 12:10:31, INFO: [-0.625888454335928, 0.13608860418406346, 1.3403714080929756, 0.20153605756008466]
+21-05-23 12:11:19, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 12:11:19, INFO: [0.4947425659313798, 0.020433412512839293, 0.46082388446033, 0.5286111082911491, 0.06778722383081913]
+21-05-23 12:11:19, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 12:11:19, INFO: [0.45984380735665564, 0.020440830451873348, 0.425881096175313, 0.49362297048568726, 0.06774187431037426]
+21-05-23 12:12:05, INFO: fid_score
+21-05-23 12:12:05, INFO: [30.956115052761504]
+21-05-23 12:12:05, INFO: --------------------------------
+21-05-23 12:12:05, INFO: epoch: 49
+21-05-23 12:15:16, INFO: epoch: 50
+21-05-23 12:18:26, INFO: epoch: 51
+21-05-23 12:21:37, INFO: epoch: 52
+21-05-23 12:24:47, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_52.pth
+21-05-23 12:24:47, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_52.pth
+21-05-23 12:24:47, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/52.png
+21-05-23 12:25:54, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 12:25:54, INFO: [-0.645069821497798, 0.15065075295725947, 1.331158707690239, 0.23433656884631057]
+21-05-23 12:26:41, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 12:26:41, INFO: [0.5110049614834785, 0.020004218825163372, 0.47698892894387246, 0.5434169231772423, 0.06642799423336983]
+21-05-23 12:26:41, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 12:26:41, INFO: [0.4725051969125867, 0.019129209064676946, 0.4403611425697804, 0.5038609353512525, 0.0634997927814722]
+21-05-23 12:27:27, INFO: fid_score
+21-05-23 12:27:27, INFO: [26.502412967906395]
+21-05-23 12:27:27, INFO: --------------------------------
+21-05-23 12:27:27, INFO: epoch: 53
+21-05-23 12:30:40, INFO: epoch: 54
+21-05-23 12:33:52, INFO: epoch: 55
+21-05-23 12:37:03, INFO: epoch: 56
+21-05-23 12:40:15, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_56.pth
+21-05-23 12:40:15, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_56.pth
+21-05-23 12:40:15, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/56.png
+21-05-23 12:41:22, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 12:41:22, INFO: [-0.6220484275817871, 0.11932985992212833, 1.3230804418087005, 0.1814788036035984]
+21-05-23 12:42:10, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 12:42:10, INFO: [0.5006244867324829, 0.020703828091927216, 0.4661087169706821, 0.535752875739336, 0.06964415876865387]
+21-05-23 12:42:10, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 12:42:10, INFO: [0.45696847210168834, 0.01993824022552971, 0.42381034846901894, 0.49108829518556596, 0.06727794671654701]
+21-05-23 12:42:56, INFO: fid_score
+21-05-23 12:42:56, INFO: [27.00346493871527]
+21-05-23 12:42:56, INFO: --------------------------------
+21-05-23 16:40:10, INFO: epoch: 57
+21-05-23 16:43:14, INFO: epoch: 58
+21-05-23 16:46:19, INFO: epoch: 59
+21-05-23 16:49:24, INFO: epoch: 60
+21-05-23 16:52:25, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_60.pth
+21-05-23 16:52:25, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_60.pth
+21-05-23 16:52:25, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/60.png
+21-05-23 16:53:29, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 16:53:29, INFO: [-0.6080681060135364, 0.12323559404906856, 1.2797871804118157, 0.18770698700307742]
+21-05-23 16:54:15, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 16:54:15, INFO: [0.5157500172573327, 0.01975252809001868, 0.48264663221240045, 0.5483398546278476, 0.06569322241544724]
+21-05-23 16:54:15, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 16:54:15, INFO: [0.45038709626317025, 0.020155804606254192, 0.4168279268294573, 0.4840492706596851, 0.06722134383022785]
+21-05-23 16:55:05, INFO: fid_score
+21-05-23 16:55:05, INFO: [27.78655852187444]
+21-05-23 16:55:05, INFO: --------------------------------
+21-05-23 16:55:05, INFO: epoch: 61
+21-05-23 16:58:11, INFO: epoch: 62
+21-05-23 17:01:14, INFO: epoch: 63
+21-05-23 17:04:17, INFO: epoch: 64
+21-05-23 17:07:19, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_64.pth
+21-05-23 17:07:19, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_64.pth
+21-05-23 17:07:19, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/64.png
+21-05-23 17:08:23, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 17:08:23, INFO: [-0.6137959940195084, 0.09185956541587663, 1.3030622375965117, 0.13584007120342048]
+21-05-23 17:09:09, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 17:09:09, INFO: [0.5044150023692846, 0.02276666994864241, 0.4665696667730808, 0.5424238132476806, 0.07585414647459984]
+21-05-23 17:09:09, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 17:09:09, INFO: [0.4562591665673256, 0.02289160041267309, 0.4186940208852291, 0.49473998650312423, 0.07604596561789513]
+21-05-23 17:09:58, INFO: fid_score
+21-05-23 17:09:58, INFO: [23.4434616129671]
+21-05-23 17:09:58, INFO: --------------------------------
+21-05-23 17:09:58, INFO: epoch: 65
+21-05-23 17:13:01, INFO: epoch: 66
+21-05-23 17:16:04, INFO: epoch: 67
+21-05-23 17:19:06, INFO: epoch: 68
+21-05-23 17:22:08, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_68.pth
+21-05-23 17:22:08, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_68.pth
+21-05-23 17:22:08, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/68.png
+21-05-23 17:23:11, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 17:23:11, INFO: [-0.6134233161866665, 0.15470569281019847, 1.3055383443713189, 0.2407302966381003]
+21-05-23 17:23:57, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 17:23:57, INFO: [0.5085750453996658, 0.021322172986645814, 0.4742643177241087, 0.5449830392926931, 0.07071872156858444]
+21-05-23 17:23:57, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 17:23:57, INFO: [0.45460641153544196, 0.021800113720002928, 0.4200798393458128, 0.49225734835267065, 0.07217750900685788]
+21-05-23 17:24:46, INFO: fid_score
+21-05-23 17:24:46, INFO: [25.171278560239898]
+21-05-23 17:24:46, INFO: --------------------------------
+21-05-23 17:24:46, INFO: epoch: 69
+21-05-23 17:27:48, INFO: epoch: 70
+21-05-23 17:30:50, INFO: epoch: 71
+21-05-23 17:33:51, INFO: epoch: 72
+21-05-23 17:36:52, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_72.pth
+21-05-23 17:36:52, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_72.pth
+21-05-23 17:36:52, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/72.png
+21-05-23 17:37:56, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 17:37:56, INFO: [-0.6611757806420326, 0.12679711170852243, 1.2874663306236267, 0.1783152111023856]
+21-05-23 17:38:41, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 17:38:41, INFO: [0.5387087066102028, 0.022170667535524245, 0.5024722439706325, 0.5754859639763832, 0.07301372000575065]
+21-05-23 17:38:41, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 17:38:41, INFO: [0.47703505269497637, 0.02306941342624844, 0.4395655172914267, 0.515783997219801, 0.07621847992837429]
+21-05-23 17:39:31, INFO: fid_score
+21-05-23 17:39:31, INFO: [24.45923980621683]
+21-05-23 17:39:31, INFO: --------------------------------
+21-05-23 17:39:31, INFO: epoch: 73
+21-05-23 17:42:33, INFO: epoch: 74
+21-05-23 17:45:34, INFO: epoch: 75
+21-05-23 17:48:36, INFO: epoch: 76
+21-05-23 17:51:39, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_76.pth
+21-05-23 17:51:39, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_76.pth
+21-05-23 17:51:39, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/76.png
+21-05-23 17:52:43, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 17:52:43, INFO: [-0.6512773862838745, 0.08459835505494691, 1.3361742722988128, 0.1228886023760401]
+21-05-23 17:53:29, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 17:53:29, INFO: [0.5061241710186004, 0.020997067960580918, 0.47039125127196313, 0.5405392801404, 0.07014802886843681]
+21-05-23 17:53:29, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 17:53:29, INFO: [0.4774299940669537, 0.02146012351803575, 0.44076852949261663, 0.5125979729950428, 0.07182944350242615]
+21-05-23 17:54:18, INFO: fid_score
+21-05-23 17:54:18, INFO: [24.333291721824963]
+21-05-23 17:54:18, INFO: --------------------------------
+21-05-23 18:10:33, INFO: epoch: 77
+21-05-23 18:13:40, INFO: epoch: 78
+21-05-23 18:16:46, INFO: epoch: 79
+21-05-23 18:19:52, INFO: epoch: 80
+21-05-23 18:22:58, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_80.pth
+21-05-23 18:22:58, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_80.pth
+21-05-23 18:22:58, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/80.png
+21-05-23 18:24:03, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 18:24:03, INFO: [-0.6602389524042607, 0.09928126764192234, 1.3509349663496018, 0.15277978921916865]
+21-05-23 18:24:50, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 18:24:50, INFO: [0.504588311803341, 0.022900441400731917, 0.46747393202185633, 0.5439692332684993, 0.07649530124664307]
+21-05-23 18:24:50, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 18:24:50, INFO: [0.4802863893181086, 0.023104610683240958, 0.4425108497798443, 0.5192895043849945, 0.07677865460515022]
+21-05-23 18:25:41, INFO: fid_score
+21-05-23 18:25:41, INFO: [20.491993092166666]
+21-05-23 18:25:41, INFO: --------------------------------
+21-05-23 18:25:41, INFO: epoch: 81
+21-05-23 18:28:50, INFO: epoch: 82
+21-05-23 18:31:58, INFO: epoch: 83
+21-05-23 18:35:03, INFO: epoch: 84
+21-05-23 18:38:08, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_84.pth
+21-05-23 18:38:08, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_84.pth
+21-05-23 18:38:08, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/84.png
+21-05-23 18:39:12, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 18:39:12, INFO: [-0.6635435182869435, 0.11117020655205721, 1.3398465083122253, 0.15720531681636396]
+21-05-23 18:39:58, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 18:39:58, INFO: [0.5115940210711957, 0.021261147428367135, 0.4768108296453953, 0.5483139478266239, 0.07150311818122863]
+21-05-23 18:39:58, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 18:39:58, INFO: [0.48223754090428356, 0.021777855186193927, 0.4467236934900284, 0.5203841339170933, 0.07366044042706489]
+21-05-23 18:40:47, INFO: fid_score
+21-05-23 18:40:47, INFO: [21.75385959845653]
+21-05-23 18:40:47, INFO: --------------------------------
+21-05-23 18:40:47, INFO: epoch: 85
+21-05-23 18:43:51, INFO: epoch: 86
+21-05-23 18:46:54, INFO: epoch: 87
+21-05-23 18:49:58, INFO: epoch: 88
+21-05-23 18:53:01, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_88.pth
+21-05-23 18:53:01, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_88.pth
+21-05-23 18:53:01, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/88.png
+21-05-23 18:54:05, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 18:54:05, INFO: [-0.6341153791725636, 0.08499509168507957, 1.3347653627753258, 0.13013479501989203]
+21-05-23 18:54:51, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 18:54:51, INFO: [0.4986385053515434, 0.020434087299318806, 0.4649275886654854, 0.5331112892985344, 0.06818370063304902]
+21-05-23 18:54:51, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 18:54:51, INFO: [0.4674963623547554, 0.020515987606543006, 0.4338138169467449, 0.5025494274556637, 0.06873561050891876]
+21-05-23 18:55:40, INFO: fid_score
+21-05-23 18:55:40, INFO: [23.730323341424793]
+21-05-23 18:55:40, INFO: --------------------------------
+21-05-23 18:55:40, INFO: epoch: 89
+21-05-23 18:58:44, INFO: epoch: 90
+21-05-23 19:01:48, INFO: epoch: 91
+21-05-23 19:04:51, INFO: epoch: 92
+21-05-23 19:07:54, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_92.pth
+21-05-23 19:07:54, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_92.pth
+21-05-23 19:07:54, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/92.png
+21-05-23 19:08:58, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 19:08:58, INFO: [-0.6626913937747478, 0.09418509622580365, 1.3575572842359542, 0.14510427550062102]
+21-05-23 19:09:44, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 19:09:44, INFO: [0.5021876428872347, 0.021775910901437507, 0.4659119067072868, 0.538653325855732, 0.07274141914844513]
+21-05-23 19:09:44, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 19:09:44, INFO: [0.48289756221592434, 0.021337270808853306, 0.4472837390720844, 0.5183973111510277, 0.07111357207894325]
+21-05-23 19:10:33, INFO: fid_score
+21-05-23 19:10:33, INFO: [18.927117808651502]
+21-05-23 19:10:33, INFO: --------------------------------
+21-05-23 19:10:33, INFO: epoch: 93
+21-05-23 19:13:36, INFO: epoch: 94
+21-05-23 19:16:42, INFO: epoch: 95
+21-05-23 19:19:46, INFO: epoch: 96
+21-05-23 19:22:50, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_96.pth
+21-05-23 19:22:50, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_96.pth
+21-05-23 19:22:50, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/96.png
+21-05-23 19:23:55, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 19:23:55, INFO: [-0.6632097050309181, 0.12640457222307494, 1.3702344803571702, 0.18359238687729496]
+21-05-23 19:24:41, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 19:24:41, INFO: [0.4974818688184023, 0.01981448822204946, 0.4644985761463642, 0.5302872801303864, 0.06578870398402215]
+21-05-23 19:24:41, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 19:24:41, INFO: [0.48000543985664845, 0.019494359609596567, 0.44807729707360267, 0.5126647377192974, 0.06458744064569473]
+21-05-23 19:25:30, INFO: fid_score
+21-05-23 19:25:30, INFO: [19.88101513864831]
+21-05-23 19:25:30, INFO: --------------------------------
+21-05-23 19:25:30, INFO: epoch: 97
+21-05-23 19:28:35, INFO: epoch: 98
+21-05-23 19:31:39, INFO: epoch: 99
+21-05-23 19:34:44, INFO: epoch: 100
+21-05-23 19:37:52, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_100.pth
+21-05-23 19:37:52, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_100.pth
+21-05-23 19:37:52, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/100.png
+21-05-23 19:38:56, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 19:38:56, INFO: [-0.659809996008873, 0.12759231401739762, 1.3642576304197311, 0.1854356060002155]
+21-05-23 19:39:42, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 19:39:42, INFO: [0.4985360964083672, 0.022666651076226736, 0.4609169153392315, 0.5359696861684322, 0.07505277082920074]
+21-05-23 19:39:42, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 19:39:42, INFO: [0.4793573754692078, 0.023216353175620857, 0.44114719485640524, 0.5175642549812793, 0.07641706012487412]
+21-05-23 19:40:31, INFO: fid_score
+21-05-23 19:40:31, INFO: [20.403902410585317]
+21-05-23 19:40:31, INFO: --------------------------------
+21-05-23 19:40:31, INFO: epoch: 101
+21-05-23 19:43:37, INFO: epoch: 102
+21-05-23 19:46:42, INFO: epoch: 103
+21-05-23 19:49:48, INFO: epoch: 104
+21-05-23 19:52:54, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_104.pth
+21-05-23 19:52:54, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_104.pth
+21-05-23 19:52:54, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/104.png
+21-05-23 19:53:58, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 19:53:58, INFO: [-0.6586495501637459, 0.11367221131729162, 1.3589452704429625, 0.15876378630042584]
+21-05-23 19:54:45, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 19:54:45, INFO: [0.49957977163076395, 0.021341454268679654, 0.4634116622269154, 0.5341072483360767, 0.07069558610916138]
+21-05-23 19:54:45, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 19:54:45, INFO: [0.4771982810544967, 0.021999478851402198, 0.4399739334821701, 0.5125207584381104, 0.07254682495594025]
+21-05-23 19:55:35, INFO: fid_score
+21-05-23 19:55:35, INFO: [20.363874823797232]
+21-05-23 19:55:35, INFO: --------------------------------
+21-05-23 19:55:35, INFO: epoch: 105
+21-05-23 19:58:41, INFO: epoch: 106
+21-05-23 20:01:47, INFO: epoch: 107
+21-05-23 20:04:53, INFO: epoch: 108
+21-05-23 20:07:59, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_108.pth
+21-05-23 20:07:59, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_108.pth
+21-05-23 20:07:59, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/108.png
+21-05-23 20:09:05, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 20:09:05, INFO: [-0.665093568021059, 0.1052600476085506, 1.355294473361969, 0.1611426767951881]
+21-05-23 20:09:51, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 20:09:51, INFO: [0.5051251605778933, 0.02334499703900518, 0.46665648181438446, 0.5436285705327988, 0.07697208871841431]
+21-05-23 20:09:51, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 20:09:51, INFO: [0.48549718878537423, 0.02412532438696627, 0.4460473584741354, 0.5251868425011634, 0.07913948402702808]
+21-05-23 20:10:42, INFO: fid_score
+21-05-23 20:10:42, INFO: [18.551665780364345]
+21-05-23 20:10:42, INFO: --------------------------------
+21-05-23 20:10:42, INFO: epoch: 109
+21-05-23 20:13:48, INFO: epoch: 110
+21-05-23 20:16:54, INFO: epoch: 111
+21-05-23 20:20:00, INFO: epoch: 112
+21-05-23 20:23:07, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_112.pth
+21-05-23 20:23:07, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_112.pth
+21-05-23 20:23:07, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/112.png
+21-05-23 20:24:12, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 20:24:12, INFO: [-0.6771087936222553, 0.11252980509774034, 1.3454625357031822, 0.16268523036992397]
+21-05-23 20:24:58, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 20:24:58, INFO: [0.5160408551597595, 0.02328790026642078, 0.47538815186023714, 0.5528984708428383, 0.07751031898260116]
+21-05-23 20:24:58, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 20:24:58, INFO: [0.4887717643338441, 0.02464682690925963, 0.44524616505503656, 0.5273291660547257, 0.0820830009996891]
+21-05-23 20:25:48, INFO: fid_score
+21-05-23 20:25:48, INFO: [19.39926558869081]
+21-05-23 20:25:48, INFO: --------------------------------
+21-05-23 20:25:48, INFO: epoch: 113
+21-05-23 20:28:55, INFO: epoch: 114
+21-05-23 20:32:01, INFO: epoch: 115
+21-05-23 20:35:08, INFO: epoch: 116
+21-05-23 20:38:15, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_116.pth
+21-05-23 20:38:15, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_116.pth
+21-05-23 20:38:15, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/116.png
+21-05-23 20:39:20, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 20:39:20, INFO: [-0.695627568101883, 0.11264877254585237, 1.3310231694698333, 0.1536156281960033]
+21-05-23 20:40:06, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 20:40:06, INFO: [0.5326414204663039, 0.022814514688706555, 0.4931476799666882, 0.5686842867553235, 0.07553660678863526]
+21-05-23 20:40:06, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 20:40:06, INFO: [0.49688736860752103, 0.023037988515248842, 0.4569488202929497, 0.5330589521586895, 0.07611013186573982]
+21-05-23 20:40:57, INFO: fid_score
+21-05-23 20:40:57, INFO: [18.767092986181552]
+21-05-23 20:40:57, INFO: --------------------------------
+21-05-23 20:40:57, INFO: epoch: 117
+21-05-23 20:44:03, INFO: epoch: 118
+21-05-23 20:47:09, INFO: epoch: 119
+21-05-23 20:50:15, INFO: epoch: 120
+21-05-23 20:53:21, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_120.pth
+21-05-23 20:53:21, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_120.pth
+21-05-23 20:53:21, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/120.png
+21-05-23 20:54:25, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 20:54:25, INFO: [-0.6486496065974235, 0.11643455307193579, 1.3693347919344903, 0.16730853140494892]
+21-05-23 20:55:12, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 20:55:12, INFO: [0.4899711313301324, 0.021161154968224877, 0.4557860961079597, 0.5255840227484703, 0.06979792664051056]
+21-05-23 20:55:12, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 20:55:12, INFO: [0.4735879199600219, 0.02090440475945399, 0.4396508876502514, 0.508803622686863, 0.06915273503661155]
+21-05-23 20:56:02, INFO: fid_score
+21-05-23 20:56:02, INFO: [17.70101008216392]
+21-05-23 20:56:02, INFO: --------------------------------
+21-05-23 20:56:02, INFO: epoch: 121
+21-05-23 20:59:09, INFO: epoch: 122
+21-05-23 21:02:17, INFO: epoch: 123
+21-05-23 21:05:25, INFO: epoch: 124
+21-05-23 21:08:31, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_124.pth
+21-05-23 21:08:31, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_124.pth
+21-05-23 21:08:31, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/124.png
+21-05-23 21:09:36, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 21:09:36, INFO: [-0.6383996916413307, 0.09805886467811312, 1.3525833957433702, 0.1460073596789445]
+21-05-23 21:10:23, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 21:10:23, INFO: [0.49249495329797266, 0.02029868793933368, 0.45805214686989787, 0.5255296870529652, 0.06747754018306733]
+21-05-23 21:10:23, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 21:10:23, INFO: [0.46853180128693583, 0.02004342640490239, 0.4351770614743233, 0.5020190065443516, 0.0668419450700283]
+21-05-23 21:11:13, INFO: fid_score
+21-05-23 21:11:13, INFO: [18.847821494650788]
+21-05-23 21:11:13, INFO: --------------------------------
+21-05-23 21:11:13, INFO: epoch: 125
+21-05-23 21:14:20, INFO: epoch: 126
+21-05-23 21:17:27, INFO: epoch: 127
+21-05-23 21:20:35, INFO: epoch: 128
+21-05-23 21:23:42, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_128.pth
+21-05-23 21:23:42, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_128.pth
+21-05-23 21:23:43, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/128.png
+21-05-23 21:24:47, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 21:24:47, INFO: [-0.6412954360604286, 0.10861239171113864, 1.3646784968137742, 0.16888960083776072]
+21-05-23 21:25:34, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 21:25:34, INFO: [0.4892690105521679, 0.02251230266724483, 0.4526343923568726, 0.5274541126012802, 0.07481972024440765]
+21-05-23 21:25:34, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 21:25:34, INFO: [0.4697456698063016, 0.022043857234486132, 0.43410567854344845, 0.5073492238402366, 0.07324354529678821]
+21-05-23 21:26:24, INFO: fid_score
+21-05-23 21:26:24, INFO: [16.209049886373236]
+21-05-23 21:26:24, INFO: --------------------------------
+21-05-23 21:26:24, INFO: epoch: 129
+21-05-23 21:29:31, INFO: epoch: 130
+21-05-23 21:32:37, INFO: epoch: 131
+21-05-23 21:35:42, INFO: epoch: 132
+21-05-23 21:38:46, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_132.pth
+21-05-23 21:38:46, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_132.pth
+21-05-23 21:38:46, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/132.png
+21-05-23 21:39:51, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-23 21:39:51, INFO: [-0.6912003336191177, 0.08163212079954167, 1.33774684779644, 0.11433222573997752]
+21-05-23 21:40:37, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-23 21:40:37, INFO: [0.52550660998106, 0.019218184847894774, 0.4943165970206261, 0.558477258682251, 0.06416066166162492]
+21-05-23 21:40:37, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-23 21:40:37, INFO: [0.4972272513681651, 0.019601063782229623, 0.4654126480460167, 0.5306758226275444, 0.06526317458152771]
+21-05-23 21:41:26, INFO: fid_score
+21-05-23 21:41:26, INFO: [18.16313401088655]
+21-05-23 21:41:26, INFO: --------------------------------
+21-05-24 02:49:07, INFO: epoch: 133
+21-05-24 02:52:13, INFO: epoch: 134
+21-05-24 02:55:25, INFO: epoch: 135
+21-05-24 02:58:32, INFO: epoch: 136
+21-05-24 03:01:38, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_136.pth
+21-05-24 03:01:38, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_136.pth
+21-05-24 03:01:38, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/136.png
+21-05-24 03:02:44, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 03:02:44, INFO: [-0.6507651321411133, 0.07349863770293046, 1.358369808137417, 0.10915939791779206]
+21-05-24 03:03:30, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 03:03:30, INFO: [0.4944336264270544, 0.019742957890141345, 0.4617640080034733, 0.527771894288063, 0.06600788628458977]
+21-05-24 03:03:30, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 03:03:30, INFO: [0.4766036376559734, 0.02067688047558361, 0.44282989569306375, 0.5116714570045471, 0.06884156131148338]
+21-05-24 03:04:17, INFO: fid_score
+21-05-24 03:04:17, INFO: [17.103512569792315]
+21-05-24 03:04:17, INFO: --------------------------------
+21-05-24 03:04:17, INFO: epoch: 137
+21-05-24 03:07:24, INFO: epoch: 138
+21-05-24 03:10:29, INFO: epoch: 139
+21-05-24 03:13:34, INFO: epoch: 140
+21-05-24 03:16:39, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_140.pth
+21-05-24 03:16:39, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_140.pth
+21-05-24 03:16:39, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/140.png
+21-05-24 03:17:44, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 03:17:44, INFO: [-0.6362175082802772, 0.12214831040726745, 1.353343394267559, 0.18468662177713552]
+21-05-24 03:18:30, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 03:18:30, INFO: [0.49300685233354563, 0.02295825072467028, 0.4565268157839775, 0.5322828126847744, 0.07575599690079689]
+21-05-24 03:18:30, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 03:18:30, INFO: [0.4678704503935575, 0.022529765832718776, 0.43203066697716713, 0.5066812393069268, 0.07465057232975959]
+21-05-24 03:19:15, INFO: fid_score
+21-05-24 03:19:15, INFO: [17.207052770266557]
+21-05-24 03:19:15, INFO: --------------------------------
+21-05-24 03:19:15, INFO: epoch: 141
+21-05-24 03:22:19, INFO: epoch: 142
+21-05-24 03:25:23, INFO: epoch: 143
+21-05-24 03:28:28, INFO: epoch: 144
+21-05-24 03:31:32, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_144.pth
+21-05-24 03:31:32, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_144.pth
+21-05-24 03:31:32, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/144.png
+21-05-24 03:32:36, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 03:32:36, INFO: [-0.7104923209249974, 0.111120460480848, 1.3371433464884759, 0.1562784343384527]
+21-05-24 03:33:23, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 03:33:23, INFO: [0.5374606775176526, 0.023707282020632933, 0.4967937145590782, 0.574713962584734, 0.07792024802565575]
+21-05-24 03:33:23, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 03:33:23, INFO: [0.5074496662712098, 0.02427755468123002, 0.4662733306646347, 0.5463071955800056, 0.08003386491537094]
+21-05-24 03:34:07, INFO: fid_score
+21-05-24 03:34:07, INFO: [17.909576872623802]
+21-05-24 03:34:07, INFO: --------------------------------
+21-05-24 03:34:07, INFO: epoch: 145
+21-05-24 03:37:12, INFO: epoch: 146
+21-05-24 03:40:16, INFO: epoch: 147
+21-05-24 03:43:20, INFO: epoch: 148
+21-05-24 03:46:23, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_148.pth
+21-05-24 03:46:23, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_148.pth
+21-05-24 03:46:23, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/148.png
+21-05-24 03:47:28, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 03:47:28, INFO: [-0.6747478032767773, 0.08654469966975512, 1.3682425931334496, 0.12738317173969355]
+21-05-24 03:48:15, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 03:48:15, INFO: [0.5019306168043614, 0.02048026101203463, 0.4677786505937576, 0.5358797258198261, 0.0681010752260685]
+21-05-24 03:48:15, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 03:48:15, INFO: [0.487691367071867, 0.020480421075625914, 0.45354344955086706, 0.5217015089511872, 0.06815805940032005]
+21-05-24 03:48:59, INFO: fid_score
+21-05-24 03:48:59, INFO: [17.508278089564868]
+21-05-24 03:48:59, INFO: --------------------------------
+21-05-24 03:48:59, INFO: epoch: 149
+21-05-24 03:52:08, INFO: epoch: 150
+21-05-24 03:55:16, INFO: epoch: 151
+21-05-24 03:58:25, INFO: epoch: 152
+21-05-24 04:01:31, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_152.pth
+21-05-24 04:01:31, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_152.pth
+21-05-24 04:01:31, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/152.png
+21-05-24 04:02:36, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 04:02:36, INFO: [-0.6880622267246246, 0.09936438580303923, 1.358710906779766, 0.1392293288060583]
+21-05-24 04:03:22, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 04:03:22, INFO: [0.5138236886429786, 0.019148723935982184, 0.4817432714521885, 0.5459924203932285, 0.06424914894104004]
+21-05-24 04:03:22, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 04:03:22, INFO: [0.4949224298477173, 0.019883525335114574, 0.4616866400897503, 0.5280114911198616, 0.0663248510301113]
+21-05-24 04:04:07, INFO: fid_score
+21-05-24 04:04:07, INFO: [16.669931245940205]
+21-05-24 04:04:07, INFO: --------------------------------
+21-05-24 04:04:07, INFO: epoch: 153
+21-05-24 04:07:12, INFO: epoch: 154
+21-05-24 04:10:19, INFO: epoch: 155
+21-05-24 04:13:24, INFO: epoch: 156
+21-05-24 04:16:30, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_156.pth
+21-05-24 04:16:30, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_156.pth
+21-05-24 04:16:30, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/156.png
+21-05-24 04:17:34, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 04:17:34, INFO: [-0.7266332431018353, 0.10478002583782219, 1.3522248306393623, 0.1396707938624591]
+21-05-24 04:18:21, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 04:18:21, INFO: [0.537323762640357, 0.019830330651446598, 0.5037457679271699, 0.5696322603285313, 0.06588649240136146]
+21-05-24 04:18:21, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 04:18:21, INFO: [0.5152878610926866, 0.019982191095153354, 0.4817371237933636, 0.548228228533268, 0.0664911047399044]
+21-05-24 04:19:05, INFO: fid_score
+21-05-24 04:19:05, INFO: [16.411988480488674]
+21-05-24 04:19:05, INFO: --------------------------------
+21-05-24 04:19:05, INFO: epoch: 157
+21-05-24 04:22:10, INFO: epoch: 158
+21-05-24 04:25:16, INFO: epoch: 159
+21-05-24 04:28:21, INFO: epoch: 160
+21-05-24 04:31:26, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_160.pth
+21-05-24 04:31:26, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_160.pth
+21-05-24 04:31:26, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/160.png
+21-05-24 04:32:31, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 04:32:31, INFO: [-0.6853409060776233, 0.09775232959543503, 1.357048430788517, 0.13879010327310426]
+21-05-24 04:33:17, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 04:33:17, INFO: [0.5133095306253432, 0.020837763296910682, 0.4787063518226147, 0.5483833805561066, 0.0696770287334919]
+21-05-24 04:33:17, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 04:33:17, INFO: [0.49425912251651277, 0.021031257845931947, 0.4595923507094383, 0.5296974628031254, 0.07010511209368706]
+21-05-24 04:34:02, INFO: fid_score
+21-05-24 04:34:02, INFO: [15.035753640348958]
+21-05-24 04:34:02, INFO: --------------------------------
+21-05-24 04:34:02, INFO: epoch: 161
+21-05-24 04:37:06, INFO: epoch: 162
+21-05-24 04:40:11, INFO: epoch: 163
+21-05-24 04:43:15, INFO: epoch: 164
+21-05-24 04:46:20, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_164.pth
+21-05-24 04:46:20, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_164.pth
+21-05-24 04:46:20, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/164.png
+21-05-24 04:47:25, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 04:47:25, INFO: [-0.6422390793859959, 0.11368565234429204, 1.3176562776565552, 0.1580028730782646]
+21-05-24 04:48:11, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 04:48:11, INFO: [0.5119183985042572, 0.019620973881470785, 0.47777374353408814, 0.5437136352837085, 0.06593989174962044]
+21-05-24 04:48:11, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 04:48:11, INFO: [0.4723294123846293, 0.0191604643873148, 0.43933036537766457, 0.5036939693450928, 0.06436360396742821]
+21-05-24 04:48:56, INFO: fid_score
+21-05-24 04:48:56, INFO: [15.186813381804825]
+21-05-24 04:48:56, INFO: --------------------------------
+21-05-24 04:48:56, INFO: epoch: 165
+21-05-24 04:52:05, INFO: epoch: 166
+21-05-24 04:55:11, INFO: epoch: 167
+21-05-24 04:58:14, INFO: epoch: 168
+21-05-24 05:01:17, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_168.pth
+21-05-24 05:01:17, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_168.pth
+21-05-24 05:01:17, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/168.png
+21-05-24 05:02:22, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 05:02:22, INFO: [-0.6282519868195057, 0.11615813023926741, 1.3551194913506508, 0.1770912907041339]
+21-05-24 05:03:08, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 05:03:08, INFO: [0.48772805751234294, 0.01820401254654173, 0.457382892280817, 0.5180825941741467, 0.06069970189332962]
+21-05-24 05:03:08, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 05:03:08, INFO: [0.46524094918429854, 0.018499967234496175, 0.43456788088679316, 0.4964740483522415, 0.06190616746544838]
+21-05-24 05:03:53, INFO: fid_score
+21-05-24 05:03:53, INFO: [16.891373010520056]
+21-05-24 05:03:53, INFO: --------------------------------
+21-05-24 05:03:53, INFO: epoch: 169
+21-05-24 05:06:56, INFO: epoch: 170
+21-05-24 05:09:59, INFO: epoch: 171
+21-05-24 05:13:02, INFO: epoch: 172
+21-05-24 05:16:05, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_172.pth
+21-05-24 05:16:05, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_172.pth
+21-05-24 05:16:05, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/172.png
+21-05-24 05:17:09, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 05:17:09, INFO: [-0.6746638549864292, 0.10055740203001973, 1.3536232978701592, 0.14465692250865125]
+21-05-24 05:17:55, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 05:17:55, INFO: [0.5098033918005228, 0.019132795571109175, 0.4777543333590031, 0.5416465302348137, 0.06389219687581062]
+21-05-24 05:17:55, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 05:17:55, INFO: [0.48740607874274255, 0.019625831078252998, 0.45381550431251527, 0.519736031705141, 0.06592052739262581]
+21-05-24 05:18:40, INFO: fid_score
+21-05-24 05:18:40, INFO: [16.996687279968114]
+21-05-24 05:18:40, INFO: --------------------------------
+21-05-24 05:18:40, INFO: epoch: 173
+21-05-24 05:21:50, INFO: epoch: 174
+21-05-24 05:24:59, INFO: epoch: 175
+21-05-24 05:28:06, INFO: epoch: 176
+21-05-24 05:31:11, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_176.pth
+21-05-24 05:31:11, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_176.pth
+21-05-24 05:31:11, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/176.png
+21-05-24 05:32:17, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 05:32:17, INFO: [-0.6799772815883159, 0.07634158626842255, 1.37555849673748, 0.11192811791472865]
+21-05-24 05:33:03, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 05:33:03, INFO: [0.5003857927203178, 0.01882757224616608, 0.4691507076740265, 0.5321953727245331, 0.0630446650505066]
+21-05-24 05:33:03, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 05:33:03, INFO: [0.4919082198405265, 0.019159524669571347, 0.46016628952026367, 0.5243022655427456, 0.06413597602248192]
+21-05-24 05:33:51, INFO: fid_score
+21-05-24 05:33:51, INFO: [16.449341228572365]
+21-05-24 05:33:51, INFO: --------------------------------
+21-05-24 05:33:51, INFO: epoch: 177
+21-05-24 05:36:58, INFO: epoch: 178
+21-05-24 05:40:02, INFO: epoch: 179
+21-05-24 05:43:07, INFO: epoch: 180
+21-05-24 05:46:11, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_180.pth
+21-05-24 05:46:11, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_180.pth
+21-05-24 05:46:11, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/180.png
+21-05-24 05:47:16, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 05:47:16, INFO: [-0.6964418514192104, 0.09113041512019628, 1.383280815422535, 0.12171180348259221]
+21-05-24 05:48:02, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 05:48:02, INFO: [0.5048075766783953, 0.02067038765081052, 0.4705682960987091, 0.5394684471368789, 0.06890015103816986]
+21-05-24 05:48:02, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 05:48:02, INFO: [0.5009304026883841, 0.020712415165321758, 0.46694431423544885, 0.5360290568113327, 0.06908474257588386]
+21-05-24 05:48:49, INFO: fid_score
+21-05-24 05:48:49, INFO: [15.900599312880871]
+21-05-24 05:48:49, INFO: --------------------------------
+21-05-24 05:48:49, INFO: epoch: 181
+21-05-24 05:51:54, INFO: epoch: 182
+21-05-24 05:54:58, INFO: epoch: 183
+21-05-24 05:58:02, INFO: epoch: 184
+21-05-24 06:01:06, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_184.pth
+21-05-24 06:01:06, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_184.pth
+21-05-24 06:01:06, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/184.png
+21-05-24 06:02:10, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 06:02:10, INFO: [-0.6709125815749168, 0.07438490986423202, 1.3550692006826401, 0.11226240541620561]
+21-05-24 06:02:57, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 06:02:57, INFO: [0.5062969151216745, 0.0202573976218539, 0.47225287118554116, 0.5395252714574337, 0.06727240027189255]
+21-05-24 06:02:57, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 06:02:57, INFO: [0.4873398822665215, 0.019631743617094865, 0.4542558755099773, 0.5194326103508472, 0.0651767348408699]
+21-05-24 06:03:44, INFO: fid_score
+21-05-24 06:03:44, INFO: [15.66919285977636]
+21-05-24 06:03:44, INFO: --------------------------------
+21-05-24 06:03:44, INFO: epoch: 185
+21-05-24 06:06:49, INFO: epoch: 186
+21-05-24 06:09:53, INFO: epoch: 187
+21-05-24 06:12:57, INFO: epoch: 188
+21-05-24 06:16:01, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_188.pth
+21-05-24 06:16:01, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_188.pth
+21-05-24 06:16:01, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/188.png
+21-05-24 06:17:05, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 06:17:05, INFO: [-0.663742734670639, 0.09804519365601669, 1.356691567969322, 0.13705988167413583]
+21-05-24 06:17:51, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 06:17:51, INFO: [0.5023297844302655, 0.022884953229319004, 0.4647370787858963, 0.5422474815189838, 0.07751040273308754]
+21-05-24 06:17:51, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 06:17:51, INFO: [0.4843408394485712, 0.022635366217090655, 0.4472878660142422, 0.5242852804005146, 0.07699741438627243]
+21-05-24 06:18:39, INFO: fid_score
+21-05-24 06:18:39, INFO: [15.04906707394889]
+21-05-24 06:18:39, INFO: --------------------------------
+21-05-24 06:18:39, INFO: epoch: 189
+21-05-24 06:21:43, INFO: epoch: 190
+21-05-24 06:24:48, INFO: epoch: 191
+21-05-24 06:27:51, INFO: epoch: 192
+21-05-24 06:30:55, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_192.pth
+21-05-24 06:30:55, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_192.pth
+21-05-24 06:30:55, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/192.png
+21-05-24 06:31:59, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 06:31:59, INFO: [-0.6961504426121712, 0.09058627378696045, 1.3878053822994232, 0.12553761795109283]
+21-05-24 06:32:45, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 06:32:45, INFO: [0.5026287083512545, 0.01993816027909493, 0.4690873099505901, 0.5355902985930443, 0.06650298864245414]
+21-05-24 06:32:45, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 06:32:45, INFO: [0.49803472090840334, 0.019579127957558964, 0.46529859198331835, 0.5304402341127396, 0.06514164212942124]
+21-05-24 06:33:33, INFO: fid_score
+21-05-24 06:33:33, INFO: [16.34428355182439]
+21-05-24 06:33:33, INFO: --------------------------------
+21-05-24 06:33:33, INFO: epoch: 193
+21-05-24 06:36:37, INFO: epoch: 194
+21-05-24 06:39:40, INFO: epoch: 195
+21-05-24 06:42:44, INFO: epoch: 196
+21-05-24 06:45:49, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_196.pth
+21-05-24 06:45:49, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_196.pth
+21-05-24 06:45:49, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/196.png
+21-05-24 06:46:55, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 06:46:55, INFO: [-0.6391015398979187, 0.07986913962916434, 1.3527818165302277, 0.11850681989789738]
+21-05-24 06:47:41, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 06:47:41, INFO: [0.4917082168990373, 0.019999866983515933, 0.45658087285757065, 0.5242865843474865, 0.06770571148991585]
+21-05-24 06:47:41, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 06:47:41, INFO: [0.46877796676516537, 0.020723534346713486, 0.4326296836137772, 0.5028396619260311, 0.07020997831225395]
+21-05-24 06:48:29, INFO: fid_score
+21-05-24 06:48:29, INFO: [15.829694600001517]
+21-05-24 06:48:29, INFO: --------------------------------
+21-05-24 08:59:16, INFO: epoch: 197
+21-05-24 09:02:20, INFO: epoch: 198
+21-05-24 09:05:24, INFO: epoch: 199
+21-05-24 09:08:28, INFO: epoch: 200
+21-05-24 09:11:32, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_200.pth
+21-05-24 09:11:32, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_200.pth
+21-05-24 09:11:32, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/200.png
+21-05-24 09:12:36, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 09:12:36, INFO: [-0.6686219290912151, 0.1137675002514665, 1.3703216887950898, 0.16303687715970816]
+21-05-24 09:13:22, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 09:13:22, INFO: [0.4990120257663727, 0.021151928071406003, 0.46409649440050127, 0.5340657388865948, 0.06996924448609353]
+21-05-24 09:13:22, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 09:13:22, INFO: [0.48357686424136154, 0.021378958963266904, 0.44833794690966605, 0.5188620627701283, 0.07052411586046219]
+21-05-24 09:14:12, INFO: fid_score
+21-05-24 09:14:12, INFO: [15.053386113476336]
+21-05-24 09:14:12, INFO: --------------------------------
+21-05-24 09:14:12, INFO: epoch: 201
+21-05-24 09:17:17, INFO: epoch: 202
+21-05-24 09:20:22, INFO: epoch: 203
+21-05-24 09:23:27, INFO: epoch: 204
+21-05-24 09:26:33, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_204.pth
+21-05-24 09:26:33, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_204.pth
+21-05-24 09:26:33, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/204.png
+21-05-24 09:27:37, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 09:27:37, INFO: [-0.670837531375885, 0.0882660877248117, 1.3831786504387855, 0.12405181711304825]
+21-05-24 09:28:24, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 09:28:24, INFO: [0.4923237085390091, 0.01862921949346063, 0.46128593141436575, 0.5232387566030026, 0.06195282518863678]
+21-05-24 09:28:24, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 09:28:24, INFO: [0.48672270730733874, 0.019060871653457805, 0.45450128632783887, 0.5181000861644744, 0.06359879983663559]
+21-05-24 09:29:12, INFO: fid_score
+21-05-24 09:29:12, INFO: [15.027222032793446]
+21-05-24 09:29:12, INFO: --------------------------------
+21-05-24 09:29:12, INFO: epoch: 205
+21-05-24 09:32:22, INFO: epoch: 206
+21-05-24 09:35:33, INFO: epoch: 207
+21-05-24 09:38:41, INFO: epoch: 208
+21-05-24 09:41:46, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_208.pth
+21-05-24 09:41:46, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_208.pth
+21-05-24 09:41:46, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/208.png
+21-05-24 09:42:51, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 09:42:51, INFO: [-0.685954340326786, 0.09454100669219602, 1.3604169456481934, 0.13288935233819188]
+21-05-24 09:43:37, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 09:43:37, INFO: [0.5115997863537074, 0.019376128496644156, 0.479733080047369, 0.5439666605830192, 0.06423358053565026]
+21-05-24 09:43:37, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 09:43:37, INFO: [0.495111096457839, 0.019452855319332087, 0.4629794724106789, 0.52747365822196, 0.0644941858112812]
+21-05-24 09:44:25, INFO: fid_score
+21-05-24 09:44:25, INFO: [14.050624269487344]
+21-05-24 09:44:25, INFO: --------------------------------
+21-05-24 09:44:25, INFO: epoch: 209
+21-05-24 09:47:30, INFO: epoch: 210
+21-05-24 09:50:34, INFO: epoch: 211
+21-05-24 09:53:36, INFO: epoch: 212
+21-05-24 09:56:37, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_212.pth
+21-05-24 09:56:37, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_212.pth
+21-05-24 09:56:37, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/212.png
+21-05-24 09:57:41, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 09:57:41, INFO: [-0.6697789851307869, 0.108929949365752, 1.3898937670588494, 0.16102628022096666]
+21-05-24 09:58:26, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 09:58:26, INFO: [0.49006242365598673, 0.01959654913387252, 0.4562200962483883, 0.5219061853408814, 0.06568608909249306]
+21-05-24 09:58:26, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 09:58:26, INFO: [0.48299279141485696, 0.019770281310200734, 0.4496776391983032, 0.5156220288574695, 0.06594438965916634]
+21-05-24 09:59:15, INFO: fid_score
+21-05-24 09:59:15, INFO: [14.916635532148405]
+21-05-24 09:59:15, INFO: --------------------------------
+21-05-24 09:59:15, INFO: epoch: 213
+21-05-24 10:02:16, INFO: epoch: 214
+21-05-24 10:05:18, INFO: epoch: 215
+21-05-24 10:08:18, INFO: epoch: 216
+21-05-24 10:11:18, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_216.pth
+21-05-24 10:11:18, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_216.pth
+21-05-24 10:11:18, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/216.png
+21-05-24 10:12:22, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 10:12:22, INFO: [-0.6872870145797729, 0.09695649908589685, 1.3489923501968384, 0.1327921080848933]
+21-05-24 10:13:07, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 10:13:07, INFO: [0.5181158345359564, 0.019619423683367762, 0.48338045082092285, 0.5495389818966389, 0.06615853107571602]
+21-05-24 10:13:07, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 10:13:07, INFO: [0.4954516207170486, 0.019871292965002778, 0.46118120101094245, 0.5277850621938706, 0.06660386118292809]
+21-05-24 10:13:55, INFO: fid_score
+21-05-24 10:13:55, INFO: [16.336718896486786]
+21-05-24 10:13:55, INFO: --------------------------------
+21-05-24 10:13:55, INFO: epoch: 217
+21-05-24 10:16:56, INFO: epoch: 218
+21-05-24 10:19:57, INFO: epoch: 219
+21-05-24 10:22:58, INFO: epoch: 220
+21-05-24 10:25:59, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_220.pth
+21-05-24 10:25:59, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_220.pth
+21-05-24 10:25:59, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/220.png
+21-05-24 10:27:02, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 10:27:02, INFO: [-0.6779720359802246, 0.09725807256919736, 1.3405499455928802, 0.1352954488692517]
+21-05-24 10:27:48, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 10:27:48, INFO: [0.5178323744636774, 0.01812695757987341, 0.4877609234392643, 0.5479297144770622, 0.06016879103779793]
+21-05-24 10:27:48, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 10:27:48, INFO: [0.49123336161971093, 0.018643333160294876, 0.46047485479712486, 0.5224151483952999, 0.06194029359817505]
+21-05-24 10:28:36, INFO: fid_score
+21-05-24 10:28:36, INFO: [15.19661095452605]
+21-05-24 10:28:36, INFO: --------------------------------
+21-05-24 10:28:36, INFO: epoch: 221
+21-05-24 10:31:37, INFO: epoch: 222
+21-05-24 10:34:38, INFO: epoch: 223
+21-05-24 10:37:40, INFO: epoch: 224
+21-05-24 10:40:41, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_224.pth
+21-05-24 10:40:41, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_224.pth
+21-05-24 10:40:41, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/224.png
+21-05-24 10:41:44, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 10:41:44, INFO: [-0.6790379968345165, 0.0774866201696498, 1.349903332901001, 0.11049991892761828]
+21-05-24 10:42:29, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 10:42:29, INFO: [0.5127828841191531, 0.01971159888675895, 0.4800256822347641, 0.5458854370832443, 0.06585975484848022]
+21-05-24 10:42:29, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 10:42:29, INFO: [0.49232000517845154, 0.019972443393042282, 0.45891087485551835, 0.5253718892872333, 0.06646101443171501]
+21-05-24 10:43:18, INFO: fid_score
+21-05-24 10:43:18, INFO: [14.140905867239837]
+21-05-24 10:43:18, INFO: --------------------------------
+21-05-24 10:43:18, INFO: epoch: 225
+21-05-24 10:46:19, INFO: epoch: 226
+21-05-24 10:49:19, INFO: epoch: 227
+21-05-24 10:52:20, INFO: epoch: 228
+21-05-24 10:55:22, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_228.pth
+21-05-24 10:55:22, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_228.pth
+21-05-24 10:55:22, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/228.png
+21-05-24 10:56:25, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 10:56:25, INFO: [-0.6327064582169056, 0.09441995370944839, 1.379965299153328, 0.1378840047007248]
+21-05-24 10:57:11, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 10:57:11, INFO: [0.4760301735115052, 0.02362644044833841, 0.43548603118658064, 0.515354157435894, 0.07986812624931336]
+21-05-24 10:57:11, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 10:57:11, INFO: [0.46753948015451435, 0.02287235254868049, 0.42836444624066355, 0.5053493832707405, 0.07698493703007699]
+21-05-24 10:57:59, INFO: fid_score
+21-05-24 10:57:59, INFO: [14.226733832287664]
+21-05-24 10:57:59, INFO: --------------------------------
+21-05-24 10:57:59, INFO: epoch: 229
+21-05-24 11:01:02, INFO: epoch: 230
+21-05-24 11:04:04, INFO: epoch: 231
+21-05-24 11:07:08, INFO: epoch: 232
+21-05-24 11:10:11, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_232.pth
+21-05-24 11:10:11, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_232.pth
+21-05-24 11:10:11, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/232.png
+21-05-24 11:11:15, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 11:11:15, INFO: [-0.7228068161845207, 0.07466007254863767, 1.389340140271187, 0.10453700201874325]
+21-05-24 11:12:00, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 11:12:00, INFO: [0.5148399622184038, 0.019845421117638148, 0.48188556053042414, 0.5480847187221051, 0.0661991581916809]
+21-05-24 11:12:00, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 11:12:00, INFO: [0.5130916237300635, 0.020246388079471975, 0.4795202430963516, 0.546989642894268, 0.06746939979791641]
+21-05-24 11:12:46, INFO: fid_score
+21-05-24 11:12:46, INFO: [14.830329578525834]
+21-05-24 11:12:46, INFO: --------------------------------
+21-05-24 11:12:46, INFO: epoch: 233
+21-05-24 11:15:50, INFO: epoch: 234
+21-05-24 11:18:52, INFO: epoch: 235
+21-05-24 11:21:55, INFO: epoch: 236
+21-05-24 11:24:58, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_236.pth
+21-05-24 11:24:58, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_236.pth
+21-05-24 11:24:58, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/236.png
+21-05-24 11:26:02, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 11:26:02, INFO: [-0.6613447992444038, 0.11419529895230919, 1.3651824917674065, 0.1619206876204449]
+21-05-24 11:26:48, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 11:26:48, INFO: [0.4978619575423002, 0.02034862922276097, 0.4647663598537445, 0.532547370070219, 0.06778101021647454]
+21-05-24 11:26:48, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 11:26:48, INFO: [0.47986735713779927, 0.020305401802397496, 0.44686208335757255, 0.5143795370578765, 0.06751745370030403]
+21-05-24 11:27:33, INFO: fid_score
+21-05-24 11:27:33, INFO: [14.202238453166558]
+21-05-24 11:27:33, INFO: --------------------------------
+21-05-24 11:27:33, INFO: epoch: 237
+21-05-24 11:30:35, INFO: epoch: 238
+21-05-24 11:33:36, INFO: epoch: 239
+21-05-24 11:36:38, INFO: epoch: 240
+21-05-24 11:39:39, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_240.pth
+21-05-24 11:39:39, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_240.pth
+21-05-24 11:39:39, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/240.png
+21-05-24 11:40:45, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 11:40:45, INFO: [-0.7183052720844746, 0.0770495415001461, 1.3703891841173172, 0.10954847421126962]
+21-05-24 11:41:31, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 11:41:31, INFO: [0.5225001499313117, 0.022509865756476073, 0.4831278713643551, 0.5573622343122959, 0.07423436294794082]
+21-05-24 11:41:31, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 11:41:31, INFO: [0.5107780122202635, 0.022764065483275316, 0.471021272867918, 0.5462076547265052, 0.07518638185858727]
+21-05-24 11:42:17, INFO: fid_score
+21-05-24 11:42:17, INFO: [14.058829790223228]
+21-05-24 11:42:17, INFO: --------------------------------
+21-05-24 11:42:17, INFO: epoch: 241
+21-05-24 11:45:19, INFO: epoch: 242
+21-05-24 11:48:20, INFO: epoch: 243
+21-05-24 11:51:22, INFO: epoch: 244
+21-05-24 11:54:23, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_244.pth
+21-05-24 11:54:23, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_244.pth
+21-05-24 11:54:23, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/244.png
+21-05-24 11:55:26, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 11:55:26, INFO: [-0.6544961953222752, 0.06336066227693607, 1.36533827791214, 0.09351086992723288]
+21-05-24 11:56:13, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 11:56:13, INFO: [0.49238854594051845, 0.018901255054828942, 0.4615983529984951, 0.5245746200799942, 0.0629762670814991]
+21-05-24 11:56:13, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 11:56:13, INFO: [0.4800621502333879, 0.018956436760602515, 0.44934168338179586, 0.5124032820940018, 0.06306159871220589]
+21-05-24 11:56:59, INFO: fid_score
+21-05-24 11:56:59, INFO: [13.608794764752133]
+21-05-24 11:56:59, INFO: --------------------------------
+21-05-24 11:56:59, INFO: epoch: 245
+21-05-24 12:00:09, INFO: epoch: 246
+21-05-24 12:03:16, INFO: epoch: 247
+21-05-24 12:06:22, INFO: epoch: 248
+21-05-24 12:09:29, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_248.pth
+21-05-24 12:09:29, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_248.pth
+21-05-24 12:09:29, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/248.png
+21-05-24 12:10:33, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 12:10:33, INFO: [-0.6470468763768673, 0.09511021897794031, 1.3836575641274451, 0.1433445483451606]
+21-05-24 12:11:19, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 12:11:19, INFO: [0.48150605475664143, 0.022945208376161843, 0.44367194795012477, 0.5196619674086571, 0.07599001945853233]
+21-05-24 12:11:19, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 12:11:19, INFO: [0.47357141239285466, 0.02299121875312415, 0.4355985310256481, 0.5117812102198601, 0.07618267919421196]
+21-05-24 12:12:06, INFO: fid_score
+21-05-24 12:12:06, INFO: [14.934345102982945]
+21-05-24 12:12:06, INFO: --------------------------------
+21-05-24 12:12:06, INFO: epoch: 249
+21-05-24 12:15:12, INFO: epoch: 250
+21-05-24 12:18:15, INFO: epoch: 251
+21-05-24 12:21:17, INFO: epoch: 252
+21-05-24 12:24:19, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_252.pth
+21-05-24 12:24:19, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_252.pth
+21-05-24 12:24:19, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/252.png
+21-05-24 12:25:23, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 12:25:23, INFO: [-0.6980354305744171, 0.08689923583801128, 1.3923839915037155, 0.11993760477290785]
+21-05-24 12:26:09, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 12:26:09, INFO: [0.5010888146001101, 0.018382638259595446, 0.47078668133616447, 0.5317100780367852, 0.06092339670062065]
+21-05-24 12:26:09, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 12:26:09, INFO: [0.499739053145051, 0.018245116651409533, 0.4694486045897007, 0.5300343302667141, 0.0605857256770134]
+21-05-24 12:26:57, INFO: fid_score
+21-05-24 12:26:57, INFO: [14.309104902101893]
+21-05-24 12:26:57, INFO: --------------------------------
+21-05-24 12:26:57, INFO: epoch: 253
+21-05-24 12:29:59, INFO: epoch: 254
+21-05-24 12:33:00, INFO: epoch: 255
+21-05-24 12:36:01, INFO: epoch: 256
+21-05-24 12:39:09, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_256.pth
+21-05-24 12:39:09, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_256.pth
+21-05-24 12:39:09, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/256.png
+21-05-24 12:40:13, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 12:40:13, INFO: [-0.6768889671385289, 0.08857968456227243, 1.377264076411724, 0.13091641336463442]
+21-05-24 12:40:59, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 12:40:59, INFO: [0.4986329952031374, 0.018740881916590835, 0.4672287782788277, 0.5298485569417477, 0.06261977866292]
+21-05-24 12:40:59, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 12:40:59, INFO: [0.48903349672019486, 0.018994111198981027, 0.45725378431677816, 0.5202172576069832, 0.062963473290205]
+21-05-24 12:41:46, INFO: fid_score
+21-05-24 12:41:46, INFO: [12.403576712593832]
+21-05-24 12:41:46, INFO: --------------------------------
+21-05-24 12:41:46, INFO: epoch: 257
+21-05-24 12:44:50, INFO: epoch: 258
+21-05-24 12:47:56, INFO: epoch: 259
+21-05-24 12:51:01, INFO: epoch: 260
+21-05-24 12:54:08, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_260.pth
+21-05-24 12:54:08, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_260.pth
+21-05-24 12:54:08, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/260.png
+21-05-24 12:55:13, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 12:55:13, INFO: [-0.7118405391454696, 0.09063815414672426, 1.3845533339262008, 0.12686838227221753]
+21-05-24 12:55:59, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 12:55:59, INFO: [0.5123348202365636, 0.02016896559372216, 0.4787590675294399, 0.5456095374941826, 0.06685046996474266]
+21-05-24 12:55:59, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 12:55:59, INFO: [0.5080690150719881, 0.02088616631818069, 0.472598943310976, 0.5418636413991451, 0.0692646980881691]
+21-05-24 12:56:45, INFO: fid_score
+21-05-24 12:56:45, INFO: [13.798680924789068]
+21-05-24 12:56:45, INFO: --------------------------------
+21-05-24 15:14:53, INFO: epoch: 261
+21-05-24 15:17:55, INFO: epoch: 262
+21-05-24 15:20:56, INFO: epoch: 263
+21-05-24 15:23:57, INFO: epoch: 264
+21-05-24 15:26:58, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_264.pth
+21-05-24 15:26:58, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_264.pth
+21-05-24 15:26:58, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/264.png
+21-05-24 15:28:02, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 15:28:02, INFO: [-0.6518263186097145, 0.05765293302845702, 1.3713448322057724, 0.08617091613791089]
+21-05-24 15:28:48, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 15:28:48, INFO: [0.487987805172205, 0.017846889576461793, 0.45853063248991965, 0.5178140995740891, 0.059283467084169386]
+21-05-24 15:28:48, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 15:28:48, INFO: [0.4784300316107273, 0.017946980119006944, 0.44878190742731094, 0.5083836302518845, 0.059601722824573516]
+21-05-24 15:29:39, INFO: fid_score
+21-05-24 15:29:39, INFO: [13.380002867834747]
+21-05-24 15:29:39, INFO: --------------------------------
+21-05-24 15:29:39, INFO: epoch: 265
+21-05-24 15:32:42, INFO: epoch: 266
+21-05-24 15:35:44, INFO: epoch: 267
+21-05-24 15:38:46, INFO: epoch: 268
+21-05-24 15:41:48, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_268.pth
+21-05-24 15:41:48, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_268.pth
+21-05-24 15:41:48, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/268.png
+21-05-24 15:42:51, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 15:42:51, INFO: [-0.6833962669789791, 0.08940279505475567, 1.387897626888752, 0.13072186924521612]
+21-05-24 15:43:37, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 15:43:37, INFO: [0.49661374205768116, 0.020504225115933215, 0.4625274239063263, 0.530624622386694, 0.06809719848036766]
+21-05-24 15:43:37, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 15:43:37, INFO: [0.4912615507721901, 0.02128404073648175, 0.4558857085585594, 0.5265941072762013, 0.07070839871764183]
+21-05-24 15:44:26, INFO: fid_score
+21-05-24 15:44:26, INFO: [15.21644458738831]
+21-05-24 15:44:26, INFO: --------------------------------
+21-05-24 15:44:26, INFO: epoch: 269
+21-05-24 15:47:27, INFO: epoch: 270
+21-05-24 15:50:29, INFO: epoch: 271
+21-05-24 15:53:30, INFO: epoch: 272
+21-05-24 15:56:31, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_272.pth
+21-05-24 15:56:31, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_272.pth
+21-05-24 15:56:31, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/272.png
+21-05-24 15:57:35, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 15:57:35, INFO: [-0.6636318451166153, 0.06855120884809651, 1.3777330434083939, 0.10257082064580816]
+21-05-24 15:58:21, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 15:58:21, INFO: [0.49098286644458766, 0.017354868051156568, 0.4626489669203758, 0.5205635217666627, 0.05791455484628678]
+21-05-24 15:58:21, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 15:58:21, INFO: [0.48333090485334396, 0.01781880446607968, 0.45419030819535255, 0.5137026870071888, 0.05951237881183624]
+21-05-24 15:59:09, INFO: fid_score
+21-05-24 15:59:09, INFO: [16.93659997856213]
+21-05-24 15:59:09, INFO: --------------------------------
+21-05-24 15:59:09, INFO: epoch: 273
+21-05-24 16:02:11, INFO: epoch: 274
+21-05-24 16:05:12, INFO: epoch: 275
+21-05-24 16:08:14, INFO: epoch: 276
+21-05-24 16:11:16, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_276.pth
+21-05-24 16:11:16, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_276.pth
+21-05-24 16:11:16, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/276.png
+21-05-24 16:12:20, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 16:12:20, INFO: [-0.6868595977783203, 0.06551899582363997, 1.3863040853738784, 0.0944860063158817]
+21-05-24 16:13:06, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 16:13:06, INFO: [0.4980374154400826, 0.019216086729259705, 0.46625776913166045, 0.5299095243752002, 0.0636517552435398]
+21-05-24 16:13:06, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 16:13:06, INFO: [0.4960805025911332, 0.019343583130090596, 0.46378027319908144, 0.527780545592308, 0.06400027239322663]
+21-05-24 16:13:54, INFO: fid_score
+21-05-24 16:13:54, INFO: [11.84364100291694]
+21-05-24 16:13:54, INFO: --------------------------------
+21-05-24 16:13:54, INFO: epoch: 277
+21-05-24 16:16:56, INFO: epoch: 278
+21-05-24 16:19:59, INFO: epoch: 279
+21-05-24 16:23:00, INFO: epoch: 280
+21-05-24 16:26:02, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_280.pth
+21-05-24 16:26:02, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_280.pth
+21-05-24 16:26:02, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/280.png
+21-05-24 16:27:05, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 16:27:05, INFO: [-0.6563281528294086, 0.06567996149247436, 1.378140873837471, 0.09749234183775907]
+21-05-24 16:27:51, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 16:27:51, INFO: [0.4871614235752821, 0.019112555844735417, 0.45568931941986085, 0.5194920356810093, 0.06380271626114846]
+21-05-24 16:27:51, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 16:27:51, INFO: [0.48031441590607166, 0.019566769479998906, 0.4481408399760723, 0.5130929096341134, 0.064952069658041]
+21-05-24 16:28:40, INFO: fid_score
+21-05-24 16:28:40, INFO: [12.120213339806128]
+21-05-24 16:28:40, INFO: --------------------------------
+21-05-24 16:28:40, INFO: epoch: 281
+21-05-24 16:31:41, INFO: epoch: 282
+21-05-24 16:34:42, INFO: epoch: 283
+21-05-24 16:37:43, INFO: epoch: 284
+21-05-24 16:40:44, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_284.pth
+21-05-24 16:40:44, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_284.pth
+21-05-24 16:40:44, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/284.png
+21-05-24 16:41:48, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 16:41:48, INFO: [-0.6896067050337792, 0.08066722160109098, 1.385189038515091, 0.11147994896590105]
+21-05-24 16:42:33, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 16:42:33, INFO: [0.5002983910191059, 0.01850021694689072, 0.46986873997449874, 0.5314893496632576, 0.06162060968875885]
+21-05-24 16:42:33, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 16:42:33, INFO: [0.49514732778131965, 0.018320711745160305, 0.46493852792978285, 0.5259809224069119, 0.06104239447712898]
+21-05-24 16:43:22, INFO: fid_score
+21-05-24 16:43:22, INFO: [13.262321834078051]
+21-05-24 16:43:22, INFO: --------------------------------
+21-05-24 17:00:52, INFO: epoch: 285
+21-05-24 17:03:55, INFO: epoch: 286
+21-05-24 17:06:57, INFO: epoch: 287
+21-05-24 17:09:58, INFO: epoch: 288
+21-05-24 17:12:59, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_288.pth
+21-05-24 17:12:59, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_288.pth
+21-05-24 17:12:59, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/288.png
+21-05-24 17:14:02, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 17:14:02, INFO: [-0.7070014157891273, 0.09558973459703668, 1.369417772769928, 0.13408959583437627]
+21-05-24 17:14:48, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 17:14:48, INFO: [0.5178893401598931, 0.020143932264076934, 0.4847735687017441, 0.5519773554861546, 0.06720378678441048]
+21-05-24 17:14:48, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 17:14:48, INFO: [0.5044293326574564, 0.019828636135264595, 0.47189291382431986, 0.537874347692728, 0.0659814338684082]
+21-05-24 17:15:39, INFO: fid_score
+21-05-24 17:15:39, INFO: [11.67258232551103]
+21-05-24 17:15:39, INFO: --------------------------------
+21-05-24 17:15:39, INFO: epoch: 289
+21-05-24 17:18:42, INFO: epoch: 290
+21-05-24 17:21:45, INFO: epoch: 291
+21-05-24 17:24:49, INFO: epoch: 292
+21-05-24 17:27:50, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_292.pth
+21-05-24 17:27:50, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_292.pth
+21-05-24 17:27:50, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/292.png
+21-05-24 17:28:54, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 17:28:54, INFO: [-0.6423668262302875, 0.09825370502501209, 1.3874773207068443, 0.15155422689170367]
+21-05-24 17:29:39, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 17:29:39, INFO: [0.477770123155117, 0.017449828001557536, 0.4486685986876488, 0.5069455627799034, 0.05827696409225464]
+21-05-24 17:29:39, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 17:29:39, INFO: [0.47062663703799246, 0.01718713573948541, 0.4421303697824478, 0.4993113801419735, 0.05718101035952568]
+21-05-24 17:30:29, INFO: fid_score
+21-05-24 17:30:29, INFO: [11.699759612470189]
+21-05-24 17:30:29, INFO: --------------------------------
+21-05-24 17:30:29, INFO: epoch: 293
+21-05-24 17:33:30, INFO: epoch: 294
+21-05-24 17:36:32, INFO: epoch: 295
+21-05-24 17:39:33, INFO: epoch: 296
+21-05-24 17:42:34, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_296.pth
+21-05-24 17:42:34, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_296.pth
+21-05-24 17:42:34, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/296.png
+21-05-24 17:43:36, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 17:43:36, INFO: [-0.6952315651297569, 0.08454516108114207, 1.3573863829135895, 0.1128698205700223]
+21-05-24 17:44:20, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 17:44:20, INFO: [0.5171718631386757, 0.018197433189916148, 0.4875910350859165, 0.5484192591249942, 0.06082822403907776]
+21-05-24 17:44:20, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 17:44:20, INFO: [0.4992848588705063, 0.01831423878481906, 0.46888284025788307, 0.5300566205918789, 0.06117378033399582]
+21-05-24 17:45:09, INFO: fid_score
+21-05-24 17:45:09, INFO: [15.696305720777247]
+21-05-24 17:45:09, INFO: --------------------------------
+21-05-24 17:45:09, INFO: epoch: 297
+21-05-24 17:48:10, INFO: epoch: 298
+21-05-24 17:51:13, INFO: epoch: 299
+21-05-24 17:54:15, INFO: epoch: 300
+21-05-24 17:57:15, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_300.pth
+21-05-24 17:57:15, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_300.pth
+21-05-24 17:57:15, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/300.png
+21-05-24 17:58:18, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 17:58:18, INFO: [-0.693454534548521, 0.09979961567234734, 1.3708134983778, 0.1362755817268231]
+21-05-24 17:59:03, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 17:59:03, INFO: [0.5101324058723451, 0.020641780790476103, 0.47628832895159723, 0.5451650479614735, 0.06887671900987626]
+21-05-24 17:59:03, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 17:59:03, INFO: [0.4979266930377484, 0.020381736806630323, 0.46467878865003587, 0.5331777001798153, 0.06849891152977944]
+21-05-24 17:59:53, INFO: fid_score
+21-05-24 17:59:53, INFO: [12.633166790849941]
+21-05-24 17:59:53, INFO: --------------------------------
+21-05-24 17:59:53, INFO: epoch: 301
+21-05-24 18:02:53, INFO: epoch: 302
+21-05-24 18:05:55, INFO: epoch: 303
+21-05-24 18:08:56, INFO: epoch: 304
+21-05-24 18:11:57, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_304.pth
+21-05-24 18:11:57, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_304.pth
+21-05-24 18:11:57, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/304.png
+21-05-24 18:13:00, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 18:13:00, INFO: [-0.6464793893277645, 0.10626351949492586, 1.3994699169397353, 0.15656062400365278]
+21-05-24 18:13:45, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 18:13:45, INFO: [0.4741325292634964, 0.019057456591270568, 0.44341455999612805, 0.5074154257178306, 0.06400086572170258]
+21-05-24 18:13:45, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 18:13:45, INFO: [0.4722624226486683, 0.019331303647701883, 0.44101953189373017, 0.5059609222173691, 0.06494139032363892]
+21-05-24 18:14:34, INFO: fid_score
+21-05-24 18:14:34, INFO: [11.308853271483883]
+21-05-24 18:14:34, INFO: --------------------------------
+21-05-25 01:10:59, INFO: epoch: 305
+21-05-25 01:14:04, INFO: epoch: 306
+21-05-25 01:17:10, INFO: epoch: 307
+21-05-25 01:20:15, INFO: epoch: 308
+21-05-25 01:23:20, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_308.pth
+21-05-25 01:23:20, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_308.pth
+21-05-25 01:23:20, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/308.png
+21-05-25 01:24:25, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 01:24:25, INFO: [-0.7031576633930207, 0.06822609194265201, 1.383675023150444, 0.09654815807731788]
+21-05-25 01:25:11, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 01:25:11, INFO: [0.5075385436075925, 0.017507079252762403, 0.4783906998515129, 0.5366464346468449, 0.05825573479533196]
+21-05-25 01:25:11, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 01:25:11, INFO: [0.5043520816493033, 0.017344381242434186, 0.47560792689919473, 0.5332397521972656, 0.057631825298070906]
+21-05-25 01:26:02, INFO: fid_score
+21-05-25 01:26:02, INFO: [12.637049286008477]
+21-05-25 01:26:02, INFO: --------------------------------
+21-05-25 01:26:02, INFO: epoch: 309
+21-05-25 01:29:11, INFO: epoch: 310
+21-05-25 01:32:18, INFO: epoch: 311
+21-05-25 01:35:25, INFO: epoch: 312
+21-05-25 01:38:33, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_312.pth
+21-05-25 01:38:33, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_312.pth
+21-05-25 01:38:33, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/312.png
+21-05-25 01:39:38, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 01:39:38, INFO: [-0.6750193547904492, 0.07170200049608906, 1.3544728583812713, 0.09758521724354743]
+21-05-25 01:40:24, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 01:40:24, INFO: [0.5080186616158486, 0.019593778770776078, 0.4749869511008263, 0.540188101375103, 0.06520115027427674]
+21-05-25 01:40:24, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 01:40:24, INFO: [0.4891206497144699, 0.01939036765413288, 0.4564515656769276, 0.5212210165202618, 0.0647694508433342]
+21-05-25 01:41:14, INFO: fid_score
+21-05-25 01:41:14, INFO: [12.577604167451483]
+21-05-25 01:41:14, INFO: --------------------------------
+21-05-25 01:41:14, INFO: epoch: 313
+21-05-25 01:44:23, INFO: epoch: 314
+21-05-25 01:47:28, INFO: epoch: 315
+21-05-25 01:50:34, INFO: epoch: 316
+21-05-25 01:53:39, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_316.pth
+21-05-25 01:53:39, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_316.pth
+21-05-25 01:53:39, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/316.png
+21-05-25 01:54:44, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 01:54:44, INFO: [-0.6862794194936752, 0.09342680621565323, 1.374429820084572, 0.12817723957829255]
+21-05-25 01:55:30, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 01:55:30, INFO: [0.504437639143467, 0.01998109649204637, 0.47090463597774507, 0.5374177742183208, 0.0665131382405758]
+21-05-25 01:55:30, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 01:55:30, INFO: [0.4956257521998882, 0.020213873298973412, 0.46177596819400785, 0.5290889845192432, 0.06731301632523537]
+21-05-25 01:56:18, INFO: fid_score
+21-05-25 01:56:18, INFO: [14.385324908891704]
+21-05-25 01:56:18, INFO: --------------------------------
+21-05-25 01:56:18, INFO: epoch: 317
+21-05-25 01:59:29, INFO: epoch: 318
+21-05-25 02:02:36, INFO: epoch: 319
+21-05-25 02:05:44, INFO: epoch: 320
+21-05-25 02:08:51, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_320.pth
+21-05-25 02:08:51, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_320.pth
+21-05-25 02:08:51, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/320.png
+21-05-25 02:09:56, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 02:09:56, INFO: [-0.6689393286347389, 0.059441110359788746, 1.3786340766191483, 0.08659023206326717]
+21-05-25 02:10:42, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 02:10:42, INFO: [0.49267428144693376, 0.01869829394982047, 0.46203318295478824, 0.524111817497015, 0.06207863454222679]
+21-05-25 02:10:42, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 02:10:42, INFO: [0.4875973290705681, 0.0190807007915331, 0.4561953116774559, 0.519573641115427, 0.06337832943797111]
+21-05-25 02:11:29, INFO: fid_score
+21-05-25 02:11:29, INFO: [11.568172707458416]
+21-05-25 02:11:29, INFO: --------------------------------
+21-05-25 02:11:29, INFO: epoch: 321
+21-05-25 02:14:36, INFO: epoch: 322
+21-05-25 02:17:44, INFO: epoch: 323
+21-05-25 02:20:53, INFO: epoch: 324
+21-05-25 02:24:01, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_324.pth
+21-05-25 02:24:01, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_324.pth
+21-05-25 02:24:01, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/324.png
+21-05-25 02:25:05, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 02:25:05, INFO: [-0.6714321550011635, 0.06597880536487703, 1.3639633330106735, 0.0951833578467732]
+21-05-25 02:25:52, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 02:25:52, INFO: [0.5014851987642049, 0.019551293625489498, 0.46952137362957, 0.5356780372858048, 0.06615666365623474]
+21-05-25 02:25:52, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 02:25:52, INFO: [0.4886255245560408, 0.020019600966377702, 0.4563462256848812, 0.5240077069759369, 0.06766148129105568]
+21-05-25 02:26:38, INFO: fid_score
+21-05-25 02:26:38, INFO: [13.707528970884766]
+21-05-25 02:26:38, INFO: --------------------------------
+21-05-25 02:26:38, INFO: epoch: 325
+21-05-25 02:29:46, INFO: epoch: 326
+21-05-25 02:32:53, INFO: epoch: 327
+21-05-25 02:36:00, INFO: epoch: 328
+21-05-25 02:39:08, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_328.pth
+21-05-25 02:39:08, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_328.pth
+21-05-25 02:39:08, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/328.png
+21-05-25 02:40:13, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 02:40:13, INFO: [-0.6743795227766037, 0.07544921439154735, 1.396073969745636, 0.10349967418245075]
+21-05-25 02:40:59, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 02:40:59, INFO: [0.4872271438074113, 0.018941290302607366, 0.45594433637857434, 0.5193363994061947, 0.06339206302762032]
+21-05-25 02:40:59, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 02:40:59, INFO: [0.4887390396356583, 0.01944651338933249, 0.4564116807281971, 0.5215662404477597, 0.06515455971956254]
+21-05-25 02:41:45, INFO: fid_score
+21-05-25 02:41:45, INFO: [13.649432264151585]
+21-05-25 02:41:45, INFO: --------------------------------
+21-05-25 03:02:20, INFO: epoch: 329
+21-05-25 03:05:13, INFO: epoch: 330
+21-05-25 03:08:06, INFO: epoch: 331
+21-05-25 03:11:00, INFO: epoch: 332
+21-05-25 03:13:53, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_332.pth
+21-05-25 03:13:53, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_332.pth
+21-05-25 03:13:53, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/332.png
+21-05-25 03:14:54, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 03:14:54, INFO: [-0.6510506422162056, 0.07572181636693781, 1.3600850093960761, 0.11068090338615352]
+21-05-25 03:15:38, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 03:15:38, INFO: [0.4936680535942316, 0.019797832819183635, 0.46018282388448717, 0.5255170599222183, 0.06533423603773117]
+21-05-25 03:15:38, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 03:15:38, INFO: [0.47679756623923775, 0.019337905852902303, 0.44419332414269447, 0.5082106647849083, 0.06401734064221382]
+21-05-25 03:16:20, INFO: fid_score
+21-05-25 03:16:20, INFO: [13.203051336706693]
+21-05-25 03:16:20, INFO: --------------------------------
+21-05-25 03:16:20, INFO: epoch: 333
+21-05-25 03:19:13, INFO: epoch: 334
+21-05-25 03:22:07, INFO: epoch: 335
+21-05-25 03:25:01, INFO: epoch: 336
+21-05-25 03:27:54, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_336.pth
+21-05-25 03:27:54, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_336.pth
+21-05-25 03:27:54, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/336.png
+21-05-25 03:28:54, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 03:28:54, INFO: [-0.6919014733552933, 0.0794784154743421, 1.362831867980957, 0.11456542246392558]
+21-05-25 03:29:38, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 03:29:38, INFO: [0.5129458737307787, 0.01911498393371188, 0.4808238607466221, 0.544415019094944, 0.06359115834832191]
+21-05-25 03:29:38, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 03:29:38, INFO: [0.4965561398237944, 0.018859374842492227, 0.46513198332190514, 0.5278773368060589, 0.06274535348415375]
+21-05-25 03:30:14, INFO: fid_score
+21-05-25 03:30:14, INFO: [11.864478583751122]
+21-05-25 03:30:14, INFO: --------------------------------
+21-05-25 03:30:14, INFO: epoch: 337
+21-05-25 03:33:07, INFO: epoch: 338
+21-05-25 03:36:01, INFO: epoch: 339
+21-05-25 03:38:55, INFO: epoch: 340
+21-05-25 03:41:48, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_340.pth
+21-05-25 03:41:48, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_340.pth
+21-05-25 03:41:48, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/340.png
+21-05-25 03:42:48, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 03:42:48, INFO: [-0.6528385740399361, 0.061875188445825666, 1.3858915338754654, 0.09213111410933526]
+21-05-25 03:43:32, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 03:43:32, INFO: [0.48160138497114185, 0.020235563563346784, 0.448388812828064, 0.5154947738707065, 0.06710596104264259]
+21-05-25 03:43:32, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 03:43:32, INFO: [0.4777014710146188, 0.020321541779749146, 0.4440925077080727, 0.5115607875227928, 0.06746827981472016]
+21-05-25 03:44:08, INFO: fid_score
+21-05-25 03:44:08, INFO: [11.627972535205686]
+21-05-25 03:44:08, INFO: --------------------------------
+21-05-25 03:44:08, INFO: epoch: 341
+21-05-25 03:47:02, INFO: epoch: 342
+21-05-25 03:49:58, INFO: epoch: 343
+21-05-25 03:52:52, INFO: epoch: 344
+21-05-25 03:55:46, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_344.pth
+21-05-25 03:55:46, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_344.pth
+21-05-25 03:55:46, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/344.png
+21-05-25 03:56:46, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 03:56:46, INFO: [-0.655964779317379, 0.06645074923989727, 1.3742325029611588, 0.09377748368670136]
+21-05-25 03:57:29, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 03:57:29, INFO: [0.4887078147482873, 0.01800335720173316, 0.4580883560717106, 0.5180129802048207, 0.05992462413311005]
+21-05-25 03:57:29, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 03:57:29, INFO: [0.48129904520750044, 0.017898596648406203, 0.45138474410176277, 0.5108621266901493, 0.059477382588386536]
+21-05-25 03:58:06, INFO: fid_score
+21-05-25 03:58:06, INFO: [11.877691844430842]
+21-05-25 03:58:06, INFO: --------------------------------
+21-05-25 03:58:06, INFO: epoch: 345
+21-05-25 04:00:59, INFO: epoch: 346
+21-05-25 04:03:53, INFO: epoch: 347
+21-05-25 04:06:46, INFO: epoch: 348
+21-05-25 04:09:40, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_348.pth
+21-05-25 04:09:40, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_348.pth
+21-05-25 04:09:40, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/348.png
+21-05-25 04:10:41, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 04:10:41, INFO: [-0.6800619484603405, 0.14267342862111482, 1.3495786073327065, 0.19724942184704058]
+21-05-25 04:11:25, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 04:11:25, INFO: [0.51648021733135, 0.018458286829858197, 0.48611141341626646, 0.5474896611750126, 0.061378247758746146]
+21-05-25 04:11:25, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 04:11:25, INFO: [0.48601298599421977, 0.019407172334058434, 0.454067163425684, 0.5187703350484372, 0.06470317162275314]
+21-05-25 04:12:01, INFO: fid_score
+21-05-25 04:12:01, INFO: [12.269717910048655]
+21-05-25 04:12:01, INFO: --------------------------------
+21-05-25 04:12:01, INFO: epoch: 349
+21-05-25 04:14:57, INFO: epoch: 350
+21-05-25 04:17:52, INFO: epoch: 351
+21-05-25 04:20:46, INFO: epoch: 352
+21-05-25 04:23:43, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_352.pth
+21-05-25 04:23:43, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_352.pth
+21-05-25 04:23:43, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/352.png
+21-05-25 04:24:43, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 04:24:43, INFO: [-0.6931092227458954, 0.06793208498016669, 1.382944686293602, 0.09948442052817345]
+21-05-25 04:25:26, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 04:25:26, INFO: [0.5028813651514054, 0.01939530667141168, 0.46970512984991075, 0.5341563244342804, 0.06445119458436965]
+21-05-25 04:25:26, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 04:25:26, INFO: [0.49741559096395965, 0.019171788404727146, 0.4646167874753475, 0.5282372412323951, 0.06362045375704765]
+21-05-25 04:26:03, INFO: fid_score
+21-05-25 04:26:03, INFO: [12.765105650024395]
+21-05-25 04:26:03, INFO: --------------------------------
+21-05-25 04:26:03, INFO: epoch: 353
+21-05-25 04:28:57, INFO: epoch: 354
+21-05-25 04:31:51, INFO: epoch: 355
+21-05-25 04:34:46, INFO: epoch: 356
+21-05-25 04:37:41, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_356.pth
+21-05-25 04:37:41, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_356.pth
+21-05-25 04:37:41, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/356.png
+21-05-25 04:38:42, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 04:38:42, INFO: [-0.6863174614310265, 0.07361713896169625, 1.3724990123033523, 0.10686956451878228]
+21-05-25 04:39:25, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 04:39:25, INFO: [0.5049645928049088, 0.021783856370930738, 0.4690573105096817, 0.5416734028220177, 0.07261609231233597]
+21-05-25 04:39:25, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 04:39:25, INFO: [0.4948957788473368, 0.021855596786228112, 0.45927161952257156, 0.5318896896958352, 0.07261807017326355]
+21-05-25 04:40:01, INFO: fid_score
+21-05-25 04:40:01, INFO: [12.220484760382334]
+21-05-25 04:40:01, INFO: --------------------------------
+21-05-25 04:40:01, INFO: epoch: 357
+21-05-25 04:42:57, INFO: epoch: 358
+21-05-25 04:45:52, INFO: epoch: 359
+21-05-25 04:48:47, INFO: epoch: 360
+21-05-25 04:51:42, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_360.pth
+21-05-25 04:51:42, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_360.pth
+21-05-25 04:51:42, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/360.png
+21-05-25 04:52:43, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 04:52:43, INFO: [-0.6792983473360539, 0.06780809194636105, 1.390979175066948, 0.09593239019452143]
+21-05-25 04:53:26, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 04:53:26, INFO: [0.4919964132827521, 0.0174477396372228, 0.46297835960388184, 0.5208133385837078, 0.05783497897982597]
+21-05-25 04:53:26, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 04:53:26, INFO: [0.4918939767402411, 0.017660833607087496, 0.4623605539143085, 0.521055239880085, 0.05869468596577644]
+21-05-25 04:54:03, INFO: fid_score
+21-05-25 04:54:03, INFO: [12.009437495133113]
+21-05-25 04:54:03, INFO: --------------------------------
+21-05-25 04:54:03, INFO: epoch: 361
+21-05-25 04:56:58, INFO: epoch: 362
+21-05-25 04:59:53, INFO: epoch: 363
+21-05-25 05:02:48, INFO: epoch: 364
+21-05-25 05:05:43, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_364.pth
+21-05-25 05:05:43, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_364.pth
+21-05-25 05:05:43, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/364.png
+21-05-25 05:06:43, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 05:06:43, INFO: [-0.6893294838428498, 0.05698901145649656, 1.3834136449098586, 0.07950202597304172]
+21-05-25 05:07:27, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 05:07:27, INFO: [0.5003297291773557, 0.019153578503733743, 0.46926106850504873, 0.5330110311925411, 0.06374996268749238]
+21-05-25 05:07:27, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 05:07:27, INFO: [0.4975553454965353, 0.01891108803709102, 0.466512599158287, 0.5296392311394215, 0.06312663198113441]
+21-05-25 05:08:03, INFO: fid_score
+21-05-25 05:08:03, INFO: [12.738617538037829]
+21-05-25 05:08:03, INFO: --------------------------------
+21-05-25 05:08:03, INFO: epoch: 365
+21-05-25 05:10:59, INFO: epoch: 366
+21-05-25 05:13:54, INFO: epoch: 367
+21-05-25 05:16:49, INFO: epoch: 368
+21-05-25 05:19:44, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_368.pth
+21-05-25 05:19:44, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_368.pth
+21-05-25 05:19:44, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/368.png
+21-05-25 05:20:44, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 05:20:44, INFO: [-0.6554541023433208, 0.06904252556162631, 1.377689831852913, 0.0973392633181375]
+21-05-25 05:21:28, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 05:21:28, INFO: [0.48677830416440965, 0.019022048036407693, 0.45556291078329086, 0.5186478325843811, 0.06308492180109024]
+21-05-25 05:21:28, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 05:21:28, INFO: [0.4792654895198346, 0.018838914621798694, 0.44797665479183196, 0.510489328199625, 0.06251267340779304]
+21-05-25 05:22:04, INFO: fid_score
+21-05-25 05:22:04, INFO: [12.183509286610388]
+21-05-25 05:22:04, INFO: --------------------------------
+21-05-25 05:22:04, INFO: epoch: 369
+21-05-25 05:24:59, INFO: epoch: 370
+21-05-25 05:27:54, INFO: epoch: 371
+21-05-25 05:30:50, INFO: epoch: 372
+21-05-25 05:33:48, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_372.pth
+21-05-25 05:33:48, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_372.pth
+21-05-25 05:33:48, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/372.png
+21-05-25 05:34:49, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 05:34:49, INFO: [-0.6748828221142292, 0.0906010675278442, 1.4003866973638535, 0.13217081259421046]
+21-05-25 05:35:33, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 05:35:33, INFO: [0.4862095868963002, 0.019657076492097622, 0.45338368906378745, 0.5191860829949378, 0.06580239393115044]
+21-05-25 05:35:33, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 05:35:33, INFO: [0.48924415469408034, 0.02002213670471994, 0.4556996133983135, 0.5229033158063888, 0.06720370240807533]
+21-05-25 05:36:09, INFO: fid_score
+21-05-25 05:36:09, INFO: [12.301991156190667]
+21-05-25 05:36:09, INFO: --------------------------------
+21-05-25 05:36:09, INFO: epoch: 373
+21-05-25 05:39:04, INFO: epoch: 374
+21-05-25 05:42:02, INFO: epoch: 375
+21-05-25 05:45:02, INFO: epoch: 376
+21-05-25 05:48:01, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_376.pth
+21-05-25 05:48:01, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_376.pth
+21-05-25 05:48:01, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/376.png
+21-05-25 05:49:02, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 05:49:02, INFO: [-0.6808964326560497, 0.07589776609284629, 1.3636751781702041, 0.10731938514878804]
+21-05-25 05:49:46, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 05:49:46, INFO: [0.506648396961093, 0.01848490581475365, 0.47603301971554757, 0.5372609319925308, 0.06122791227698326]
+21-05-25 05:49:46, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 05:49:46, INFO: [0.49247570914387706, 0.018247637725203505, 0.46218882524371147, 0.5228369113326072, 0.0606480860888958]
+21-05-25 05:50:23, INFO: fid_score
+21-05-25 05:50:23, INFO: [12.3877470716277]
+21-05-25 05:50:23, INFO: --------------------------------
+21-05-25 05:50:23, INFO: epoch: 377
+21-05-25 05:53:22, INFO: epoch: 378
+21-05-25 05:56:18, INFO: epoch: 379
+21-05-25 05:59:12, INFO: epoch: 380
+21-05-25 06:02:07, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_380.pth
+21-05-25 06:02:07, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_380.pth
+21-05-25 06:02:07, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/380.png
+21-05-25 06:03:08, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 06:03:08, INFO: [-0.6604452008962631, 0.09363011608263216, 1.3569401144266129, 0.13352890720224572]
+21-05-25 06:03:52, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 06:03:52, INFO: [0.5004477190601825, 0.018529151381170117, 0.47038340505957604, 0.5321961996614933, 0.06181279460191727]
+21-05-25 06:03:52, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 06:03:52, INFO: [0.4824666115736962, 0.018436662291488007, 0.4524995961844921, 0.5139995077013969, 0.06149991151690483]
+21-05-25 06:04:28, INFO: fid_score
+21-05-25 06:04:28, INFO: [12.705115094602036]
+21-05-25 06:04:28, INFO: --------------------------------
+21-05-25 06:04:28, INFO: epoch: 381
+21-05-25 06:07:26, INFO: epoch: 382
+21-05-25 06:10:22, INFO: epoch: 383
+21-05-25 06:13:21, INFO: epoch: 384
+21-05-25 06:16:20, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_384.pth
+21-05-25 06:16:20, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_384.pth
+21-05-25 06:16:20, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/384.png
+21-05-25 06:17:21, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 06:17:21, INFO: [-0.6873176702320576, 0.06636035505407428, 1.3896214256048203, 0.09593404750542446]
+21-05-25 06:18:05, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 06:18:05, INFO: [0.4966110440015793, 0.018989361799755362, 0.46631014767289164, 0.529533414387703, 0.06322326671481132]
+21-05-25 06:18:05, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 06:18:05, INFO: [0.4955780491364003, 0.019336335834468487, 0.4644531874001026, 0.529358926141262, 0.06490573874115944]
+21-05-25 06:18:42, INFO: fid_score
+21-05-25 06:18:42, INFO: [12.362908291214012]
+21-05-25 06:18:42, INFO: --------------------------------
+21-05-25 06:18:42, INFO: epoch: 385
+21-05-25 06:21:41, INFO: epoch: 386
+21-05-25 06:24:40, INFO: epoch: 387
+21-05-25 06:27:37, INFO: epoch: 388
+21-05-25 06:30:31, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_388.pth
+21-05-25 06:30:31, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_388.pth
+21-05-25 06:30:31, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/388.png
+21-05-25 06:31:31, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 06:31:31, INFO: [-0.706657783484459, 0.08111771006001975, 1.370923620414734, 0.11151880862453027]
+21-05-25 06:32:15, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 06:32:15, INFO: [0.5161009462702274, 0.021104056118766607, 0.4813535358130932, 0.5510683038771153, 0.06971476806402206]
+21-05-25 06:32:15, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 06:32:15, INFO: [0.504627661100626, 0.021615028368962817, 0.46886433908343317, 0.5404844357967377, 0.07162009671330452]
+21-05-25 06:32:51, INFO: fid_score
+21-05-25 06:32:51, INFO: [12.353923742708844]
+21-05-25 06:32:51, INFO: --------------------------------
+21-05-25 06:32:51, INFO: epoch: 389
+21-05-25 06:35:47, INFO: epoch: 390
+21-05-25 06:38:45, INFO: epoch: 391
+21-05-25 06:41:44, INFO: epoch: 392
+21-05-25 06:44:43, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_392.pth
+21-05-25 06:44:43, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_392.pth
+21-05-25 06:44:43, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/392.png
+21-05-25 06:45:44, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 06:45:44, INFO: [-0.6863428364634514, 0.06861140154881451, 1.369603880095482, 0.09639359030495678]
+21-05-25 06:46:28, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 06:46:28, INFO: [0.5061099066370726, 0.022042557781694876, 0.4709027629375458, 0.544304715281725, 0.07340195234417915]
+21-05-25 06:46:28, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 06:46:28, INFO: [0.4941697018575668, 0.02197609044424501, 0.45900040618181226, 0.5321547182142734, 0.07315431203246117]
+21-05-25 06:47:04, INFO: fid_score
+21-05-25 06:47:04, INFO: [12.999789413288909]
+21-05-25 06:47:04, INFO: --------------------------------
+21-05-25 06:47:04, INFO: epoch: 393
+21-05-25 06:50:03, INFO: epoch: 394
+21-05-25 06:53:02, INFO: epoch: 395
+21-05-25 06:56:01, INFO: epoch: 396
+21-05-25 06:58:57, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_396.pth
+21-05-25 06:58:57, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_396.pth
+21-05-25 06:58:57, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/396.png
+21-05-25 06:59:58, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 06:59:58, INFO: [-0.6873005319654941, 0.07524563851800871, 1.3788160620450973, 0.10576150730041618]
+21-05-25 07:00:41, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 07:00:41, INFO: [0.5021435569190978, 0.020496690405488526, 0.46923351447582246, 0.5368238278925419, 0.06759031341671944]
+21-05-25 07:00:41, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 07:00:41, INFO: [0.49664178308963774, 0.02059669477329805, 0.46373448696136477, 0.5313537629544735, 0.06761927599310875]
+21-05-25 07:01:18, INFO: fid_score
+21-05-25 07:01:18, INFO: [11.953363103111542]
+21-05-25 07:01:18, INFO: --------------------------------
+21-05-25 07:01:18, INFO: epoch: 397
+21-05-25 07:04:12, INFO: epoch: 398
+21-05-25 07:07:06, INFO: epoch: 399
+21-05-25 07:10:00, INFO: epoch: 400
+21-05-25 07:12:56, INFO: saved g at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/generator_400.pth
+21-05-25 07:12:56, INFO: saved d at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/models/discriminator_400.pth
+21-05-25 07:12:56, INFO: saved image at: experiments/rfgan/augmentation/rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD/images/400.png
+21-05-25 07:13:57, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 07:13:57, INFO: [-0.6855378112494945, 0.07007647553321891, 1.3801903312683106, 0.09899389271752969]
+21-05-25 07:14:41, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 07:14:41, INFO: [0.5004154967659712, 0.01836553667515102, 0.4697649818003178, 0.531173287576437, 0.061408305776119235]
+21-05-25 07:14:41, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 07:14:41, INFO: [0.49512649418711663, 0.018710466923657236, 0.46378830091953277, 0.5260578395187855, 0.0622695385992527]
+21-05-25 07:15:17, INFO: fid_score
+21-05-25 07:15:17, INFO: [12.498832783511972]
+21-05-25 07:15:17, INFO: --------------------------------
+21-05-25 07:15:17, INFO: Completed
