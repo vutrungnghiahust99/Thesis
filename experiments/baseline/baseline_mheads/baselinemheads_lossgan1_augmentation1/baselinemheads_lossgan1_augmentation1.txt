@@ -1,0 +1,1869 @@
+21-05-24 05:39:57, INFO: 
+***************** BASELINEMHEADS_LOSSGAN1_AUGMENTATION1 **************
+21-05-24 05:39:57, INFO: aug_times: 2
+21-05-24 05:39:57, INFO: augmentation: 1
+21-05-24 05:39:57, INFO: b1: 0.5
+21-05-24 05:39:57, INFO: b2: 0.999
+21-05-24 05:39:57, INFO: batch_size: 64
+21-05-24 05:39:57, INFO: bound: 1
+21-05-24 05:39:57, INFO: channels: 1
+21-05-24 05:39:57, INFO: data_path: data/mnist
+21-05-24 05:39:57, INFO: dist: gauss
+21-05-24 05:39:57, INFO: exp_name: baselinemheads_lossgan1_augmentation1
+21-05-24 05:39:57, INFO: img_size: 28
+21-05-24 05:39:57, INFO: interval: 4
+21-05-24 05:39:57, INFO: loss_name: gan1
+21-05-24 05:39:57, INFO: lr: 0.0002
+21-05-24 05:39:57, INFO: n_cpu: 8
+21-05-24 05:39:57, INFO: n_epochs: 401
+21-05-24 05:39:57, INFO: n_heads: 10
+21-05-24 05:39:57, INFO: use_mask_d: 1
+21-05-24 05:39:57, INFO: weights_d: 
+21-05-24 05:39:57, INFO: weights_g: 
+21-05-24 05:39:57, INFO: z_dim: 100
+21-05-24 05:39:57, INFO: --------------------------------
+21-05-24 05:39:57, INFO: exp_folder: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1
+21-05-24 05:39:57, INFO: images_folder: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images
+21-05-24 05:39:57, INFO: models_folder: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models
+21-05-24 05:39:57, INFO: 0: [0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0]
+21-05-24 05:39:57, INFO: 1: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0]
+21-05-24 05:39:57, INFO: 2: [0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0]
+21-05-24 05:39:57, INFO: 3: [0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1]
+21-05-24 05:39:57, INFO: 4: [0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0]
+21-05-24 05:39:57, INFO: 5: [1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1]
+21-05-24 05:39:57, INFO: 6: [1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1]
+21-05-24 05:39:57, INFO: 7: [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1]
+21-05-24 05:39:57, INFO: 8: [1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0]
+21-05-24 05:39:57, INFO: 9: [1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0]
+21-05-24 05:39:57, INFO: Generator(
+  (model): Sequential(
+    (0): Linear(
+      (linear): Linear(in_features=100, out_features=128, bias=True)
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+    (4): Linear(
+      (linear): Linear(in_features=256, out_features=512, bias=True)
+    )
+    (5): LeakyReLU(negative_slope=0.2, inplace=True)
+    (6): Linear(
+      (linear): Linear(in_features=512, out_features=1024, bias=True)
+    )
+    (7): LeakyReLU(negative_slope=0.2, inplace=True)
+    (8): Linear(
+      (linear): Linear(in_features=1024, out_features=784, bias=True)
+    )
+    (9): Tanh()
+  )
+)
+21-05-24 05:39:57, INFO: Discriminator(
+  (shared_layers): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=784, out_features=512, bias=True)
+      )
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=512, out_features=256, bias=True)
+      )
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+  )
+  (head_0): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_1): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_2): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_3): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_4): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_5): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_6): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_7): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_8): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_9): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+)
+21-05-24 05:39:57, INFO: start at epoch: 0
+21-05-24 05:40:08, INFO: data at: data/mnist
+21-05-24 05:40:11, INFO: epoch: 0
+21-05-24 05:46:55, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_0.pth
+21-05-24 05:46:55, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_0.pth
+21-05-24 05:46:56, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/0.png
+21-05-24 05:49:33, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 05:49:33, INFO: [-1.059307602930069, 0.12947559140418172, 3.179799818634987, 1.2395466480165713]
+21-05-24 05:50:19, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 05:50:19, INFO: [0.8150024910324811, 0.014652764222558014, 0.7902745887994767, 0.8375944275557995, 0.04731983875632286]
+21-05-24 05:50:19, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 05:50:19, INFO: [0.10072519308231771, 0.005544557447871637, 0.09145557338520885, 0.110455463527143, 0.018999890141934157]
+21-05-24 05:51:09, INFO: fid_score
+21-05-24 05:51:09, INFO: [294.3904013438287]
+21-05-24 05:51:09, INFO: --------------------------------
+21-05-24 05:51:09, INFO: epoch: 1
+21-05-24 05:58:15, INFO: epoch: 2
+21-05-24 06:05:22, INFO: epoch: 3
+21-05-24 06:12:24, INFO: epoch: 4
+21-05-24 06:19:20, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_4.pth
+21-05-24 06:19:20, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_4.pth
+21-05-24 06:19:20, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/4.png
+21-05-24 06:21:59, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 06:21:59, INFO: [-0.979815593290329, 0.19395365222589656, 2.6356533829927447, 0.8039493600304125]
+21-05-24 06:22:45, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 06:22:45, INFO: [0.8500265675532818, 0.012654669987881331, 0.8277649126887322, 0.8700886151552201, 0.04232370246648789]
+21-05-24 06:22:45, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 06:22:45, INFO: [0.09327438990555705, 0.007024848701673727, 0.08269015325456858, 0.10566749416142703, 0.022977340906858445]
+21-05-24 06:23:32, INFO: fid_score
+21-05-24 06:23:32, INFO: [269.27991417709774]
+21-05-24 06:23:32, INFO: --------------------------------
+21-05-24 06:23:32, INFO: epoch: 5
+21-05-24 06:30:29, INFO: epoch: 6
+21-05-24 06:37:17, INFO: epoch: 7
+21-05-24 06:43:57, INFO: epoch: 8
+21-05-24 06:50:36, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_8.pth
+21-05-24 06:50:36, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_8.pth
+21-05-24 06:50:36, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/8.png
+21-05-24 06:53:11, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 06:53:11, INFO: [-2.1102853343486787, 0.695905397981064, 4.356769210386276, 1.0889521604385184]
+21-05-24 06:53:58, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 06:53:58, INFO: [0.8016085039484501, 0.013478962029530707, 0.7784802289187908, 0.8229808597803115, 0.044500630861520764]
+21-05-24 06:53:58, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 06:53:58, INFO: [0.18798089546367525, 0.01303409111861485, 0.16743223157450557, 0.20907304095625878, 0.041640809381753206]
+21-05-24 06:54:44, INFO: fid_score
+21-05-24 06:54:44, INFO: [184.05672200944989]
+21-05-24 06:54:44, INFO: --------------------------------
+21-05-24 06:54:44, INFO: epoch: 9
+21-05-24 07:01:24, INFO: epoch: 10
+21-05-24 07:08:09, INFO: epoch: 11
+21-05-24 07:14:51, INFO: epoch: 12
+21-05-24 07:21:32, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_12.pth
+21-05-24 07:21:32, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_12.pth
+21-05-24 07:21:32, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/12.png
+21-05-24 07:24:07, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 07:24:07, INFO: [-4.364508732199669, 0.9591633707211913, 9.764188708686829, 1.7257590953005115]
+21-05-24 07:24:52, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 07:24:52, INFO: [0.588872071068883, 0.015376170955111314, 0.5632363978981971, 0.6147000435888768, 0.05146364569067955]
+21-05-24 07:24:52, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 07:24:52, INFO: [0.3526387555345893, 0.013618039373224701, 0.3314630792558193, 0.3767260581851006, 0.04526297892928124]
+21-05-24 07:25:38, INFO: fid_score
+21-05-24 07:25:38, INFO: [96.4671633523584]
+21-05-24 07:25:38, INFO: --------------------------------
+21-05-24 07:25:38, INFO: epoch: 13
+21-05-24 07:32:38, INFO: epoch: 14
+21-05-24 07:39:47, INFO: epoch: 15
+21-05-24 07:46:54, INFO: epoch: 16
+21-05-24 07:54:00, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_16.pth
+21-05-24 07:54:00, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_16.pth
+21-05-24 07:54:00, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/16.png
+21-05-24 07:56:39, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 07:56:39, INFO: [-5.900114132928849, 1.2477889801151947, 11.397358272266388, 2.02284687751266]
+21-05-24 07:57:27, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 07:57:27, INFO: [0.5845067411440611, 0.014535964201188096, 0.5600543800354004, 0.6085350970983505, 0.04848071706295014]
+21-05-24 07:57:27, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 07:57:27, INFO: [0.4407261259952187, 0.013254419663028679, 0.4188884335041046, 0.4630849265813827, 0.04419649307727814]
+21-05-24 07:58:16, INFO: fid_score
+21-05-24 07:58:16, INFO: [67.82844044775575]
+21-05-24 07:58:16, INFO: --------------------------------
+21-05-24 09:01:20, INFO: epoch: 17
+21-05-24 09:08:03, INFO: epoch: 18
+21-05-24 09:14:47, INFO: epoch: 19
+21-05-24 09:21:29, INFO: epoch: 20
+21-05-24 09:28:12, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_20.pth
+21-05-24 09:28:12, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_20.pth
+21-05-24 09:28:12, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/20.png
+21-05-24 09:30:48, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 09:30:48, INFO: [-6.159394006824494, 1.3815053729110014, 12.124414444446563, 2.120762387259321]
+21-05-24 09:31:34, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 09:31:34, INFO: [0.5579591469275951, 0.014121939828161924, 0.5347594831764698, 0.5819040830850601, 0.047144599908590316]
+21-05-24 09:31:34, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 09:31:34, INFO: [0.454377283848226, 0.013600817203379228, 0.4323882569491863, 0.47774077740907667, 0.04535252045989036]
+21-05-24 09:32:22, INFO: fid_score
+21-05-24 09:32:22, INFO: [50.558753720290184]
+21-05-24 09:32:22, INFO: --------------------------------
+21-05-24 09:32:22, INFO: epoch: 21
+21-05-24 09:39:06, INFO: epoch: 22
+21-05-24 09:45:49, INFO: epoch: 23
+21-05-24 09:52:32, INFO: epoch: 24
+21-05-24 09:59:15, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_24.pth
+21-05-24 09:59:15, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_24.pth
+21-05-24 09:59:15, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/24.png
+21-05-24 10:01:51, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 10:01:51, INFO: [-5.945354030609131, 0.9610511586838455, 12.143942370414734, 1.4910179397411198]
+21-05-24 10:02:37, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 10:02:37, INFO: [0.541762911348939, 0.013683607806894824, 0.5183996352076531, 0.5640179541409016, 0.04561831893324852]
+21-05-24 10:02:37, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 10:02:37, INFO: [0.44360274331331245, 0.012593324139058323, 0.4227877800703049, 0.46453821647167204, 0.041750436401367184]
+21-05-24 10:03:24, INFO: fid_score
+21-05-24 10:03:24, INFO: [42.23648656357989]
+21-05-24 10:03:24, INFO: --------------------------------
+21-05-24 10:10:45, INFO: epoch: 25
+21-05-24 10:18:13, INFO: epoch: 26
+21-05-24 10:25:42, INFO: epoch: 27
+21-05-24 10:33:12, INFO: epoch: 28
+21-05-24 10:40:40, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_28.pth
+21-05-24 10:40:40, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_28.pth
+21-05-24 10:40:40, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/28.png
+21-05-24 10:43:33, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 10:43:33, INFO: [-6.297047990560531, 1.0704891407976658, 12.666410686683655, 1.7559762165496946]
+21-05-24 10:44:24, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 10:44:24, INFO: [0.5342111260294914, 0.014104910802541164, 0.5109685704708099, 0.5580734427630901, 0.0471048722922802]
+21-05-24 10:44:24, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 10:44:24, INFO: [0.4646916301321984, 0.013785650201459993, 0.4423970536649227, 0.4884612266421318, 0.04606417297720909]
+21-05-24 10:45:11, INFO: fid_score
+21-05-24 10:45:11, INFO: [36.702578824244966]
+21-05-24 10:45:11, INFO: --------------------------------
+21-05-24 10:45:11, INFO: epoch: 29
+21-05-24 10:52:40, INFO: epoch: 30
+21-05-24 11:00:15, INFO: epoch: 31
+21-05-24 11:07:46, INFO: epoch: 32
+21-05-24 11:15:19, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_32.pth
+21-05-24 11:15:19, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_32.pth
+21-05-24 11:15:19, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/32.png
+21-05-24 11:18:11, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 11:18:11, INFO: [-6.516501125860215, 1.3784331292828473, 12.885157161140443, 1.8827273233424275]
+21-05-24 11:19:02, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 11:19:02, INFO: [0.5333921712189913, 0.012993562603707553, 0.5114566949188709, 0.5546699282646179, 0.043213233345747]
+21-05-24 11:19:02, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 11:19:02, INFO: [0.47584124709546566, 0.012924380530261828, 0.45430488259196283, 0.49727079330682755, 0.04296591071486473]
+21-05-24 11:19:48, INFO: fid_score
+21-05-24 11:19:48, INFO: [33.58904939494366]
+21-05-24 11:19:48, INFO: --------------------------------
+21-05-24 11:19:48, INFO: epoch: 33
+21-05-24 11:27:15, INFO: epoch: 34
+21-05-24 11:34:39, INFO: epoch: 35
+21-05-24 11:42:07, INFO: epoch: 36
+21-05-24 11:49:37, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_36.pth
+21-05-24 11:49:37, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_36.pth
+21-05-24 11:49:37, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/36.png
+21-05-24 11:52:29, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 11:52:29, INFO: [-6.473236370277405, 1.3678878927923883, 13.098258518791198, 1.933400214015717]
+21-05-24 11:53:20, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 11:53:20, INFO: [0.5207115428054332, 0.013123040086895963, 0.49901752663850785, 0.5427680136859417, 0.04375048704743385]
+21-05-24 11:53:20, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 11:53:20, INFO: [0.4718792066735028, 0.012879026339882745, 0.4509168717622757, 0.494089695328474, 0.04317282356619835]
+21-05-24 11:54:09, INFO: fid_score
+21-05-24 11:54:09, INFO: [30.318286903199663]
+21-05-24 11:54:09, INFO: --------------------------------
+21-05-24 11:54:09, INFO: epoch: 37
+21-05-24 12:01:43, INFO: epoch: 38
+21-05-24 12:09:13, INFO: epoch: 39
+21-05-24 12:16:42, INFO: epoch: 40
+21-05-24 12:24:08, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_40.pth
+21-05-24 12:24:08, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_40.pth
+21-05-24 12:24:08, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/40.png
+21-05-24 12:26:58, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 12:26:58, INFO: [-6.061277282619477, 1.307101438959954, 12.895786633205415, 1.9682221400052378]
+21-05-24 12:27:49, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 12:27:49, INFO: [0.5104911019015311, 0.01324787839684762, 0.4888280014514923, 0.5329399781703948, 0.04411197671890259]
+21-05-24 12:27:49, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 12:27:49, INFO: [0.45046237540721895, 0.013187717102828015, 0.4288945736885071, 0.4728412656545639, 0.04394669196605682]
+21-05-24 12:28:39, INFO: fid_score
+21-05-24 12:28:39, INFO: [29.35382673590155]
+21-05-24 12:28:39, INFO: --------------------------------
+21-05-24 12:28:39, INFO: epoch: 41
+21-05-24 12:36:07, INFO: epoch: 42
+21-05-24 12:43:36, INFO: epoch: 43
+21-05-24 12:51:09, INFO: epoch: 44
+21-05-24 12:58:39, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_44.pth
+21-05-24 12:58:39, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_44.pth
+21-05-24 12:58:39, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/44.png
+21-05-24 13:01:31, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 13:01:31, INFO: [-6.753134913825988, 1.0338100997069952, 12.846467437171937, 1.3721771873241864]
+21-05-24 13:02:21, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 13:02:21, INFO: [0.5460693444758654, 0.013068344528474463, 0.5239554511010647, 0.5674713416457177, 0.043515890544652935]
+21-05-24 13:02:21, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 13:02:21, INFO: [0.4892735830920934, 0.012742650156770109, 0.46764138694405555, 0.5100435656666755, 0.04240217872262001]
+21-05-24 13:03:11, INFO: fid_score
+21-05-24 13:03:11, INFO: [27.70670052053464]
+21-05-24 13:03:11, INFO: --------------------------------
+21-05-24 13:03:11, INFO: epoch: 45
+21-05-24 13:10:36, INFO: epoch: 46
+21-05-24 13:18:05, INFO: epoch: 47
+21-05-24 13:25:32, INFO: epoch: 48
+21-05-24 13:32:54, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_48.pth
+21-05-24 13:32:54, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_48.pth
+21-05-24 13:32:54, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/48.png
+21-05-24 13:35:42, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 13:35:42, INFO: [-6.6206675322532655, 1.078812528573901, 13.01339446849823, 1.5264322508871788]
+21-05-24 13:36:31, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 13:36:31, INFO: [0.5309207589346171, 0.012885523854970398, 0.5091770284354686, 0.5520179123699666, 0.042840883934497836]
+21-05-24 13:36:31, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 13:36:31, INFO: [0.4788437407195568, 0.012468019265454164, 0.457772552806139, 0.49920024359822274, 0.04142769079208374]
+21-05-24 13:37:20, INFO: fid_score
+21-05-24 13:37:20, INFO: [24.403877401378367]
+21-05-24 13:37:20, INFO: --------------------------------
+21-05-24 15:35:11, INFO: epoch: 49
+21-05-24 15:41:56, INFO: epoch: 50
+21-05-24 15:48:37, INFO: epoch: 51
+21-05-24 15:55:16, INFO: epoch: 52
+21-05-24 16:01:53, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_52.pth
+21-05-24 16:01:53, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_52.pth
+21-05-24 16:01:53, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/52.png
+21-05-24 16:04:26, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 16:04:26, INFO: [-6.266391903352737, 1.3630925976219015, 12.968540848827361, 2.011650138526961]
+21-05-24 16:05:12, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 16:05:12, INFO: [0.5171539763635398, 0.013437641622459506, 0.49446144034862516, 0.5391650930047035, 0.04470365265607834]
+21-05-24 16:05:12, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 16:05:12, INFO: [0.4609852090606093, 0.012849345295147486, 0.43955605440437795, 0.4823556267142296, 0.042799572309851645]
+21-05-24 16:05:59, INFO: fid_score
+21-05-24 16:05:59, INFO: [24.70586997312904]
+21-05-24 16:05:59, INFO: --------------------------------
+21-05-24 16:05:59, INFO: epoch: 53
+21-05-24 16:12:36, INFO: epoch: 54
+21-05-24 16:19:14, INFO: epoch: 55
+21-05-24 16:25:53, INFO: epoch: 56
+21-05-24 16:32:31, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_56.pth
+21-05-24 16:32:31, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_56.pth
+21-05-24 16:32:31, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/56.png
+21-05-24 16:35:05, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 16:35:05, INFO: [-6.478178748226166, 0.8903780940789764, 13.004881321334839, 1.334646544475834]
+21-05-24 16:35:51, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 16:35:51, INFO: [0.5234316836386919, 0.012268033293834022, 0.5029294084846974, 0.5436984525084495, 0.04076904402375221]
+21-05-24 16:35:51, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 16:35:51, INFO: [0.4746488805991412, 0.012016054334138288, 0.4545382734000683, 0.4944128095030785, 0.03987453610301018]
+21-05-24 16:36:36, INFO: fid_score
+21-05-24 16:36:36, INFO: [24.822643944711047]
+21-05-24 16:36:36, INFO: --------------------------------
+21-05-24 16:36:36, INFO: epoch: 57
+21-05-24 16:43:16, INFO: epoch: 58
+21-05-24 16:49:57, INFO: epoch: 59
+21-05-24 16:56:42, INFO: epoch: 60
+21-05-24 17:03:23, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_60.pth
+21-05-24 17:03:23, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_60.pth
+21-05-24 17:03:23, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/60.png
+21-05-24 17:05:59, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 17:05:59, INFO: [-6.609178457355499, 0.9733222498212487, 13.312279453086854, 1.4228001318032573]
+21-05-24 17:06:45, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 17:06:45, INFO: [0.5144982014459372, 0.01320018716495674, 0.49267443252801896, 0.5365093445181847, 0.04383491199016571]
+21-05-24 17:06:45, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 17:06:45, INFO: [0.48038326763451106, 0.01305508219893511, 0.4589747920632362, 0.5023757327258587, 0.04340094066262245]
+21-05-24 17:07:31, INFO: fid_score
+21-05-24 17:07:31, INFO: [24.971843257687283]
+21-05-24 17:07:31, INFO: --------------------------------
+21-05-24 17:07:31, INFO: epoch: 61
+21-05-24 17:14:16, INFO: epoch: 62
+21-05-24 17:20:57, INFO: epoch: 63
+21-05-24 17:27:38, INFO: epoch: 64
+21-05-24 17:34:19, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_64.pth
+21-05-24 17:34:19, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_64.pth
+21-05-24 17:34:19, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/64.png
+21-05-24 17:36:54, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 17:36:54, INFO: [-6.8168696465492244, 1.1464679618619995, 13.228024405288696, 1.5594910511236821]
+21-05-24 17:37:40, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 17:37:40, INFO: [0.529628825404644, 0.012243015639687528, 0.509156953150034, 0.5499551219403743, 0.04079816879034042]
+21-05-24 17:37:40, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 17:37:40, INFO: [0.4906507619154454, 0.012235501149181989, 0.470160327142477, 0.5110676381826401, 0.04090731104016304]
+21-05-24 17:38:25, INFO: fid_score
+21-05-24 17:38:25, INFO: [24.593302167536706]
+21-05-24 17:38:25, INFO: --------------------------------
+21-05-24 17:38:25, INFO: epoch: 65
+21-05-24 17:45:08, INFO: epoch: 66
+21-05-24 17:51:47, INFO: epoch: 67
+21-05-24 17:58:34, INFO: epoch: 68
+21-05-24 18:05:24, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_68.pth
+21-05-24 18:05:24, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_68.pth
+21-05-24 18:05:24, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/68.png
+21-05-24 18:07:58, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 18:07:58, INFO: [-6.8573111001968385, 0.7831263664504108, 13.21424622516632, 1.1296833377489803]
+21-05-24 18:08:44, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 18:08:44, INFO: [0.531441229635477, 0.012214820381078033, 0.5111446261763573, 0.5517753615140915, 0.040630735337734224]
+21-05-24 18:08:44, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 18:08:44, INFO: [0.49490511895775796, 0.011961396274398328, 0.47524165107011795, 0.5149511877477169, 0.03970953667759895]
+21-05-24 18:09:34, INFO: fid_score
+21-05-24 18:09:34, INFO: [20.715428894414742]
+21-05-24 18:09:34, INFO: --------------------------------
+21-05-24 18:09:34, INFO: epoch: 69
+21-05-24 18:16:11, INFO: epoch: 70
+21-05-24 18:22:47, INFO: epoch: 71
+21-05-24 18:29:24, INFO: epoch: 72
+21-05-24 18:36:02, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_72.pth
+21-05-24 18:36:02, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_72.pth
+21-05-24 18:36:02, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/72.png
+21-05-24 18:38:38, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 18:38:38, INFO: [-6.8915051054000855, 1.0174873939348243, 13.52664144191742, 1.4393442733856705]
+21-05-24 18:39:24, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 18:39:24, INFO: [0.5178342527258396, 0.011742832811397041, 0.4981717065811157, 0.5374629168450832, 0.039291210263967515]
+21-05-24 18:39:24, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 18:39:24, INFO: [0.49701189733922474, 0.011808685290589486, 0.47737663295865057, 0.516862038141489, 0.03948540518283844]
+21-05-24 18:40:13, INFO: fid_score
+21-05-24 18:40:13, INFO: [20.894055885537313]
+21-05-24 18:40:13, INFO: --------------------------------
+21-05-24 18:40:13, INFO: epoch: 73
+21-05-24 18:46:54, INFO: epoch: 74
+21-05-24 18:53:36, INFO: epoch: 75
+21-05-24 19:00:14, INFO: epoch: 76
+21-05-24 19:06:50, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_76.pth
+21-05-24 19:06:50, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_76.pth
+21-05-24 19:06:50, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/76.png
+21-05-24 19:09:24, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-24 19:09:24, INFO: [-6.58211123290062, 1.490803867443313, 13.029688686656952, 2.046361241848796]
+21-05-24 19:10:10, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-24 19:10:10, INFO: [0.5297106647402048, 0.011919187591476612, 0.5098990918457508, 0.5495762760341167, 0.03967718418836594]
+21-05-24 19:10:10, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-24 19:10:10, INFO: [0.47565996073573835, 0.011640330940473348, 0.4564446794271469, 0.49521734373569487, 0.03877266430854797]
+21-05-24 19:10:59, INFO: fid_score
+21-05-24 19:10:59, INFO: [22.324465883108758]
+21-05-24 19:10:59, INFO: --------------------------------
+21-05-25 01:00:24, INFO: epoch: 77
+21-05-25 01:07:22, INFO: epoch: 78
+21-05-25 01:14:21, INFO: epoch: 79
+21-05-25 01:21:13, INFO: epoch: 80
+21-05-25 01:28:03, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_80.pth
+21-05-25 01:28:03, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_80.pth
+21-05-25 01:28:03, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/80.png
+21-05-25 01:30:41, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 01:30:41, INFO: [-6.886031748771668, 1.4863738779464302, 13.208212474250793, 2.003841124187811]
+21-05-25 01:31:27, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 01:31:27, INFO: [0.5361801822972297, 0.013306060193964615, 0.5131170325219632, 0.5577058622896671, 0.04458882976770401]
+21-05-25 01:31:27, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 01:31:27, INFO: [0.49063855836212633, 0.01304824110031622, 0.46832521927952764, 0.512026281785965, 0.0437010625064373]
+21-05-25 01:32:18, INFO: fid_score
+21-05-25 01:32:18, INFO: [20.637825781592653]
+21-05-25 01:32:18, INFO: --------------------------------
+21-05-25 01:32:18, INFO: epoch: 81
+21-05-25 01:39:15, INFO: epoch: 82
+21-05-25 01:46:07, INFO: epoch: 83
+21-05-25 01:52:56, INFO: epoch: 84
+21-05-25 01:59:37, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_84.pth
+21-05-25 01:59:37, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_84.pth
+21-05-25 01:59:37, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/84.png
+21-05-25 02:02:13, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 02:02:13, INFO: [-6.990745680999756, 0.8162127867117405, 13.319846146202087, 1.1527764148127795]
+21-05-25 02:02:59, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 02:02:59, INFO: [0.532925649741888, 0.012242415027336324, 0.5127411987304688, 0.5536612972021103, 0.04092009847164154]
+21-05-25 02:02:59, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 02:02:59, INFO: [0.5005473663914204, 0.012139556460304499, 0.48070401960015297, 0.5213088513612747, 0.04060483176112175]
+21-05-25 02:03:48, INFO: fid_score
+21-05-25 02:03:48, INFO: [20.20782584003794]
+21-05-25 02:03:48, INFO: --------------------------------
+21-05-25 02:03:48, INFO: epoch: 85
+21-05-25 02:10:28, INFO: epoch: 86
+21-05-25 02:17:09, INFO: epoch: 87
+21-05-25 02:23:54, INFO: epoch: 88
+21-05-25 02:30:32, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_88.pth
+21-05-25 02:30:32, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_88.pth
+21-05-25 02:30:32, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/88.png
+21-05-25 02:33:07, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 02:33:07, INFO: [-6.74267206454277, 0.9036243868300012, 13.557940521621704, 1.3194696392668404]
+21-05-25 02:33:53, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 02:33:53, INFO: [0.5083955783653259, 0.012084410973865487, 0.4879534564137459, 0.5282898651063442, 0.040336408692598344]
+21-05-25 02:33:53, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 02:33:53, INFO: [0.4880457595467567, 0.011897361898407639, 0.46804652656912804, 0.5077391128659249, 0.0396925862967968]
+21-05-25 02:34:42, INFO: fid_score
+21-05-25 02:34:42, INFO: [19.83708673881469]
+21-05-25 02:34:42, INFO: --------------------------------
+21-05-25 02:34:42, INFO: epoch: 89
+21-05-25 02:41:27, INFO: epoch: 90
+21-05-25 02:48:16, INFO: epoch: 91
+21-05-25 02:55:06, INFO: epoch: 92
+21-05-25 03:02:02, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_92.pth
+21-05-25 03:02:02, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_92.pth
+21-05-25 03:02:02, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/92.png
+21-05-25 03:04:43, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 03:04:43, INFO: [-6.617401727390289, 1.1078664993884135, 13.475468872833252, 1.6328977243493668]
+21-05-25 03:05:31, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 03:05:31, INFO: [0.5073676207578183, 0.013222086368932982, 0.48602366781830786, 0.5300546497941017, 0.04403098197579384]
+21-05-25 03:05:31, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 03:05:31, INFO: [0.48217717490196227, 0.01305707782134477, 0.4609401039838791, 0.5042623930037021, 0.043322289019823074]
+21-05-25 03:06:20, INFO: fid_score
+21-05-25 03:06:20, INFO: [19.08873381109467]
+21-05-25 03:06:20, INFO: --------------------------------
+21-05-25 03:06:20, INFO: epoch: 93
+21-05-25 03:13:18, INFO: epoch: 94
+21-05-25 03:20:11, INFO: epoch: 95
+21-05-25 03:27:07, INFO: epoch: 96
+21-05-25 03:33:59, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_96.pth
+21-05-25 03:33:59, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_96.pth
+21-05-25 03:33:59, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/96.png
+21-05-25 03:36:38, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 03:36:38, INFO: [-6.438585645103455, 0.7917629938685168, 13.403969463920593, 1.1283703096432538]
+21-05-25 03:37:24, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 03:37:24, INFO: [0.5001127578324079, 0.012142597394488029, 0.4797234826266766, 0.5199352883160114, 0.04021180568933487]
+21-05-25 03:37:24, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 03:37:24, INFO: [0.47413796424686905, 0.01188344543113872, 0.45432142776846884, 0.4938089128494263, 0.03948748508095741]
+21-05-25 03:38:14, INFO: fid_score
+21-05-25 03:38:14, INFO: [17.518921405002942]
+21-05-25 03:38:14, INFO: --------------------------------
+21-05-25 03:38:14, INFO: epoch: 97
+21-05-25 03:45:04, INFO: epoch: 98
+21-05-25 03:51:55, INFO: epoch: 99
+21-05-25 03:58:45, INFO: epoch: 100
+21-05-25 04:05:33, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_100.pth
+21-05-25 04:05:33, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_100.pth
+21-05-25 04:05:33, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/100.png
+21-05-25 04:08:09, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 04:08:09, INFO: [-6.547768644094467, 0.8527848807604899, 13.148498209571839, 1.2019138862567542]
+21-05-25 04:08:55, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 04:08:55, INFO: [0.5188014830845594, 0.012699844493118638, 0.497146012544632, 0.5399564471304417, 0.04281043458580971]
+21-05-25 04:08:55, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 04:08:55, INFO: [0.4787968067592383, 0.012776798748660369, 0.4568537035048008, 0.49995419632196425, 0.043100492817163466]
+21-05-25 04:09:45, INFO: fid_score
+21-05-25 04:09:45, INFO: [18.86887765814413]
+21-05-25 04:09:45, INFO: --------------------------------
+21-05-25 04:09:45, INFO: epoch: 101
+21-05-25 04:16:34, INFO: epoch: 102
+21-05-25 04:23:23, INFO: epoch: 103
+21-05-25 04:30:03, INFO: epoch: 104
+21-05-25 04:36:43, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_104.pth
+21-05-25 04:36:43, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_104.pth
+21-05-25 04:36:43, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/104.png
+21-05-25 04:39:20, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 04:39:20, INFO: [-6.728173065042496, 0.9464600548439899, 13.36213182258606, 1.2903259600105883]
+21-05-25 04:40:05, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 04:40:05, INFO: [0.517168969451189, 0.011675742825433452, 0.49794905380010607, 0.5368973720312119, 0.038948318231105804]
+21-05-25 04:40:05, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 04:40:05, INFO: [0.4875252125495672, 0.011440286940808694, 0.46885316180586817, 0.5069756979584694, 0.03812253615260124]
+21-05-25 04:40:54, INFO: fid_score
+21-05-25 04:40:54, INFO: [18.52909174596232]
+21-05-25 04:40:54, INFO: --------------------------------
+21-05-25 04:40:54, INFO: epoch: 105
+21-05-25 04:47:37, INFO: epoch: 106
+21-05-25 04:54:21, INFO: epoch: 107
+21-05-25 05:01:06, INFO: epoch: 108
+21-05-25 05:07:49, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_108.pth
+21-05-25 05:07:49, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_108.pth
+21-05-25 05:07:49, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/108.png
+21-05-25 05:10:26, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 05:10:26, INFO: [-6.742106146717071, 0.7579725516426515, 13.433432160568238, 1.0782117132418578]
+21-05-25 05:11:11, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 05:11:11, INFO: [0.513762236725688, 0.011873565617940448, 0.49401871153712273, 0.533499883055687, 0.03948117151856422]
+21-05-25 05:11:11, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 05:11:11, INFO: [0.49019694490373134, 0.011681637042473164, 0.47087318814992907, 0.509811714887619, 0.03893852673768997]
+21-05-25 05:12:00, INFO: fid_score
+21-05-25 05:12:00, INFO: [17.694412045126143]
+21-05-25 05:12:00, INFO: --------------------------------
+21-05-25 07:25:45, INFO: epoch: 109
+21-05-25 07:32:02, INFO: epoch: 110
+21-05-25 07:38:19, INFO: epoch: 111
+21-05-25 07:44:37, INFO: epoch: 112
+21-05-25 07:50:58, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_112.pth
+21-05-25 07:50:58, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_112.pth
+21-05-25 07:50:58, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/112.png
+21-05-25 07:53:26, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 07:53:26, INFO: [-6.390820552825928, 0.6746536340098299, 13.456122476768494, 1.0614107956760717]
+21-05-25 07:54:10, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 07:54:10, INFO: [0.495198848811388, 0.012076049765856826, 0.47472552400827406, 0.5149153236508369, 0.04018979964256287]
+21-05-25 07:54:10, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 07:54:10, INFO: [0.47097782256782056, 0.011753962690305327, 0.4512122317254543, 0.49040623683333395, 0.03919400510787964]
+21-05-25 07:54:46, INFO: fid_score
+21-05-25 07:54:46, INFO: [18.32924067258665]
+21-05-25 07:54:46, INFO: --------------------------------
+21-05-25 07:54:46, INFO: epoch: 113
+21-05-25 08:01:08, INFO: epoch: 114
+21-05-25 08:07:36, INFO: epoch: 115
+21-05-25 08:14:04, INFO: epoch: 116
+21-05-25 08:20:32, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_116.pth
+21-05-25 08:20:32, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_116.pth
+21-05-25 08:20:32, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/116.png
+21-05-25 08:23:01, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 08:23:01, INFO: [-6.91016705751419, 1.0544573746814883, 13.584511510467529, 1.4892589503826095]
+21-05-25 08:23:45, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 08:23:45, INFO: [0.5160259530043603, 0.011813598732982274, 0.4964193145096302, 0.535789408659935, 0.0393700941503048]
+21-05-25 08:23:45, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 08:23:45, INFO: [0.49500573135197157, 0.011558748870710093, 0.47604955363869667, 0.5143981139481067, 0.0383485603094101]
+21-05-25 08:24:21, INFO: fid_score
+21-05-25 08:24:21, INFO: [16.218286606818964]
+21-05-25 08:24:21, INFO: --------------------------------
+21-05-25 08:24:21, INFO: epoch: 117
+21-05-25 08:30:38, INFO: epoch: 118
+21-05-25 08:36:58, INFO: epoch: 119
+21-05-25 08:43:26, INFO: epoch: 120
+21-05-25 08:49:54, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_120.pth
+21-05-25 08:49:54, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_120.pth
+21-05-25 08:49:54, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/120.png
+21-05-25 08:52:25, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 08:52:25, INFO: [-6.708910269069672, 0.8143391942791797, 13.516168040084839, 1.2436752744873976]
+21-05-25 08:53:09, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 08:53:09, INFO: [0.5086161312496662, 0.011436591246715021, 0.489536577552557, 0.5277066693425179, 0.038170091789960864]
+21-05-25 08:53:09, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 08:53:09, INFO: [0.4870138956671953, 0.011426165993982633, 0.4680296276450157, 0.5060707490384578, 0.03804112139344215]
+21-05-25 08:53:46, INFO: fid_score
+21-05-25 08:53:46, INFO: [16.63800597840236]
+21-05-25 08:53:46, INFO: --------------------------------
+21-05-25 08:53:46, INFO: epoch: 121
+21-05-25 09:00:16, INFO: epoch: 122
+21-05-25 09:06:40, INFO: epoch: 123
+21-05-25 09:12:58, INFO: epoch: 124
+21-05-25 09:19:16, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_124.pth
+21-05-25 09:19:16, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_124.pth
+21-05-25 09:19:16, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/124.png
+21-05-25 09:21:45, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 09:21:45, INFO: [-6.7475890219688415, 0.7216926113671005, 13.618938189315795, 1.0518170075318656]
+21-05-25 09:22:29, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 09:22:29, INFO: [0.5046504185783862, 0.011904374585921211, 0.4851065686106682, 0.5245862443625927, 0.039479675751924515]
+21-05-25 09:22:29, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 09:22:29, INFO: [0.48831287442922583, 0.011746616210479208, 0.46916794381141663, 0.5080937965869904, 0.03892585277557373]
+21-05-25 09:23:05, INFO: fid_score
+21-05-25 09:23:05, INFO: [16.36189952898411]
+21-05-25 09:23:05, INFO: --------------------------------
+21-05-25 09:23:05, INFO: epoch: 125
+21-05-25 09:29:23, INFO: epoch: 126
+21-05-25 09:35:41, INFO: epoch: 127
+21-05-25 09:41:59, INFO: epoch: 128
+21-05-25 09:48:18, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_128.pth
+21-05-25 09:48:18, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_128.pth
+21-05-25 09:48:18, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/128.png
+21-05-25 09:50:47, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 09:50:47, INFO: [-6.509865236759186, 0.6847473098261836, 13.433451123428345, 0.9951780841667582]
+21-05-25 09:51:31, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 09:51:31, INFO: [0.5018158330214024, 0.011953995421752501, 0.48221115772128104, 0.5219371700942517, 0.03972601237297058]
+21-05-25 09:51:31, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 09:51:31, INFO: [0.47645242863535875, 0.012083144403964376, 0.45645982869267465, 0.4965517720043659, 0.04009194331169128]
+21-05-25 09:52:08, INFO: fid_score
+21-05-25 09:52:08, INFO: [16.95749622308813]
+21-05-25 09:52:08, INFO: --------------------------------
+21-05-25 09:52:08, INFO: epoch: 129
+21-05-25 09:58:28, INFO: epoch: 130
+21-05-25 10:04:48, INFO: epoch: 131
+21-05-25 10:11:08, INFO: epoch: 132
+21-05-25 10:17:29, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_132.pth
+21-05-25 10:17:29, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_132.pth
+21-05-25 10:17:29, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/132.png
+21-05-25 10:19:59, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 10:19:59, INFO: [-6.985607927799225, 0.8315922875060268, 13.569537364196778, 1.2104422882649466]
+21-05-25 10:20:43, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 10:20:43, INFO: [0.5197873716288804, 0.011089487153132512, 0.501314488863945, 0.5383032830178738, 0.03698879415392876]
+21-05-25 10:20:43, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 10:20:43, INFO: [0.5008088798278569, 0.011125247961237747, 0.482204001635313, 0.5193612185060978, 0.03715721687078476]
+21-05-25 10:21:19, INFO: fid_score
+21-05-25 10:21:19, INFO: [17.181047524611984]
+21-05-25 10:21:19, INFO: --------------------------------
+21-05-25 10:21:19, INFO: epoch: 133
+21-05-25 10:27:43, INFO: epoch: 134
+21-05-25 10:34:12, INFO: epoch: 135
+21-05-25 10:40:32, INFO: epoch: 136
+21-05-25 10:46:55, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_136.pth
+21-05-25 10:46:55, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_136.pth
+21-05-25 10:46:55, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/136.png
+21-05-25 10:49:26, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 10:49:26, INFO: [-6.781215065574646, 0.7726848773516737, 13.667035561370849, 1.118405271145559]
+21-05-25 10:50:10, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 10:50:10, INFO: [0.5040445011806489, 0.011430450514942007, 0.48522571421265603, 0.5232580964684487, 0.03803238225579262]
+21-05-25 10:50:10, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 10:50:10, INFO: [0.49104140675783153, 0.010942300270820073, 0.4730755230486393, 0.5095349695682526, 0.03645944651961327]
+21-05-25 10:50:46, INFO: fid_score
+21-05-25 10:50:46, INFO: [17.174552483575553]
+21-05-25 10:50:46, INFO: --------------------------------
+21-05-25 10:50:46, INFO: epoch: 137
+21-05-25 10:57:18, INFO: epoch: 138
+21-05-25 11:03:37, INFO: epoch: 139
+21-05-25 11:09:57, INFO: epoch: 140
+21-05-25 11:16:20, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_140.pth
+21-05-25 11:16:20, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_140.pth
+21-05-25 11:16:20, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/140.png
+21-05-25 11:18:50, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 11:18:50, INFO: [-6.530600539302826, 0.8303696797630734, 13.585369294548034, 1.2692755387617538]
+21-05-25 11:19:35, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 11:19:35, INFO: [0.4961595658487082, 0.011171420174394922, 0.47769183742403987, 0.51485137347579, 0.03715953605175018]
+21-05-25 11:19:35, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 11:19:35, INFO: [0.47706246778249745, 0.011140847977815161, 0.45865169813632967, 0.4957605920732021, 0.03710889393687248]
+21-05-25 11:20:11, INFO: fid_score
+21-05-25 11:20:11, INFO: [17.450105346401358]
+21-05-25 11:20:11, INFO: --------------------------------
+21-05-25 11:20:11, INFO: epoch: 141
+21-05-25 11:26:41, INFO: epoch: 142
+21-05-25 11:33:02, INFO: epoch: 143
+21-05-25 11:39:27, INFO: epoch: 144
+21-05-25 11:45:57, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_144.pth
+21-05-25 11:45:57, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_144.pth
+21-05-25 11:45:57, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/144.png
+21-05-25 11:48:28, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 11:48:28, INFO: [-6.711732086849213, 0.7910858623252698, 13.621427164840698, 1.1320562572306179]
+21-05-25 11:49:12, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 11:49:12, INFO: [0.5029334035885333, 0.011411402630357354, 0.4834483970463276, 0.5214878218531609, 0.03803942480683327]
+21-05-25 11:49:12, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 11:49:12, INFO: [0.4866026963835955, 0.011345258664190016, 0.4671971453487873, 0.5050911419868469, 0.03789399663805962]
+21-05-25 11:49:48, INFO: fid_score
+21-05-25 11:49:48, INFO: [16.615824884541638]
+21-05-25 11:49:48, INFO: --------------------------------
+21-05-25 11:49:48, INFO: epoch: 145
+21-05-25 11:56:08, INFO: epoch: 146
+21-05-25 12:02:28, INFO: epoch: 147
+21-05-25 12:08:47, INFO: epoch: 148
+21-05-25 12:15:07, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_148.pth
+21-05-25 12:15:07, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_148.pth
+21-05-25 12:15:07, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/148.png
+21-05-25 12:17:37, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 12:17:37, INFO: [-6.857567576503754, 0.6659747457116116, 13.379042488861083, 0.9422813339143833]
+21-05-25 12:18:21, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 12:18:21, INFO: [0.522206488646269, 0.011585636890833126, 0.5032242207407951, 0.5418383340418339, 0.03861411330103874]
+21-05-25 12:18:21, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 12:18:21, INFO: [0.4962763885003329, 0.011596899255367126, 0.47728887421488764, 0.5160870084285736, 0.03879813421368599]
+21-05-25 12:18:57, INFO: fid_score
+21-05-25 12:18:57, INFO: [17.307405715050578]
+21-05-25 12:18:57, INFO: --------------------------------
+21-05-25 13:54:33, INFO: epoch: 149
+21-05-25 14:01:23, INFO: epoch: 150
+21-05-25 14:08:13, INFO: epoch: 151
+21-05-25 14:15:02, INFO: epoch: 152
+21-05-25 14:21:50, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_152.pth
+21-05-25 14:21:50, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_152.pth
+21-05-25 14:21:50, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/152.png
+21-05-25 14:24:28, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 14:24:28, INFO: [-6.564771166563034, 0.8996686257840641, 13.688164727592468, 1.389595965509674]
+21-05-25 14:25:14, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 14:25:14, INFO: [0.4934205876725912, 0.01087693468027393, 0.47542334195971486, 0.5114953363895416, 0.03607199442982674]
+21-05-25 14:25:14, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 14:25:14, INFO: [0.4781841097390652, 0.010727320325381753, 0.46030539411902427, 0.49596680480837824, 0.03566141068935394]
+21-05-25 14:26:01, INFO: fid_score
+21-05-25 14:26:01, INFO: [16.59325558079655]
+21-05-25 14:26:01, INFO: --------------------------------
+21-05-25 14:26:01, INFO: epoch: 153
+21-05-25 14:32:53, INFO: epoch: 154
+21-05-25 14:39:43, INFO: epoch: 155
+21-05-25 14:46:33, INFO: epoch: 156
+21-05-25 14:53:24, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_156.pth
+21-05-25 14:53:24, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_156.pth
+21-05-25 14:53:24, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/156.png
+21-05-25 14:56:02, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 14:56:02, INFO: [-6.745387822532654, 0.6408957288380444, 13.612755867004395, 0.8868407088777529]
+21-05-25 14:56:48, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 14:56:48, INFO: [0.5042984973984956, 0.011184807011967548, 0.4857802527546883, 0.523126877295971, 0.03734662454128265]
+21-05-25 14:56:48, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 14:56:48, INFO: [0.4899078010052443, 0.01114545966058197, 0.4714466163575649, 0.5086487593710423, 0.03720214301347732]
+21-05-25 14:57:33, INFO: fid_score
+21-05-25 14:57:33, INFO: [16.93738027091979]
+21-05-25 14:57:33, INFO: --------------------------------
+21-05-25 14:57:33, INFO: epoch: 157
+21-05-25 15:04:28, INFO: epoch: 158
+21-05-25 15:11:23, INFO: epoch: 159
+21-05-25 15:18:19, INFO: epoch: 160
+21-05-25 15:25:15, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_160.pth
+21-05-25 15:25:15, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_160.pth
+21-05-25 15:25:15, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/160.png
+21-05-25 15:27:54, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 15:27:54, INFO: [-6.847590140199661, 0.9667415007799294, 13.22326288948059, 1.316685667389461]
+21-05-25 15:28:41, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 15:28:41, INFO: [0.5308145954489708, 0.011447885017689691, 0.5118258958935737, 0.5498303155779839, 0.038004419684410096]
+21-05-25 15:28:41, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 15:28:41, INFO: [0.4917618357688189, 0.011190690527628333, 0.47320855835080144, 0.5103643026828766, 0.03715574433207512]
+21-05-25 15:29:28, INFO: fid_score
+21-05-25 15:29:28, INFO: [15.954133946339311]
+21-05-25 15:29:28, INFO: --------------------------------
+21-05-25 15:29:28, INFO: epoch: 161
+21-05-25 15:36:24, INFO: epoch: 162
+21-05-25 15:43:21, INFO: epoch: 163
+21-05-25 15:50:18, INFO: epoch: 164
+21-05-25 15:57:09, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_164.pth
+21-05-25 15:57:09, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_164.pth
+21-05-25 15:57:09, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/164.png
+21-05-25 15:59:48, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 15:59:48, INFO: [-7.053390468406677, 0.8409415907628156, 13.732326610183716, 1.1707318466457755]
+21-05-25 16:00:35, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 16:00:35, INFO: [0.5146489856517316, 0.01145120318223874, 0.49557236937880517, 0.5336806723237038, 0.03810830294489861]
+21-05-25 16:00:35, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 16:00:35, INFO: [0.5030466726249456, 0.011679316081533091, 0.483679562664032, 0.5225567489564419, 0.038877186292409896]
+21-05-25 16:01:23, INFO: fid_score
+21-05-25 16:01:23, INFO: [15.766639183472108]
+21-05-25 16:01:23, INFO: --------------------------------
+21-05-25 16:01:23, INFO: epoch: 165
+21-05-25 16:08:19, INFO: epoch: 166
+21-05-25 16:15:19, INFO: epoch: 167
+21-05-25 16:22:18, INFO: epoch: 168
+21-05-25 16:29:14, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_168.pth
+21-05-25 16:29:14, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_168.pth
+21-05-25 16:29:14, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/168.png
+21-05-25 16:31:53, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 16:31:53, INFO: [-6.999635356807708, 0.852500196738285, 13.66578781337738, 1.145166017984202]
+21-05-25 16:32:39, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 16:32:39, INFO: [0.5151305207449197, 0.01101896796212725, 0.49688904148340224, 0.5336073151826859, 0.0367182736992836]
+21-05-25 16:32:39, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 16:32:39, INFO: [0.5008280850958825, 0.010915194460097536, 0.4827885681509972, 0.5191465893685818, 0.03635802121758461]
+21-05-25 16:33:28, INFO: fid_score
+21-05-25 16:33:28, INFO: [15.576567455841314]
+21-05-25 16:33:28, INFO: --------------------------------
+21-05-25 16:33:28, INFO: epoch: 169
+21-05-25 16:40:21, INFO: epoch: 170
+21-05-25 16:47:15, INFO: epoch: 171
+21-05-25 16:54:11, INFO: epoch: 172
+21-05-25 17:01:05, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_172.pth
+21-05-25 17:01:05, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_172.pth
+21-05-25 17:01:05, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/172.png
+21-05-25 17:03:44, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 17:03:44, INFO: [-6.672147243928909, 0.9628785340472561, 13.258920132255554, 1.3186418104367703]
+21-05-25 17:04:31, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 17:04:31, INFO: [0.5198500510567426, 0.011967669755482276, 0.4993029446542263, 0.5392859538137913, 0.03998300915956497]
+21-05-25 17:04:31, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 17:04:31, INFO: [0.48538758778035646, 0.01164040148922441, 0.46573341953158376, 0.5047546267271041, 0.0390212071955204]
+21-05-25 17:05:20, INFO: fid_score
+21-05-25 17:05:20, INFO: [15.227752390381568]
+21-05-25 17:05:20, INFO: --------------------------------
+21-05-25 17:05:20, INFO: epoch: 173
+21-05-25 17:12:12, INFO: epoch: 174
+21-05-25 17:19:01, INFO: epoch: 175
+21-05-25 17:25:53, INFO: epoch: 176
+21-05-25 17:32:49, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_176.pth
+21-05-25 17:32:49, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_176.pth
+21-05-25 17:32:49, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/176.png
+21-05-25 17:35:30, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-25 17:35:30, INFO: [-6.534824621200562, 0.5816779394773786, 13.484963412475587, 0.8629724279660175]
+21-05-25 17:36:17, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-25 17:36:17, INFO: [0.5002290230441093, 0.011389675742865547, 0.48101571489572525, 0.5190546208322048, 0.038038905936479565]
+21-05-25 17:36:17, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-25 17:36:17, INFO: [0.48014233619570734, 0.011305413101340483, 0.46120184527039526, 0.49899048700332643, 0.03778864173293114]
+21-05-25 17:37:06, INFO: fid_score
+21-05-25 17:37:06, INFO: [14.87338324207542]
+21-05-25 17:37:06, INFO: --------------------------------
+epoch: 177
+100% 938/938 [06:47<00:00,  2.30it/s]
+epoch: 178
+100% 938/938 [06:47<00:00,  2.30it/s]
+epoch: 179
+100% 938/938 [06:43<00:00,  2.32it/s]
+epoch: 180
+100% 938/938 [06:41<00:00,  2.33it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_180.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_180.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/180.png
+100% 5000/5000 [02:37<00:00, 31.70it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.816281263065338, 0.9630254788119184, 13.504924795150757, 1.3361627282725734]
+100% 5000/5000 [00:46<00:00, 107.91it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.5145973593103886, 0.010645361349856003, 0.49734257430434226, 0.5329310249269008, 0.035588450622558596]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.4908305460083484, 0.010556266943975825, 0.4736320462882519, 0.508915418946743, 0.03528337265849114]
+Downloading: "https://github.com/mseitzer/pytorch-fid/releases/download/fid_weights/pt_inception-2015-12-05-6726825d.pth" to /root/.cache/torch/hub/checkpoints/pt_inception-2015-12-05-6726825d.pth
+100% 91.2M/91.2M [00:00<00:00, 129MB/s]
+100% 313/313 [00:19<00:00, 16.12it/s]
+100% 313/313 [00:19<00:00, 16.38it/s]
+fid_score
+[16.182090633639945]
+--------------------------------
+epoch: 181
+100% 938/938 [06:47<00:00,  2.30it/s]
+epoch: 182
+100% 938/938 [06:45<00:00,  2.31it/s]
+epoch: 183
+100% 938/938 [06:44<00:00,  2.32it/s]
+epoch: 184
+100% 938/938 [06:43<00:00,  2.33it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_184.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_184.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/184.png
+100% 5000/5000 [02:36<00:00, 31.98it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.647691787815094, 0.7111891022998948, 13.487472660255433, 1.0132325819908838]
+100% 5000/5000 [00:45<00:00, 109.13it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.5059641611725092, 0.010812529180776003, 0.4880597494006157, 0.5241027262210846, 0.036042976820468905]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.4837364815282822, 0.010813132935864049, 0.4661358755767345, 0.5020584937751293, 0.035922618198394776]
+100% 313/313 [00:19<00:00, 16.04it/s]
+100% 313/313 [00:19<00:00, 16.37it/s]
+fid_score
+[17.024393784263026]
+--------------------------------
+epoch: 185
+100% 938/938 [06:43<00:00,  2.33it/s]
+epoch: 186
+100% 938/938 [06:43<00:00,  2.32it/s]
+epoch: 187
+100% 938/938 [06:43<00:00,  2.32it/s]
+epoch: 188
+100% 938/938 [06:43<00:00,  2.33it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_188.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_188.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/188.png
+100% 5000/5000 [02:36<00:00, 32.00it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.638923705482483, 0.8527019674777577, 13.755063381576537, 1.2507468184508737]
+100% 5000/5000 [00:45<00:00, 109.30it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.492938654204607, 0.011041118418576435, 0.4747853137075901, 0.5113533275663853, 0.03656801385879516]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.4828651408302784, 0.010882679324531021, 0.4649014790892601, 0.5010999429762364, 0.03619846388697624]
+100% 313/313 [00:19<00:00, 16.12it/s]
+100% 313/313 [00:19<00:00, 16.37it/s]
+fid_score
+[15.835474440470364]
+--------------------------------
+epoch: 189
+100% 938/938 [06:43<00:00,  2.32it/s]
+epoch: 190
+100% 938/938 [06:45<00:00,  2.31it/s]
+epoch: 191
+100% 938/938 [06:44<00:00,  2.32it/s]
+epoch: 192
+100% 938/938 [06:42<00:00,  2.33it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_192.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_192.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/192.png
+100% 5000/5000 [02:35<00:00, 32.15it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.625764719676972, 0.9111955813175349, 13.81779716835022, 1.299536267241999]
+100% 5000/5000 [00:45<00:00, 110.02it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.48938786048531535, 0.011215767160090909, 0.4707290159344673, 0.5082796232581138, 0.03755060732364655]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.48246250126361845, 0.011403484151819418, 0.4634398269236088, 0.5016875757038594, 0.03824774878025055]
+100% 313/313 [00:19<00:00, 16.12it/s]
+100% 313/313 [00:19<00:00, 16.36it/s]
+fid_score
+[15.103153456441134]
+--------------------------------
+epoch: 193
+100% 938/938 [06:44<00:00,  2.32it/s]
+epoch: 194
+100% 938/938 [06:44<00:00,  2.32it/s]
+epoch: 195
+100% 938/938 [06:41<00:00,  2.34it/s]
+epoch: 196
+100% 938/938 [06:47<00:00,  2.30it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_196.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_196.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/196.png
+100% 5000/5000 [02:37<00:00, 31.77it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.4953947902679445, 0.62766287848254, 13.521071357154845, 0.9170950493863153]
+100% 5000/5000 [00:45<00:00, 109.39it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.49654863046288483, 0.011921247907373722, 0.4753791855931282, 0.5152032876312733, 0.039824102038145064]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.4776437021881342, 0.011914815436124809, 0.4564867951869965, 0.4962602776646614, 0.03977348247766495]
+100% 313/313 [00:19<00:00, 16.15it/s]
+100% 313/313 [00:19<00:00, 16.38it/s]
+fid_score
+[14.393959689203598]
+--------------------------------
+epoch: 197
+100% 938/938 [06:41<00:00,  2.33it/s]
+epoch: 198
+100% 938/938 [06:42<00:00,  2.33it/s]
+epoch: 199
+100% 938/938 [06:40<00:00,  2.34it/s]
+epoch: 200
+100% 938/938 [06:44<00:00,  2.32it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_200.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_200.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/200.png
+100% 5000/5000 [02:38<00:00, 31.64it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.565405442810059, 0.7636001401940197, 13.749953287887573, 1.099841173107599]
+100% 5000/5000 [00:45<00:00, 109.46it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.4892073052537441, 0.010220844973784724, 0.4722706071078777, 0.506387089240551, 0.034116482132673265]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.47996894404828544, 0.010192873694616413, 0.46298663855195044, 0.4969825762987137, 0.03399593774676323]
+100% 313/313 [00:19<00:00, 16.07it/s]
+100% 313/313 [00:19<00:00, 16.36it/s]
+fid_score
+[14.388535328256012]
+--------------------------------
+epoch: 201
+100% 938/938 [06:47<00:00,  2.30it/s]
+epoch: 202
+100% 938/938 [06:45<00:00,  2.31it/s]
+epoch: 203
+100% 938/938 [06:45<00:00,  2.32it/s]
+epoch: 204
+100% 938/938 [06:44<00:00,  2.32it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_204.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_204.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/204.png
+100% 5000/5000 [02:36<00:00, 32.03it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.594685433673859, 0.6955662651893321, 13.680205116462707, 0.9843837724978731]
+100% 5000/5000 [00:45<00:00, 109.44it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.49373097062945365, 0.01069974167997226, 0.4759853364169598, 0.5116414381086827, 0.03565610169172287]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.481448611240983, 0.010852762859928804, 0.46343476954698565, 0.4996524497151375, 0.036217680168151856]
+100% 313/313 [00:19<00:00, 16.08it/s]
+100% 313/313 [00:19<00:00, 16.37it/s]
+fid_score
+[15.28874700198898]
+--------------------------------
+epoch: 205
+100% 938/938 [06:42<00:00,  2.33it/s]
+epoch: 206
+100% 938/938 [06:44<00:00,  2.32it/s]
+epoch: 207
+100% 938/938 [06:42<00:00,  2.33it/s]
+epoch: 208
+100% 938/938 [06:47<00:00,  2.30it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_208.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_208.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/208.png
+100% 5000/5000 [02:39<00:00, 31.42it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.599737279319763, 0.7622801300497665, 13.697058326530456, 1.1271157830230134]
+100% 5000/5000 [00:45<00:00, 108.99it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.4936489158004522, 0.010144505900910558, 0.47666430855989456, 0.5104838252365589, 0.03381951667666435]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.48225857461452487, 0.01014541669231312, 0.46537173377275465, 0.49922189691066743, 0.03385016313791275]
+100% 313/313 [00:19<00:00, 16.17it/s]
+100% 313/313 [00:19<00:00, 16.32it/s]
+fid_score
+[14.00165407683727]
+--------------------------------
+epoch: 209
+100% 938/938 [07:01<00:00,  2.23it/s]
+epoch: 210
+100% 938/938 [07:06<00:00,  2.20it/s]
+epoch: 211
+100% 938/938 [07:05<00:00,  2.20it/s]
+epoch: 212
+100% 938/938 [06:49<00:00,  2.29it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_212.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_212.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/212.png
+100% 5000/5000 [02:37<00:00, 31.84it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.986742765712738, 0.6919778384273708, 13.737000003051758, 0.9702653508778625]
+100% 5000/5000 [00:46<00:00, 108.14it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.5104248504072427, 0.010812965185263508, 0.4920704064369202, 0.5281678656041622, 0.03609745916724205]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.5015524834102392, 0.01080898303975024, 0.4832467575848103, 0.5192236179471016, 0.035976860362291335]
+100% 313/313 [00:19<00:00, 16.11it/s]
+100% 313/313 [00:19<00:00, 16.32it/s]
+fid_score
+[14.987044125196547]
+--------------------------------
+epoch: 213
+100% 938/938 [06:53<00:00,  2.27it/s]
+epoch: 214
+100% 938/938 [06:52<00:00,  2.27it/s]
+epoch: 215
+100% 938/938 [06:51<00:00,  2.28it/s]
+epoch: 216
+100% 938/938 [06:48<00:00,  2.30it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_216.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_216.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/216.png
+100% 5000/5000 [02:35<00:00, 32.07it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.9426725075721745, 0.8602688808576304, 13.823941481399537, 1.200144526493135]
+100% 5000/5000 [00:45<00:00, 109.38it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.504345327798128, 0.010799279731865747, 0.48673860976696015, 0.5227967984437942, 0.03605818867683411]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.498611903796196, 0.010725787878913593, 0.48088738484978677, 0.5167670221447944, 0.035879637295007705]
+100% 313/313 [00:19<00:00, 16.10it/s]
+100% 313/313 [00:19<00:00, 16.39it/s]
+fid_score
+[13.218927039584202]
+--------------------------------
+epoch: 217
+100% 938/938 [06:43<00:00,  2.33it/s]
+epoch: 218
+100% 938/938 [06:40<00:00,  2.34it/s]
+epoch: 219
+100% 938/938 [06:40<00:00,  2.34it/s]
+epoch: 220
+100% 938/938 [06:40<00:00,  2.34it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_220.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_220.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/220.png
+100% 5000/5000 [02:35<00:00, 32.18it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.596022925949097, 0.8014623840686205, 13.801584044456481, 1.1400744806291934]
+100% 5000/5000 [00:45<00:00, 110.67it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.4882034528207779, 0.010711979765755516, 0.4700561397433281, 0.5059470621645451, 0.03589092242121696]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.4814535353058576, 0.010643361386256338, 0.4633184766352177, 0.49893058970570564, 0.03561211307048798]
+100% 313/313 [00:19<00:00, 16.12it/s]
+100% 313/313 [00:19<00:00, 16.39it/s]
+fid_score
+[12.93387547475237]
+--------------------------------
+epoch: 221
+100% 938/938 [06:40<00:00,  2.34it/s]
+epoch: 222
+100% 938/938 [06:42<00:00,  2.33it/s]
+epoch: 223
+100% 938/938 [06:41<00:00,  2.34it/s]
+epoch: 224
+100% 938/938 [06:40<00:00,  2.34it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_224.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_224.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/224.png
+100% 5000/5000 [02:35<00:00, 32.21it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.966923619937897, 0.8176586039224161, 13.588152552413941, 1.111942935473003]
+100% 5000/5000 [00:45<00:00, 109.75it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.5172922923988105, 0.009991387496878184, 0.500471565425396, 0.5337662917077541, 0.03329472628235817]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.4994939177650213, 0.009811877405914157, 0.4829413896083832, 0.5156811067938805, 0.032739717185497286]
+100% 313/313 [00:19<00:00, 16.14it/s]
+100% 313/313 [00:19<00:00, 16.36it/s]
+fid_score
+[13.046062991338857]
+--------------------------------
+epoch: 225
+100% 938/938 [06:43<00:00,  2.32it/s]
+epoch: 226
+100% 938/938 [06:44<00:00,  2.32it/s]
+epoch: 227
+100% 938/938 [06:44<00:00,  2.32it/s]
+epoch: 228
+100% 938/938 [06:41<00:00,  2.34it/s]
+saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_228.pth
+saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_228.pth
+saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/228.png
+100% 5000/5000 [02:35<00:00, 32.09it/s]
+lossg_mean lossg_std lossd_mean lossd_std
+[-6.854156232929229, 0.9833007959215313, 13.503175905799866, 1.3751099881156712]
+100% 5000/5000 [00:46<00:00, 107.14it/s]
+dx_mean dx_std dx_min dx_max dx_max_min
+[0.5168150152420998, 0.01014187373195045, 0.49985241824388504, 0.533593630361557, 0.03374121211767197]
+dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+[0.49121653848052027, 0.01014635873491324, 0.47438746188282965, 0.5081724510669708, 0.03378498918414116]
+100% 313/313 [00:19<00:00, 16.23it/s]
+100% 313/313 [00:19<00:00, 16.34it/s]
+fid_score
+[15.827675765561054]
+--------------------------------
+21-05-26 09:41:10, INFO: epoch: 229
+21-05-26 09:47:51, INFO: epoch: 230
+21-05-26 09:54:30, INFO: epoch: 231
+21-05-26 10:01:09, INFO: epoch: 232
+21-05-26 10:07:45, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_232.pth
+21-05-26 10:07:45, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_232.pth
+21-05-26 10:07:45, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/232.png
+21-05-26 10:10:23, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 10:10:23, INFO: [-6.745964616584778, 0.884067399127308, 13.726838153266907, 1.2705312551770203]
+21-05-26 10:11:09, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 10:11:09, INFO: [0.49964598991215237, 0.01081955426022086, 0.4815449299097061, 0.5175842918932438, 0.036039361983537674]
+21-05-26 10:11:09, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 10:11:09, INFO: [0.4887852702355385, 0.010603964514318867, 0.4710831641256809, 0.5064502401292325, 0.03536707600355148]
+21-05-26 10:11:59, INFO: fid_score
+21-05-26 10:11:59, INFO: [14.039422331683397]
+21-05-26 10:11:59, INFO: --------------------------------
+21-05-26 10:11:59, INFO: epoch: 233
+21-05-26 10:18:44, INFO: epoch: 234
+21-05-26 10:25:29, INFO: epoch: 235
+21-05-26 10:32:09, INFO: epoch: 236
+21-05-26 10:38:48, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_236.pth
+21-05-26 10:38:48, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_236.pth
+21-05-26 10:38:48, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/236.png
+21-05-26 10:41:23, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 10:41:23, INFO: [-6.789647936725617, 0.7739476126522493, 13.46241962890625, 1.06552502764113]
+21-05-26 10:42:09, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 10:42:09, INFO: [0.5145389157348871, 0.010200881181631451, 0.49731881204247474, 0.5312494917452335, 0.03393067970275879]
+21-05-26 10:42:09, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 10:42:09, INFO: [0.49208953846514225, 0.010305384620391923, 0.47484327895641326, 0.5091007256984711, 0.0342574467420578]
+21-05-26 10:42:57, INFO: fid_score
+21-05-26 10:42:57, INFO: [13.75618120192263]
+21-05-26 10:42:57, INFO: --------------------------------
+21-05-26 10:42:57, INFO: epoch: 237
+21-05-26 10:49:36, INFO: epoch: 238
+21-05-26 10:56:14, INFO: epoch: 239
+21-05-26 11:02:53, INFO: epoch: 240
+21-05-26 11:09:30, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_240.pth
+21-05-26 11:09:30, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_240.pth
+21-05-26 11:09:30, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/240.png
+21-05-26 11:12:04, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 11:12:04, INFO: [-6.9554248999595645, 0.7524661047820412, 13.724838969612122, 1.0790051031639651]
+21-05-26 11:12:50, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 11:12:50, INFO: [0.5097929686897993, 0.010503158835864794, 0.4921275049269199, 0.527117394143343, 0.034989889216423035]
+21-05-26 11:12:50, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 11:12:50, INFO: [0.49966911327064034, 0.01047218396664237, 0.48201157674193384, 0.5169596662819386, 0.03494808954000473]
+21-05-26 11:13:39, INFO: fid_score
+21-05-26 11:13:39, INFO: [13.476084711721256]
+21-05-26 11:13:39, INFO: --------------------------------
+21-05-26 11:13:39, INFO: epoch: 241
+21-05-26 11:20:18, INFO: epoch: 242
+21-05-26 11:26:55, INFO: epoch: 243
+21-05-26 11:33:32, INFO: epoch: 244
+21-05-26 11:40:10, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_244.pth
+21-05-26 11:40:10, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_244.pth
+21-05-26 11:40:10, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/244.png
+21-05-26 11:42:45, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 11:42:45, INFO: [-6.651752720737457, 0.5827091909788784, 13.700642364311218, 0.8923372078430202]
+21-05-26 11:43:31, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 11:43:31, INFO: [0.495410202280879, 0.01095184086969993, 0.47721795659065247, 0.5135927749454975, 0.036374818354845045]
+21-05-26 11:43:31, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 11:43:31, INFO: [0.4845806919169426, 0.010874115698057294, 0.46647518283128736, 0.5025679221868515, 0.03609273935556412]
+21-05-26 11:44:20, INFO: fid_score
+21-05-26 11:44:20, INFO: [12.789051582648142]
+21-05-26 11:44:20, INFO: --------------------------------
+21-05-26 11:44:20, INFO: epoch: 245
+21-05-26 11:50:59, INFO: epoch: 246
+21-05-26 11:57:41, INFO: epoch: 247
+21-05-26 12:04:29, INFO: epoch: 248
+21-05-26 12:11:11, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_248.pth
+21-05-26 12:11:11, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_248.pth
+21-05-26 12:11:11, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/248.png
+21-05-26 12:13:46, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 12:13:46, INFO: [-6.681935442638397, 0.5862782646113825, 13.658114839363098, 0.849337217950354]
+21-05-26 12:14:32, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 12:14:32, INFO: [0.49880199070096015, 0.009996203941030174, 0.4823644891679287, 0.5155353037059307, 0.03317081453800201]
+21-05-26 12:14:32, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 12:14:32, INFO: [0.4855275426256656, 0.009795014889686517, 0.46934135618805883, 0.501858576142788, 0.03251721995472908]
+21-05-26 12:15:21, INFO: fid_score
+21-05-26 12:15:21, INFO: [13.394973713662097]
+21-05-26 12:15:21, INFO: --------------------------------
+21-05-26 12:15:21, INFO: epoch: 249
+21-05-26 12:22:04, INFO: epoch: 250
+21-05-26 12:28:48, INFO: epoch: 251
+21-05-26 12:35:31, INFO: epoch: 252
+21-05-26 12:42:14, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_252.pth
+21-05-26 12:42:14, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_252.pth
+21-05-26 12:42:14, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/252.png
+21-05-26 12:44:50, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 12:44:50, INFO: [-6.82090717163086, 0.6007832387788821, 13.634307937431336, 0.8655296627005404]
+21-05-26 12:45:36, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 12:45:36, INFO: [0.507003757776022, 0.010452249008347365, 0.4897261003017426, 0.5246789959669114, 0.034952895665168765]
+21-05-26 12:45:36, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 12:45:36, INFO: [0.49404938473522664, 0.010383596487524906, 0.47694762334227564, 0.5116578685820102, 0.03471024523973465]
+21-05-26 12:46:26, INFO: fid_score
+21-05-26 12:46:26, INFO: [13.235668574254305]
+21-05-26 12:46:26, INFO: --------------------------------
+21-05-26 12:46:26, INFO: epoch: 253
+21-05-26 12:53:07, INFO: epoch: 254
+21-05-26 12:59:47, INFO: epoch: 255
+21-05-26 13:06:27, INFO: epoch: 256
+21-05-26 13:13:08, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_256.pth
+21-05-26 13:13:08, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_256.pth
+21-05-26 13:13:08, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/256.png
+21-05-26 13:15:46, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 13:15:46, INFO: [-6.9889178476333615, 0.9577340137557361, 13.505664876937866, 1.2929291736898965]
+21-05-26 13:16:32, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 13:16:32, INFO: [0.5231203719234467, 0.010723661889697063, 0.5047761343836784, 0.5405242030262947, 0.035748068642616274]
+21-05-26 13:16:32, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 13:16:32, INFO: [0.5002878203052282, 0.010356407444186588, 0.4826318678855896, 0.5171281228542328, 0.03449625496864319]
+21-05-26 13:17:21, INFO: fid_score
+21-05-26 13:17:21, INFO: [13.104852335318753]
+21-05-26 13:17:21, INFO: --------------------------------
+21-05-26 13:17:21, INFO: epoch: 257
+21-05-26 13:24:02, INFO: epoch: 258
+21-05-26 13:30:43, INFO: epoch: 259
+21-05-26 13:37:23, INFO: epoch: 260
+21-05-26 13:44:02, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_260.pth
+21-05-26 13:44:02, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_260.pth
+21-05-26 13:44:02, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/260.png
+21-05-26 13:46:37, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 13:46:37, INFO: [-6.737136284828186, 0.6206312699823515, 13.675763508224488, 0.8669685761429587]
+21-05-26 13:47:23, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 13:47:23, INFO: [0.5006789021593332, 0.010270955631443337, 0.4838250517189503, 0.5179737596690654, 0.0341487079501152]
+21-05-26 13:47:23, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 13:47:23, INFO: [0.4893661713773012, 0.010203956874374257, 0.4725335583567619, 0.5065689848005772, 0.03403542644381523]
+21-05-26 13:48:12, INFO: fid_score
+21-05-26 13:48:12, INFO: [13.610231781889468]
+21-05-26 13:48:12, INFO: --------------------------------
+21-05-26 13:48:12, INFO: epoch: 261
+21-05-26 13:54:56, INFO: epoch: 262
+21-05-26 14:01:43, INFO: epoch: 263
+21-05-26 14:08:25, INFO: epoch: 264
+21-05-26 14:15:08, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_264.pth
+21-05-26 14:15:08, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_264.pth
+21-05-26 14:15:08, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/264.png
+21-05-26 14:17:43, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 14:17:43, INFO: [-6.782381202316285, 0.5794556568297556, 13.755988699150086, 0.8326169853695319]
+21-05-26 14:18:29, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 14:18:29, INFO: [0.49890361251056203, 0.009850893631132254, 0.48259948247671125, 0.5155030607044697, 0.032903578227758405]
+21-05-26 14:18:29, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 14:18:29, INFO: [0.4917809204214811, 0.00986225690596711, 0.47528520508408545, 0.5082923527479172, 0.03300714766383171]
+21-05-26 14:19:18, INFO: fid_score
+21-05-26 14:19:18, INFO: [13.504041214446147]
+21-05-26 14:19:18, INFO: --------------------------------
+21-05-26 14:19:18, INFO: epoch: 265
+21-05-26 14:25:56, INFO: epoch: 266
+21-05-26 14:32:33, INFO: epoch: 267
+21-05-26 14:39:11, INFO: epoch: 268
+21-05-26 14:45:48, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_268.pth
+21-05-26 14:45:48, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_268.pth
+21-05-26 14:45:48, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/268.png
+21-05-26 14:48:22, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 14:48:22, INFO: [-6.841963966369629, 0.6752645953913348, 13.81838690814972, 0.9576329931224731]
+21-05-26 14:49:07, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 14:49:07, INFO: [0.49897088748812674, 0.010070588393994434, 0.4821880933582783, 0.5157635447561741, 0.03357545139789581]
+21-05-26 14:49:07, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 14:49:07, INFO: [0.49473176068723207, 0.009967231085844583, 0.4782037868857384, 0.5114735223531723, 0.03326973546743393]
+21-05-26 14:49:54, INFO: fid_score
+21-05-26 14:49:54, INFO: [13.38036675357094]
+21-05-26 14:49:54, INFO: --------------------------------
+21-05-26 14:49:54, INFO: epoch: 269
+21-05-26 14:56:32, INFO: epoch: 270
+21-05-26 15:03:10, INFO: epoch: 271
+21-05-26 15:09:47, INFO: epoch: 272
+21-05-26 15:16:25, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_272.pth
+21-05-26 15:16:25, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_272.pth
+21-05-26 15:16:25, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/272.png
+21-05-26 15:19:00, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-26 15:19:00, INFO: [-6.762213933181763, 0.7482859607110599, 13.786459349250794, 1.0666284463913172]
+21-05-26 15:19:45, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-26 15:19:45, INFO: [0.4969959380787612, 0.009903457909693799, 0.4805926234304905, 0.5135468912005424, 0.032954267770051955]
+21-05-26 15:19:45, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-26 15:19:45, INFO: [0.4894924224793911, 0.009971046098679645, 0.4728732120335102, 0.5062022960841656, 0.033329084050655364]
+21-05-26 15:20:34, INFO: fid_score
+21-05-26 15:20:34, INFO: [11.955701115201464]
+21-05-26 15:20:34, INFO: --------------------------------
+21-05-27 01:49:09, INFO: epoch: 273
+21-05-27 01:55:57, INFO: epoch: 274
+21-05-27 02:02:46, INFO: epoch: 275
+21-05-27 02:09:35, INFO: epoch: 276
+21-05-27 02:16:23, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_276.pth
+21-05-27 02:16:23, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_276.pth
+21-05-27 02:16:23, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/276.png
+21-05-27 02:19:02, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 02:19:02, INFO: [-6.736192173099518, 0.8029693515363278, 13.572273090171814, 1.1258006824839062]
+21-05-27 02:19:48, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 02:19:48, INFO: [0.5064199770575762, 0.010339668832357074, 0.4893613079249859, 0.5240308411538601, 0.03466953322887421]
+21-05-27 02:19:48, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 02:19:48, INFO: [0.4876796158528328, 0.010207493477081102, 0.4710476163804531, 0.5050922998428344, 0.03404468346238136]
+21-05-27 02:20:36, INFO: fid_score
+21-05-27 02:20:36, INFO: [12.474440337634888]
+21-05-27 02:20:36, INFO: --------------------------------
+21-05-27 02:20:36, INFO: epoch: 277
+21-05-27 02:27:28, INFO: epoch: 278
+21-05-27 02:34:19, INFO: epoch: 279
+21-05-27 02:41:17, INFO: epoch: 280
+21-05-27 02:48:10, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_280.pth
+21-05-27 02:48:10, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_280.pth
+21-05-27 02:48:10, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/280.png
+21-05-27 02:50:49, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 02:50:49, INFO: [-6.854233867168427, 0.5351655508039208, 13.711392944335937, 0.7663262856343372]
+21-05-27 02:51:36, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 02:51:36, INFO: [0.504654674512744, 0.009927957901460312, 0.48797156628370286, 0.5210788128972054, 0.033107246613502506]
+21-05-27 02:51:36, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 02:51:36, INFO: [0.49613007066428655, 0.009960915839014872, 0.47934679815769193, 0.5125322257339955, 0.03318542757630348]
+21-05-27 02:52:22, INFO: fid_score
+21-05-27 02:52:22, INFO: [12.307203723757311]
+21-05-27 02:52:22, INFO: --------------------------------
+21-05-27 02:52:22, INFO: epoch: 281
+21-05-27 02:59:12, INFO: epoch: 282
+21-05-27 03:06:02, INFO: epoch: 283
+21-05-27 03:12:55, INFO: epoch: 284
+21-05-27 03:19:50, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_284.pth
+21-05-27 03:19:50, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_284.pth
+21-05-27 03:19:50, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/284.png
+21-05-27 03:22:31, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 03:22:31, INFO: [-6.824677668571472, 0.5704497645631467, 13.708815031433106, 0.7899687532454963]
+21-05-27 03:23:18, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 03:23:18, INFO: [0.5032209835886955, 0.010151999478952841, 0.486255291056633, 0.5200562165141106, 0.03380092545747757]
+21-05-27 03:23:18, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 03:23:18, INFO: [0.4942153458547592, 0.010022948991877126, 0.4774450243890285, 0.5108469948291778, 0.03340197044014931]
+21-05-27 03:24:04, INFO: fid_score
+21-05-27 03:24:04, INFO: [12.937142804455277]
+21-05-27 03:24:04, INFO: --------------------------------
+21-05-27 03:24:04, INFO: epoch: 285
+21-05-27 03:31:01, INFO: epoch: 286
+21-05-27 03:37:55, INFO: epoch: 287
+21-05-27 03:44:48, INFO: epoch: 288
+21-05-27 03:51:39, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_288.pth
+21-05-27 03:51:39, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_288.pth
+21-05-27 03:51:39, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/288.png
+21-05-27 03:54:17, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 03:54:17, INFO: [-6.7035030088424685, 0.7224918083296392, 13.752958396720887, 1.0532668849176845]
+21-05-27 03:55:04, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 03:55:04, INFO: [0.4957417566746473, 0.01044738303305087, 0.4782549995779991, 0.5131330367982387, 0.03487803722023964]
+21-05-27 03:55:04, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 03:55:04, INFO: [0.4871612193095684, 0.010300717620060249, 0.46994876263141633, 0.5041497337698937, 0.034200971138477324]
+21-05-27 03:55:50, INFO: fid_score
+21-05-27 03:55:50, INFO: [11.840604197408794]
+21-05-27 03:55:50, INFO: --------------------------------
+21-05-27 03:55:50, INFO: epoch: 289
+21-05-27 04:02:41, INFO: epoch: 290
+21-05-27 04:09:34, INFO: epoch: 291
+21-05-27 04:16:27, INFO: epoch: 292
+21-05-27 04:23:27, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_292.pth
+21-05-27 04:23:27, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_292.pth
+21-05-27 04:23:27, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/292.png
+21-05-27 04:26:08, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 04:26:08, INFO: [-6.638654835510254, 0.6609476220251097, 13.49692871875763, 0.9416788841796653]
+21-05-27 04:26:56, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 04:26:56, INFO: [0.5049386907511949, 0.010127199038703898, 0.48832723729610444, 0.5221727304279804, 0.033845493131875994]
+21-05-27 04:26:56, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 04:26:56, INFO: [0.4840326290410758, 0.010074471019849528, 0.46780128356218337, 0.501458998644352, 0.03365771508216858]
+21-05-27 04:27:42, INFO: fid_score
+21-05-27 04:27:42, INFO: [13.456419650721898]
+21-05-27 04:27:42, INFO: --------------------------------
+21-05-27 04:27:42, INFO: epoch: 293
+21-05-27 04:34:36, INFO: epoch: 294
+21-05-27 04:41:32, INFO: epoch: 295
+21-05-27 04:48:25, INFO: epoch: 296
+21-05-27 04:55:17, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_296.pth
+21-05-27 04:55:17, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_296.pth
+21-05-27 04:55:17, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/296.png
+21-05-27 04:57:55, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 04:57:55, INFO: [-6.839521397876739, 0.7892993377260344, 13.701166192436219, 1.0905030437678813]
+21-05-27 04:58:42, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 04:58:42, INFO: [0.5050611011993886, 0.010252380152519745, 0.4881972741246223, 0.5222472523391247, 0.034049978214502334]
+21-05-27 04:58:42, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 04:58:42, INFO: [0.4940757936495542, 0.01026520884203192, 0.4770552933871746, 0.5112520931303501, 0.03419679974317551]
+21-05-27 04:59:28, INFO: fid_score
+21-05-27 04:59:28, INFO: [13.42827442499268]
+21-05-27 04:59:28, INFO: --------------------------------
+21-05-27 04:59:28, INFO: epoch: 297
+21-05-27 05:06:19, INFO: epoch: 298
+21-05-27 05:13:13, INFO: epoch: 299
+21-05-27 05:20:05, INFO: epoch: 300
+21-05-27 05:26:57, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_300.pth
+21-05-27 05:26:57, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_300.pth
+21-05-27 05:26:58, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/300.png
+21-05-27 05:29:37, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 05:29:37, INFO: [-6.94870419254303, 0.5166725752466529, 13.708468712234497, 0.716085843346751]
+21-05-27 05:30:24, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 05:30:24, INFO: [0.5093630836474896, 0.009773244647204186, 0.49317792981863023, 0.525768402504921, 0.03259047268629074]
+21-05-27 05:30:24, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 05:30:24, INFO: [0.49976345601856703, 0.009725324378426258, 0.48365723821520806, 0.5160503670990467, 0.032393128883838655]
+21-05-27 05:31:11, INFO: fid_score
+21-05-27 05:31:11, INFO: [12.256628017230753]
+21-05-27 05:31:11, INFO: --------------------------------
+21-05-27 05:31:11, INFO: epoch: 301
+21-05-27 05:38:07, INFO: epoch: 302
+21-05-27 05:45:04, INFO: epoch: 303
+21-05-27 05:52:01, INFO: epoch: 304
+21-05-27 05:58:59, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_304.pth
+21-05-27 05:58:59, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_304.pth
+21-05-27 05:58:59, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/304.png
+21-05-27 06:01:40, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 06:01:40, INFO: [-6.565946479701996, 0.5768576701306868, 13.812150969696045, 0.8625675579734412]
+21-05-27 06:02:27, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 06:02:27, INFO: [0.48562999753117564, 0.009675442846918457, 0.4693314235568047, 0.5015885354876518, 0.03225711193084717]
+21-05-27 06:02:27, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 06:02:27, INFO: [0.47911313577592374, 0.009696629854615446, 0.4628206454753876, 0.49512012189030646, 0.0322994764149189]
+21-05-27 06:03:13, INFO: fid_score
+21-05-27 06:03:13, INFO: [12.888458500842319]
+21-05-27 06:03:13, INFO: --------------------------------
+21-05-27 06:03:13, INFO: epoch: 305
+21-05-27 06:10:15, INFO: epoch: 306
+21-05-27 06:17:09, INFO: epoch: 307
+21-05-27 06:24:02, INFO: epoch: 308
+21-05-27 06:30:55, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_308.pth
+21-05-27 06:30:55, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_308.pth
+21-05-27 06:30:55, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/308.png
+21-05-27 06:33:34, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 06:33:34, INFO: [-6.7269159255027775, 0.6084491910055698, 13.596045378684998, 0.8599922191739142]
+21-05-27 06:34:21, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 06:34:21, INFO: [0.5041633736735582, 0.010650730310947445, 0.48605573303103444, 0.5213991000950337, 0.035343367063999175]
+21-05-27 06:34:21, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 06:34:21, INFO: [0.48886226077437406, 0.010871918088430525, 0.4704296870410442, 0.5064600603103637, 0.036030373269319536]
+21-05-27 06:35:07, INFO: fid_score
+21-05-27 06:35:07, INFO: [12.84417615082387]
+21-05-27 06:35:07, INFO: --------------------------------
+21-05-27 08:33:16, INFO: epoch: 309
+21-05-27 08:39:58, INFO: epoch: 310
+21-05-27 08:46:36, INFO: epoch: 311
+21-05-27 08:53:12, INFO: epoch: 312
+21-05-27 08:59:48, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_312.pth
+21-05-27 08:59:48, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_312.pth
+21-05-27 08:59:48, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/312.png
+21-05-27 09:02:23, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 09:02:23, INFO: [-6.7875848795890805, 0.5204887624386151, 13.776967308807373, 0.7635469794382077]
+21-05-27 09:03:08, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 09:03:08, INFO: [0.4980001076883078, 0.009431385849981723, 0.4823938732743263, 0.5138298395335674, 0.031435966259241103]
+21-05-27 09:03:08, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 09:03:08, INFO: [0.49170520422637465, 0.00940569012316388, 0.4761527252137661, 0.5074953591108322, 0.03134263389706612]
+21-05-27 09:03:58, INFO: fid_score
+21-05-27 09:03:58, INFO: [12.95868008332505]
+21-05-27 09:03:58, INFO: --------------------------------
+21-05-27 09:03:58, INFO: epoch: 313
+21-05-27 09:10:35, INFO: epoch: 314
+21-05-27 09:17:13, INFO: epoch: 315
+21-05-27 09:23:50, INFO: epoch: 316
+21-05-27 09:30:28, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_316.pth
+21-05-27 09:30:28, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_316.pth
+21-05-27 09:30:28, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/316.png
+21-05-27 09:33:02, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 09:33:02, INFO: [-6.790891614246369, 0.6411734352496484, 13.673092942428589, 0.8987702080345096]
+21-05-27 09:33:48, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 09:33:48, INFO: [0.5035668944877387, 0.009931904150440611, 0.4869118439733982, 0.5201052412986755, 0.033193397325277325]
+21-05-27 09:33:48, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 09:33:48, INFO: [0.49206498151123523, 0.010007515888483398, 0.47528144775033, 0.5087065364360809, 0.03342508868575096]
+21-05-27 09:34:38, INFO: fid_score
+21-05-27 09:34:38, INFO: [13.940848622624884]
+21-05-27 09:34:38, INFO: --------------------------------
+21-05-27 09:34:38, INFO: epoch: 317
+21-05-27 09:41:28, INFO: epoch: 318
+21-05-27 09:48:18, INFO: epoch: 319
+21-05-27 09:55:04, INFO: epoch: 320
+21-05-27 10:01:46, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_320.pth
+21-05-27 10:01:46, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_320.pth
+21-05-27 10:01:46, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/320.png
+21-05-27 10:04:21, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 10:04:21, INFO: [-6.675853451061249, 0.5549846488618619, 13.7694005361557, 0.790491265631536]
+21-05-27 10:05:07, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 10:05:07, INFO: [0.4928590702795982, 0.009495675184616983, 0.47709002251029015, 0.5087214190840721, 0.031631396573781966]
+21-05-27 10:05:07, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 10:05:07, INFO: [0.4866392475146055, 0.009560529395715264, 0.4707103860139847, 0.5024890590786933, 0.03177867306470871]
+21-05-27 10:05:57, INFO: fid_score
+21-05-27 10:05:57, INFO: [12.698237061922725]
+21-05-27 10:05:57, INFO: --------------------------------
+21-05-27 10:05:57, INFO: epoch: 321
+21-05-27 10:12:39, INFO: epoch: 322
+21-05-27 10:19:21, INFO: epoch: 323
+21-05-27 10:26:07, INFO: epoch: 324
+21-05-27 10:32:54, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_324.pth
+21-05-27 10:32:54, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_324.pth
+21-05-27 10:32:54, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/324.png
+21-05-27 10:35:32, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 10:35:32, INFO: [-7.038740076541901, 0.764457136286203, 13.792685960388184, 1.0783424394801415]
+21-05-27 10:36:19, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 10:36:19, INFO: [0.5105312716460229, 0.011029312384798545, 0.49191816377043723, 0.5285410246372223, 0.03662286086678505]
+21-05-27 10:36:19, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 10:36:19, INFO: [0.5036914008635284, 0.011094128444067207, 0.48500269867777823, 0.5217803399026394, 0.03677764122486114]
+21-05-27 10:37:07, INFO: fid_score
+21-05-27 10:37:07, INFO: [13.742010494958521]
+21-05-27 10:37:07, INFO: --------------------------------
+21-05-27 10:37:07, INFO: epoch: 325
+21-05-27 10:43:52, INFO: epoch: 326
+21-05-27 10:50:37, INFO: epoch: 327
+21-05-27 10:57:28, INFO: epoch: 328
+21-05-27 11:04:11, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_328.pth
+21-05-27 11:04:11, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_328.pth
+21-05-27 11:04:11, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/328.png
+21-05-27 11:06:48, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 11:06:48, INFO: [-7.020975395965576, 0.6017283351125167, 13.663643156814576, 0.8334902016228929]
+21-05-27 11:07:35, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 11:07:35, INFO: [0.5156005059331655, 0.00992307216400586, 0.4991846010923386, 0.532261808347702, 0.033077207255363464]
+21-05-27 11:07:35, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 11:07:35, INFO: [0.5026260086798667, 0.009918573375137962, 0.4861202766954899, 0.5191921789586544, 0.03307190226316452]
+21-05-27 11:08:25, INFO: fid_score
+21-05-27 11:08:25, INFO: [11.512239619037643]
+21-05-27 11:08:25, INFO: --------------------------------
+21-05-27 11:08:25, INFO: epoch: 329
+21-05-27 11:15:08, INFO: epoch: 330
+21-05-27 11:21:53, INFO: epoch: 331
+21-05-27 11:28:36, INFO: epoch: 332
+21-05-27 11:35:20, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_332.pth
+21-05-27 11:35:20, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_332.pth
+21-05-27 11:35:20, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/332.png
+21-05-27 11:37:57, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 11:37:57, INFO: [-7.087448462772369, 0.7421921961262271, 13.614166708946229, 0.9848636475767883]
+21-05-27 11:38:43, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 11:38:43, INFO: [0.521832090278864, 0.010272477907125382, 0.5046502220451832, 0.538926103913784, 0.034275881868600845]
+21-05-27 11:38:43, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 11:38:43, INFO: [0.5064975398701429, 0.010280055626994264, 0.4893352750241756, 0.523605610024929, 0.0342703350007534]
+21-05-27 11:39:31, INFO: fid_score
+21-05-27 11:39:31, INFO: [12.467022240045651]
+21-05-27 11:39:31, INFO: --------------------------------
+21-05-27 11:39:31, INFO: epoch: 333
+21-05-27 11:46:19, INFO: epoch: 334
+21-05-27 11:53:07, INFO: epoch: 335
+21-05-27 11:59:52, INFO: epoch: 336
+21-05-27 12:06:34, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_336.pth
+21-05-27 12:06:34, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_336.pth
+21-05-27 12:06:34, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/336.png
+21-05-27 12:09:11, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 12:09:11, INFO: [-6.645382728099823, 0.6554204685171889, 13.774826287841798, 0.9647276549736413]
+21-05-27 12:09:57, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 12:09:57, INFO: [0.49153328064024454, 0.010140110960793092, 0.47438757851719854, 0.5082654224812985, 0.03387784396409988]
+21-05-27 12:09:57, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 12:09:57, INFO: [0.4844438727045059, 0.010253764739034948, 0.46717217513918874, 0.5012002368211746, 0.034028061681985855]
+21-05-27 12:10:45, INFO: fid_score
+21-05-27 12:10:45, INFO: [11.634220537084076]
+21-05-27 12:10:45, INFO: --------------------------------
+21-05-27 13:02:33, INFO: epoch: 337
+21-05-27 13:09:20, INFO: epoch: 338
+21-05-27 13:16:21, INFO: epoch: 339
+21-05-27 13:23:17, INFO: epoch: 340
+21-05-27 13:30:13, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_340.pth
+21-05-27 13:30:13, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_340.pth
+21-05-27 13:30:13, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/340.png
+21-05-27 13:32:51, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 13:32:51, INFO: [-6.891927598190308, 0.9277614212679189, 13.744412745285034, 1.2846638815780949]
+21-05-27 13:33:38, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 13:33:38, INFO: [0.5060395834964514, 0.009599247067692725, 0.4901031447827816, 0.5220828338265419, 0.0319796890437603]
+21-05-27 13:33:38, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 13:33:38, INFO: [0.494773917195797, 0.009605454901012493, 0.4789110848784447, 0.5109456518530846, 0.03203456697463989]
+21-05-27 13:34:26, INFO: fid_score
+21-05-27 13:34:26, INFO: [12.671329316216202]
+21-05-27 13:34:26, INFO: --------------------------------
+21-05-27 13:34:26, INFO: epoch: 341
+21-05-27 13:41:23, INFO: epoch: 342
+21-05-27 13:48:18, INFO: epoch: 343
+21-05-27 13:55:07, INFO: epoch: 344
+21-05-27 14:01:51, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_344.pth
+21-05-27 14:01:51, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_344.pth
+21-05-27 14:01:52, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/344.png
+21-05-27 14:04:26, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 14:04:26, INFO: [-6.923609975242615, 0.5712766795632929, 13.56646984539032, 0.8010911395919904]
+21-05-27 14:05:12, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 14:05:12, INFO: [0.5155164213061333, 0.009844961889824273, 0.4987551817059517, 0.5315196310997009, 0.032764449393749236]
+21-05-27 14:05:12, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 14:05:12, INFO: [0.4988750352954865, 0.009853978940059953, 0.48215092270970344, 0.5149969641864299, 0.03284604147672653]
+21-05-27 14:06:02, INFO: fid_score
+21-05-27 14:06:02, INFO: [13.190765603366998]
+21-05-27 14:06:02, INFO: --------------------------------
+21-05-27 14:06:02, INFO: epoch: 345
+21-05-27 14:12:46, INFO: epoch: 346
+21-05-27 14:19:28, INFO: epoch: 347
+21-05-27 14:26:10, INFO: epoch: 348
+21-05-27 14:32:52, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_348.pth
+21-05-27 14:32:52, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_348.pth
+21-05-27 14:32:53, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/348.png
+21-05-27 14:35:32, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 14:35:32, INFO: [-6.746671801757812, 0.5971031759135755, 13.804241459846496, 0.8353642926138994]
+21-05-27 14:36:19, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 14:36:19, INFO: [0.4946533122044802, 0.009802363278612017, 0.47814389704465865, 0.5108640264630318, 0.03272012941837311]
+21-05-27 14:36:19, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 14:36:19, INFO: [0.4899027059268952, 0.010199898675734462, 0.47272896293401717, 0.5066920237541199, 0.03396306082010269]
+21-05-27 14:37:09, INFO: fid_score
+21-05-27 14:37:09, INFO: [12.599386031710367]
+21-05-27 14:37:09, INFO: --------------------------------
+21-05-27 14:37:09, INFO: epoch: 349
+21-05-27 14:43:53, INFO: epoch: 350
+21-05-27 14:50:42, INFO: epoch: 351
+21-05-27 14:57:32, INFO: epoch: 352
+21-05-27 15:04:23, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_352.pth
+21-05-27 15:04:23, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_352.pth
+21-05-27 15:04:23, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/352.png
+21-05-27 15:07:00, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 15:07:00, INFO: [-6.743135946178437, 0.5311711100453888, 13.792312127685546, 0.8055986006494356]
+21-05-27 15:07:47, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 15:07:47, INFO: [0.49516532538294794, 0.009974565836876214, 0.4783143088161945, 0.5114671134889126, 0.03315280467271805]
+21-05-27 15:07:47, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 15:07:47, INFO: [0.4895523893177509, 0.009959683700750071, 0.47278912650346755, 0.5059153155207634, 0.03312618901729584]
+21-05-27 15:08:37, INFO: fid_score
+21-05-27 15:08:37, INFO: [13.020418366176699]
+21-05-27 15:08:37, INFO: --------------------------------
+21-05-27 15:08:37, INFO: epoch: 353
+21-05-27 15:15:26, INFO: epoch: 354
+21-05-27 15:22:14, INFO: epoch: 355
+21-05-27 15:29:07, INFO: epoch: 356
+21-05-27 15:35:58, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_356.pth
+21-05-27 15:35:58, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_356.pth
+21-05-27 15:35:58, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/356.png
+21-05-27 15:38:34, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 15:38:34, INFO: [-6.917052303600311, 0.5005555543745138, 13.8099268075943, 0.6927294368776876]
+21-05-27 15:39:21, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 15:39:21, INFO: [0.5026168481183053, 0.009219162551170144, 0.48737714291214945, 0.5180582717299461, 0.030681128817796707]
+21-05-27 15:39:21, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 15:39:21, INFO: [0.49888712226450443, 0.009180476578523538, 0.4835825198709965, 0.5141878878712655, 0.030605368000268935]
+21-05-27 15:40:08, INFO: fid_score
+21-05-27 15:40:08, INFO: [11.76092637829305]
+21-05-27 15:40:08, INFO: --------------------------------
+21-05-27 15:40:08, INFO: epoch: 357
+21-05-27 15:46:52, INFO: epoch: 358
+21-05-27 15:53:35, INFO: epoch: 359
+21-05-27 16:00:15, INFO: epoch: 360
+21-05-27 16:06:59, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_360.pth
+21-05-27 16:06:59, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_360.pth
+21-05-27 16:06:59, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/360.png
+21-05-27 16:09:35, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 16:09:35, INFO: [-7.054247169685364, 0.7022505819243542, 13.864568088531493, 0.9710719394763776]
+21-05-27 16:10:21, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 16:10:21, INFO: [0.5073614661788941, 0.010042444766324434, 0.4906478661596775, 0.52407650218606, 0.03342863602638245]
+21-05-27 16:10:21, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 16:10:21, INFO: [0.5053077487152816, 0.009966237207583313, 0.4885988974392414, 0.5217840604960918, 0.03318516305685043]
+21-05-27 16:11:11, INFO: fid_score
+21-05-27 16:11:11, INFO: [11.24531017016173]
+21-05-27 16:11:11, INFO: --------------------------------
+21-05-27 16:11:11, INFO: epoch: 361
+21-05-27 16:18:00, INFO: epoch: 362
+21-05-27 16:24:47, INFO: epoch: 363
+21-05-27 16:31:33, INFO: epoch: 364
+21-05-27 16:38:14, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_364.pth
+21-05-27 16:38:14, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_364.pth
+21-05-27 16:38:14, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/364.png
+21-05-27 16:40:50, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 16:40:50, INFO: [-6.714748788452148, 0.793069336385366, 13.655640246200562, 1.1270568717951155]
+21-05-27 16:41:37, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 16:41:37, INFO: [0.5012175873714686, 0.009750933882200625, 0.48499815826416015, 0.5174227343559266, 0.032424576091766355]
+21-05-27 16:41:37, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 16:41:37, INFO: [0.4877707550960779, 0.009566445838274982, 0.47189590176939966, 0.5037217383742333, 0.0318258366048336]
+21-05-27 16:42:23, INFO: fid_score
+21-05-27 16:42:23, INFO: [11.326876504108952]
+21-05-27 16:42:23, INFO: --------------------------------
+21-05-27 16:42:23, INFO: epoch: 365
+21-05-27 16:49:05, INFO: epoch: 366
+21-05-27 16:55:47, INFO: epoch: 367
+21-05-27 17:02:29, INFO: epoch: 368
+21-05-27 17:09:10, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_368.pth
+21-05-27 17:09:10, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_368.pth
+21-05-27 17:09:10, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/368.png
+21-05-27 17:11:45, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 17:11:45, INFO: [-6.871143398571014, 0.8150886301006862, 13.95537072353363, 1.1056620938505661]
+21-05-27 17:12:31, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 17:12:31, INFO: [0.4939682646578551, 0.010133944884687619, 0.47715365909338, 0.5109092073857784, 0.033755548292398456]
+21-05-27 17:12:31, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 17:12:31, INFO: [0.4959232485866547, 0.010016566774627674, 0.47924785284399984, 0.5126807543158531, 0.03343290147185326]
+21-05-27 17:13:21, INFO: fid_score
+21-05-27 17:13:21, INFO: [12.821745645575561]
+21-05-27 17:13:21, INFO: --------------------------------
+21-05-27 17:13:21, INFO: epoch: 369
+21-05-27 17:20:15, INFO: epoch: 370
+21-05-27 17:26:59, INFO: epoch: 371
+21-05-27 17:33:40, INFO: epoch: 372
+21-05-27 17:40:20, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_372.pth
+21-05-27 17:40:20, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_372.pth
+21-05-27 17:40:20, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/372.png
+21-05-27 17:42:55, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 17:42:55, INFO: [-6.7859931604385375, 0.6010957695600131, 13.638716451454163, 0.8308847324538694]
+21-05-27 17:43:40, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 17:43:40, INFO: [0.5048745331573485, 0.00931947393736531, 0.4894975465536118, 0.5205627584338188, 0.031065211880207062]
+21-05-27 17:43:40, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 17:43:40, INFO: [0.49111024887681004, 0.009250758576461612, 0.4758263991177082, 0.5066202177107334, 0.030793818593025206]
+21-05-27 17:44:30, INFO: fid_score
+21-05-27 17:44:30, INFO: [11.736432952447615]
+21-05-27 17:44:30, INFO: --------------------------------
+21-05-27 17:44:30, INFO: epoch: 373
+21-05-27 17:51:10, INFO: epoch: 374
+21-05-27 17:57:50, INFO: epoch: 375
+21-05-27 18:04:30, INFO: epoch: 376
+21-05-27 18:11:11, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_376.pth
+21-05-27 18:11:11, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_376.pth
+21-05-27 18:11:11, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/376.png
+21-05-27 18:13:46, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 18:13:46, INFO: [-6.6465054995536805, 0.6718629973208957, 13.733361249160767, 0.9890228951978687]
+21-05-27 18:14:32, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 18:14:32, INFO: [0.4936901632106305, 0.00963494792274895, 0.47778040345907213, 0.5098539774775505, 0.03207357401847839]
+21-05-27 18:14:32, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 18:14:32, INFO: [0.48464334916293617, 0.009736130415151884, 0.4685133913993835, 0.500964638799429, 0.032451247400045395]
+21-05-27 18:15:22, INFO: fid_score
+21-05-27 18:15:22, INFO: [11.178481426790142]
+21-05-27 18:15:22, INFO: --------------------------------
+21-05-27 18:15:22, INFO: epoch: 377
+21-05-27 18:22:01, INFO: epoch: 378
+21-05-27 18:28:42, INFO: epoch: 379
+21-05-27 18:35:22, INFO: epoch: 380
+21-05-27 18:42:04, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_380.pth
+21-05-27 18:42:04, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_380.pth
+21-05-27 18:42:04, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/380.png
+21-05-27 18:44:39, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 18:44:39, INFO: [-6.534583848667145, 0.653562511518232, 13.70609569091797, 0.9490558147719572]
+21-05-27 18:45:25, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 18:45:25, INFO: [0.48929560955524437, 0.009262303888621924, 0.47407614611387255, 0.5050144918322563, 0.03093834571838379]
+21-05-27 18:45:25, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 18:45:25, INFO: [0.4789779123622178, 0.009287671660242166, 0.4637106908261776, 0.49476894795298576, 0.031058257126808167]
+21-05-27 18:46:15, INFO: fid_score
+21-05-27 18:46:15, INFO: [11.92816732412615]
+21-05-27 18:46:15, INFO: --------------------------------
+21-05-27 18:46:15, INFO: epoch: 381
+21-05-27 18:52:57, INFO: epoch: 382
+21-05-27 18:59:39, INFO: epoch: 383
+21-05-27 19:06:21, INFO: epoch: 384
+21-05-27 19:13:01, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_384.pth
+21-05-27 19:13:01, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_384.pth
+21-05-27 19:13:01, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/384.png
+21-05-27 19:15:37, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 19:15:37, INFO: [-6.6925877316474915, 0.5304941167061213, 13.635928903579712, 0.7733779813282333]
+21-05-27 19:16:23, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 19:16:23, INFO: [0.5002847789758443, 0.009070562298307695, 0.4852002189874649, 0.5154756473779678, 0.03027542839050293]
+21-05-27 19:16:23, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 19:16:23, INFO: [0.486713552942276, 0.009080296769105538, 0.4715309016406536, 0.5018060672283172, 0.03027516558766365]
+21-05-27 19:17:13, INFO: fid_score
+21-05-27 19:17:13, INFO: [12.673112465188183]
+21-05-27 19:17:13, INFO: --------------------------------
+21-05-27 19:17:13, INFO: epoch: 385
+21-05-27 19:23:53, INFO: epoch: 386
+21-05-27 19:30:33, INFO: epoch: 387
+21-05-27 19:37:13, INFO: epoch: 388
+21-05-27 19:43:53, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_388.pth
+21-05-27 19:43:53, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_388.pth
+21-05-27 19:43:53, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/388.png
+21-05-27 19:46:28, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 19:46:28, INFO: [-6.7312435248374936, 0.6747399012792386, 13.550712608528137, 0.978930901905809]
+21-05-27 19:47:14, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 19:47:14, INFO: [0.5070067919659614, 0.009456669869050109, 0.4914171175837517, 0.5229285108089448, 0.03151139322519302]
+21-05-27 19:47:14, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 19:47:14, INFO: [0.4889527705448865, 0.009263132433011582, 0.47356472461223603, 0.5043204784572124, 0.030755753844976426]
+21-05-27 19:48:04, INFO: fid_score
+21-05-27 19:48:04, INFO: [11.83538690347612]
+21-05-27 19:48:04, INFO: --------------------------------
+21-05-27 19:48:04, INFO: epoch: 389
+21-05-27 19:54:44, INFO: epoch: 390
+21-05-27 20:01:24, INFO: epoch: 391
+21-05-27 20:08:05, INFO: epoch: 392
+21-05-27 20:14:44, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_392.pth
+21-05-27 20:14:44, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_392.pth
+21-05-27 20:14:44, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/392.png
+21-05-27 20:17:19, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 20:17:19, INFO: [-6.753610465240478, 0.7670194963574635, 13.958532548332215, 1.0860218560175112]
+21-05-27 20:18:04, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 20:18:04, INFO: [0.48807850921928886, 0.009592652474515594, 0.4724148971915245, 0.5043332288086414, 0.03191833161711693]
+21-05-27 20:18:04, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 20:18:04, INFO: [0.4883430690556765, 0.009500909591395719, 0.4727065409362316, 0.5043177112102508, 0.03161117027401924]
+21-05-27 20:18:54, INFO: fid_score
+21-05-27 20:18:54, INFO: [11.298533062984745]
+21-05-27 20:18:54, INFO: --------------------------------
+21-05-27 23:21:19, INFO: epoch: 393
+21-05-27 23:28:10, INFO: epoch: 394
+21-05-27 23:35:02, INFO: epoch: 395
+21-05-27 23:41:53, INFO: epoch: 396
+21-05-27 23:48:41, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_396.pth
+21-05-27 23:48:41, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_396.pth
+21-05-27 23:48:41, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/396.png
+21-05-27 23:51:19, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-27 23:51:19, INFO: [-6.878086128139496, 0.6173107911619113, 13.617650709533692, 0.879068284946885]
+21-05-27 23:52:05, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-27 23:52:05, INFO: [0.5107158130669593, 0.009168771608987422, 0.4954593862831593, 0.5260846836388111, 0.030625297355651854]
+21-05-27 23:52:05, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-27 23:52:05, INFO: [0.49586326353490356, 0.009101466815232433, 0.4808340681552887, 0.5112117146313191, 0.03037764647603035]
+21-05-27 23:52:57, INFO: fid_score
+21-05-27 23:52:57, INFO: [12.793748214874881]
+21-05-27 23:52:57, INFO: --------------------------------
+21-05-27 23:52:57, INFO: epoch: 397
+21-05-27 23:59:48, INFO: epoch: 398
+21-05-28 00:06:38, INFO: epoch: 399
+21-05-28 00:13:26, INFO: epoch: 400
+21-05-28 00:20:17, INFO: saved g at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/generator_400.pth
+21-05-28 00:20:17, INFO: saved d at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/models/discriminator_400.pth
+21-05-28 00:20:17, INFO: saved image at: experiments/baseline/baseline_mheads/baselinemheads_lossgan1_augmentation1/images/400.png
+21-05-28 00:22:54, INFO: lossg_mean lossg_std lossd_mean lossd_std
+21-05-28 00:22:54, INFO: [-6.615176275730133, 0.6846639252350908, 13.942936377716064, 0.9578697435484399]
+21-05-28 00:23:40, INFO: dx_mean dx_std dx_min dx_max dx_max_min
+21-05-28 00:23:40, INFO: [0.48181089948594574, 0.00980750709663013, 0.46577177670001985, 0.4984917377650738, 0.03271996106505394]
+21-05-28 00:23:40, INFO: dgz_mean dgz_std dgz_min dgz_max dgz_max_min
+21-05-28 00:23:40, INFO: [0.4827676234042645, 0.009766190304978817, 0.4667552449822426, 0.49925467075705526, 0.0324994257748127]
+21-05-28 00:24:28, INFO: fid_score
+21-05-28 00:24:28, INFO: [11.651350047147531]
+21-05-28 00:24:28, INFO: --------------------------------
+21-05-28 00:24:28, INFO: Completed
