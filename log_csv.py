@@ -2,39 +2,29 @@
 import os
 import pandas as pd
 
-# root = "experiments/sagan/augmentation/"
-root = "experiments/augmentation/"
+root = "experiments/rfgan/augmentation"
+
+# header = [
+#     'lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std', 'dx_mean', 'dx_std', 'dgz_mean', 'dgz_std',
+#     'fid_score'
+# ]
 
 header = [
-    'lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std', 'dx_mean', 'dx_std', 'dgz_mean', 'dgz_std',
+    'lossg_mean', 'lossg_std', 'lossd_mean', 'lossd_std',
+    'dx_mean', 'dx_std', 'dx_min', 'dx_max', 'dx_max_min',
+    'dgz_mean', 'dgz_std', 'dgz_min', 'dgz_max', 'dgz_max_min',
     'fid_score',
-    'lossg_mean_0', 'lossg_std_0', 'lossd_mean_0', 'lossd_std_0', 'dx_mean_0', 'dx_std_0', 'dgz_mean_0', 'dgz_std_0',
-    'lossg_mean_1', 'lossg_std_1', 'lossd_mean_1', 'lossd_std_1', 'dx_mean_1', 'dx_std_1', 'dgz_mean_1', 'dgz_std_1',
-    'lossg_mean_2', 'lossg_std_2', 'lossd_mean_2', 'lossd_std_2', 'dx_mean_2', 'dx_std_2', 'dgz_mean_2', 'dgz_std_2',
-    'lossg_mean_3', 'lossg_std_3', 'lossd_mean_3', 'lossd_std_3', 'dx_mean_3', 'dx_std_3', 'dgz_mean_3', 'dgz_std_3',
-    'lossg_mean_4', 'lossg_std_4', 'lossd_mean_4', 'lossd_std_4', 'dx_mean_4', 'dx_std_4', 'dgz_mean_4', 'dgz_std_4',
-    'lossg_mean_5', 'lossg_std_5', 'lossd_mean_5', 'lossd_std_5', 'dx_mean_5', 'dx_std_5', 'dgz_mean_5', 'dgz_std_5',
-    'lossg_mean_6', 'lossg_std_6', 'lossd_mean_6', 'lossd_std_6', 'dx_mean_6', 'dx_std_6', 'dgz_mean_6', 'dgz_std_6',
-    'lossg_mean_7', 'lossg_std_7', 'lossd_mean_7', 'lossd_std_7', 'dx_mean_7', 'dx_std_7', 'dgz_mean_7', 'dgz_std_7',
-    'lossg_mean_8', 'lossg_std_8', 'lossd_mean_8', 'lossd_std_8', 'dx_mean_8', 'dx_std_8', 'dgz_mean_8', 'dgz_std_8',
-    'lossg_mean_9', 'lossg_std_9', 'lossd_mean_9', 'lossd_std_9', 'dx_mean_9', 'dx_std_9', 'dgz_mean_9', 'dgz_std_9'
 ]
 
 INPUT = [
-    # 'gan1_10_heads_1G_10heads_diff_data_for_heads_DV2',
-    # 'gan1_10_heads_1G_10heads_DV2',
-    # 'gan1_baseline',
-    'lsgan_10_heads_1G_10heads_diff_data_for_heads_DV2',
-    'lsgan_10_heads_1G_10heads_DV2',
-    # 'lsgan_baseline'
-    # 'gan1_10_heads_1G_10heads_diff_data_for_heads',
-    # 'gan1_10_heads_1G_10heads',
+    'rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD',
+    'rfgan_lossgan1_bagging1_augmentation1_10heads_usemaskD',
 ]
 
 
 def get_numeric(s):
     s = s.split('\n')
-    s = [x for x in s if '[' in x and ']' in x and 'accuracy' not in x and '/s' not in x and '_' not in x]
+    s = [x for x in s if '[' in x and ']' in x and 'accuracy' not in x and '/s' not in x and '_' not in x and (len(x) < 700)]
     result = []
     for line in s:
         line = line.split('[')[1]
@@ -42,7 +32,7 @@ def get_numeric(s):
         line = line.split(',')
         line = [float(x) for x in line]
         result = result + line
-    assert len(result) == len(header)
+    assert len(result) == len(header), f'{len(result)} != {len(header)}'
     return result[0:len(header)]
 
 for inp in INPUT:
