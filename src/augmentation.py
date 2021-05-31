@@ -29,7 +29,7 @@ class Augmentation():
         return tensor + torch.randn(tensor.size()).type(Tensor) * std + mean
 
     @staticmethod
-    def rand_cutout(x, ratio=0.5):
+    def rand_cutout(x, ratio=0.4):
         cutout_size = int(x.size(2) * ratio + 0.5), int(x.size(3) * ratio + 0.5)
         offset_x = torch.randint(0, x.size(2) + (1 - cutout_size[0] % 2), size=[x.size(0), 1, 1], device=x.device)
         offset_y = torch.randint(0, x.size(3) + (1 - cutout_size[1] % 2), size=[x.size(0), 1, 1], device=x.device)
