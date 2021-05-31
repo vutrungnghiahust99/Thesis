@@ -21,10 +21,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--exp_name", type=str, required=True)
 parser.add_argument("--loss_name", type=str, choices=['gan1', 'lsgan'], required=True)
 
-# augmentation
-parser.add_argument("--augmentation", type=int, choices=[0, 1], default=0)
-parser.add_argument("--aug_times", type=int, default=-1)
-
 # No. heads in the discriminator
 parser.add_argument("--n_heads", type=int, required=True)
 
@@ -35,6 +31,8 @@ parser.add_argument("--weights_g", type=str, default='')
 parser.add_argument("--weights_d", type=str, default='')
 
 # unchanged configs
+parser.add_argument("--augmentation", type=int, choices=[0, 1], default=1)
+parser.add_argument("--aug_times", type=int, default=2)
 parser.add_argument('--use_mask_d', type=int, choices=[0, 1], default=1)
 parser.add_argument("--dist", type=str, choices=['gauss', 'uniform'], default='gauss')
 parser.add_argument("--bound", type=float, default=1)
@@ -169,6 +167,19 @@ Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTen
 #  Training
 # ----------
 
+mapping = {
+    0: Augmentation.aug0,
+    1: Augmentation.aug1,
+    2: Augmentation.aug2,
+    3: Augmentation.aug3,
+    4: Augmentation.aug4,
+    5: Augmentation.aug5,
+    6: Augmentation.aug6,
+    7: Augmentation.aug7,
+    8: Augmentation.aug8,
+    9: Augmentation.aug9
+}
+
 for epoch in range(start_epoch, args.n_epochs):
     logging.info(f'epoch: {epoch}')
     generator.train()
@@ -188,7 +199,7 @@ for epoch in range(start_epoch, args.n_epochs):
         gen_imgs = generator(z)
         s = gen_imgs
         if args.augmentation:
-            s = torch.cat([s] + [Augmentation.translation(s) for _ in range(args.aug_times)])
+            s = torch.cat([s] + [Augmentation.translation(s) for _ in range(args.aug_times)] + [Augmentation.rand_cutout(s) for _ in range(args.aug_times)])
         lossg = loss.compute_lossg(discriminator, s)
         lossg.backward()
         optimizer_G.step()
@@ -204,8 +215,8 @@ for epoch in range(start_epoch, args.n_epochs):
             g = gen_imgs.detach()
             r = real_imgs
             if args.augmentation:
-                g = torch.cat([g] + [Augmentation.translation(g) for _ in range(args.aug_times)])
-                r = torch.cat([r] + [Augmentation.translation(r) for _ in range(args.aug_times)])
+                g = torch.cat([g] + [mapping[head_id](g) for _ in range(args.aug_times)])
+                r = torch.cat([r] + [mapping[head_id](r) for _ in range(args.aug_times)])
             lossd = loss.compute_lossd(discriminator, g, r)
             lossd.backward()
             shared_layers_D_otim.step()
