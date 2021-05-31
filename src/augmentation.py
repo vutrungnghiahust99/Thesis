@@ -63,41 +63,56 @@ class Augmentation():
         return x
 
     @staticmethod
+    def f1(x):
+        return Augmentation.translation(x, shift=2)
+    
+    @staticmethod
+    def f2(x):
+        return Augmentation.translation(x, shift=4)
+
+    @staticmethod
+    def f3(x):
+        return Augmentation.rand_cutout(x, ratio=0.2)
+
+    def f4(x):
+        return Augmentation.rand_cutout(x, ratio=0.4)
+
+    @staticmethod
     def aug0(x):
-        return Augmentation.translation(x)
+        return Augmentation.f1(x)
 
     @staticmethod
     def aug1(x):
-        return Augmentation.translation(x)
+        return Augmentation.f2(x)
 
     @staticmethod
     def aug2(x):
-        return Augmentation.translation(x)
+        return Augmentation.f3(x)
 
     @staticmethod
     def aug3(x):
-        return Augmentation.translation(x)
+        return Augmentation.f4(x)
 
     @staticmethod
     def aug4(x):
-        return Augmentation.translation(x)
+        return Augmentation.f1(Augmentation.f3(x))
 
     @staticmethod
     def aug5(x):
-        return Augmentation.translation(x)
+        return Augmentation.f1(Augmentation.f4(x))
 
     @staticmethod
     def aug6(x):
-        return Augmentation.translation(x)
+        return Augmentation.f2(Augmentation.f3(x))
 
     @staticmethod
     def aug7(x):
-        return Augmentation.translation(x)
+        return Augmentation.f2(Augmentation.f4(x))
 
     @staticmethod
     def aug8(x):
-        return Augmentation.translation(x)
+        return Augmentation.f1(Augmentation.f1(x))
 
     @staticmethod
     def aug9(x):
-        return Augmentation.translation(x)
+        return Augmentation.f3(Augmentation.f3(x))
