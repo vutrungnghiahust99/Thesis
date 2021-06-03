@@ -136,10 +136,10 @@ class Discriminator(nn.Module):
 
 
 class MDiscriminators(nn.Module):
-    def __init__(self, n_heads: int):
+    def __init__(self, m: int):
         super(MDiscriminators, self).__init__()
-        self.m = n_heads
-        for i in range(n_heads):
+        self.m = m
+        for i in range(m):
             setattr(self, f"head_{i}", Discriminator())
 
     def forward(self, img, head_id=-1):
