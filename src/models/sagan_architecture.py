@@ -1,74 +1,8 @@
 import numpy as np
 
-import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 from src.models.spectral_normalization import SpectralNorm
-
-
-masks = {
-    0: [0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0,
-        0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1,
-        0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0,
-        1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1,
-        0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0,
-        0, 1, 1, 0, 0, 0, 0, 0],
-    1: [0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1,
-        0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0,
-        1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1,
-        1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0,
-        0, 1, 0, 0, 1, 0, 0, 0],
-    2: [1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1,
-        1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0,
-        1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0,
-        1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0,
-        0, 1, 0, 0, 1, 1, 0, 0],
-    3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0,
-        0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0,
-        1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1,
-        0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 1, 1],
-    4: [1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0,
-        0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1,
-        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1,
-        0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1,
-        0, 0, 0, 1, 1, 0, 1, 0],
-    5: [1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0,
-        1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0,
-        0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1,
-        0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1,
-        0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0,
-        1, 0, 0, 0, 0, 1, 0, 1],
-    6: [0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0,
-        0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0,
-        0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1,
-        0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0,
-        0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1,
-        0, 1, 1, 1, 1, 1, 0, 0],
-    7: [0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0,
-        0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1,
-        0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0,
-        1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1,
-        0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0,
-        0, 0, 0, 0, 0, 1, 0, 1],
-    8: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1,
-        0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1,
-        0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
-        0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0,
-        1, 1, 0, 0, 0, 0, 0, 1],
-    9: [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0,
-        0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0,
-        1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1,
-        0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1,
-        0, 1, 0, 0, 0, 0, 1, 0]
-}
 
 
 class ConvTranspose2d(nn.Module):
@@ -155,38 +89,10 @@ class Generator(nn.Module):
         return out
 
 
-class MaskedConv2D(nn.Conv2d):
-    def __init__(self, in_channels: int, out_channels: int, kernel_size: int, stride: int, padding: int, head_id: int):
-        super().__init__(
-            in_channels=in_channels, out_channels=out_channels, kernel_size=kernel_size, stride=stride, padding=padding)
-        self.register_buffer('mask', torch.ones(1, 128, 1, 1))
-        if head_id != -1:
-            print(head_id, masks[head_id])
-            mask = np.array(masks[head_id]).reshape(1, 128, 1, 1)
-            self.mask.data.copy_(torch.from_numpy(mask.astype(np.uint8)))
-
-    def forward(self, input):
-        return F.conv2d(input, self.mask * self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
-
-
-def create_d_head(head_id: int, use_sigmoid: bool):
-    if use_sigmoid:
-        return nn.Sequential(MaskedConv2D(128, 1, 1, 1, 0, head_id), nn.Sigmoid())
-    else:
-        return nn.Sequential(MaskedConv2D(128, 1, 1, 1, 0, head_id))
-
-
-def create_d_head_without_mask(use_sigmoid: bool):
-    if use_sigmoid:
-        return nn.Sequential(nn.Conv2d(128, 1, 1, 1, 0), nn.Sigmoid())
-    else:
-        return nn.Sequential(nn.Conv2d(128, 1, 1, 1, 0))
-
-
 class Discriminator(nn.Module):
     """Discriminator, Auxiliary Classifier."""
 
-    def __init__(self, use_sigmoid: bool, image_size=28, conv_dim=16, use_spectral_norm=True, n_heads=10):
+    def __init__(self, image_size=28, conv_dim=16, use_spectral_norm=True):
         super(Discriminator, self).__init__()
         assert conv_dim == 16 or conv_dim == 64
         assert image_size == 28
@@ -218,37 +124,50 @@ class Discriminator(nn.Module):
         self.l3 = nn.Sequential(*layer3)
         self.l4 = nn.Sequential(*layer4)
 
-        self.n = n_heads
-        if self.n == 1:
-            setattr(self, "head_%i" % 0, create_d_head_without_mask(use_sigmoid))
-        else:
-            for head in range(self.n):
-                setattr(self, "head_%i" % head, create_d_head(head, use_sigmoid))
+        self.last = nn.Sequential(nn.Conv2d(128, 1, 1, 1, 0), nn.Sigmoid())
 
-    def forward(self, x, head_id):
+    def forward(self, x):
         out = self.l1(x)
         out = self.l2(out)
         out = self.l3(out)
         out = self.l4(out)
-
-        if head_id == -1:
-            s = 0
-            for i in range(self.n):
-                s += getattr(self, "head_%i" % i)(out)
-            return (s / self.n).squeeze()
-        elif head_id >= 0 and head_id < self.n:
-            return getattr(self, "head_%i" % head_id)(out).squeeze()
-        else:
-            RuntimeError(f"Invalid head id: {head_id}")
+        out = self.last(out).view(-1)
+        return out
 
 
-# import torch
-# z = torch.randn(64, 100)
+class MDiscriminators(nn.Module):
+    def __init__(self, n_heads: int):
+        super(MDiscriminators, self).__init__()
+        self.m = n_heads
+        for i in range(n_heads):
+            setattr(self, f"head_{i}", Discriminator())
+
+    def forward(self, img, head_id=-1):
+        if head_id != -1:
+            assert head_id >= 0 and head_id < self.m
+            p = getattr(self, f"head_{head_id}")(img)
+            return p
+        s = 0
+        for i in range(self.m):
+            s += getattr(self, f"head_{i}")(img)
+        return (s / self.m)
+     
+    def eval_heads(self, img):
+        assert img.shape[0] == 1
+        assert self.m > 1
+        s = []
+        for i in range(self.m):
+            a = getattr(self, f"head_{i}")(img).squeeze()
+            s.append(a.item())
+        s = np.array(s)
+        return s.mean(), s.std(), s.min(), s.max(), s.max() - s.min()
+
+
+# d = MDiscriminators(10)
 # g = Generator()
-# d = Discriminator(use_sigmoid=True)
-# # d2 = Discriminator(use_sigmoid=False)
-# # d3 = Discriminator(n_heads=1, use_sigmoid=False)
+
+# s = torch.randn(64, 100)
+
 # with torch.no_grad():
-#     gen_imgs = g(z)
-# with torch.no_grad():
-#     outs = d(gen_imgs, -1)
+#     a = g(s)
+#     b = d(a, -1)
