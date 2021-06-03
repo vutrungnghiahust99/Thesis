@@ -17,7 +17,7 @@ df4 = pd.read_csv(exp4)
 df5 = pd.read_csv(exp5)
 df6 = pd.read_csv(exp6)
 
-n = min(df1.shape[0], df2.shape[0], df3.shape[0], df4.shape[0], df5.shape[0], df6.shape[0], 360 // 4)
+n = min(df1.shape[0], df2.shape[0], df3.shape[0], df4.shape[0], df5.shape[0], df6.shape[0])
 df1 = df1.iloc[0:n]
 df2 = df2.iloc[0:n]
 df3 = df3.iloc[0:n]
@@ -25,6 +25,14 @@ df4 = df4.iloc[0:n]
 df5 = df5.iloc[0:n]
 df6 = df6.iloc[0:n]
 epochs = [x * 4 for x in range(n)]
+
+print(n)
+print(df1['fid_score'].min())
+print(df2['fid_score'].min())
+print(df3['fid_score'].min())
+print(df4['fid_score'].min())
+print(df5['fid_score'].min())
+print(df6['fid_score'].min())
 
 fig, axs = plt.subplots(4, 3, sharex=False, sharey=False, figsize=(12, 14))
 
