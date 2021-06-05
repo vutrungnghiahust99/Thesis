@@ -3,15 +3,15 @@ import os
 import pandas as pd
 
 root1 = 'experiments/rfgan'
-exp1 = 'rfgan_lossgan1_bagging0_augmentation0_10heads_usemaskD'
-exp2 = 'rfgan_lossgan1_bagging1_augmentation0_10heads_usemaskD'
-exp4 = 'experiments/baseline/baseline_hgan/baselinehgan_losshgan_augmentation0/baselinehgan_losshgan_augmentation0.csv'
+exp1 = 'rfgan_lossgan1_bagging0_augmentation0_5heads_usemaskD_sagan'
+exp2 = 'rfgan_lossgan1_bagging1_augmentation0_5heads_usemaskD_sagan'
+exp4 = 'experiments/baseline/baseline_hgan/baselinehgan_losshgan_5heads_augmentation0_sagan/baselinehgan_losshgan_5heads_augmentation0_sagan.csv'
 
 
 root2 = 'experiments/rfgan/augmentation'
-exp5 = 'rfgan_lossgan1_bagging0_augmentation1_10heads_usemaskD'
-exp6 = 'rfgan_lossgan1_bagging1_augmentation1_10heads_usemaskD'
-exp8 = 'experiments/baseline/baseline_hgan/baselinehgan_losshgan_augmentation1/baselinehgan_losshgan_augmentation1.csv'
+exp5 = 'rfgan_lossgan1_bagging0_augmentation1_5heads_usemaskD_sagan'
+exp6 = 'rfgan_lossgan1_bagging1_augmentation1_5heads_usemaskD_sagan'
+exp8 = 'experiments/baseline/baseline_hgan/baselinehgan_losshgan_5heads_augmentation1_sagan/baselinehgan_losshgan_5heads_augmentation1_sagan.csv'
 
 
 df1 = pd.read_csv(os.path.join(root1, exp1, exp1 + '.csv'))
@@ -80,4 +80,4 @@ axs[3].legend(handles=handles, labels=labels, loc='lower center',
 
 plt.subplots_adjust(top=.9, bottom=0.3, right=0.99, left=0.05,
                     hspace=0, wspace=0.32)
-plt.savefig('submission/info_in_D_rfgan_vs_baselines_K=10.pdf')
+plt.savefig('submission/info_in_D_rfgan_vs_baselines_K=5_sagan.pdf')
