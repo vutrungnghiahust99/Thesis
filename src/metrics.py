@@ -3,6 +3,7 @@ from PIL import Image
 from tqdm import tqdm
 
 import torch
+from torchvision.transforms import ToPILImage
 
 from src.noise import Noise
 from src.fid_score.fid_score import compute_fid_score
@@ -131,8 +132,8 @@ class Metrics():
                         bound,
                         path_to_real_imgs='data/cifar10/new_data/test.pt',
                         z_dim=100) -> float:
-        real_pil_imgs = get_real_pil_images(path_to_real_imgs)
-        gen_pil_imgs = get_gen_pil_images(generator, bound, dist, len(real_pil_imgs))
+        real_pil_imgs = get_real_pil_images_v2(path_to_real_imgs)
+        gen_pil_imgs = get_gen_pil_images_v2(generator, bound, dist, len(real_pil_imgs))
         fid_score = compute_fid_score_rgb(gen_pil_imgs, real_pil_imgs)
         return fid_score
 
@@ -143,6 +144,33 @@ def get_real_pil_images(path) -> [Image.Image]:
     pil_images = []
     for i in range(dataset.shape[0]):
         pil_image = Image.fromarray(dataset[i, :, :].numpy())
+        pil_images.append(pil_image)
+    return pil_images
+
+
+def get_real_pil_images_v2(path) -> [Image.Image]:
+    dataset = torch.load(path)
+    dataset = dataset['data']
+    pil_images = []
+    for i in range(dataset.shape[0]):
+        pil_image = Image.fromarray(dataset[i])
+        pil_images.append(pil_image)
+    return pil_images
+
+
+def get_gen_pil_images_v2(generator,
+                          bound,
+                          dist,
+                          n_samples,
+                          z_dim=100) -> [Image.Image]:
+    pil_images = []
+
+    for i in range(n_samples):
+        z = Noise.sample_gauss_or_uniform_noise(dist, bound, 1, z_dim)
+        with torch.no_grad():
+            img = generator(z).squeeze()
+        img = img * 0.5 + 0.5
+        pil_image = ToPILImage()(img)
         pil_images.append(pil_image)
     return pil_images
 
