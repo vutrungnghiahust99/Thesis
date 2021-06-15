@@ -48,14 +48,14 @@ axs[0].plot(epochs, df1['dx_max_min'], color=colors[0], label='RFGan + no baggin
 axs[0].plot(epochs, df2['dx_max_min'], color=colors[1], label='RFGan + bagging')
 axs[0].plot(epochs, df4['dx_max_min'], color=colors[3], label='HGan')
 axs[0].set_xlabel('Epoch', fontsize='xx-large')
-axs[0].set_ylabel(r'$W_{F_d(x)}$', fontsize='x-large')
+axs[0].set_ylabel(r'$W_{F_d(x)}$', fontsize='xx-large')
 axs[0].set_title('no augmentation')
 
 axs[1].plot(epochs, df1['dgz_max_min'], color=colors[0])
 axs[1].plot(epochs, df2['dgz_max_min'], color=colors[1])
 axs[1].plot(epochs, df4['dgz_max_min'], color=colors[3])
 axs[1].set_xlabel('Epoch', fontsize='xx-large')
-axs[1].set_ylabel(r'$W_{F_d(G(z))}$', fontsize='x-large')
+axs[1].set_ylabel(r'$W_{F_d(G(z))}$', fontsize='xx-large')
 axs[1].set_title('no augmentation')
 
 
@@ -63,14 +63,14 @@ axs[2].plot(epochs, df5['dx_max_min'], color=colors[0])
 axs[2].plot(epochs, df6['dx_max_min'], color=colors[1])
 axs[2].plot(epochs, df8['dx_max_min'], color=colors[3])
 axs[2].set_xlabel('Epoch', fontsize='xx-large')
-axs[2].set_ylabel(r'$W_{F_d(x)}$', fontsize='x-large')
+axs[2].set_ylabel(r'$W_{F_d(x)}$', fontsize='xx-large')
 axs[2].set_title("augmentation")
 
 axs[3].plot(epochs, df5['dgz_max_min'], color=colors[0])
 axs[3].plot(epochs, df6['dgz_max_min'], color=colors[1])
 axs[3].plot(epochs, df8['dgz_max_min'], color=colors[3])
 axs[3].set_xlabel('Epoch', fontsize='xx-large')
-axs[3].set_ylabel(r'$W_{F_d(G(z))}$', fontsize='x-large')
+axs[3].set_ylabel(r'$W_{F_d(G(z))}$', fontsize='xx-large')
 axs[3].set_title("augmentation")
 
 handles, labels = axs[0].get_legend_handles_labels()
