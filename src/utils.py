@@ -42,6 +42,13 @@ def get_frequent(s, a):
     return count
 
 
+def get_frequent_v2(s, a):
+    count = 0
+    for b in s.split(','):
+        count += (b == a)
+    return count
+
+
 def get_gen_real_imgs_with_headID(gen_imgs, real_imgs, heads, head_id):
     gen = []
     real = []
@@ -57,7 +64,7 @@ def get_gen_real_imgs_with_headID(gen_imgs, real_imgs, heads, head_id):
 def get_real_imgs_with_headID(real_imgs, heads, head_id):
     real = []
     for i in range(len(heads)):
-        count = get_frequent(heads[i], str(head_id))
+        count = get_frequent_v2(heads[i], str(head_id))
         if count == 0:
             continue
         real.append(real_imgs[i].unsqueeze(0))
