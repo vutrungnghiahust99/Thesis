@@ -1,4 +1,3 @@
-import logging
 import numpy as np
 
 import torch
@@ -129,8 +128,8 @@ class MaskedLinear(nn.Linear):
     def __init__(self, in_features, out_features, head_id: int, bias=True):
         super().__init__(in_features, out_features, bias)
         self.register_buffer('mask', torch.ones(out_features, in_features))
-        logging.info(f'{head_id}: {masks[head_id]}')
-        mask = np.array(masks[head_id]).reshape(256, 1)
+        # logging.info(f'{head_id}: {masks[head_id % 10]}')
+        mask = np.array(masks[head_id % 10]).reshape(256, 1)
         self.mask.data.copy_(torch.from_numpy(mask.astype(np.uint8).T))
 
     def forward(self, input):
