@@ -127,7 +127,7 @@ logging.info(f'data at: {args.data_path}')
 
 dataloader = torch.utils.data.DataLoader(
     MNIST(
-        root='data/mnist/MNIST/processed/training_rf.pt',
+        root='data/mnist/MNIST/processed/training_rf_v2.pt',
         transform=transforms.Compose([
             transforms.Resize(args.img_size),
             transforms.ToTensor(),
