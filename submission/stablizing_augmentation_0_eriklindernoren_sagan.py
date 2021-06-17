@@ -56,7 +56,7 @@ axs[0].plot(epochs1, df4['dx_mean'], color=colors[3], label='Vanilla Gan + Big D
 axs[0].plot(epochs1, df5['dx_mean'], color=colors[4], label='HGan')
 axs[0].set_xlabel('Epoch', fontsize='xx-large')
 axs[0].set_ylabel(r'$F_d(x)$', fontsize='xx-large')
-axs[0].set_title('Eriklindernoren')
+axs[0].set_title('Eriklindernoren', fontsize='xx-large')
 
 
 axs[1].plot(epochs1, df1['dgz_mean'], color=colors[0])
@@ -66,21 +66,21 @@ axs[1].plot(epochs1, df4['dgz_mean'], color=colors[3])
 axs[1].plot(epochs1, df5['dgz_mean'], color=colors[4])
 axs[1].set_xlabel('Epoch', fontsize='xx-large')
 axs[1].set_ylabel(r'$F_d(G(z))$', fontsize='xx-large')
-axs[1].set_title('Eriklindernoren')
+axs[1].set_title('Eriklindernoren', fontsize='xx-large')
 
 axs[2].plot(epochs2, df6['dx_mean'], color=colors[0])
 axs[2].plot(epochs2, df7['dx_mean'], color=colors[1])
 axs[2].plot(epochs2, df8['dx_mean'], color=colors[4])
 axs[2].set_xlabel('Epoch', fontsize='xx-large')
 axs[2].set_ylabel(r'$F_d(x)$', fontsize='xx-large')
-axs[2].set_title('Sagan')
+axs[2].set_title('Sagan', fontsize='xx-large')
 
 axs[3].plot(epochs2, df6['dgz_mean'], color=colors[0])
 axs[3].plot(epochs2, df7['dgz_mean'], color=colors[1])
 axs[3].plot(epochs2, df8['dgz_mean'], color=colors[4])
 axs[3].set_xlabel('Epoch', fontsize='xx-large')
 axs[3].set_ylabel(r'$F_d(G(z))$', fontsize='xx-large')
-axs[3].set_title('Sagan')
+axs[3].set_title('Sagan', fontsize='xx-large')
 
 handles, labels = axs[0].get_legend_handles_labels()
 axs[3].legend(handles=handles, labels=labels, loc='lower center',
