@@ -53,11 +53,13 @@ def get_gen_real_imgs_with_headID(gen_imgs, real_imgs, heads, head_id):
     gen = []
     real = []
     for i in range(len(heads)):
-        count = get_frequent(heads[i], str(head_id))
+        count = get_frequent_v2(heads[i], str(head_id))
         if count == 0:
             continue
         gen.append(gen_imgs[i].unsqueeze(0))
         real.append(real_imgs[i].unsqueeze(0))
+    if len(gen) == 0:
+        return None, None
     return torch.cat(gen), torch.cat(real)
 
 
