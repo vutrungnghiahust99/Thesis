@@ -27,22 +27,30 @@ axs[0].plot(epochs, df1['dx_max_min'], color=colors[0], label='RFGan + no baggin
 axs[0].plot(epochs, df2['dx_max_min'], color=colors[1], label='RFGan + bagging')
 axs[0].set_xlabel('Epoch', fontsize='xx-large')
 axs[0].set_ylabel(r'$W_{F_d(x)}$', fontsize='xx-large')
+axs[0].set_yticks([0.65, 0.75, 0.85, 0.95])
+axs[0].set_xticks([0, 40, 80, 120])
 
 axs[1].plot(epochs, df1['dgz_max_min'], color=colors[0])
 axs[1].plot(epochs, df2['dgz_max_min'], color=colors[1])
 axs[1].set_xlabel('Epoch', fontsize='xx-large')
 axs[1].set_ylabel(r'$W_{F_d(G(z))}$', fontsize='xx-large')
+axs[1].set_yticks([0.65, 0.75, 0.85, 0.95])
+axs[1].set_xticks([0, 40, 80, 120])
 
 n1 = 5
 axs[2].plot(epochs[n1:], df1['fid_score'][n1:], color=colors[0])
 axs[2].plot(epochs[n1:], df2['fid_score'][n1:], color=colors[1])
 axs[2].set_xlabel('Epoch', fontsize='xx-large')
 axs[2].set_ylabel('FID', fontsize='xx-large')
+axs[2].set_yticks([7, 9, 11, 13])
+axs[2].set_xticks([0, 40, 80, 120])
 
 axs[3].plot(epochs, df1['lossd_mean'], color=colors[0])
 axs[3].plot(epochs, df2['lossd_mean'], color=colors[1])
 axs[3].set_xlabel('Epoch', fontsize='xx-large')
 axs[3].set_ylabel(r'$L_{F_d}$', fontsize='xx-large')
+axs[3].set_yticks([1.15, 1.25, 1.35])
+axs[3].set_xticks([0, 40, 80, 120])
 
 
 handles, labels = axs[0].get_legend_handles_labels()
