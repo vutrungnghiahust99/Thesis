@@ -1,0 +1,141 @@
+21-06-18 17:44:44, INFO: 
+***************** RFGAN_LOSSGAN1_BAGGING0_AUGMENTATION0_10HEADS_USEMASKD **************
+21-06-18 17:44:44, INFO: aug_times: -1
+21-06-18 17:44:44, INFO: augmentation: 0
+21-06-18 17:44:44, INFO: b1: 0.5
+21-06-18 17:44:44, INFO: b2: 0.999
+21-06-18 17:44:44, INFO: bagging: 0
+21-06-18 17:44:44, INFO: batch_size: 64
+21-06-18 17:44:44, INFO: bound: 1
+21-06-18 17:44:44, INFO: channels: 1
+21-06-18 17:44:44, INFO: data_path: data/mnist
+21-06-18 17:44:44, INFO: dist: gauss
+21-06-18 17:44:44, INFO: exp_name: rfgan_lossgan1_bagging0_augmentation0_10heads_usemaskD
+21-06-18 17:44:44, INFO: img_size: 28
+21-06-18 17:44:44, INFO: interval: 4
+21-06-18 17:44:44, INFO: loss_name: gan1
+21-06-18 17:44:44, INFO: lr: 0.0002
+21-06-18 17:44:44, INFO: n_cpu: 8
+21-06-18 17:44:44, INFO: n_epochs: 453
+21-06-18 17:44:44, INFO: n_heads: 10
+21-06-18 17:44:44, INFO: use_mask_d: 1
+21-06-18 17:44:44, INFO: weights_d: 
+21-06-18 17:44:44, INFO: weights_g: 
+21-06-18 17:44:44, INFO: z_dim: 100
+21-06-18 17:44:44, INFO: --------------------------------
+21-06-18 17:44:44, INFO: exp_folder: experiments/rfgan/rfgan_lossgan1_bagging0_augmentation0_10heads_usemaskD
+21-06-18 17:44:44, INFO: images_folder: experiments/rfgan/rfgan_lossgan1_bagging0_augmentation0_10heads_usemaskD/images
+21-06-18 17:44:44, INFO: models_folder: experiments/rfgan/rfgan_lossgan1_bagging0_augmentation0_10heads_usemaskD/models
+21-06-18 17:44:44, INFO: Generator(
+  (model): Sequential(
+    (0): Linear(
+      (linear): Linear(in_features=100, out_features=128, bias=True)
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+    (4): Linear(
+      (linear): Linear(in_features=256, out_features=512, bias=True)
+    )
+    (5): LeakyReLU(negative_slope=0.2, inplace=True)
+    (6): Linear(
+      (linear): Linear(in_features=512, out_features=1024, bias=True)
+    )
+    (7): LeakyReLU(negative_slope=0.2, inplace=True)
+    (8): Linear(
+      (linear): Linear(in_features=1024, out_features=784, bias=True)
+    )
+    (9): Tanh()
+  )
+)
+21-06-18 17:44:44, INFO: Discriminator(
+  (shared_layers): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=784, out_features=512, bias=True)
+      )
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=512, out_features=256, bias=True)
+      )
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+  )
+  (head_0): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_1): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_2): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_3): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_4): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_5): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_6): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_7): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_8): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_9): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=256, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+)
+21-06-18 17:44:44, INFO: start at epoch: 0
+21-06-18 17:44:44, INFO: data at: data/mnist
+21-06-18 17:44:44, INFO: epoch: 0
