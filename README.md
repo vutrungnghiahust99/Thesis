@@ -1,9 +1,19 @@
-Data
-===
-Download data at: https://husteduvn-my.sharepoint.com/:f:/g/personal/nghia_vt173284_sis_hust_edu_vn/EnLISFks36FDpy9g5PThWAQBDnbvnFydOP95FeQj8E_O9w?e=6jdZxb
-
-- Save data at: ./data/mnist/...
-
 Enviroments
-===
-- Pytorch
+---
+- pytorch
+- pandas
+
+Reproduce experimental results
+---
+All commands to reproduce experimental results are saved in `./run/` folder.
+
+Below is an example to run the experiment:
+ - RFGan + No augmentation + No bagging + 10 heads + eriklindernoren architecture
+```bash
+python -m src.train.rfgan --exp_name rfgan_lossgan1_bagging0_augmentation0_10heads_usemaskD \
+                          --loss_name 'gan1' \
+                          --n_heads '10' \
+                          --n_epochs '453' \
+                          --interval '4' \
+                          --use_mask_d '1'
+```

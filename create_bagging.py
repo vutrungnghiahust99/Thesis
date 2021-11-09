@@ -2,7 +2,7 @@ import torch
 import random
 from tqdm import tqdm
 
-train = torch.load('data/mnist/MNIST/processed/training_rf.pt')
+train = torch.load('data/mnist/MNIST/processed/training.pt')
 
 N = 60000
 
@@ -21,4 +21,4 @@ for i in range(N):
 
 d = (train[0], train[1], m1)
 
-torch.save(d, 'training_rf_v2.pt')
+torch.save(d, 'training_rf.pt')

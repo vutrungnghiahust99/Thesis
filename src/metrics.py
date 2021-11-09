@@ -7,7 +7,6 @@ from torchvision.transforms import ToPILImage
 
 from src.noise import Noise
 from src.fid_score.fid_score import compute_fid_score
-from src.fid_score_rgb.fid_score import compute_fid_score_rgb
 
 Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
@@ -124,17 +123,6 @@ class Metrics():
         real_pil_imgs = get_real_pil_images(path_to_real_imgs)
         gen_pil_imgs = get_gen_pil_images(generator, bound, dist, len(real_pil_imgs))
         fid_score = compute_fid_score(gen_pil_imgs, real_pil_imgs)
-        return fid_score
-
-    @staticmethod
-    def compute_fid_rgb(generator,
-                        dist,
-                        bound,
-                        path_to_real_imgs='data/cifar10/new_data/test.pt',
-                        z_dim=100) -> float:
-        real_pil_imgs = get_real_pil_images_v2(path_to_real_imgs)
-        gen_pil_imgs = get_gen_pil_images_v2(generator, bound, dist, len(real_pil_imgs))
-        fid_score = compute_fid_score_rgb(gen_pil_imgs, real_pil_imgs)
         return fid_score
 
 
